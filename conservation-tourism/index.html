@@ -6,257 +6,373 @@
 <title>Conservation tourism | Conservation Portal</title>
 <meta name="description" content="Turning visitors into conservation revenue without turning wildlife into a prop. 28 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/conservation-tourism/">
+<link rel="icon" href="/assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#123D2C">
 <meta property="og:title" content="Conservation tourism | Conservation Portal">
 <meta property="og:description" content="Turning visitors into conservation revenue without turning wildlife into a prop. 28 hand-checked resources for conservationists.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://conservationportal.org/conservation-tourism/">
 <meta property="og:site_name" content="Conservation Portal">
+<meta property="og:image" content="https://conservationportal.org/assets/logo-lockup-2x.png">
 <meta name="twitter:card" content="summary">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400..700;1,400&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap">
 <style>
 :root{
-  --ground:#f4f7f3; --surface:#fff; --ink:#263028; --muted:#5f6b5f; --hair:#d5ddd4;
-  --green:#2e7d52; --green-deep:#1f5a3a; --orange:#c8490a;
-  --shadow:0 1px 2px rgba(38,48,40,.05),0 8px 24px rgba(38,48,40,.06);
+  --paper:#F5F3EC; --surface:#FFFFFF; --surface-2:#EFEDE3;
+  --ink:#172229; --muted:#5C6660; --hair:#E0DCCE;
+  --forest:#123D2C; --teal:#168B82; --field:#7BAA47;
+  --link:#123D2C; --accent:#168B82;
+  --pill-bg:#E8F0DC; --pill-ink:#3E5C22;
+  --shadow:0 1px 2px rgba(23,34,41,.04),0 10px 30px rgba(23,34,41,.06);
+  --topo-opacity:.05;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --ground:#171c18; --surface:#1f2620; --ink:#e7ece6; --muted:#9aa79a; --hair:#333d34;
-  --green:#6dc292; --green-deep:#8fd6ab; --orange:#ff9052;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+  --paper:#0F1714; --surface:#16211C; --surface-2:#1C2822;
+  --ink:#E7EDE6; --muted:#98A69D; --hair:#26332C;
+  --forest:#7BC9A6; --teal:#3FBFB2; --field:#9BCB63;
+  --link:#7BC9A6; --accent:#3FBFB2;
+  --pill-bg:#1F3320; --pill-ink:#A8D47A;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.32);
+  --topo-opacity:.07;
 }}
 :root[data-theme="dark"]{
-  --ground:#171c18; --surface:#1f2620; --ink:#e7ece6; --muted:#9aa79a; --hair:#333d34;
-  --green:#6dc292; --green-deep:#8fd6ab; --orange:#ff9052;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+  --paper:#0F1714; --surface:#16211C; --surface-2:#1C2822;
+  --ink:#E7EDE6; --muted:#98A69D; --hair:#26332C;
+  --forest:#7BC9A6; --teal:#3FBFB2; --field:#9BCB63;
+  --link:#7BC9A6; --accent:#3FBFB2;
+  --pill-bg:#1F3320; --pill-ink:#A8D47A;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.32);
+  --topo-opacity:.07;
 }
+
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--ground);color:var(--ink);
-  font-family:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;
-  font-size:17px;line-height:1.6;text-align:center;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:Petrona,Georgia,serif;font-weight:600;text-wrap:balance;
-  margin:0;line-height:1.15;letter-spacing:-.01em}
-a{color:var(--green-deep);text-decoration-thickness:1px;text-underline-offset:3px}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) a{color:var(--green)}}
-:root[data-theme="dark"] a{color:var(--green)}
-a:focus-visible,button:focus-visible,input:focus-visible{
-  outline:2px solid var(--green);outline-offset:3px;border-radius:2px}
-.mono,.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
-.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Inter,"Segoe UI",system-ui,sans-serif;font-size:16.5px;line-height:1.6;
+  text-align:center;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:"Source Serif 4",Georgia,serif;font-weight:600;margin:0;
+  line-height:1.18;letter-spacing:-.008em;text-wrap:balance}
+a{color:var(--link)}
+a:focus-visible,button:focus-visible,input:focus-visible,.card:focus-visible{
+  outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.mono,.eyebrow{font-family:Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums}
+.eyebrow{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
+  font-weight:600}
 .skip{position:absolute;left:-9999px}
-.skip:focus{position:static;display:inline-block;padding:8px}
+.skip:focus{position:static;display:inline-block;padding:10px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 
-header{position:sticky;top:0;z-index:20;background:var(--ground);border-bottom:1px solid var(--hair)}
-.hbar{max-width:1180px;margin:0 auto;padding:12px 24px;display:flex;
-  align-items:center;justify-content:center;gap:14px;position:relative}
-/* logo pinned top left, out of the centered flow so the wordmark stays centered */
-.logo{position:absolute;left:24px;top:50%;transform:translateY(-50%);
-  display:flex;align-items:center;line-height:0}
-/* one image for both themes: the frog sits on the brand's own colored disc, which
-   reads on a light and a dark ground alike */
-.logo img{height:38px;width:auto;display:block}
-@media (max-width:560px){.logo img{height:30px}.logo{left:14px}}
-.wordmark{font-family:Petrona,Georgia,serif;font-size:21px;font-weight:600;
-  color:var(--ink);text-decoration:none;letter-spacing:-.015em}
-.wordmark span{color:var(--green-deep)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .wordmark span{color:var(--green)}}
-:root[data-theme="dark"] .wordmark span{color:var(--green)}
-.hbar .eyebrow{border-left:1px solid var(--hair);padding-left:14px}
-@media (max-width:640px){.hbar .eyebrow{display:none}}
+/* ---------- header: sticky, shrinks once you scroll ---------- */
+header{position:sticky;top:0;z-index:40;background:var(--paper);
+  border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+header.stuck{border-bottom-color:var(--hair);box-shadow:0 1px 12px rgba(23,34,41,.05)}
+.hbar{max-width:1120px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px;transition:padding .2s}
+header.stuck .hbar{padding:9px 24px}
+.brand{display:flex;align-items:center;line-height:0;flex:0 0 auto}
+.brand img{height:34px;width:auto;display:block;transition:height .2s}
+header.stuck .brand img{height:27px}
+.brand .mark{display:none}
+nav.top{display:flex;align-items:center;gap:26px;flex-wrap:wrap;justify-content:flex-end}
+nav.top a{font-size:14.5px;text-decoration:none;color:var(--ink);white-space:nowrap}
+nav.top a:hover{color:var(--accent)}
+nav.top a.btn{border:1px solid var(--hair);border-radius:2px;padding:7px 14px;
+  color:var(--forest);font-weight:600}
+nav.top a.btn:hover{border-color:var(--accent);color:var(--accent)}
+@media (max-width:860px){
+  .brand .lockup{display:none} .brand .mark{display:block;height:30px}
+  nav.top{gap:16px} nav.top a{font-size:13.5px}
+}
+@media (max-width:540px){nav.top a.nav-hide{display:none}}
 
-main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
-.hero{padding:72px 0 8px}
-.hero h1{font-size:clamp(38px,6.4vw,64px);margin:14px 0 0}
-.lede{max-width:62ch;margin:26px auto 0;font-size:19px}
-.lede.second{margin-top:18px;color:var(--muted);font-size:17px}
-.shelf{color:var(--green-deep);font-weight:700}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .shelf{color:var(--green)}}
-:root[data-theme="dark"] .shelf{color:var(--green)}
+/* ---------- hero, search first ---------- */
+.hero{position:relative;padding:78px 0 8px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221200%22%20height%3D%22420%22%20viewBox%3D%220%200%201200%20420%22%20fill%3D%22none%22%20stroke%3D%22%2523123D2C%22%20stroke-width%3D%221.4%22%3E%3Cpath%20d%3D%22M-40%20300C140%20250%20260%20330%20420%20300s300-120%20470-92%20250%2090%20390%2052%22%2F%3E%3Cpath%20d%3D%22M-40%20258C150%20205%20270%20292%20430%20258s300-128%20470-96%20240%2096%20380%2054%22%2F%3E%3Cpath%20d%3D%22M-40%20216C160%20160%20280%20254%20440%20216s300-136%20470-100%20230%20102%20370%2056%22%2F%3E%3Cpath%20d%3D%22M-40%20174C170%20115%20290%20216%20450%20174s300-144%20470-104%20220%20108%20360%2058%22%2F%3E%3Cpath%20d%3D%22M-40%20132C180%2070%20300%20178%20460%20132s300-152%20470-108%20210%20114%20350%2060%22%2F%3E%3Cpath%20d%3D%22M-40%2090C190%2025%20310%20140%20470%2090s300-160%20470-112%20200%20120%20340%2062%22%2F%3E%3C%2Fsvg%3E") center top/1200px 420px repeat-x;opacity:var(--topo-opacity)}
+.hero > *{position:relative}
+.hero h1{font-size:clamp(35px,5.6vw,60px);margin:0 auto;max-width:20ch}
+.hero .sub{max-width:56ch;margin:20px auto 0;color:var(--muted);font-size:17.5px}
 
-.stats{display:flex;justify-content:center;flex-wrap:wrap;margin:40px auto 0;max-width:640px;
-  border:1px solid var(--hair);border-radius:3px;background:var(--surface);
-  box-shadow:var(--shadow);overflow:hidden}
-.stat{flex:1 1 33%;min-width:150px;padding:20px 16px;border-left:1px solid var(--hair)}
-.stat:first-child{border-left:0}
-.stat b{display:block;font-family:Petrona,Georgia,serif;font-size:34px;font-weight:600;
-  font-variant-numeric:tabular-nums;line-height:1}
-.stat .eyebrow{margin-top:8px;display:block}
-
-.searchwrap{margin:44px auto 0;max-width:520px}
-input[type=search]{width:100%;padding:13px 18px;font:inherit;font-size:16px;text-align:center;
-  color:var(--ink);background:var(--surface);border:1px solid var(--hair);
-  border-radius:3px;box-shadow:var(--shadow)}
+.searchwrap{margin:34px auto 0;max-width:620px;position:relative}
+.searchwrap svg{position:absolute;left:18px;top:50%;transform:translateY(-50%);
+  width:19px;height:19px;stroke:var(--muted);fill:none;stroke-width:2;pointer-events:none}
+input[type=search]{width:100%;padding:16px 54px 16px 48px;font:inherit;font-size:16.5px;
+  color:var(--ink);background:var(--surface);border:1px solid var(--hair);border-radius:3px;
+  box-shadow:var(--shadow);text-align:left}
 input[type=search]::placeholder{color:var(--muted)}
+input[type=search]:focus{border-color:var(--accent);outline:none;
+  box-shadow:0 0 0 3px rgba(22,139,130,.14)}
+.slash{position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  border:1px solid var(--hair);border-radius:3px;padding:1px 7px;font-size:12px;
+  color:var(--muted);pointer-events:none}
+@media (max-width:640px){.slash{display:none}}
 
-.rule{display:flex;align-items:center;gap:16px;margin:56px auto 24px}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:22px auto 0;
+  max-width:660px}
+.chips a{font-size:14px;text-decoration:none;color:var(--ink);background:var(--surface);
+  border:1px solid var(--hair);border-radius:100px;padding:7px 15px;transition:.16s}
+.chips a:hover{border-color:var(--accent);color:var(--accent)}
+.credline{margin:26px auto 0;font-size:14px;color:var(--muted)}
+.credline b{color:var(--ink);font-weight:600}
+
+/* ---------- section headings ---------- */
+.rule{display:flex;align-items:center;gap:18px;margin:64px auto 8px}
 .rule::before,.rule::after{content:"";flex:1;height:1px;background:var(--hair)}
-.grouphead{margin:56px 0 6px}
-.grouphead h2{font-size:26px}
-.grouphead p{margin:6px 0 0;color:var(--muted);font-size:14px}
+.sechead{margin:62px 0 4px}
+.sechead h2{font-size:27px}
+.sechead p{margin:7px auto 0;color:var(--muted);font-size:15px;max-width:56ch}
 
-/* Exactly three across, and a short last row stays centered. The basis is computed
-   rather than a fixed px value: a fixed basis with shrink allowed lets a fourth card
-   squeeze onto the row, which is what happened before this was measured. */
-.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:18px}
-.card{flex:0 0 calc((100% - 32px) / 3);
-  background:var(--surface);border:1px solid var(--hair);border-radius:3px;
-  padding:24px 22px;text-align:center;display:flex;flex-direction:column;
-  align-items:center;justify-content:flex-start;gap:10px;box-shadow:var(--shadow);
-  text-decoration:none;transition:border-color .18s,transform .18s;
-  /* set explicitly: color:inherit here lost to the theme-scoped `a` rules, which have
-     higher specificity, so titles came out green in dark and near-black in light by
-     accident rather than by choice */
-  color:var(--ink)}
-.card:hover{border-color:var(--green);transform:translateY(-2px)}
-@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
-.card .count{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;
-  letter-spacing:.1em;color:var(--muted);font-variant-numeric:tabular-nums}
-/* Cards in a row are equal height, so vertically centering their contents pushed a
-   short-titled card's whole block downwards and the counts and titles across a row sat
-   at different heights. Top-align instead, and reserve two lines for the title so the
-   descriptions start on the same line as well. */
-.card h3{font-size:20px;min-height:2.3em;display:block;width:100%;color:var(--green-deep)}
-.card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
-@media (max-width:900px){.card{flex:0 0 calc((100% - 16px) / 2)}}
-@media (max-width:620px){.card{flex:0 0 100%;max-width:420px}}
+/* ---------- eight domain blocks ---------- */
+.domains{display:grid;gap:16px;margin-top:26px;
+  grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+@media (max-width:740px){.domains{grid-template-columns:1fr}}
+.domain{background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
+  padding:24px 24px 20px;text-align:left;
+  /* the mark's angled panel, echoed once per block */
+  clip-path:polygon(18px 0,100% 0,100% 100%,0 100%,0 18px)}
+.domain .dh{display:flex;align-items:center;gap:12px}
+.domain .dh svg{width:24px;height:24px;flex:0 0 24px;stroke:var(--accent);fill:none;
+  stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.domain h3{font-size:21px}
+.domain .dmeta{margin:3px 0 0 36px;font-size:13px;color:var(--muted);
+  font-variant-numeric:tabular-nums}
+.domain ul{list-style:none;margin:16px 0 0;padding:0;border-top:1px solid var(--hair)}
+.domain li{border-bottom:1px solid var(--hair)}
+.domain li:last-child{border-bottom:0}
+.domain li a{display:flex;justify-content:space-between;gap:14px;align-items:baseline;
+  padding:9px 2px;text-decoration:none;color:var(--ink);font-size:14.5px;
+  transition:padding-left .16s,color .16s}
+.domain li a:hover{color:var(--accent);padding-left:6px}
+.domain li a .n{color:var(--muted);font-size:12.5px;font-variant-numeric:tabular-nums;
+  flex:0 0 auto}
 
-.catpage{padding-top:52px}
-.catpage h1{font-size:clamp(30px,5vw,46px)}
-.catpage .blurb{max-width:56ch;margin:16px auto 0;color:var(--muted)}
-.list{max-width:720px;margin:36px auto 0;background:var(--surface);
-  border:1px solid var(--hair);border-radius:3px;box-shadow:var(--shadow);overflow:hidden;
-  text-align:center;list-style:none;padding:0}
-.item{padding:22px;border-top:1px solid var(--hair)}
+/* ---------- compact resource rows ---------- */
+.list{max-width:760px;margin:26px auto 0;text-align:left;list-style:none;padding:0;
+  background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow)}
+.item{border-top:1px solid var(--hair)}
 .item:first-child{border-top:0}
-.item .top{display:flex;align-items:baseline;justify-content:center;gap:9px;flex-wrap:wrap}
-.item a.nm{font-family:Petrona,Georgia,serif;font-size:20px;font-weight:600;
-  text-decoration:none;letter-spacing:-.01em}
-.item a.nm:hover{text-decoration:underline;text-underline-offset:4px}
-.item p{margin:6px auto 0;font-size:15.5px;color:var(--muted);max-width:56ch;line-height:1.55}
-.tag{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.1em;
-  text-transform:uppercase;border-radius:2px;padding:1px 5px}
-.tag.new{color:var(--orange);border:1px solid currentColor;font-weight:700}
-.browse{display:block;margin-top:9px;font-size:11.5px;letter-spacing:.04em}
-.hint{color:var(--muted);font-size:15px;margin:32px auto 0}
-.nav2{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:30px auto 0;font-size:15px}
+.item > a{display:block;padding:17px 22px;text-decoration:none;color:inherit;
+  transition:background .16s,padding-left .16s}
+.item > a:hover{background:var(--surface-2);padding-left:28px}
+.item .nm{font-family:"Source Serif 4",Georgia,serif;font-size:18.5px;font-weight:600;
+  color:var(--forest);display:inline-flex;align-items:center;gap:7px}
+.item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
+.item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
+.item p{margin:4px 0 0;font-size:15px;color:var(--muted);max-width:64ch}
+.pill{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+  background:var(--pill-bg);color:var(--pill-ink);border-radius:100px;padding:2px 8px;
+  margin-left:9px;vertical-align:2px;white-space:nowrap}
+mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 
-footer{border-top:1px solid var(--hair);margin-top:24px;padding:34px 24px 60px;
-  color:var(--muted);font-size:14px}
-footer p{max-width:62ch;margin:0 auto 10px}
+/* ---------- category page ---------- */
+.crumbs{font-size:13.5px;color:var(--muted);padding-top:34px}
+.crumbs a{color:var(--muted);text-decoration:none}
+.crumbs a:hover{color:var(--accent);text-decoration:underline}
+.crumbs span{margin:0 7px;opacity:.5}
+.cathead{padding-top:14px}
+.cathead h1{font-size:clamp(28px,4.4vw,42px)}
+.cathead .blurb{max-width:58ch;margin:14px auto 0;color:var(--muted)}
+.cathead .n{margin:16px auto 0}
+.filterwrap{max-width:420px;margin:24px auto 0;position:relative}
+.filterwrap input{width:100%;padding:11px 15px;font:inherit;font-size:15px;
+  background:var(--surface);border:1px solid var(--hair);border-radius:3px;color:var(--ink);
+  text-align:left}
+.nav2{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:34px auto 0;
+  font-size:14.5px}
+.hint{color:var(--muted);font-size:15px;margin:28px auto 0}
+
+/* ---------- recently added ---------- */
+.recent{display:grid;gap:14px;margin-top:24px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+@media (max-width:700px){.recent{grid-template-columns:1fr}}
+.recent a{display:block;background:var(--surface);border:1px solid var(--hair);
+  padding:18px 20px;text-decoration:none;color:inherit;text-align:left;
+  box-shadow:var(--shadow);transition:border-color .16s,transform .16s;
+  clip-path:polygon(14px 0,100% 0,100% 100%,0 100%,0 14px)}
+.recent a:hover{border-color:var(--accent);transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.recent a:hover{transform:none}}
+.recent .rn{font-family:"Source Serif 4",Georgia,serif;font-size:17px;font-weight:600;
+  color:var(--forest)}
+.recent .rc{display:block;margin-top:6px;font-size:12.5px;color:var(--muted)}
+
+/* ---------- categories index ---------- */
+.allcats{text-align:left;max-width:900px;margin:30px auto 0}
+.allcats section{margin-bottom:30px}
+.allcats h3{font-size:18px;margin-bottom:10px}
+.allcats ul{list-style:none;margin:0;padding:0;display:grid;gap:2px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.allcats a{display:flex;justify-content:space-between;gap:12px;padding:8px 10px;
+  text-decoration:none;color:var(--ink);font-size:14.5px;border:1px solid transparent}
+.allcats a:hover{border-color:var(--hair);background:var(--surface);color:var(--accent)}
+.allcats .n{color:var(--muted);font-size:12.5px;font-variant-numeric:tabular-nums}
+
+/* ---------- prose (about) ---------- */
+.prose{max-width:66ch;margin:0 auto;text-align:left}
+.prose h2{font-size:23px;margin:34px 0 10px}
+.prose p{margin:0 0 14px}
+.prose ul{margin:0 0 16px;padding-left:22px}
+.prose li{margin-bottom:7px}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
+  background:var(--surface-2)}
+.fgrid{display:grid;gap:30px;text-align:left;
+  grid-template-columns:1.6fr 1fr 1fr 1fr}
+@media (max-width:800px){.fgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.fgrid{grid-template-columns:1fr}}
+.fgrid img{height:30px;width:auto;margin-bottom:12px}
+.fgrid p{margin:0;color:var(--muted);font-size:14px;max-width:34ch}
+.fgrid h4{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
+  font-family:Inter,sans-serif;font-weight:700;margin-bottom:10px}
+.fgrid ul{list-style:none;margin:0;padding:0}
+.fgrid li{margin-bottom:7px}
+.fgrid a{font-size:14.5px;text-decoration:none}
+.fgrid a:hover{text-decoration:underline}
+.fbase{border-top:1px solid var(--hair);margin-top:34px;padding-top:20px;font-size:13.5px;
+  color:var(--muted)}
 .hidden{display:none}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Conservation tourism | Conservation Portal", "url": "https://conservationportal.org/conservation-tourism/", "description": "Turning visitors into conservation revenue without turning wildlife into a prop.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "mainEntity": {"@type": "ItemList", "numberOfItems": 28, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Conservation Atlas", "url": "https://www.conservationatlas.org/"}, {"@type": "ListItem", "position": 2, "name": "Global Sustainable Tourism Council", "url": "https://www.gstc.org/"}, {"@type": "ListItem", "position": 3, "name": "EarthCheck", "url": "https://earthcheck.org/"}, {"@type": "ListItem", "position": 4, "name": "Green Destinations", "url": "https://greendestinations.org/"}, {"@type": "ListItem", "position": 5, "name": "Travelife", "url": "https://www.travelife.info/"}, {"@type": "ListItem", "position": 6, "name": "Fair Trade Tourism", "url": "https://www.fairtradetourism.org/"}, {"@type": "ListItem", "position": 7, "name": "Ecotourism Australia", "url": "https://www.ecotourism.org.au/"}, {"@type": "ListItem", "position": 8, "name": "Ecotourism Kenya", "url": "https://ecotourismkenya.org/"}, {"@type": "ListItem", "position": 9, "name": "TOFTigers", "url": "https://www.toftigers.org/"}, {"@type": "ListItem", "position": 10, "name": "Whale Heritage Areas", "url": "https://whaleheritagesites.org/"}, {"@type": "ListItem", "position": 11, "name": "Blue Flag", "url": "https://www.blueflag.global/"}, {"@type": "ListItem", "position": 12, "name": "The Long Run", "url": "https://www.thelongrun.org/"}, {"@type": "ListItem", "position": 13, "name": "The International Ecotourism Society", "url": "https://ecotourism.org/"}, {"@type": "ListItem", "position": 14, "name": "Global Ecotourism Network", "url": "https://www.globalecotourismnetwork.org/"}, {"@type": "ListItem", "position": 15, "name": "Adventure Travel Trade Association", "url": "https://www.adventuretravel.biz/"}, {"@type": "ListItem", "position": 16, "name": "African Travel and Tourism Association", "url": "https://www.atta.travel/"}, {"@type": "ListItem", "position": 17, "name": "Future of Tourism Coalition", "url": "https://www.futureoftourism.org/"}, {"@type": "ListItem", "position": 18, "name": "Wilderness Trust", "url": "https://www.wildernesstrust.com/"}, {"@type": "ListItem", "position": 19, "name": "Conservation Travel Foundation", "url": "https://conservationtravelfoundation.org/"}, {"@type": "ListItem", "position": 20, "name": "Tourism Cares", "url": "https://www.tourismcares.org/"}, {"@type": "ListItem", "position": 21, "name": "IUCN Tourism and Visitor Management in Protected Areas", "url": "https://portals.iucn.org/library/node/47918"}, {"@type": "ListItem", "position": 22, "name": "IUCN WCPA Tourism and Protected Areas Specialist Group", "url": "https://iucn.org/our-union/commissions/group/iucn-wcpa-tourism-and-protected-areas-specialist-group"}, {"@type": "ListItem", "position": 23, "name": "Tools and Resources for Nature-Based Tourism", "url": "https://openknowledge.worldbank.org/handle/10986/34433"}, {"@type": "ListItem", "position": 24, "name": "World Animal Protection: travel and tourism", "url": "https://www.worldanimalprotection.org/our-campaigns/wildlife/commercial-exploitation/travel-tourism/"}, {"@type": "ListItem", "position": 25, "name": "UN Tourism wildlife watching study", "url": "https://www.untourism.int/project/unwto-study-economic-value-wildlife-watching-tourism-africa"}, {"@type": "ListItem", "position": 26, "name": "Sustainable Travel International", "url": "https://sustainabletravel.org/"}, {"@type": "ListItem", "position": 27, "name": "Destination Stewardship Center", "url": "https://destinationcenter.org/"}, {"@type": "ListItem", "position": 28, "name": "Travel Forward", "url": "https://travel-forward.org/"}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Conservation tourism | Conservation Portal", "url": "https://conservationportal.org/conservation-tourism/", "description": "Turning visitors into conservation revenue without turning wildlife into a prop.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Land, sea and recovery", "item": "https://conservationportal.org/categories/"}, {"@type": "ListItem", "position": 3, "name": "Conservation tourism", "item": "https://conservationportal.org/conservation-tourism/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 28, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Conservation Atlas", "url": "https://www.conservationatlas.org/"}, {"@type": "ListItem", "position": 2, "name": "Global Sustainable Tourism Council", "url": "https://www.gstc.org/"}, {"@type": "ListItem", "position": 3, "name": "EarthCheck", "url": "https://earthcheck.org/"}, {"@type": "ListItem", "position": 4, "name": "Green Destinations", "url": "https://greendestinations.org/"}, {"@type": "ListItem", "position": 5, "name": "Travelife", "url": "https://www.travelife.info/"}, {"@type": "ListItem", "position": 6, "name": "Fair Trade Tourism", "url": "https://www.fairtradetourism.org/"}, {"@type": "ListItem", "position": 7, "name": "Ecotourism Australia", "url": "https://www.ecotourism.org.au/"}, {"@type": "ListItem", "position": 8, "name": "Ecotourism Kenya", "url": "https://ecotourismkenya.org/"}, {"@type": "ListItem", "position": 9, "name": "TOFTigers", "url": "https://www.toftigers.org/"}, {"@type": "ListItem", "position": 10, "name": "Whale Heritage Areas", "url": "https://whaleheritagesites.org/"}, {"@type": "ListItem", "position": 11, "name": "Blue Flag", "url": "https://www.blueflag.global/"}, {"@type": "ListItem", "position": 12, "name": "The Long Run", "url": "https://www.thelongrun.org/"}, {"@type": "ListItem", "position": 13, "name": "The International Ecotourism Society", "url": "https://ecotourism.org/"}, {"@type": "ListItem", "position": 14, "name": "Global Ecotourism Network", "url": "https://www.globalecotourismnetwork.org/"}, {"@type": "ListItem", "position": 15, "name": "Adventure Travel Trade Association", "url": "https://www.adventuretravel.biz/"}, {"@type": "ListItem", "position": 16, "name": "African Travel and Tourism Association", "url": "https://www.atta.travel/"}, {"@type": "ListItem", "position": 17, "name": "Future of Tourism Coalition", "url": "https://www.futureoftourism.org/"}, {"@type": "ListItem", "position": 18, "name": "Wilderness Trust", "url": "https://www.wildernesstrust.com/"}, {"@type": "ListItem", "position": 19, "name": "Conservation Travel Foundation", "url": "https://conservationtravelfoundation.org/"}, {"@type": "ListItem", "position": 20, "name": "Tourism Cares", "url": "https://www.tourismcares.org/"}, {"@type": "ListItem", "position": 21, "name": "IUCN Tourism and Visitor Management in Protected Areas", "url": "https://portals.iucn.org/library/node/47918"}, {"@type": "ListItem", "position": 22, "name": "IUCN WCPA Tourism and Protected Areas Specialist Group", "url": "https://iucn.org/our-union/commissions/group/iucn-wcpa-tourism-and-protected-areas-specialist-group"}, {"@type": "ListItem", "position": 23, "name": "Tools and Resources for Nature-Based Tourism", "url": "https://openknowledge.worldbank.org/handle/10986/34433"}, {"@type": "ListItem", "position": 24, "name": "World Animal Protection: travel and tourism", "url": "https://www.worldanimalprotection.org/our-campaigns/wildlife/commercial-exploitation/travel-tourism/"}, {"@type": "ListItem", "position": 25, "name": "UN Tourism wildlife watching study", "url": "https://www.untourism.int/project/unwto-study-economic-value-wildlife-watching-tourism-africa"}, {"@type": "ListItem", "position": 26, "name": "Sustainable Travel International", "url": "https://sustainabletravel.org/"}, {"@type": "ListItem", "position": 27, "name": "Destination Stewardship Center", "url": "https://destinationcenter.org/"}, {"@type": "ListItem", "position": 28, "name": "Travel Forward", "url": "https://travel-forward.org/"}]}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header><div class="hbar">
-<a class="logo" href="https://biodiversitygroup.org/" aria-label="The Biodiversity Group">
-<img src="/assets/tbg-logo.png" alt="The Biodiversity Group" width="102" height="96">
+<header id="hdr"><div class="hbar">
+<a class="brand" href="/" aria-label="Conservation Portal home">
+<img class="lockup" src="/assets/logo-lockup.png" alt="Conservation Portal" width="191" height="68">
+<img class="mark" src="/assets/logo-mark.png" alt="Conservation Portal" width="52" height="64">
 </a>
-<a class="wordmark" href="/">Conservation <span>Portal</span></a>
-<span class="eyebrow"><a href="https://biodiversitygroup.org/">A project of The Biodiversity Group</a></span>
+<nav class="top"><a href="/#browse">Browse</a><a href="/categories/">Categories</a><a class="nav-hide" href="/about/">About</a><a class="btn" href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%3A%20suggest%20a%20resource">Submit a resource</a></nav>
 </div></header>
 <main id="main">
-<div class="catpage">
-<p class="eyebrow">Land, sea and recovery</p>
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb">
+<a href="/">Home</a><span>/</span><a href="/categories/">Land, sea and recovery</a>
+<span>/</span>Conservation tourism
+</nav>
+<section class="cathead">
 <h1>Conservation tourism</h1>
 <p class="blurb">Turning visitors into conservation revenue without turning wildlife into a prop.</p>
-<div class="rule"><span class="eyebrow">28 resources</span></div>
-<ul class="list">
-<li class="item">
-<span class="top"><a class="nm" href="https://www.conservationatlas.org/" target="_blank" rel="noopener">Conservation Atlas</a></span>
-<p>Places and initiatives where tourism money reaches conservation, with photo essays and destination guides</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://www.gstc.org/" target="_blank" rel="noopener">Global Sustainable Tourism Council</a></span>
-<p>Owns the sustainable tourism criteria and accredits the bodies that audit against them. It does not certify anyone itself</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://earthcheck.org/" target="_blank" rel="noopener">EarthCheck</a></span>
-<p>Tourism sustainability benchmarking and certification</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://greendestinations.org/" target="_blank" rel="noopener">Green Destinations</a></span>
-<p>Certification and reporting for whole destinations rather than single businesses</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://www.travelife.info/" target="_blank" rel="noopener">Travelife</a></span>
-<p>Sustainability certification for tour operators and travel agencies</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://www.fairtradetourism.org/" target="_blank" rel="noopener">Fair Trade Tourism</a></span>
-<p>Fair trade certification for African tourism businesses. Use this domain, not the old booking one</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://www.ecotourism.org.au/" target="_blank" rel="noopener">Ecotourism Australia</a></span>
-<p>ECO Certification for ecotourism operators and guides</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://ecotourismkenya.org/" target="_blank" rel="noopener">Ecotourism Kenya</a></span>
-<p>Eco-rating certification for Kenyan lodges and camps</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://www.toftigers.org/" target="_blank" rel="noopener">TOFTigers</a></span>
-<p>Certification for wildlife lodges and operators in India and Nepal</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://whaleheritagesites.org/" target="_blank" rel="noopener">Whale Heritage Areas</a></span>
-<p>Accreditation for destinations that watch cetaceans responsibly</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://www.blueflag.global/" target="_blank" rel="noopener">Blue Flag</a></span>
-<p>Environmental award for beaches, marinas and tourism boats</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://www.thelongrun.org/" target="_blank" rel="noopener">The Long Run</a></span>
-<p>Membership for conservation-led tourism businesses, built on the 4C standard</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://ecotourism.org/" target="_blank" rel="noopener">The International Ecotourism Society</a></span>
-<p>The field&#x27;s oldest body and a useful guidelines archive. Its newest content is from 2021, so not an active network</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://www.globalecotourismnetwork.org/" target="_blank" rel="noopener">Global Ecotourism Network</a></span>
-<p>Regional ecotourism practitioner networks</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://www.adventuretravel.biz/" target="_blank" rel="noopener">Adventure Travel Trade Association</a></span>
-<p>Adventure travel industry trade association</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://www.atta.travel/" target="_blank" rel="noopener">African Travel and Tourism Association</a></span>
-<p>Pan-African tourism trade association</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://www.futureoftourism.org/" target="_blank" rel="noopener">Future of Tourism Coalition</a></span>
-<p>Destination-first tourism principles, with a toolkit for applying them</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://www.wildernesstrust.com/" target="_blank" rel="noopener">Wilderness Trust</a></span>
-<p>Safari-funded grants for African conservation projects</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://conservationtravelfoundation.org/" target="_blank" rel="noopener">Conservation Travel Foundation</a></span>
-<p>Namibian travel-funded conservation and community grants</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://www.tourismcares.org/" target="_blank" rel="noopener">Tourism Cares</a></span>
-<p>Travel industry nonprofit funding community impact projects</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://portals.iucn.org/library/node/47918" target="_blank" rel="noopener">IUCN Tourism and Visitor Management in Protected Areas</a></span>
-<p>IUCN best-practice guidelines for tourism inside protected areas</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://iucn.org/our-union/commissions/group/iucn-wcpa-tourism-and-protected-areas-specialist-group" target="_blank" rel="noopener">IUCN WCPA Tourism and Protected Areas Specialist Group</a></span>
-<p>The IUCN expert group on protected area tourism</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://openknowledge.worldbank.org/handle/10986/34433" target="_blank" rel="noopener">Tools and Resources for Nature-Based Tourism</a></span>
-<p>World Bank database of nature-based tourism toolkits, searchable</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://www.worldanimalprotection.org/our-campaigns/wildlife/commercial-exploitation/travel-tourism/" target="_blank" rel="noopener">World Animal Protection: travel and tourism</a></span>
-<p>Animal welfare guidance for travel companies and the venues they sell</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://www.untourism.int/project/unwto-study-economic-value-wildlife-watching-tourism-africa" target="_blank" rel="noopener">UN Tourism wildlife watching study</a></span>
-<p>What wildlife watching is actually worth in Africa</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://sustainabletravel.org/" target="_blank" rel="noopener">Sustainable Travel International</a></span>
-<p>Tourism impact measurement and destination climate tools</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://destinationcenter.org/" target="_blank" rel="noopener">Destination Stewardship Center</a></span>
-<p>Destination stewardship reporting and practitioner case studies</p>
-</li><li class="item">
-<span class="top"><a class="nm" href="https://travel-forward.org/" target="_blank" rel="noopener">Travel Forward</a></span>
-<p>Destination tourism research and toolkits. Renamed from The Travel Foundation, so search both</p>
-</li>
-</ul>
-<p class="nav2"><a href="/indigenous-and-community-led-conservation/">&larr; Indigenous and community-led conservation</a> <a href="/">All categories</a> <a href="/international-treaties-and-policy/">International treaties and policy &rarr;</a></p>
+<p class="eyebrow n">28 resources</p>
+<div class="filterwrap">
+<label class="skip" for="f">Search within this category</label>
+<input type="search" id="f" autocomplete="off" placeholder="Search within Conservation tourism&hellip;">
 </div>
+</section>
+<ul class="list" id="clist">
+<li class="item"><a href="https://www.conservationatlas.org/" target="_blank" rel="noopener">
+<span class="nm">Conservation Atlas<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Places and initiatives where tourism money reaches conservation, with photo essays and destination guides</p></a></li><li class="item"><a href="https://www.gstc.org/" target="_blank" rel="noopener">
+<span class="nm">Global Sustainable Tourism Council<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Owns the sustainable tourism criteria and accredits the bodies that audit against them. It does not certify anyone itself</p></a></li><li class="item"><a href="https://earthcheck.org/" target="_blank" rel="noopener">
+<span class="nm">EarthCheck<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Tourism sustainability benchmarking and certification</p></a></li><li class="item"><a href="https://greendestinations.org/" target="_blank" rel="noopener">
+<span class="nm">Green Destinations<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Certification and reporting for whole destinations rather than single businesses</p></a></li><li class="item"><a href="https://www.travelife.info/" target="_blank" rel="noopener">
+<span class="nm">Travelife<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Sustainability certification for tour operators and travel agencies</p></a></li><li class="item"><a href="https://www.fairtradetourism.org/" target="_blank" rel="noopener">
+<span class="nm">Fair Trade Tourism<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Fair trade certification for African tourism businesses. Use this domain, not the old booking one</p></a></li><li class="item"><a href="https://www.ecotourism.org.au/" target="_blank" rel="noopener">
+<span class="nm">Ecotourism Australia<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>ECO Certification for ecotourism operators and guides</p></a></li><li class="item"><a href="https://ecotourismkenya.org/" target="_blank" rel="noopener">
+<span class="nm">Ecotourism Kenya<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Eco-rating certification for Kenyan lodges and camps</p></a></li><li class="item"><a href="https://www.toftigers.org/" target="_blank" rel="noopener">
+<span class="nm">TOFTigers<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Certification for wildlife lodges and operators in India and Nepal</p></a></li><li class="item"><a href="https://whaleheritagesites.org/" target="_blank" rel="noopener">
+<span class="nm">Whale Heritage Areas<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Accreditation for destinations that watch cetaceans responsibly</p></a></li><li class="item"><a href="https://www.blueflag.global/" target="_blank" rel="noopener">
+<span class="nm">Blue Flag<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Environmental award for beaches, marinas and tourism boats</p></a></li><li class="item"><a href="https://www.thelongrun.org/" target="_blank" rel="noopener">
+<span class="nm">The Long Run<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Membership for conservation-led tourism businesses, built on the 4C standard</p></a></li><li class="item"><a href="https://ecotourism.org/" target="_blank" rel="noopener">
+<span class="nm">The International Ecotourism Society<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>The field&#x27;s oldest body and a useful guidelines archive. Its newest content is from 2021, so not an active network</p></a></li><li class="item"><a href="https://www.globalecotourismnetwork.org/" target="_blank" rel="noopener">
+<span class="nm">Global Ecotourism Network<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Regional ecotourism practitioner networks</p></a></li><li class="item"><a href="https://www.adventuretravel.biz/" target="_blank" rel="noopener">
+<span class="nm">Adventure Travel Trade Association<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Adventure travel industry trade association</p></a></li><li class="item"><a href="https://www.atta.travel/" target="_blank" rel="noopener">
+<span class="nm">African Travel and Tourism Association<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Pan-African tourism trade association</p></a></li><li class="item"><a href="https://www.futureoftourism.org/" target="_blank" rel="noopener">
+<span class="nm">Future of Tourism Coalition<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Destination-first tourism principles, with a toolkit for applying them</p></a></li><li class="item"><a href="https://www.wildernesstrust.com/" target="_blank" rel="noopener">
+<span class="nm">Wilderness Trust<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Safari-funded grants for African conservation projects</p></a></li><li class="item"><a href="https://conservationtravelfoundation.org/" target="_blank" rel="noopener">
+<span class="nm">Conservation Travel Foundation<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Namibian travel-funded conservation and community grants</p></a></li><li class="item"><a href="https://www.tourismcares.org/" target="_blank" rel="noopener">
+<span class="nm">Tourism Cares<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Travel industry nonprofit funding community impact projects</p></a></li><li class="item"><a href="https://portals.iucn.org/library/node/47918" target="_blank" rel="noopener">
+<span class="nm">IUCN Tourism and Visitor Management in Protected Areas<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>IUCN best-practice guidelines for tourism inside protected areas</p></a></li><li class="item"><a href="https://iucn.org/our-union/commissions/group/iucn-wcpa-tourism-and-protected-areas-specialist-group" target="_blank" rel="noopener">
+<span class="nm">IUCN WCPA Tourism and Protected Areas Specialist Group<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>The IUCN expert group on protected area tourism</p></a></li><li class="item"><a href="https://openknowledge.worldbank.org/handle/10986/34433" target="_blank" rel="noopener">
+<span class="nm">Tools and Resources for Nature-Based Tourism<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>World Bank database of nature-based tourism toolkits, searchable</p></a></li><li class="item"><a href="https://www.worldanimalprotection.org/our-campaigns/wildlife/commercial-exploitation/travel-tourism/" target="_blank" rel="noopener">
+<span class="nm">World Animal Protection: travel and tourism<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Animal welfare guidance for travel companies and the venues they sell</p></a></li><li class="item"><a href="https://www.untourism.int/project/unwto-study-economic-value-wildlife-watching-tourism-africa" target="_blank" rel="noopener">
+<span class="nm">UN Tourism wildlife watching study<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>What wildlife watching is actually worth in Africa</p></a></li><li class="item"><a href="https://sustainabletravel.org/" target="_blank" rel="noopener">
+<span class="nm">Sustainable Travel International<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Tourism impact measurement and destination climate tools</p></a></li><li class="item"><a href="https://destinationcenter.org/" target="_blank" rel="noopener">
+<span class="nm">Destination Stewardship Center<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Destination stewardship reporting and practitioner case studies</p></a></li><li class="item"><a href="https://travel-forward.org/" target="_blank" rel="noopener">
+<span class="nm">Travel Forward<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Destination tourism research and toolkits. Renamed from The Travel Foundation, so search both</p></a></li>
+</ul>
+<p class="hint hidden" id="none">Nothing in this category matches that.</p>
+<p class="nav2"><a href="/indigenous-and-community-led-conservation/">&larr; Indigenous and community-led conservation</a> <a href="/categories/">All categories</a> <a href="/international-treaties-and-policy/">International treaties and policy &rarr;</a></p>
+</div>
+
+<script>
+(function(){
+  var f=document.getElementById('f'),list=document.getElementById('clist'),
+      none=document.getElementById('none'),
+      items=[].slice.call(list.querySelectorAll('.item'));
+  var text=items.map(function(li){return li.textContent.toLowerCase();});
+  f.addEventListener('input',function(){
+    var ts=f.value.trim().toLowerCase().split(/\s+/).filter(Boolean)
+      .map(function(w){return w.replace(/s$/,'');});
+    var shown=0;
+    items.forEach(function(li,i){
+      var ok=ts.every(function(t){return text[i].indexOf(t)>-1;});
+      li.style.display=ok?'':'none';if(ok)shown++;
+    });
+    none.classList.toggle('hidden',shown>0);
+    list.classList.toggle('hidden',shown===0);
+  });
+})();
+</script>
 </main>
-<footer>
-<p class="eyebrow">Conservation Portal</p>
-<p>A curated shelf of resources for wildlife conservationists, built and maintained by
-<a href="https://biodiversitygroup.org/">The Biodiversity Group</a>.
-Know something that belongs here? <a href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%20suggestion">Tell us</a>.</p>
-</footer>
+<footer><div class="wrap">
+<div class="fgrid">
+<div>
+<img src="/assets/logo-lockup.png" alt="Conservation Portal" width="191" height="68">
+<p>A curated directory of tools and resources for wildlife conservationists.</p>
+</div>
+<div><h4>Explore</h4><ul>
+<li><a href="/#browse">Browse all</a></li>
+<li><a href="/categories/">Categories</a></li>
+<li><a href="/#recent">Recently added</a></li>
+</ul></div>
+<div><h4>Contribute</h4><ul>
+<li><a href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%3A%20suggest%20a%20resource">Suggest a resource</a></li>
+<li><a href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%3A%20broken%20link">Report a broken link</a></li>
+</ul></div>
+<div><h4>About</h4><ul>
+<li><a href="/about/">About the Portal</a></li>
+<li><a href="https://biodiversitygroup.org/">The Biodiversity Group</a></li>
+</ul></div>
+</div>
+<p class="fbase">A project of <a href="https://biodiversitygroup.org/">The Biodiversity Group</a>.</p>
+</div></footer>
+<script>
+(function(){
+  var h=document.getElementById('hdr');
+  var onScroll=function(){h.classList.toggle('stuck',window.scrollY>12);};
+  onScroll();addEventListener('scroll',onScroll,{passive:true});
+})();
+</script>
 </body>
 </html>
