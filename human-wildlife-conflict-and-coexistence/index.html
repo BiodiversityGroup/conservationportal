@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Human-wildlife conflict and coexistence | Conservation Portal</title>
-<meta name="description" content="Protecting livestock and crops, designing compensation, and defusing the politics. 3 hand-checked resources for conservationists.">
+<meta name="description" content="Protecting livestock and crops, designing compensation, and defusing the politics. 2 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/human-wildlife-conflict-and-coexistence/">
 <link rel="icon" href="/assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#123D2C">
 <meta property="og:title" content="Human-wildlife conflict and coexistence | Conservation Portal">
-<meta property="og:description" content="Protecting livestock and crops, designing compensation, and defusing the politics. 3 hand-checked resources for conservationists.">
+<meta property="og:description" content="Protecting livestock and crops, designing compensation, and defusing the politics. 2 hand-checked resources for conservationists.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://conservationportal.org/human-wildlife-conflict-and-coexistence/">
 <meta property="og:site_name" content="Conservation Portal">
@@ -230,13 +230,19 @@ mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .prose p{margin:0 0 14px}
 .prose ul{margin:0 0 16px;padding-left:22px}
 .prose li{margin-bottom:7px}
-.prose .cta{text-align:center;margin:26px 0 8px}
-.donate{display:inline-block;background:var(--forest);color:var(--paper);font-weight:700;
-  font-size:16px;text-decoration:none;padding:14px 30px;
-  clip-path:polygon(12px 0,100% 0,100% 100%,0 100%,0 12px);transition:background .16s}
-.donate:hover{background:var(--teal);color:var(--paper)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .donate{color:#0F1714}}
-:root[data-theme="dark"] .donate{color:#0F1714}
+/* The donate button is deliberately single-look: fixed deep forest in both themes, not
+   token-driven. --forest lightens on the dark theme, and the frog artwork is white on
+   transparency, so a token background would have put white on pale green. */
+.prose .cta{text-align:center;margin:32px 0 10px}
+.donate{display:inline-flex;flex-direction:column;align-items:center;gap:8px;
+  background:#123D2C;color:#fff;text-decoration:none;font-weight:700;font-size:19px;
+  line-height:1.15;padding:20px 46px 22px;
+  clip-path:polygon(15px 0,100% 0,100% 100%,0 100%,0 15px);transition:background .16s}
+.donate:hover,.donate:focus-visible{background:#168B82;color:#fff}
+.donate img{display:block;width:86px;height:63px}
+@media (max-width:560px){
+  .donate{font-size:17px;padding:16px 32px 18px}
+  .donate img{width:72px;height:53px}}
 
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
@@ -260,7 +266,7 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 .fbase .tbg img{height:30px;width:auto;display:block}
 .hidden{display:none}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Human-wildlife conflict and coexistence | Conservation Portal", "url": "https://conservationportal.org/human-wildlife-conflict-and-coexistence/", "description": "Protecting livestock and crops, designing compensation, and defusing the politics.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Threats and response", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Human-wildlife conflict and coexistence", "item": "https://conservationportal.org/human-wildlife-conflict-and-coexistence/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 3, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Conservation Conflict Research Group", "url": "https://conservationconflicts.info/"}, {"@type": "ListItem", "position": 2, "name": "CPeace", "url": "https://cpeace.ngo/"}, {"@type": "ListItem", "position": 3, "name": "IUCN SSC guidelines on human-wildlife conflict and coexistence", "url": "https://www.hwctf.org/guidelines"}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Human-wildlife conflict and coexistence | Conservation Portal", "url": "https://conservationportal.org/human-wildlife-conflict-and-coexistence/", "description": "Protecting livestock and crops, designing compensation, and defusing the politics.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Threats and response", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Human-wildlife conflict and coexistence", "item": "https://conservationportal.org/human-wildlife-conflict-and-coexistence/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 2, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "CPeace", "url": "https://cpeace.ngo/"}, {"@type": "ListItem", "position": 2, "name": "IUCN SSC guidelines on human-wildlife conflict and coexistence", "url": "https://www.hwctf.org/guidelines"}]}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -281,16 +287,14 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 <section class="cathead">
 <h1>Human-wildlife conflict and coexistence</h1>
 <p class="blurb">Protecting livestock and crops, designing compensation, and defusing the politics.</p>
-<p class="eyebrow n">3 resources</p>
+<p class="eyebrow n">2 resources</p>
 <div class="filterwrap">
 <label class="skip" for="f">Search within this category</label>
 <input type="search" id="f" autocomplete="off" placeholder="Search within Human-wildlife conflict and coexistence&hellip;">
 </div>
 </section>
 <ul class="list" id="clist">
-<li class="item"><a href="https://conservationconflicts.info/" target="_blank" rel="noopener">
-<span class="nm">Conservation Conflict Research Group<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Conflict research</p></a></li><li class="item"><a href="https://cpeace.ngo/" target="_blank" rel="noopener">
+<li class="item"><a href="https://cpeace.ngo/" target="_blank" rel="noopener">
 <span class="nm">CPeace<span class="arw" aria-hidden="true">&#8599;</span></span>
 <p>Conservation conflict transformation</p></a></li><li class="item"><a href="https://www.hwctf.org/guidelines" target="_blank" rel="noopener">
 <span class="nm">IUCN SSC guidelines on human-wildlife conflict and coexistence<span class="arw" aria-hidden="true">&#8599;</span></span>

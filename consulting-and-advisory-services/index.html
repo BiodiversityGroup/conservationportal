@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Consulting and advisory services | Conservation Portal</title>
-<meta name="description" content="People and firms you can hire when a project needs strategy, evaluation, economics or a grant writer. 18 hand-checked resources for conservationists.">
+<meta name="description" content="People and firms you can hire when a project needs strategy, evaluation, economics or a grant writer. 17 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/consulting-and-advisory-services/">
 <link rel="icon" href="/assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#123D2C">
 <meta property="og:title" content="Consulting and advisory services | Conservation Portal">
-<meta property="og:description" content="People and firms you can hire when a project needs strategy, evaluation, economics or a grant writer. 18 hand-checked resources for conservationists.">
+<meta property="og:description" content="People and firms you can hire when a project needs strategy, evaluation, economics or a grant writer. 17 hand-checked resources for conservationists.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://conservationportal.org/consulting-and-advisory-services/">
 <meta property="og:site_name" content="Conservation Portal">
@@ -230,13 +230,19 @@ mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .prose p{margin:0 0 14px}
 .prose ul{margin:0 0 16px;padding-left:22px}
 .prose li{margin-bottom:7px}
-.prose .cta{text-align:center;margin:26px 0 8px}
-.donate{display:inline-block;background:var(--forest);color:var(--paper);font-weight:700;
-  font-size:16px;text-decoration:none;padding:14px 30px;
-  clip-path:polygon(12px 0,100% 0,100% 100%,0 100%,0 12px);transition:background .16s}
-.donate:hover{background:var(--teal);color:var(--paper)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .donate{color:#0F1714}}
-:root[data-theme="dark"] .donate{color:#0F1714}
+/* The donate button is deliberately single-look: fixed deep forest in both themes, not
+   token-driven. --forest lightens on the dark theme, and the frog artwork is white on
+   transparency, so a token background would have put white on pale green. */
+.prose .cta{text-align:center;margin:32px 0 10px}
+.donate{display:inline-flex;flex-direction:column;align-items:center;gap:8px;
+  background:#123D2C;color:#fff;text-decoration:none;font-weight:700;font-size:19px;
+  line-height:1.15;padding:20px 46px 22px;
+  clip-path:polygon(15px 0,100% 0,100% 100%,0 100%,0 15px);transition:background .16s}
+.donate:hover,.donate:focus-visible{background:#168B82;color:#fff}
+.donate img{display:block;width:86px;height:63px}
+@media (max-width:560px){
+  .donate{font-size:17px;padding:16px 32px 18px}
+  .donate img{width:72px;height:53px}}
 
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
@@ -260,7 +266,7 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 .fbase .tbg img{height:30px;width:auto;display:block}
 .hidden{display:none}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Consulting and advisory services | Conservation Portal", "url": "https://conservationportal.org/consulting-and-advisory-services/", "description": "People and firms you can hire when a project needs strategy, evaluation, economics or a grant writer.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Money and services", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Consulting and advisory services", "item": "https://conservationportal.org/consulting-and-advisory-services/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 18, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Human Nature Group", "url": "https://www.humannaturegroup.org"}, {"@type": "ListItem", "position": 2, "name": "BLUeDNA Institute", "url": "https://bluedna.org"}, {"@type": "ListItem", "position": 3, "name": "Strategically Wild", "url": "https://www.strategicallywild.org/"}, {"@type": "ListItem", "position": 4, "name": "Global Conservation Solutions", "url": "https://www.globalconservationsolutions.com/"}, {"@type": "ListItem", "position": 5, "name": "Maliasili", "url": "https://maliasili.org"}, {"@type": "ListItem", "position": 6, "name": "Wildlife Impact", "url": "https://wildlifeimpact.org"}, {"@type": "ListItem", "position": 7, "name": "Conservation Strategy Fund", "url": "https://www.conservation-strategy.org/what-we-do"}, {"@type": "ListItem", "position": 8, "name": "IUCN SSC Conservation Planning Specialist Group", "url": "https://www.cpsg.org"}, {"@type": "ListItem", "position": 9, "name": "Capacity for Conservation", "url": "https://www.capacityforconservation.org/"}, {"@type": "ListItem", "position": 10, "name": "Development for Conservation", "url": "https://developmentforconservation.com/"}, {"@type": "ListItem", "position": 11, "name": "Conservation Careers coaching", "url": "https://www.conservation-careers.com/support/"}, {"@type": "ListItem", "position": 12, "name": "On Life and Wildlife grant writing", "url": "https://onlifeandwildlife.com/grant-writing-editing/"}, {"@type": "ListItem", "position": 13, "name": "Lupine Grant Strategies", "url": "https://lupinegrants.com/grantwriter-outdoor-nonprofits/"}, {"@type": "ListItem", "position": 14, "name": "Conservation Coaches Network: Find a Coach", "url": "https://www.ccnetglobal.com/conservation-coaches/find-a-coach/"}, {"@type": "ListItem", "position": 15, "name": "Conservation Finance Alliance professional services", "url": "https://www.conservationfinancealliance.org/professional-services-directory"}, {"@type": "ListItem", "position": 16, "name": "CIEEM Registered Practice Directory", "url": "https://events.cieem.net/registered-practice-directory/"}, {"@type": "ListItem", "position": 17, "name": "Maine Land Trust Network consultants", "url": "https://www.mltn.org/resources/consultants/"}, {"@type": "ListItem", "position": 18, "name": "Taking Action for Wildlife consultants", "url": "https://www.takingactionforwildlife.org/natural-resources-consultants"}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Consulting and advisory services | Conservation Portal", "url": "https://conservationportal.org/consulting-and-advisory-services/", "description": "People and firms you can hire when a project needs strategy, evaluation, economics or a grant writer.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Money and services", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Consulting and advisory services", "item": "https://conservationportal.org/consulting-and-advisory-services/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 17, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Human Nature Group", "url": "https://www.humannaturegroup.org"}, {"@type": "ListItem", "position": 2, "name": "BLUeDNA Institute", "url": "https://bluedna.org"}, {"@type": "ListItem", "position": 3, "name": "Strategically Wild", "url": "https://www.strategicallywild.org/"}, {"@type": "ListItem", "position": 4, "name": "Global Conservation Solutions", "url": "https://www.globalconservationsolutions.com/"}, {"@type": "ListItem", "position": 5, "name": "Maliasili", "url": "https://maliasili.org"}, {"@type": "ListItem", "position": 6, "name": "Wildlife Impact", "url": "https://wildlifeimpact.org"}, {"@type": "ListItem", "position": 7, "name": "Conservation Strategy Fund", "url": "https://www.conservation-strategy.org/what-we-do"}, {"@type": "ListItem", "position": 8, "name": "IUCN SSC Conservation Planning Specialist Group", "url": "https://www.cpsg.org"}, {"@type": "ListItem", "position": 9, "name": "Capacity for Conservation", "url": "https://www.capacityforconservation.org/"}, {"@type": "ListItem", "position": 10, "name": "Development for Conservation", "url": "https://developmentforconservation.com/"}, {"@type": "ListItem", "position": 11, "name": "Conservation Careers coaching", "url": "https://www.conservation-careers.com/support/"}, {"@type": "ListItem", "position": 12, "name": "On Life and Wildlife grant writing", "url": "https://onlifeandwildlife.com/grant-writing-editing/"}, {"@type": "ListItem", "position": 13, "name": "Lupine Grant Strategies", "url": "https://lupinegrants.com/grantwriter-outdoor-nonprofits/"}, {"@type": "ListItem", "position": 14, "name": "Conservation Coaches Network: Find a Coach", "url": "https://www.ccnetglobal.com/conservation-coaches/find-a-coach/"}, {"@type": "ListItem", "position": 15, "name": "Conservation Finance Alliance professional services", "url": "https://www.conservationfinancealliance.org/professional-services-directory"}, {"@type": "ListItem", "position": 16, "name": "CIEEM Registered Practice Directory", "url": "https://events.cieem.net/registered-practice-directory/"}, {"@type": "ListItem", "position": 17, "name": "Maine Land Trust Network consultants", "url": "https://www.mltn.org/resources/consultants/"}]}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -281,7 +287,7 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 <section class="cathead">
 <h1>Consulting and advisory services</h1>
 <p class="blurb">People and firms you can hire when a project needs strategy, evaluation, economics or a grant writer.</p>
-<p class="eyebrow n">18 resources</p>
+<p class="eyebrow n">17 resources</p>
 <div class="filterwrap">
 <label class="skip" for="f">Search within this category</label>
 <input type="search" id="f" autocomplete="off" placeholder="Search within Consulting and advisory services&hellip;">
@@ -322,9 +328,7 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 <span class="nm">CIEEM Registered Practice Directory<span class="arw" aria-hidden="true">&#8599;</span></span>
 <p>Searchable directory of ecological consultancies, UK and Ireland</p></a></li><li class="item"><a href="https://www.mltn.org/resources/consultants/" target="_blank" rel="noopener">
 <span class="nm">Maine Land Trust Network consultants<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Regional directory of independent conservation consultants</p></a></li><li class="item"><a href="https://www.takingactionforwildlife.org/natural-resources-consultants" target="_blank" rel="noopener">
-<span class="nm">Taking Action for Wildlife consultants<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Directory of wildlife and natural resource consultants, New Hampshire</p></a></li>
+<p>Regional directory of independent conservation consultants</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/fiscal-sponsorship/">&larr; Fiscal sponsorship</a> <a href="/#browse">All categories</a> <a href="/organization-directories/">Organization directories &rarr;</a></p>

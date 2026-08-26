@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Planning, evaluation and practice | Conservation Portal</title>
-<meta name="description" content="Frameworks for designing a project and finding out whether it worked. 16 hand-checked resources for conservationists.">
+<meta name="description" content="Frameworks for designing a project and finding out whether it worked. 13 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/planning-evaluation-and-practice/">
 <link rel="icon" href="/assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#123D2C">
 <meta property="og:title" content="Planning, evaluation and practice | Conservation Portal">
-<meta property="og:description" content="Frameworks for designing a project and finding out whether it worked. 16 hand-checked resources for conservationists.">
+<meta property="og:description" content="Frameworks for designing a project and finding out whether it worked. 13 hand-checked resources for conservationists.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://conservationportal.org/planning-evaluation-and-practice/">
 <meta property="og:site_name" content="Conservation Portal">
@@ -230,13 +230,19 @@ mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .prose p{margin:0 0 14px}
 .prose ul{margin:0 0 16px;padding-left:22px}
 .prose li{margin-bottom:7px}
-.prose .cta{text-align:center;margin:26px 0 8px}
-.donate{display:inline-block;background:var(--forest);color:var(--paper);font-weight:700;
-  font-size:16px;text-decoration:none;padding:14px 30px;
-  clip-path:polygon(12px 0,100% 0,100% 100%,0 100%,0 12px);transition:background .16s}
-.donate:hover{background:var(--teal);color:var(--paper)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .donate{color:#0F1714}}
-:root[data-theme="dark"] .donate{color:#0F1714}
+/* The donate button is deliberately single-look: fixed deep forest in both themes, not
+   token-driven. --forest lightens on the dark theme, and the frog artwork is white on
+   transparency, so a token background would have put white on pale green. */
+.prose .cta{text-align:center;margin:32px 0 10px}
+.donate{display:inline-flex;flex-direction:column;align-items:center;gap:8px;
+  background:#123D2C;color:#fff;text-decoration:none;font-weight:700;font-size:19px;
+  line-height:1.15;padding:20px 46px 22px;
+  clip-path:polygon(15px 0,100% 0,100% 100%,0 100%,0 15px);transition:background .16s}
+.donate:hover,.donate:focus-visible{background:#168B82;color:#fff}
+.donate img{display:block;width:86px;height:63px}
+@media (max-width:560px){
+  .donate{font-size:17px;padding:16px 32px 18px}
+  .donate img{width:72px;height:53px}}
 
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
@@ -260,7 +266,7 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 .fbase .tbg img{height:30px;width:auto;display:block}
 .hidden{display:none}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Planning, evaluation and practice | Conservation Portal", "url": "https://conservationportal.org/planning-evaluation-and-practice/", "description": "Frameworks for designing a project and finding out whether it worked.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Rules and planning", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Planning, evaluation and practice", "item": "https://conservationportal.org/planning-evaluation-and-practice/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 16, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Conservation Measures Partnership", "url": "https://www.conservationmeasures.org/"}, {"@type": "ListItem", "position": 2, "name": "Conservation Coaches Network", "url": "https://www.ccnetglobal.com/"}, {"@type": "ListItem", "position": 3, "name": "Foundations of Success", "url": "https://fosonline.org/"}, {"@type": "ListItem", "position": 4, "name": "Miradi", "url": "https://miradi.org/"}, {"@type": "ListItem", "position": 5, "name": "Conservation Planning Database", "url": "https://database.conservationplanning.org/"}, {"@type": "ListItem", "position": 6, "name": "Prism evaluation toolkit", "url": "https://conservationevaluation.org/"}, {"@type": "ListItem", "position": 7, "name": "Conservation Learning Initiative", "url": "https://conservation-learning.org/"}, {"@type": "ListItem", "position": 8, "name": "WCS Failure Factors", "url": "https://programs.wcs.org/failurefactors/"}, {"@type": "ListItem", "position": 9, "name": "Transforming Conservation", "url": "https://transformingconservation.org/"}, {"@type": "ListItem", "position": 10, "name": "Future of Conservation survey", "url": "https://www.futureconservation.org/"}, {"@type": "ListItem", "position": 11, "name": "PCLG tools", "url": "https://povertyandconservation.info/"}, {"@type": "ListItem", "position": 12, "name": "Community Voice Method", "url": "http://communityvoicemethod.org/"}, {"@type": "ListItem", "position": 13, "name": "IUCN conservation tools", "url": "https://www.iucn.org/resources/conservation-tools"}, {"@type": "ListItem", "position": 14, "name": "NatureServe tools and services", "url": "https://www.natureserve.org/"}, {"@type": "ListItem", "position": 15, "name": "ConservationTools.org", "url": "https://conservationtools.org/"}, {"@type": "ListItem", "position": 16, "name": "LandScale", "url": "https://www.landscale.org/"}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Planning, evaluation and practice | Conservation Portal", "url": "https://conservationportal.org/planning-evaluation-and-practice/", "description": "Frameworks for designing a project and finding out whether it worked.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Rules and planning", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Planning, evaluation and practice", "item": "https://conservationportal.org/planning-evaluation-and-practice/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 13, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Conservation Measures Partnership", "url": "https://www.conservationmeasures.org/"}, {"@type": "ListItem", "position": 2, "name": "Conservation Coaches Network", "url": "https://www.ccnetglobal.com/"}, {"@type": "ListItem", "position": 3, "name": "Foundations of Success", "url": "https://fosonline.org/"}, {"@type": "ListItem", "position": 4, "name": "Miradi Share", "url": "https://www.miradishare.org/"}, {"@type": "ListItem", "position": 5, "name": "Prism evaluation toolkit", "url": "https://conservationevaluation.org/"}, {"@type": "ListItem", "position": 6, "name": "Conservation Learning Initiative", "url": "https://conservation-learning.org/"}, {"@type": "ListItem", "position": 7, "name": "WCS Failure Factors", "url": "https://programs.wcs.org/failurefactors/"}, {"@type": "ListItem", "position": 8, "name": "Future of Conservation survey", "url": "https://www.futureconservation.org/"}, {"@type": "ListItem", "position": 9, "name": "PCLG at IIED", "url": "https://www.iied.org/poverty-conservation-learning-group"}, {"@type": "ListItem", "position": 10, "name": "IUCN conservation tools", "url": "https://www.iucn.org/resources/conservation-tools"}, {"@type": "ListItem", "position": 11, "name": "NatureServe tools and services", "url": "https://www.natureserve.org/"}, {"@type": "ListItem", "position": 12, "name": "WeConservePA library", "url": "https://library.weconservepa.org/"}, {"@type": "ListItem", "position": 13, "name": "LandScale", "url": "https://www.landscale.org/"}]}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -281,7 +287,7 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 <section class="cathead">
 <h1>Planning, evaluation and practice</h1>
 <p class="blurb">Frameworks for designing a project and finding out whether it worked.</p>
-<p class="eyebrow n">16 resources</p>
+<p class="eyebrow n">13 resources</p>
 <div class="filterwrap">
 <label class="skip" for="f">Search within this category</label>
 <input type="search" id="f" autocomplete="off" placeholder="Search within Planning, evaluation and practice&hellip;">
@@ -294,31 +300,25 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 <span class="nm">Conservation Coaches Network<span class="arw" aria-hidden="true">&#8599;</span></span>
 <p>Open Standards coaching community</p></a></li><li class="item"><a href="https://fosonline.org/" target="_blank" rel="noopener">
 <span class="nm">Foundations of Success<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Adaptive management and evaluation training</p></a></li><li class="item"><a href="https://miradi.org/" target="_blank" rel="noopener">
-<span class="nm">Miradi<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Project planning and monitoring software built on the Conservation Standards</p></a></li><li class="item"><a href="https://database.conservationplanning.org/" target="_blank" rel="noopener">
-<span class="nm">Conservation Planning Database<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Systematic planning exercise catalog</p></a></li><li class="item"><a href="https://conservationevaluation.org/" target="_blank" rel="noopener">
+<p>Adaptive management and evaluation training</p></a></li><li class="item"><a href="https://www.miradishare.org/" target="_blank" rel="noopener">
+<span class="nm">Miradi Share<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Project planning and monitoring built on the Conservation Standards</p></a></li><li class="item"><a href="https://conservationevaluation.org/" target="_blank" rel="noopener">
 <span class="nm">Prism evaluation toolkit<span class="arw" aria-hidden="true">&#8599;</span></span>
 <p>Evaluation toolkit for small and medium projects</p></a></li><li class="item"><a href="https://conservation-learning.org/" target="_blank" rel="noopener">
 <span class="nm">Conservation Learning Initiative<span class="arw" aria-hidden="true">&#8599;</span></span>
 <p>Learning-from-evidence resources</p></a></li><li class="item"><a href="https://programs.wcs.org/failurefactors/" target="_blank" rel="noopener">
 <span class="nm">WCS Failure Factors<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Cataloging why projects fail</p></a></li><li class="item"><a href="https://transformingconservation.org/" target="_blank" rel="noopener">
-<span class="nm">Transforming Conservation<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Systems thinking resources</p></a></li><li class="item"><a href="https://www.futureconservation.org/" target="_blank" rel="noopener">
+<p>Cataloging why projects fail</p></a></li><li class="item"><a href="https://www.futureconservation.org/" target="_blank" rel="noopener">
 <span class="nm">Future of Conservation survey<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Values-mapping for conservationists</p></a></li><li class="item"><a href="https://povertyandconservation.info/" target="_blank" rel="noopener">
-<span class="nm">PCLG tools<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Poverty and conservation tools and methods</p></a></li><li class="item"><a href="http://communityvoicemethod.org/" target="_blank" rel="noopener">
-<span class="nm">Community Voice Method<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Film-based community consultation</p></a></li><li class="item"><a href="https://www.iucn.org/resources/conservation-tools" target="_blank" rel="noopener">
+<p>Values-mapping for conservationists</p></a></li><li class="item"><a href="https://www.iied.org/poverty-conservation-learning-group" target="_blank" rel="noopener">
+<span class="nm">PCLG at IIED<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Poverty and conservation tools, methods and small grants, hosted by IIED</p></a></li><li class="item"><a href="https://www.iucn.org/resources/conservation-tools" target="_blank" rel="noopener">
 <span class="nm">IUCN conservation tools<span class="arw" aria-hidden="true">&#8599;</span></span>
 <p>IUCN tools index</p></a></li><li class="item"><a href="https://www.natureserve.org/" target="_blank" rel="noopener">
 <span class="nm">NatureServe tools and services<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Ranking methods and Biotics</p></a></li><li class="item"><a href="https://conservationtools.org/" target="_blank" rel="noopener">
-<span class="nm">ConservationTools.org<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Land conservation guides</p></a></li><li class="item"><a href="https://www.landscale.org/" target="_blank" rel="noopener">
+<p>Ranking methods and Biotics</p></a></li><li class="item"><a href="https://library.weconservepa.org/" target="_blank" rel="noopener">
+<span class="nm">WeConservePA library<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Guides on land conservation, easements and stewardship. Formerly ConservationTools.org</p></a></li><li class="item"><a href="https://www.landscale.org/" target="_blank" rel="noopener">
 <span class="nm">LandScale<span class="arw" aria-hidden="true">&#8599;</span></span>
 <p>Landscape sustainability assessment</p></a></li>
 </ul>

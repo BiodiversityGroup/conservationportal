@@ -230,13 +230,19 @@ mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .prose p{margin:0 0 14px}
 .prose ul{margin:0 0 16px;padding-left:22px}
 .prose li{margin-bottom:7px}
-.prose .cta{text-align:center;margin:26px 0 8px}
-.donate{display:inline-block;background:var(--forest);color:var(--paper);font-weight:700;
-  font-size:16px;text-decoration:none;padding:14px 30px;
-  clip-path:polygon(12px 0,100% 0,100% 100%,0 100%,0 12px);transition:background .16s}
-.donate:hover{background:var(--teal);color:var(--paper)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .donate{color:#0F1714}}
-:root[data-theme="dark"] .donate{color:#0F1714}
+/* The donate button is deliberately single-look: fixed deep forest in both themes, not
+   token-driven. --forest lightens on the dark theme, and the frog artwork is white on
+   transparency, so a token background would have put white on pale green. */
+.prose .cta{text-align:center;margin:32px 0 10px}
+.donate{display:inline-flex;flex-direction:column;align-items:center;gap:8px;
+  background:#123D2C;color:#fff;text-decoration:none;font-weight:700;font-size:19px;
+  line-height:1.15;padding:20px 46px 22px;
+  clip-path:polygon(15px 0,100% 0,100% 100%,0 100%,0 15px);transition:background .16s}
+.donate:hover,.donate:focus-visible{background:#168B82;color:#fff}
+.donate img{display:block;width:86px;height:63px}
+@media (max-width:560px){
+  .donate{font-size:17px;padding:16px 32px 18px}
+  .donate img{width:72px;height:53px}}
 
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
@@ -284,7 +290,7 @@ easily find.</p>
 <p>The tools exist. Grant databases, species registers, camera-trap platforms, ranger
 toolkits, job boards, reporting systems. What the sector has never had is one place to
 put them, so most conservationists find them by accident, late, or never.</p>
-<p>Conservation Portal holds <b>561 resources</b> across <b>42 categories</b>.</p>
+<p>Conservation Portal holds <b>548 resources</b> across <b>42 categories</b>.</p>
 
 <h2>Why the sector needs a shelf</h2>
 <p>Conservation is not badly organized because anyone is careless. It is thousands of
@@ -341,8 +347,10 @@ on the species most conservation funding overlooks, and by people who donate to 
 <p>A donation funds the fieldwork, and it funds the unglamorous hours that keep lists like
 this one honest: opening every link, chasing the ones that died, and writing down what a
 resource actually does.</p>
-<p class="cta"><a class="donate" href="https://biodiversitygroup.org/donate/">Donate
-now</a></p>
+<p class="cta"><a class="donate" href="https://biodiversitygroup.org/donate/"
+target="_blank" rel="noopener">
+<img src="/assets/tbg-white-frog.svg" alt="" width="86" height="63" aria-hidden="true">
+<span>Donate now</span></a></p>
 </div>
 </div>
 </main>

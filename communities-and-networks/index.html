@@ -230,13 +230,19 @@ mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .prose p{margin:0 0 14px}
 .prose ul{margin:0 0 16px;padding-left:22px}
 .prose li{margin-bottom:7px}
-.prose .cta{text-align:center;margin:26px 0 8px}
-.donate{display:inline-block;background:var(--forest);color:var(--paper);font-weight:700;
-  font-size:16px;text-decoration:none;padding:14px 30px;
-  clip-path:polygon(12px 0,100% 0,100% 100%,0 100%,0 12px);transition:background .16s}
-.donate:hover{background:var(--teal);color:var(--paper)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .donate{color:#0F1714}}
-:root[data-theme="dark"] .donate{color:#0F1714}
+/* The donate button is deliberately single-look: fixed deep forest in both themes, not
+   token-driven. --forest lightens on the dark theme, and the frog artwork is white on
+   transparency, so a token background would have put white on pale green. */
+.prose .cta{text-align:center;margin:32px 0 10px}
+.donate{display:inline-flex;flex-direction:column;align-items:center;gap:8px;
+  background:#123D2C;color:#fff;text-decoration:none;font-weight:700;font-size:19px;
+  line-height:1.15;padding:20px 46px 22px;
+  clip-path:polygon(15px 0,100% 0,100% 100%,0 100%,0 15px);transition:background .16s}
+.donate:hover,.donate:focus-visible{background:#168B82;color:#fff}
+.donate img{display:block;width:86px;height:63px}
+@media (max-width:560px){
+  .donate{font-size:17px;padding:16px 32px 18px}
+  .donate img{width:72px;height:53px}}
 
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
@@ -260,7 +266,7 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 .fbase .tbg img{height:30px;width:auto;display:block}
 .hidden{display:none}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Communities and networks | Conservation Portal", "url": "https://conservationportal.org/communities-and-networks/", "description": "Peer groups, professional societies and skills-matching platforms.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "People", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Communities and networks", "item": "https://conservationportal.org/communities-and-networks/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 14, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TBG conservation conference list", "url": "https://biodiversitygroup.org/conservation-conference-list/"}, {"@type": "ListItem", "position": 2, "name": "WildHub", "url": "https://wildhub.community/"}, {"@type": "ListItem", "position": 3, "name": "Women In Nature Network", "url": "https://womeninnaturenetwork.org/"}, {"@type": "ListItem", "position": 4, "name": "WE Africa", "url": "https://womenforenvironment.org/"}, {"@type": "ListItem", "position": 5, "name": "500 Women Scientists", "url": "https://500womenscientists.org/"}, {"@type": "ListItem", "position": 6, "name": "Environmental Evaluators Network", "url": "https://environmentalevaluators.net/"}, {"@type": "ListItem", "position": 7, "name": "Ashoka", "url": "https://www.ashoka.org/"}, {"@type": "ListItem", "position": 8, "name": "NEXUS", "url": "https://nexusglobal.org/"}, {"@type": "ListItem", "position": 9, "name": "We Make Change", "url": "https://wemakechange.org/"}, {"@type": "ListItem", "position": 10, "name": "Taproot Plus", "url": "https://taprootplus.org/"}, {"@type": "ListItem", "position": 11, "name": "Global Hand", "url": "https://www.globalhand.org/"}, {"@type": "ListItem", "position": 12, "name": "Society for Conservation Biology", "url": "https://conbio.org/"}, {"@type": "ListItem", "position": 13, "name": "The Wildlife Society", "url": "https://wildlife.org/"}, {"@type": "ListItem", "position": 14, "name": "IUCN PAPACO", "url": "https://papaco.org/"}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Communities and networks | Conservation Portal", "url": "https://conservationportal.org/communities-and-networks/", "description": "Peer groups, professional societies and skills-matching platforms.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "People", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Communities and networks", "item": "https://conservationportal.org/communities-and-networks/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 14, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TBG conservation conference list", "url": "https://biodiversitygroup.org/conservation-conference-list/"}, {"@type": "ListItem", "position": 2, "name": "WildHub", "url": "https://wildhub.community/"}, {"@type": "ListItem", "position": 3, "name": "Women In Nature Network", "url": "https://womeninnaturenetwork.org/"}, {"@type": "ListItem", "position": 4, "name": "WE Africa", "url": "https://womenforenvironment.org/"}, {"@type": "ListItem", "position": 5, "name": "500 Women Scientists", "url": "https://500womenscientists.org/"}, {"@type": "ListItem", "position": 6, "name": "Environmental Evaluators Network", "url": "https://environmentalevaluators.net/"}, {"@type": "ListItem", "position": 7, "name": "Ashoka", "url": "https://www.ashoka.org/"}, {"@type": "ListItem", "position": 8, "name": "NEXUS", "url": "https://nexusglobal.org/"}, {"@type": "ListItem", "position": 9, "name": "We Make Change", "url": "https://wemakechange.org/"}, {"@type": "ListItem", "position": 10, "name": "Taproot Foundation", "url": "https://taprootfoundation.org/"}, {"@type": "ListItem", "position": 11, "name": "Global Hand", "url": "https://www.globalhand.org/"}, {"@type": "ListItem", "position": 12, "name": "Society for Conservation Biology", "url": "https://conbio.org/"}, {"@type": "ListItem", "position": 13, "name": "The Wildlife Society", "url": "https://wildlife.org/"}, {"@type": "ListItem", "position": 14, "name": "IUCN PAPACO", "url": "https://papaco.org/"}]}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -306,9 +312,9 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 <span class="nm">NEXUS<span class="arw" aria-hidden="true">&#8599;</span></span>
 <p>Wealth and social entrepreneurship network</p></a></li><li class="item"><a href="https://wemakechange.org/" target="_blank" rel="noopener">
 <span class="nm">We Make Change<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Skills volunteering for causes</p></a></li><li class="item"><a href="https://taprootplus.org/" target="_blank" rel="noopener">
-<span class="nm">Taproot Plus<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Pro bono professional matching</p></a></li><li class="item"><a href="https://www.globalhand.org/" target="_blank" rel="noopener">
+<p>Skills volunteering for causes</p></a></li><li class="item"><a href="https://taprootfoundation.org/" target="_blank" rel="noopener">
+<span class="nm">Taproot Foundation<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Pro bono professional matching for nonprofits</p></a></li><li class="item"><a href="https://www.globalhand.org/" target="_blank" rel="noopener">
 <span class="nm">Global Hand<span class="arw" aria-hidden="true">&#8599;</span></span>
 <p>Corporate and NGO partnership matching</p></a></li><li class="item"><a href="https://conbio.org/" target="_blank" rel="noopener">
 <span class="nm">Society for Conservation Biology<span class="arw" aria-hidden="true">&#8599;</span></span>

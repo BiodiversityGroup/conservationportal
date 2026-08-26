@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Species and taxonomy databases | Conservation Portal</title>
-<meta name="description" content="Names, threat status, distributions and the records behind them. 33 hand-checked resources for conservationists.">
+<meta name="description" content="Names, threat status, distributions and the records behind them. 32 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/species-and-taxonomy-databases/">
 <link rel="icon" href="/assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#123D2C">
 <meta property="og:title" content="Species and taxonomy databases | Conservation Portal">
-<meta property="og:description" content="Names, threat status, distributions and the records behind them. 33 hand-checked resources for conservationists.">
+<meta property="og:description" content="Names, threat status, distributions and the records behind them. 32 hand-checked resources for conservationists.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://conservationportal.org/species-and-taxonomy-databases/">
 <meta property="og:site_name" content="Conservation Portal">
@@ -230,13 +230,19 @@ mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .prose p{margin:0 0 14px}
 .prose ul{margin:0 0 16px;padding-left:22px}
 .prose li{margin-bottom:7px}
-.prose .cta{text-align:center;margin:26px 0 8px}
-.donate{display:inline-block;background:var(--forest);color:var(--paper);font-weight:700;
-  font-size:16px;text-decoration:none;padding:14px 30px;
-  clip-path:polygon(12px 0,100% 0,100% 100%,0 100%,0 12px);transition:background .16s}
-.donate:hover{background:var(--teal);color:var(--paper)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .donate{color:#0F1714}}
-:root[data-theme="dark"] .donate{color:#0F1714}
+/* The donate button is deliberately single-look: fixed deep forest in both themes, not
+   token-driven. --forest lightens on the dark theme, and the frog artwork is white on
+   transparency, so a token background would have put white on pale green. */
+.prose .cta{text-align:center;margin:32px 0 10px}
+.donate{display:inline-flex;flex-direction:column;align-items:center;gap:8px;
+  background:#123D2C;color:#fff;text-decoration:none;font-weight:700;font-size:19px;
+  line-height:1.15;padding:20px 46px 22px;
+  clip-path:polygon(15px 0,100% 0,100% 100%,0 100%,0 15px);transition:background .16s}
+.donate:hover,.donate:focus-visible{background:#168B82;color:#fff}
+.donate img{display:block;width:86px;height:63px}
+@media (max-width:560px){
+  .donate{font-size:17px;padding:16px 32px 18px}
+  .donate img{width:72px;height:53px}}
 
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
@@ -260,7 +266,7 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 .fbase .tbg img{height:30px;width:auto;display:block}
 .hidden{display:none}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Species and taxonomy databases | Conservation Portal", "url": "https://conservationportal.org/species-and-taxonomy-databases/", "description": "Names, threat status, distributions and the records behind them.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Species and status", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Species and taxonomy databases", "item": "https://conservationportal.org/species-and-taxonomy-databases/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 33, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GBIF", "url": "https://www.gbif.org/"}, {"@type": "ListItem", "position": 2, "name": "IUCN Red List", "url": "https://www.iucnredlist.org/"}, {"@type": "ListItem", "position": 3, "name": "Catalogue of Life", "url": "https://www.catalogueoflife.org/"}, {"@type": "ListItem", "position": 4, "name": "ITIS", "url": "https://itis.gov/"}, {"@type": "ListItem", "position": 5, "name": "Encyclopedia of Life", "url": "https://eol.org/"}, {"@type": "ListItem", "position": 6, "name": "NatureServe Explorer", "url": "https://explorer.natureserve.org/"}, {"@type": "ListItem", "position": 7, "name": "Species+", "url": "https://speciesplus.net/"}, {"@type": "ListItem", "position": 8, "name": "Map of Life", "url": "https://mol.org/"}, {"@type": "ListItem", "position": 9, "name": "Reptile Database", "url": "http://www.reptile-database.org/"}, {"@type": "ListItem", "position": 10, "name": "Amphibian Species of the World", "url": "https://amphibiansoftheworld.amnh.org/"}, {"@type": "ListItem", "position": 11, "name": "AmphibiaWeb", "url": "https://amphibiaweb.org/"}, {"@type": "ListItem", "position": 12, "name": "Amphibian Conservation Needs Assessments", "url": "https://www.conservationneeds.org/"}, {"@type": "ListItem", "position": 13, "name": "Mammal Diversity Database", "url": "https://www.mammaldiversity.org/"}, {"@type": "ListItem", "position": 14, "name": "All The World's Primates", "url": "https://alltheworldsprimates.org/"}, {"@type": "ListItem", "position": 15, "name": "Elephant Database", "url": "https://www.elephant.se/"}, {"@type": "ListItem", "position": 16, "name": "Rhino Resource Center", "url": "http://www.rhinoresourcecenter.com/"}, {"@type": "ListItem", "position": 17, "name": "AnimalBase", "url": "https://animalbase.org/"}, {"@type": "ListItem", "position": 18, "name": "Avian Knowledge Network", "url": "https://avianknowledge.net/"}, {"@type": "ListItem", "position": 19, "name": "FishBase", "url": "https://fishbase.org/"}, {"@type": "ListItem", "position": 20, "name": "Shark-Base", "url": "https://shark-base.org/"}, {"@type": "ListItem", "position": 21, "name": "OBIS", "url": "https://obis.org/"}, {"@type": "ListItem", "position": 22, "name": "WoRMS", "url": "https://www.marinespecies.org/"}, {"@type": "ListItem", "position": 23, "name": "GlobalFungi", "url": "https://globalfungi.com/"}, {"@type": "ListItem", "position": 24, "name": "SEINet / Symbiota", "url": "https://swbiodiversity.org/seinet/"}, {"@type": "ListItem", "position": 25, "name": "Calflora", "url": "https://www.calflora.org/"}, {"@type": "ListItem", "position": 26, "name": "Jepson eFlora", "url": "https://ucjeps.berkeley.edu/"}, {"@type": "ListItem", "position": 27, "name": "antmaps.org", "url": "https://antmaps.org/"}, {"@type": "ListItem", "position": 28, "name": "Recently Extinct Plants and Animals Database", "url": "https://recentlyextinctspecies.com/"}, {"@type": "ListItem", "position": 29, "name": "Threatened Island Biodiversity Database", "url": "https://tib.islandconservation.org/"}, {"@type": "ListItem", "position": 30, "name": "World Database of Key Biodiversity Areas", "url": "https://www.keybiodiversityareas.org/"}, {"@type": "ListItem", "position": 31, "name": "Alliance for Zero Extinction", "url": "https://zeroextinction.org/"}, {"@type": "ListItem", "position": 32, "name": "Local Biodiversity Outlooks", "url": "https://localbiodiversityoutlooks.net/"}, {"@type": "ListItem", "position": 33, "name": "snakeDatabase LD50", "url": "https://snakedatabase.org/"}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Species and taxonomy databases | Conservation Portal", "url": "https://conservationportal.org/species-and-taxonomy-databases/", "description": "Names, threat status, distributions and the records behind them.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Species and status", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Species and taxonomy databases", "item": "https://conservationportal.org/species-and-taxonomy-databases/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 32, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GBIF", "url": "https://www.gbif.org/"}, {"@type": "ListItem", "position": 2, "name": "IUCN Red List", "url": "https://www.iucnredlist.org/"}, {"@type": "ListItem", "position": 3, "name": "Catalogue of Life", "url": "https://www.catalogueoflife.org/"}, {"@type": "ListItem", "position": 4, "name": "ITIS", "url": "https://itis.gov/"}, {"@type": "ListItem", "position": 5, "name": "Encyclopedia of Life", "url": "https://eol.org/"}, {"@type": "ListItem", "position": 6, "name": "NatureServe Explorer", "url": "https://explorer.natureserve.org/"}, {"@type": "ListItem", "position": 7, "name": "Species+", "url": "https://speciesplus.net/"}, {"@type": "ListItem", "position": 8, "name": "Map of Life", "url": "https://mol.org/"}, {"@type": "ListItem", "position": 9, "name": "Reptile Database", "url": "http://www.reptile-database.org/"}, {"@type": "ListItem", "position": 10, "name": "Amphibian Species of the World", "url": "https://amphibiansoftheworld.amnh.org/"}, {"@type": "ListItem", "position": 11, "name": "AmphibiaWeb", "url": "https://amphibiaweb.org/"}, {"@type": "ListItem", "position": 12, "name": "Amphibian Conservation Needs Assessments", "url": "https://www.conservationneeds.org/"}, {"@type": "ListItem", "position": 13, "name": "Mammal Diversity Database", "url": "https://www.mammaldiversity.org/"}, {"@type": "ListItem", "position": 14, "name": "All The World's Primates", "url": "https://alltheworldsprimates.org/"}, {"@type": "ListItem", "position": 15, "name": "Elephant Database", "url": "https://www.elephant.se/"}, {"@type": "ListItem", "position": 16, "name": "Rhino Resource Center", "url": "http://www.rhinoresourcecenter.com/"}, {"@type": "ListItem", "position": 17, "name": "AnimalBase", "url": "https://animalbase.org/"}, {"@type": "ListItem", "position": 18, "name": "Avian Knowledge Network", "url": "https://avianknowledge.net/"}, {"@type": "ListItem", "position": 19, "name": "FishBase", "url": "https://fishbase.org/"}, {"@type": "ListItem", "position": 20, "name": "Shark-Base", "url": "https://shark-base.org/"}, {"@type": "ListItem", "position": 21, "name": "OBIS", "url": "https://obis.org/"}, {"@type": "ListItem", "position": 22, "name": "WoRMS", "url": "https://www.marinespecies.org/"}, {"@type": "ListItem", "position": 23, "name": "GlobalFungi", "url": "https://globalfungi.com/"}, {"@type": "ListItem", "position": 24, "name": "SEINet / Symbiota", "url": "https://swbiodiversity.org/seinet/"}, {"@type": "ListItem", "position": 25, "name": "Calflora", "url": "https://www.calflora.org/"}, {"@type": "ListItem", "position": 26, "name": "Jepson eFlora", "url": "https://ucjeps.berkeley.edu/"}, {"@type": "ListItem", "position": 27, "name": "antmaps.org", "url": "https://antmaps.org/"}, {"@type": "ListItem", "position": 28, "name": "Recently Extinct Plants and Animals Database", "url": "https://recentlyextinctspecies.com/"}, {"@type": "ListItem", "position": 29, "name": "World Database of Key Biodiversity Areas", "url": "https://www.keybiodiversityareas.org/"}, {"@type": "ListItem", "position": 30, "name": "Alliance for Zero Extinction", "url": "https://zeroextinction.org/"}, {"@type": "ListItem", "position": 31, "name": "Local Biodiversity Outlooks", "url": "https://localbiodiversityoutlooks.net/"}, {"@type": "ListItem", "position": 32, "name": "snakeDB", "url": "https://snakedb.org/"}]}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -281,7 +287,7 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 <section class="cathead">
 <h1>Species and taxonomy databases</h1>
 <p class="blurb">Names, threat status, distributions and the records behind them.</p>
-<p class="eyebrow n">33 resources</p>
+<p class="eyebrow n">32 resources</p>
 <div class="filterwrap">
 <label class="skip" for="f">Search within this category</label>
 <input type="search" id="f" autocomplete="off" placeholder="Search within Species and taxonomy databases&hellip;">
@@ -344,17 +350,15 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 <span class="nm">antmaps.org<span class="arw" aria-hidden="true">&#8599;</span></span>
 <p>Ant distributions</p></a></li><li class="item"><a href="https://recentlyextinctspecies.com/" target="_blank" rel="noopener">
 <span class="nm">Recently Extinct Plants and Animals Database<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Extinctions including plants and invertebrates</p></a></li><li class="item"><a href="https://tib.islandconservation.org/" target="_blank" rel="noopener">
-<span class="nm">Threatened Island Biodiversity Database<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Islands crossed with threatened species and invasives</p></a></li><li class="item"><a href="https://www.keybiodiversityareas.org/" target="_blank" rel="noopener">
+<p>Extinctions including plants and invertebrates</p></a></li><li class="item"><a href="https://www.keybiodiversityareas.org/" target="_blank" rel="noopener">
 <span class="nm">World Database of Key Biodiversity Areas<span class="arw" aria-hidden="true">&#8599;</span></span>
 <p>KBA boundaries and triggers</p></a></li><li class="item"><a href="https://zeroextinction.org/" target="_blank" rel="noopener">
 <span class="nm">Alliance for Zero Extinction<span class="arw" aria-hidden="true">&#8599;</span></span>
 <p>AZE sites and species</p></a></li><li class="item"><a href="https://localbiodiversityoutlooks.net/" target="_blank" rel="noopener">
 <span class="nm">Local Biodiversity Outlooks<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Community biodiversity reporting</p></a></li><li class="item"><a href="https://snakedatabase.org/" target="_blank" rel="noopener">
-<span class="nm">snakeDatabase LD50<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Venom and LD50 reference</p></a></li>
+<p>Community biodiversity reporting</p></a></li><li class="item"><a href="https://snakedb.org/" target="_blank" rel="noopener">
+<span class="nm">snakeDB<span class="arw" aria-hidden="true">&#8599;</span></span>
+<p>Referenced venom and LD50 data for snake research</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/taxon-specialist-networks/">&larr; Taxon specialist networks</a> <a href="/#browse">All categories</a> <a href="/lost-species-and-rediscovery/">Lost species and rediscovery &rarr;</a></p>

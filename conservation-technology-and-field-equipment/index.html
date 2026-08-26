@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Conservation technology and field equipment | Conservation Portal</title>
-<meta name="description" content="Recorders, tags, triggers, dogs, and the community that builds them. 16 hand-checked resources for conservationists.">
+<meta name="description" content="Recorders, tags, triggers, dogs, and the community that builds them. 14 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/conservation-technology-and-field-equipment/">
 <link rel="icon" href="/assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#123D2C">
 <meta property="og:title" content="Conservation technology and field equipment | Conservation Portal">
-<meta property="og:description" content="Recorders, tags, triggers, dogs, and the community that builds them. 16 hand-checked resources for conservationists.">
+<meta property="og:description" content="Recorders, tags, triggers, dogs, and the community that builds them. 14 hand-checked resources for conservationists.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://conservationportal.org/conservation-technology-and-field-equipment/">
 <meta property="og:site_name" content="Conservation Portal">
@@ -230,13 +230,19 @@ mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .prose p{margin:0 0 14px}
 .prose ul{margin:0 0 16px;padding-left:22px}
 .prose li{margin-bottom:7px}
-.prose .cta{text-align:center;margin:26px 0 8px}
-.donate{display:inline-block;background:var(--forest);color:var(--paper);font-weight:700;
-  font-size:16px;text-decoration:none;padding:14px 30px;
-  clip-path:polygon(12px 0,100% 0,100% 100%,0 100%,0 12px);transition:background .16s}
-.donate:hover{background:var(--teal);color:var(--paper)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .donate{color:#0F1714}}
-:root[data-theme="dark"] .donate{color:#0F1714}
+/* The donate button is deliberately single-look: fixed deep forest in both themes, not
+   token-driven. --forest lightens on the dark theme, and the frog artwork is white on
+   transparency, so a token background would have put white on pale green. */
+.prose .cta{text-align:center;margin:32px 0 10px}
+.donate{display:inline-flex;flex-direction:column;align-items:center;gap:8px;
+  background:#123D2C;color:#fff;text-decoration:none;font-weight:700;font-size:19px;
+  line-height:1.15;padding:20px 46px 22px;
+  clip-path:polygon(15px 0,100% 0,100% 100%,0 100%,0 15px);transition:background .16s}
+.donate:hover,.donate:focus-visible{background:#168B82;color:#fff}
+.donate img{display:block;width:86px;height:63px}
+@media (max-width:560px){
+  .donate{font-size:17px;padding:16px 32px 18px}
+  .donate img{width:72px;height:53px}}
 
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
@@ -260,7 +266,7 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 .fbase .tbg img{height:30px;width:auto;display:block}
 .hidden{display:none}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Conservation technology and field equipment | Conservation Portal", "url": "https://conservationportal.org/conservation-technology-and-field-equipment/", "description": "Recorders, tags, triggers, dogs, and the community that builds them.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Recording and data", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Conservation technology and field equipment", "item": "https://conservationportal.org/conservation-technology-and-field-equipment/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 16, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Conservation Equipped", "url": "https://biodiversitygroup.org/conservation-equipped/"}, {"@type": "ListItem", "position": 2, "name": "WILDLABS", "url": "https://wildlabs.net/"}, {"@type": "ListItem", "position": 3, "name": "Conservation X Labs", "url": "https://conservationxlabs.com/"}, {"@type": "ListItem", "position": 4, "name": "Tech 4 Conservation", "url": "https://t4c.org/"}, {"@type": "ListItem", "position": 5, "name": "SMART", "url": "https://smartconservationtools.org/"}, {"@type": "ListItem", "position": 6, "name": "AudioMoth", "url": "https://www.openacousticdevices.info/"}, {"@type": "ListItem", "position": 7, "name": "Wildlife Acoustics", "url": "https://www.wildlifeacoustics.com/"}, {"@type": "ListItem", "position": 8, "name": "Camtraptions", "url": "https://store.camtraptions.com/"}, {"@type": "ListItem", "position": 9, "name": "Cognisys", "url": "https://www.cognisys-inc.com/"}, {"@type": "ListItem", "position": 10, "name": "Telemetry Solutions", "url": "https://www.telemetrysolutions.com/"}, {"@type": "ListItem", "position": 11, "name": "WildTrack", "url": "https://wildtrack.org/"}, {"@type": "ListItem", "position": 12, "name": "Working Dogs for Conservation", "url": "https://wd4c.org/"}, {"@type": "ListItem", "position": 13, "name": "LightHawk", "url": "https://lighthawk.org/"}, {"@type": "ListItem", "position": 14, "name": "ARK Biodiversity", "url": "https://ark-biodiversity.com/"}, {"@type": "ListItem", "position": 15, "name": "Forestry Suppliers", "url": "https://www.forestry-suppliers.com/"}, {"@type": "ListItem", "position": 16, "name": "WildEyes VR", "url": "https://wildeyesvr.com/"}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Conservation technology and field equipment | Conservation Portal", "url": "https://conservationportal.org/conservation-technology-and-field-equipment/", "description": "Recorders, tags, triggers, dogs, and the community that builds them.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Recording and data", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Conservation technology and field equipment", "item": "https://conservationportal.org/conservation-technology-and-field-equipment/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 14, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Conservation Equipped", "url": "https://biodiversitygroup.org/conservation-equipped/"}, {"@type": "ListItem", "position": 2, "name": "WILDLABS", "url": "https://wildlabs.net/"}, {"@type": "ListItem", "position": 3, "name": "Conservation X Labs", "url": "https://conservationxlabs.com/"}, {"@type": "ListItem", "position": 4, "name": "Tech 4 Conservation", "url": "https://www.tech4conservation.org/"}, {"@type": "ListItem", "position": 5, "name": "SMART", "url": "https://smartconservationtools.org/"}, {"@type": "ListItem", "position": 6, "name": "AudioMoth", "url": "https://www.openacousticdevices.info/"}, {"@type": "ListItem", "position": 7, "name": "Wildlife Acoustics", "url": "https://www.wildlifeacoustics.com/"}, {"@type": "ListItem", "position": 8, "name": "Camtraptions", "url": "https://store.camtraptions.com/"}, {"@type": "ListItem", "position": 9, "name": "Cognisys", "url": "https://www.cognisys-inc.com/"}, {"@type": "ListItem", "position": 10, "name": "Telemetry Solutions", "url": "https://www.telemetrysolutions.com/"}, {"@type": "ListItem", "position": 11, "name": "WildTrack", "url": "https://wildtrack.org/"}, {"@type": "ListItem", "position": 12, "name": "Working Dogs for Conservation", "url": "https://wd4c.org/"}, {"@type": "ListItem", "position": 13, "name": "LightHawk", "url": "https://lighthawk.org/"}, {"@type": "ListItem", "position": 14, "name": "Forestry Suppliers", "url": "https://www.forestry-suppliers.com/"}]}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -281,7 +287,7 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 <section class="cathead">
 <h1>Conservation technology and field equipment</h1>
 <p class="blurb">Recorders, tags, triggers, dogs, and the community that builds them.</p>
-<p class="eyebrow n">16 resources</p>
+<p class="eyebrow n">14 resources</p>
 <div class="filterwrap">
 <label class="skip" for="f">Search within this category</label>
 <input type="search" id="f" autocomplete="off" placeholder="Search within Conservation technology and field equipment&hellip;">
@@ -294,7 +300,7 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 <span class="nm">WILDLABS<span class="arw" aria-hidden="true">&#8599;</span></span>
 <p>The conservation-tech community</p></a></li><li class="item"><a href="https://conservationxlabs.com/" target="_blank" rel="noopener">
 <span class="nm">Conservation X Labs<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Tech innovation challenges and the Digital Makerspace</p></a></li><li class="item"><a href="https://t4c.org/" target="_blank" rel="noopener">
+<p>Tech innovation challenges and the Digital Makerspace</p></a></li><li class="item"><a href="https://www.tech4conservation.org/" target="_blank" rel="noopener">
 <span class="nm">Tech 4 Conservation<span class="arw" aria-hidden="true">&#8599;</span></span>
 <p>AI and technology for conservation</p></a></li><li class="item"><a href="https://smartconservationtools.org/" target="_blank" rel="noopener">
 <span class="nm">SMART<span class="arw" aria-hidden="true">&#8599;</span></span>
@@ -314,13 +320,9 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 <span class="nm">Working Dogs for Conservation<span class="arw" aria-hidden="true">&#8599;</span></span>
 <p>Detection dogs</p></a></li><li class="item"><a href="https://lighthawk.org/" target="_blank" rel="noopener">
 <span class="nm">LightHawk<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Donated conservation flights</p></a></li><li class="item"><a href="https://ark-biodiversity.com/" target="_blank" rel="noopener">
-<span class="nm">ARK Biodiversity<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Anti-poaching technology</p></a></li><li class="item"><a href="https://www.forestry-suppliers.com/" target="_blank" rel="noopener">
+<p>Donated conservation flights</p></a></li><li class="item"><a href="https://www.forestry-suppliers.com/" target="_blank" rel="noopener">
 <span class="nm">Forestry Suppliers<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Field equipment vendor</p></a></li><li class="item"><a href="https://wildeyesvr.com/" target="_blank" rel="noopener">
-<span class="nm">WildEyes VR<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>VR nature content</p></a></li>
+<p>Field equipment vendor</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/analytical-methods-and-modeling-tools/">&larr; Analytical methods and modeling tools</a> <a href="/#browse">All categories</a> <a href="/invasive-species-and-biosecurity/">Invasive species and biosecurity &rarr;</a></p>

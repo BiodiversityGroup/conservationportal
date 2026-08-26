@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Organization directories | Conservation Portal</title>
-<meta name="description" content="Find the groups already working in a country, a taxon or a cause. 7 hand-checked resources for conservationists.">
+<meta name="description" content="Find the groups already working in a country, a taxon or a cause. 6 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/organization-directories/">
 <link rel="icon" href="/assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#123D2C">
 <meta property="og:title" content="Organization directories | Conservation Portal">
-<meta property="og:description" content="Find the groups already working in a country, a taxon or a cause. 7 hand-checked resources for conservationists.">
+<meta property="og:description" content="Find the groups already working in a country, a taxon or a cause. 6 hand-checked resources for conservationists.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://conservationportal.org/organization-directories/">
 <meta property="og:site_name" content="Conservation Portal">
@@ -230,13 +230,19 @@ mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .prose p{margin:0 0 14px}
 .prose ul{margin:0 0 16px;padding-left:22px}
 .prose li{margin-bottom:7px}
-.prose .cta{text-align:center;margin:26px 0 8px}
-.donate{display:inline-block;background:var(--forest);color:var(--paper);font-weight:700;
-  font-size:16px;text-decoration:none;padding:14px 30px;
-  clip-path:polygon(12px 0,100% 0,100% 100%,0 100%,0 12px);transition:background .16s}
-.donate:hover{background:var(--teal);color:var(--paper)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .donate{color:#0F1714}}
-:root[data-theme="dark"] .donate{color:#0F1714}
+/* The donate button is deliberately single-look: fixed deep forest in both themes, not
+   token-driven. --forest lightens on the dark theme, and the frog artwork is white on
+   transparency, so a token background would have put white on pale green. */
+.prose .cta{text-align:center;margin:32px 0 10px}
+.donate{display:inline-flex;flex-direction:column;align-items:center;gap:8px;
+  background:#123D2C;color:#fff;text-decoration:none;font-weight:700;font-size:19px;
+  line-height:1.15;padding:20px 46px 22px;
+  clip-path:polygon(15px 0,100% 0,100% 100%,0 100%,0 15px);transition:background .16s}
+.donate:hover,.donate:focus-visible{background:#168B82;color:#fff}
+.donate img{display:block;width:86px;height:63px}
+@media (max-width:560px){
+  .donate{font-size:17px;padding:16px 32px 18px}
+  .donate img{width:72px;height:53px}}
 
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
@@ -260,7 +266,7 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 .fbase .tbg img{height:30px;width:auto;display:block}
 .hidden{display:none}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Organization directories | Conservation Portal", "url": "https://conservationportal.org/organization-directories/", "description": "Find the groups already working in a country, a taxon or a cause.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "People", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Organization directories", "item": "https://conservationportal.org/organization-directories/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 7, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Connect & Conserve", "url": "https://connectandconserve.org/"}, {"@type": "ListItem", "position": 2, "name": "Candid", "url": "https://candid.org/"}, {"@type": "ListItem", "position": 3, "name": "Animal Charity Evaluators", "url": "https://animalcharityevaluators.org/"}, {"@type": "ListItem", "position": 4, "name": "GreatNonprofits", "url": "https://greatnonprofits.org/"}, {"@type": "ListItem", "position": 5, "name": "every.org", "url": "https://www.every.org/"}, {"@type": "ListItem", "position": 6, "name": "NGO Explorer", "url": "https://ngoexplorer.org/"}, {"@type": "ListItem", "position": 7, "name": "The NGO List", "url": "https://thengolist.com/"}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Organization directories | Conservation Portal", "url": "https://conservationportal.org/organization-directories/", "description": "Find the groups already working in a country, a taxon or a cause.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "People", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Organization directories", "item": "https://conservationportal.org/organization-directories/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 6, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Connect & Conserve", "url": "https://connectandconserve.org/"}, {"@type": "ListItem", "position": 2, "name": "Candid", "url": "https://candid.org/"}, {"@type": "ListItem", "position": 3, "name": "Animal Charity Evaluators", "url": "https://animalcharityevaluators.org/"}, {"@type": "ListItem", "position": 4, "name": "GreatNonprofits", "url": "https://greatnonprofits.org/"}, {"@type": "ListItem", "position": 5, "name": "every.org", "url": "https://www.every.org/"}, {"@type": "ListItem", "position": 6, "name": "NGO Explorer", "url": "https://ngoexplorer.org/"}]}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -281,7 +287,7 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 <section class="cathead">
 <h1>Organization directories</h1>
 <p class="blurb">Find the groups already working in a country, a taxon or a cause.</p>
-<p class="eyebrow n">7 resources</p>
+<p class="eyebrow n">6 resources</p>
 <div class="filterwrap">
 <label class="skip" for="f">Search within this category</label>
 <input type="search" id="f" autocomplete="off" placeholder="Search within Organization directories&hellip;">
@@ -300,9 +306,7 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 <span class="nm">every.org<span class="arw" aria-hidden="true">&#8599;</span></span>
 <p>Nonprofit discovery and donation platform</p></a></li><li class="item"><a href="https://ngoexplorer.org/" target="_blank" rel="noopener">
 <span class="nm">NGO Explorer<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>UK-registered development and environment NGOs by country and sector</p></a></li><li class="item"><a href="https://thengolist.com/" target="_blank" rel="noopener">
-<span class="nm">The NGO List<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Grassroots NGOs by country, across all causes</p></a></li>
+<p>UK-registered development and environment NGOs by country and sector</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/consulting-and-advisory-services/">&larr; Consulting and advisory services</a> <a href="/#browse">All categories</a> <a href="/communities-and-networks/">Communities and networks &rarr;</a></p>
