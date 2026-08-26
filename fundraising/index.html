@@ -245,25 +245,28 @@ mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
   .donate img{width:72px;height:53px}}
 
 /* ---------- footer ---------- */
-footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
+footer{border-top:1px solid var(--hair);margin-top:64px;padding:34px 0 30px;
   background:var(--surface-2)}
-.fgrid{display:grid;gap:30px;text-align:left;
-  grid-template-columns:1.6fr 1fr 1fr 1fr}
+/* align-items:start stops the short columns stretching and leaving dead space under
+   their last link */
+.fgrid{display:grid;gap:26px 30px;text-align:left;align-items:start;
+  grid-template-columns:1.7fr 1fr 1fr 1fr}
 @media (max-width:800px){.fgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.fgrid{grid-template-columns:1fr}}
-.fgrid img{height:30px;width:auto;margin-bottom:12px}
+.fgrid img{height:52px;width:auto;margin:0 0 10px;display:block}
 .fgrid p{margin:0;color:var(--muted);font-size:14px;max-width:34ch}
 .fgrid h4{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
-  font-family:Inter,sans-serif;font-weight:700;margin-bottom:10px}
+  font-family:Inter,sans-serif;font-weight:700;margin:0 0 9px}
 .fgrid ul{list-style:none;margin:0;padding:0}
-.fgrid li{margin-bottom:7px}
+.fgrid li{margin-bottom:6px}
+.fgrid li:last-child{margin-bottom:0}
 .fgrid a{font-size:14.5px;text-decoration:none}
 .fgrid a:hover{text-decoration:underline}
-.fbase{border-top:1px solid var(--hair);margin-top:34px;padding-top:22px;font-size:13.5px;
-  color:var(--muted);display:flex;align-items:center;justify-content:center;gap:14px;
+.fbase{border-top:1px solid var(--hair);margin-top:26px;padding-top:18px;font-size:13.5px;
+  color:var(--muted);display:flex;align-items:center;justify-content:center;gap:16px;
   flex-wrap:wrap}
 .fbase .tbg{line-height:0;flex:0 0 auto}
-.fbase .tbg img{height:30px;width:auto;display:block}
+.fbase .tbg img{height:46px;width:auto;display:block}
 .hidden{display:none}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Fundraising | Conservation Portal", "url": "https://conservationportal.org/fundraising/", "description": "Ways to raise money directly instead of applying for a grant: platforms, giving federations and campaign apps.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Money and services", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Fundraising", "item": "https://conservationportal.org/fundraising/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 8, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GlobalGiving", "url": "https://www.globalgiving.org/"}, {"@type": "ListItem", "position": 2, "name": "Milkywire", "url": "https://www.milkywire.com/"}, {"@type": "ListItem", "position": 3, "name": "Conserve Now", "url": "https://conservenow.org/"}, {"@type": "ListItem", "position": 4, "name": "Key Conservation", "url": "https://keyconservation.org/"}, {"@type": "ListItem", "position": 5, "name": "Experiment.com", "url": "https://experiment.com/"}, {"@type": "ListItem", "position": 6, "name": "JustGiving", "url": "https://www.justgiving.com/"}, {"@type": "ListItem", "position": 7, "name": "BiddingForGood", "url": "https://www.biddingforgood.com/"}, {"@type": "ListItem", "position": 8, "name": "Omaze", "url": "https://omaze.com/"}]}}</script>
@@ -345,7 +348,6 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 </div>
 <div><h4>Explore</h4><ul>
 <li><a href="/#browse">Browse all</a></li>
-<li><a href="/#recent">Recently added</a></li>
 </ul></div>
 <div><h4>Contribute</h4><ul>
 <li><a href="mailto:info@biodiversitygroup.org?subject=Conservation%20Portal%3A%20suggest%20a%20resource">Suggest a resource</a></li>

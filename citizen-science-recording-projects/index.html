@@ -245,25 +245,28 @@ mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
   .donate img{width:72px;height:53px}}
 
 /* ---------- footer ---------- */
-footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
+footer{border-top:1px solid var(--hair);margin-top:64px;padding:34px 0 30px;
   background:var(--surface-2)}
-.fgrid{display:grid;gap:30px;text-align:left;
-  grid-template-columns:1.6fr 1fr 1fr 1fr}
+/* align-items:start stops the short columns stretching and leaving dead space under
+   their last link */
+.fgrid{display:grid;gap:26px 30px;text-align:left;align-items:start;
+  grid-template-columns:1.7fr 1fr 1fr 1fr}
 @media (max-width:800px){.fgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.fgrid{grid-template-columns:1fr}}
-.fgrid img{height:30px;width:auto;margin-bottom:12px}
+.fgrid img{height:52px;width:auto;margin:0 0 10px;display:block}
 .fgrid p{margin:0;color:var(--muted);font-size:14px;max-width:34ch}
 .fgrid h4{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
-  font-family:Inter,sans-serif;font-weight:700;margin-bottom:10px}
+  font-family:Inter,sans-serif;font-weight:700;margin:0 0 9px}
 .fgrid ul{list-style:none;margin:0;padding:0}
-.fgrid li{margin-bottom:7px}
+.fgrid li{margin-bottom:6px}
+.fgrid li:last-child{margin-bottom:0}
 .fgrid a{font-size:14.5px;text-decoration:none}
 .fgrid a:hover{text-decoration:underline}
-.fbase{border-top:1px solid var(--hair);margin-top:34px;padding-top:22px;font-size:13.5px;
-  color:var(--muted);display:flex;align-items:center;justify-content:center;gap:14px;
+.fbase{border-top:1px solid var(--hair);margin-top:26px;padding-top:18px;font-size:13.5px;
+  color:var(--muted);display:flex;align-items:center;justify-content:center;gap:16px;
   flex-wrap:wrap}
 .fbase .tbg{line-height:0;flex:0 0 auto}
-.fbase .tbg img{height:30px;width:auto;display:block}
+.fbase .tbg img{height:46px;width:auto;display:block}
 .hidden{display:none}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Citizen science recording projects | Conservation Portal", "url": "https://conservationportal.org/citizen-science-recording-projects/", "description": "Individual schemes you send records to, by taxon and by country. Most want a photograph and five minutes.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Recording and data", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Citizen science recording projects", "item": "https://conservationportal.org/citizen-science-recording-projects/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 31, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "HerpMapper", "url": "https://www.herpmapper.org/"}, {"@type": "ListItem", "position": 2, "name": "FrogID", "url": "https://www.frogid.net.au/"}, {"@type": "ListItem", "position": 3, "name": "JellyWatch", "url": "https://jellywatch.org/"}, {"@type": "ListItem", "position": 4, "name": "NANPA citizen science", "url": "https://nanpa.org/"}, {"@type": "ListItem", "position": 5, "name": "Global Sawfish Encounters", "url": "https://www.floridamuseum.ufl.edu/sawfish/"}, {"@type": "ListItem", "position": 6, "name": "Online Jaguar Observation Database", "url": "https://jaguardata.info/"}, {"@type": "ListItem", "position": 7, "name": "Latest Sightings", "url": "https://www.latestsightings.com/"}, {"@type": "ListItem", "position": 8, "name": "Seabirds.net", "url": "http://seabirds.net/"}, {"@type": "ListItem", "position": 9, "name": "Bumble Bee Watch", "url": "https://www.bumblebeewatch.org/"}, {"@type": "ListItem", "position": 10, "name": "European Butterfly Monitoring Scheme", "url": "https://butterfly-monitoring.net/"}, {"@type": "ListItem", "position": 11, "name": "Tagfalter-Monitoring Deutschland", "url": "https://www.ufz.de/tagfalter-monitoring/"}, {"@type": "ListItem", "position": 12, "name": "Catalan Butterfly Monitoring Scheme", "url": "https://www.catalanbms.org/"}, {"@type": "ListItem", "position": 13, "name": "Correo Real", "url": "https://www.correoreal.mx/"}, {"@type": "ListItem", "position": 14, "name": "Butterflies of India", "url": "https://www.ifoundbutterflies.org/"}, {"@type": "ListItem", "position": 15, "name": "Mosquito Alert", "url": "https://www.mosquitoalert.com/"}, {"@type": "ListItem", "position": 16, "name": "Mueckenatlas", "url": "https://mueckenatlas.com/"}, {"@type": "ListItem", "position": 17, "name": "Riverfly Monitoring Initiative", "url": "https://riverflies.org/"}, {"@type": "ListItem", "position": 18, "name": "British Dragonfly Society recording scheme", "url": "https://british-dragonflies.org.uk/recording/bds-recording-scheme/"}, {"@type": "ListItem", "position": 19, "name": "UK Glow Worm Survey", "url": "https://www.glowworms.org.uk/"}, {"@type": "ListItem", "position": 20, "name": "FrogWatch USA", "url": "https://www.akronzoo.org/frogwatch"}, {"@type": "ListItem", "position": 21, "name": "RAVON", "url": "https://www.ravon.nl/"}, {"@type": "ListItem", "position": 22, "name": "TurtleSAT", "url": "https://www.turtlesat.org.au/"}, {"@type": "ListItem", "position": 23, "name": "Great Eggcase Hunt", "url": "https://www.sharktrust.org/greateggcasehunt"}, {"@type": "ListItem", "position": 24, "name": "Big Seaweed Search", "url": "https://www.nhm.ac.uk/take-part/monitor-and-encourage-nature/big-seaweed-search.html"}, {"@type": "ListItem", "position": 25, "name": "National Plant Monitoring Scheme", "url": "https://www.npms.org.uk/"}, {"@type": "ListItem", "position": 26, "name": "Nature's Calendar", "url": "https://naturescalendar.woodlandtrust.org.uk/"}, {"@type": "ListItem", "position": 27, "name": "SeasonWatch", "url": "https://www.seasonwatch.in/"}, {"@type": "ListItem", "position": 28, "name": "Fungimap", "url": "https://fungimap.org.au/"}, {"@type": "ListItem", "position": 29, "name": "Hedgehog Street", "url": "https://www.hedgehogstreet.org/"}, {"@type": "ListItem", "position": 30, "name": "Vigie-Chiro", "url": "https://www.vigienature.fr/fr/vigie-chiro"}, {"@type": "ListItem", "position": 31, "name": "National Dormouse Monitoring Programme", "url": "https://ptes.org/campaigns/dormice/surveying-and-monitoring-hazel-dormice/national-dormouse-database-ndd/"}]}}</script>
@@ -391,7 +394,6 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 </div>
 <div><h4>Explore</h4><ul>
 <li><a href="/#browse">Browse all</a></li>
-<li><a href="/#recent">Recently added</a></li>
 </ul></div>
 <div><h4>Contribute</h4><ul>
 <li><a href="mailto:info@biodiversitygroup.org?subject=Conservation%20Portal%3A%20suggest%20a%20resource">Suggest a resource</a></li>

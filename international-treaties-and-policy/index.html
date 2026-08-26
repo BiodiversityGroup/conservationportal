@@ -245,25 +245,28 @@ mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
   .donate img{width:72px;height:53px}}
 
 /* ---------- footer ---------- */
-footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
+footer{border-top:1px solid var(--hair);margin-top:64px;padding:34px 0 30px;
   background:var(--surface-2)}
-.fgrid{display:grid;gap:30px;text-align:left;
-  grid-template-columns:1.6fr 1fr 1fr 1fr}
+/* align-items:start stops the short columns stretching and leaving dead space under
+   their last link */
+.fgrid{display:grid;gap:26px 30px;text-align:left;align-items:start;
+  grid-template-columns:1.7fr 1fr 1fr 1fr}
 @media (max-width:800px){.fgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.fgrid{grid-template-columns:1fr}}
-.fgrid img{height:30px;width:auto;margin-bottom:12px}
+.fgrid img{height:52px;width:auto;margin:0 0 10px;display:block}
 .fgrid p{margin:0;color:var(--muted);font-size:14px;max-width:34ch}
 .fgrid h4{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
-  font-family:Inter,sans-serif;font-weight:700;margin-bottom:10px}
+  font-family:Inter,sans-serif;font-weight:700;margin:0 0 9px}
 .fgrid ul{list-style:none;margin:0;padding:0}
-.fgrid li{margin-bottom:7px}
+.fgrid li{margin-bottom:6px}
+.fgrid li:last-child{margin-bottom:0}
 .fgrid a{font-size:14.5px;text-decoration:none}
 .fgrid a:hover{text-decoration:underline}
-.fbase{border-top:1px solid var(--hair);margin-top:34px;padding-top:22px;font-size:13.5px;
-  color:var(--muted);display:flex;align-items:center;justify-content:center;gap:14px;
+.fbase{border-top:1px solid var(--hair);margin-top:26px;padding-top:18px;font-size:13.5px;
+  color:var(--muted);display:flex;align-items:center;justify-content:center;gap:16px;
   flex-wrap:wrap}
 .fbase .tbg{line-height:0;flex:0 0 auto}
-.fbase .tbg img{height:30px;width:auto;display:block}
+.fbase .tbg img{height:46px;width:auto;display:block}
 .hidden{display:none}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "International treaties and policy | Conservation Portal", "url": "https://conservationportal.org/international-treaties-and-policy/", "description": "The agreements that set the targets, and the trackers that follow them.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Rules and planning", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "International treaties and policy", "item": "https://conservationportal.org/international-treaties-and-policy/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 10, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Convention on Biological Diversity", "url": "https://www.cbd.int/"}, {"@type": "ListItem", "position": 2, "name": "WWF NBSAP Tracker", "url": "https://wwf.panda.org/act/nbsap_tracker_check_your_countrys_nature_progress/"}, {"@type": "ListItem", "position": 3, "name": "Convention on Migratory Species", "url": "https://www.cms.int/"}, {"@type": "ListItem", "position": 4, "name": "CITES", "url": "https://cites.org/eng"}, {"@type": "ListItem", "position": 5, "name": "Ramsar Sites Information Service", "url": "https://rsis.ramsar.org/"}, {"@type": "ListItem", "position": 6, "name": "IPBES", "url": "https://www.ipbes.net/"}, {"@type": "ListItem", "position": 7, "name": "IISD Earth Negotiations Bulletin", "url": "https://enb.iisd.org/"}, {"@type": "ListItem", "position": 8, "name": "InforMEA", "url": "https://www.informea.org/"}, {"@type": "ListItem", "position": 9, "name": "ECOLEX", "url": "https://www.ecolex.org/"}, {"@type": "ListItem", "position": 10, "name": "FAOLEX", "url": "https://www.fao.org/faolex/"}]}}</script>
@@ -349,7 +352,6 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 </div>
 <div><h4>Explore</h4><ul>
 <li><a href="/#browse">Browse all</a></li>
-<li><a href="/#recent">Recently added</a></li>
 </ul></div>
 <div><h4>Contribute</h4><ul>
 <li><a href="mailto:info@biodiversitygroup.org?subject=Conservation%20Portal%3A%20suggest%20a%20resource">Suggest a resource</a></li>

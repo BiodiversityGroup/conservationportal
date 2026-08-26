@@ -245,25 +245,28 @@ mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
   .donate img{width:72px;height:53px}}
 
 /* ---------- footer ---------- */
-footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
+footer{border-top:1px solid var(--hair);margin-top:64px;padding:34px 0 30px;
   background:var(--surface-2)}
-.fgrid{display:grid;gap:30px;text-align:left;
-  grid-template-columns:1.6fr 1fr 1fr 1fr}
+/* align-items:start stops the short columns stretching and leaving dead space under
+   their last link */
+.fgrid{display:grid;gap:26px 30px;text-align:left;align-items:start;
+  grid-template-columns:1.7fr 1fr 1fr 1fr}
 @media (max-width:800px){.fgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.fgrid{grid-template-columns:1fr}}
-.fgrid img{height:30px;width:auto;margin-bottom:12px}
+.fgrid img{height:52px;width:auto;margin:0 0 10px;display:block}
 .fgrid p{margin:0;color:var(--muted);font-size:14px;max-width:34ch}
 .fgrid h4{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
-  font-family:Inter,sans-serif;font-weight:700;margin-bottom:10px}
+  font-family:Inter,sans-serif;font-weight:700;margin:0 0 9px}
 .fgrid ul{list-style:none;margin:0;padding:0}
-.fgrid li{margin-bottom:7px}
+.fgrid li{margin-bottom:6px}
+.fgrid li:last-child{margin-bottom:0}
 .fgrid a{font-size:14.5px;text-decoration:none}
 .fgrid a:hover{text-decoration:underline}
-.fbase{border-top:1px solid var(--hair);margin-top:34px;padding-top:22px;font-size:13.5px;
-  color:var(--muted);display:flex;align-items:center;justify-content:center;gap:14px;
+.fbase{border-top:1px solid var(--hair);margin-top:26px;padding-top:18px;font-size:13.5px;
+  color:var(--muted);display:flex;align-items:center;justify-content:center;gap:16px;
   flex-wrap:wrap}
 .fbase .tbg{line-height:0;flex:0 0 auto}
-.fbase .tbg img{height:30px;width:auto;display:block}
+.fbase .tbg img{height:46px;width:auto;display:block}
 .hidden{display:none}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Planning, evaluation and practice | Conservation Portal", "url": "https://conservationportal.org/planning-evaluation-and-practice/", "description": "Frameworks for designing a project and finding out whether it worked.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Rules and planning", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Planning, evaluation and practice", "item": "https://conservationportal.org/planning-evaluation-and-practice/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 13, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Conservation Measures Partnership", "url": "https://www.conservationmeasures.org/"}, {"@type": "ListItem", "position": 2, "name": "Conservation Coaches Network", "url": "https://www.ccnetglobal.com/"}, {"@type": "ListItem", "position": 3, "name": "Foundations of Success", "url": "https://fosonline.org/"}, {"@type": "ListItem", "position": 4, "name": "Miradi Share", "url": "https://www.miradishare.org/"}, {"@type": "ListItem", "position": 5, "name": "Prism evaluation toolkit", "url": "https://conservationevaluation.org/"}, {"@type": "ListItem", "position": 6, "name": "Conservation Learning Initiative", "url": "https://conservation-learning.org/"}, {"@type": "ListItem", "position": 7, "name": "WCS Failure Factors", "url": "https://programs.wcs.org/failurefactors/"}, {"@type": "ListItem", "position": 8, "name": "Future of Conservation survey", "url": "https://www.futureconservation.org/"}, {"@type": "ListItem", "position": 9, "name": "PCLG at IIED", "url": "https://www.iied.org/poverty-conservation-learning-group"}, {"@type": "ListItem", "position": 10, "name": "IUCN conservation tools", "url": "https://www.iucn.org/resources/conservation-tools"}, {"@type": "ListItem", "position": 11, "name": "NatureServe tools and services", "url": "https://www.natureserve.org/"}, {"@type": "ListItem", "position": 12, "name": "WeConservePA library", "url": "https://library.weconservepa.org/"}, {"@type": "ListItem", "position": 13, "name": "LandScale", "url": "https://www.landscale.org/"}]}}</script>
@@ -355,7 +358,6 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 </div>
 <div><h4>Explore</h4><ul>
 <li><a href="/#browse">Browse all</a></li>
-<li><a href="/#recent">Recently added</a></li>
 </ul></div>
 <div><h4>Contribute</h4><ul>
 <li><a href="mailto:info@biodiversitygroup.org?subject=Conservation%20Portal%3A%20suggest%20a%20resource">Suggest a resource</a></li>

@@ -245,25 +245,28 @@ mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
   .donate img{width:72px;height:53px}}
 
 /* ---------- footer ---------- */
-footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
+footer{border-top:1px solid var(--hair);margin-top:64px;padding:34px 0 30px;
   background:var(--surface-2)}
-.fgrid{display:grid;gap:30px;text-align:left;
-  grid-template-columns:1.6fr 1fr 1fr 1fr}
+/* align-items:start stops the short columns stretching and leaving dead space under
+   their last link */
+.fgrid{display:grid;gap:26px 30px;text-align:left;align-items:start;
+  grid-template-columns:1.7fr 1fr 1fr 1fr}
 @media (max-width:800px){.fgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.fgrid{grid-template-columns:1fr}}
-.fgrid img{height:30px;width:auto;margin-bottom:12px}
+.fgrid img{height:52px;width:auto;margin:0 0 10px;display:block}
 .fgrid p{margin:0;color:var(--muted);font-size:14px;max-width:34ch}
 .fgrid h4{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
-  font-family:Inter,sans-serif;font-weight:700;margin-bottom:10px}
+  font-family:Inter,sans-serif;font-weight:700;margin:0 0 9px}
 .fgrid ul{list-style:none;margin:0;padding:0}
-.fgrid li{margin-bottom:7px}
+.fgrid li{margin-bottom:6px}
+.fgrid li:last-child{margin-bottom:0}
 .fgrid a{font-size:14.5px;text-decoration:none}
 .fgrid a:hover{text-decoration:underline}
-.fbase{border-top:1px solid var(--hair);margin-top:34px;padding-top:22px;font-size:13.5px;
-  color:var(--muted);display:flex;align-items:center;justify-content:center;gap:14px;
+.fbase{border-top:1px solid var(--hair);margin-top:26px;padding-top:18px;font-size:13.5px;
+  color:var(--muted);display:flex;align-items:center;justify-content:center;gap:16px;
   flex-wrap:wrap}
 .fbase .tbg{line-height:0;flex:0 0 auto}
-.fbase .tbg img{height:30px;width:auto;display:block}
+.fbase .tbg img{height:46px;width:auto;display:block}
 .hidden{display:none}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Incident and threat reporting | Conservation Portal", "url": "https://conservationportal.org/incident-and-threat-reporting/", "description": "Where to report a problem rather than a sighting: roadkill, strandings, poisoning, invasives and lost fishing gear.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Recording and data", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Incident and threat reporting", "item": "https://conservationportal.org/incident-and-threat-reporting/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 27, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "California Roadkill Observation System", "url": "https://wildlifecrossing.net/california"}, {"@type": "ListItem", "position": 2, "name": "The Road Lab", "url": "https://www.theroadlab.co.uk/"}, {"@type": "ListItem", "position": 3, "name": "Projekt Roadkill", "url": "https://roadkill.at/en/"}, {"@type": "ListItem", "position": 4, "name": "Taiwan Roadkill Observation Network", "url": "https://roadkill.tw/en"}, {"@type": "ListItem", "position": 5, "name": "Srazena zver", "url": "https://www.srazenazver.cz/en"}, {"@type": "ListItem", "position": 6, "name": "EWT Wildlife and Transport Programme", "url": "https://ewt.org/what-we-do/benefitting-people/bbn-programme/wildlife-and-transport/"}, {"@type": "ListItem", "position": 7, "name": "Sistema Urubu", "url": "https://www.sistemaurubu.com.br/"}, {"@type": "ListItem", "position": 8, "name": "MISIN", "url": "https://www.misin.msu.edu/"}, {"@type": "ListItem", "position": 9, "name": "iMapInvasives", "url": "https://www.imapinvasives.org/"}, {"@type": "ListItem", "position": 10, "name": "EASIN", "url": "https://easin.jrc.ec.europa.eu/easin/Home"}, {"@type": "ListItem", "position": 11, "name": "Invading Species Awareness Program", "url": "https://www.invadingspecies.com/"}, {"@type": "ListItem", "position": 12, "name": "USGS Nonindigenous Aquatic Species", "url": "https://nas.er.usgs.gov/"}, {"@type": "ListItem", "position": 13, "name": "FeralScan", "url": "https://www.feralscan.org.au/"}, {"@type": "ListItem", "position": 14, "name": "GB non-native species alerts", "url": "https://www.nonnativespecies.org/non-native-species/species-alerts"}, {"@type": "ListItem", "position": 15, "name": "RSPB: report crimes against wild birds", "url": "https://www.rspb.org.uk/birds-and-wildlife/how-to-report-crimes-against-wild-birds"}, {"@type": "ListItem", "position": 16, "name": "African Wildlife Poisoning Database", "url": "https://www.africanwildlifepoisoning.org/"}, {"@type": "ListItem", "position": 17, "name": "End Wildlife Trafficking Online: report a listing", "url": "https://www.endwildlifetraffickingonline.org/report"}, {"@type": "ListItem", "position": 18, "name": "dBird", "url": "https://dbird.org"}, {"@type": "ListItem", "position": 19, "name": "Global Bird Collision Mapper", "url": "https://birdmapper.org"}, {"@type": "ListItem", "position": 20, "name": "Garden Wildlife Health", "url": "https://www.gardenwildlifehealth.org/"}, {"@type": "ListItem", "position": 21, "name": "Canadian Wildlife Health Cooperative", "url": "https://www.cwhc-rcsf.ca/report_and_submit.php"}, {"@type": "ListItem", "position": 22, "name": "UK Cetacean Strandings Investigation Programme", "url": "https://ukstrandings.org/"}, {"@type": "ListItem", "position": 23, "name": "NOAA: report a stranded or injured marine animal", "url": "https://www.fisheries.noaa.gov/report"}, {"@type": "ListItem", "position": 24, "name": "ORRCA", "url": "https://www.orrca.org.au/"}, {"@type": "ListItem", "position": 25, "name": "COASST", "url": "https://coasst.org/"}, {"@type": "ListItem", "position": 26, "name": "Global Ghost Gear Initiative data portal", "url": "https://www.ghostgear.org/dataportal"}, {"@type": "ListItem", "position": 27, "name": "Marine Debris Tracker", "url": "https://debristracker.org/"}]}}</script>
@@ -383,7 +386,6 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 </div>
 <div><h4>Explore</h4><ul>
 <li><a href="/#browse">Browse all</a></li>
-<li><a href="/#recent">Recently added</a></li>
 </ul></div>
 <div><h4>Contribute</h4><ul>
 <li><a href="mailto:info@biodiversitygroup.org?subject=Conservation%20Portal%3A%20suggest%20a%20resource">Suggest a resource</a></li>
