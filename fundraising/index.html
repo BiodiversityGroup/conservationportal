@@ -78,9 +78,11 @@ header.stuck .hbar{padding:9px 24px}
 header.stuck .brand img{height:27px}
 .brand .mark{display:none}
 /* The export's "Conservation" wordmark is dark ink, so a relit copy is used on dark
-   grounds. Declared light-first, then swapped, so the un-stamped system state works. */
-.onlight{display:block}
-.ondark{display:none}
+   grounds. Declared light-first, then swapped, so the un-stamped system state works.
+   Selectors are img.* rather than bare .*: .brand img above sets display:block and at
+   (0,1,1) it outranked a bare .ondark, so BOTH header lockups rendered in light mode. */
+img.onlight{display:block}
+img.ondark{display:none}
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]) .onlight{display:none}
   :root:not([data-theme="light"]) .ondark{display:block}}
