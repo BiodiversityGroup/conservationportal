@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="build" content="157dee4792b4">
+<meta name="build" content="0aae9bfecfbd">
 <title>Wildlife health and disease | Conservation Portal</title>
 <meta name="description" content="Surveillance, diagnostics, forensics and outbreak reporting for wild populations. 7 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/wildlife-health-and-disease/">
@@ -267,7 +267,10 @@ footer{border-top:1px solid var(--hair);margin-top:64px;padding:34px 0 30px;
   grid-template-columns:1.7fr 1fr 1fr 1fr}
 @media (max-width:800px){.fgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.fgrid{grid-template-columns:1fr}}
-.fgrid img{height:52px;width:auto;margin:0 0 10px}
+/* AUTO SIDE MARGINS, not text-align: the theme-swap block at the end of this file sets
+   display:block on every paired lockup, and text-align:center does nothing to a block.
+   margin:0 0 10px pinned the footer logo to the left edge of a centred column. */
+.fgrid img{height:52px;width:auto;margin:0 auto 10px}
 .fgrid > div{text-align:center}
 .fgrid p{margin:0 auto;color:var(--muted);font-size:14px;max-width:34ch}
 .fgrid h4{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
