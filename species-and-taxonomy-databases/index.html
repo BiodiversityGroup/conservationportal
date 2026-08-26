@@ -70,17 +70,20 @@ a:focus-visible,button:focus-visible,input:focus-visible,.card:focus-visible{
 header{position:sticky;top:0;z-index:40;background:var(--paper);
   border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
 header.stuck{border-bottom-color:var(--hair);box-shadow:0 1px 12px rgba(23,34,41,.05)}
-.hbar{max-width:1120px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;
-  justify-content:space-between;gap:20px;transition:padding .2s}
+.hbar{max-width:1120px;margin:0 auto;padding:16px 24px;display:grid;
+  grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;transition:padding .2s}
 header.stuck .hbar{padding:9px 24px}
-.brand{display:flex;align-items:center;line-height:0;flex:0 0 auto}
+/* the logo sits in the middle column; the two 1fr columns either side keep it
+   optically centred no matter how wide the nav gets */
+.brand{grid-column:2;justify-self:center;display:flex;align-items:center;line-height:0}
 /* no display here: the theme-swap block at the end of this file owns display for the
    paired lockups, and any display set in a sizing rule competes with it */
 .brand img{height:34px;width:auto;transition:height .2s}
 header.stuck .brand img{height:27px}
 .brand .mark{display:none}
 /* theme-swapped logo pairs are governed at the very END of this stylesheet, see there */
-nav.top{display:flex;align-items:center;gap:26px;flex-wrap:wrap;justify-content:flex-end}
+nav.top{grid-column:3;justify-self:end;display:flex;align-items:center;gap:26px;
+  flex-wrap:wrap;justify-content:flex-end}
 nav.top a{font-size:14.5px;text-decoration:none;color:var(--ink);white-space:nowrap}
 nav.top a:hover{color:var(--accent)}
 nav.top a.btn{border:1px solid var(--hair);border-radius:2px;padding:7px 14px;
@@ -91,6 +94,14 @@ nav.top a.btn:hover{border-color:var(--accent);color:var(--accent)}
   nav.top{gap:16px} nav.top a{font-size:13.5px}
 }
 @media (max-width:540px){nav.top a.nav-hide{display:none}}
+/* Below this width the nav is wider than its 1fr share, so the third grid track grows
+   past the first and the logo drifts off true centre. Stack instead: logo centred on its
+   own row, nav centred underneath, which keeps the centring exact at every width. */
+@media (max-width:600px){
+  .hbar{grid-template-columns:1fr;gap:10px}
+  .brand{grid-column:1}
+  nav.top{grid-column:1;justify-self:center;justify-content:center}
+}
 
 /* ---------- hero, search first ---------- */
 .hero{position:relative;padding:78px 0 8px;overflow:hidden}
@@ -264,7 +275,7 @@ footer{border-top:1px solid var(--hair);margin-top:64px;padding:34px 0 30px;
 .fgrid a{font-size:14.5px;text-decoration:none}
 .fgrid a:hover{text-decoration:underline}
 .fbase{border-top:1px solid var(--hair);margin-top:26px;padding-top:18px;font-size:13.5px;
-  color:var(--muted);display:flex;align-items:center;justify-content:center;gap:16px;
+  color:var(--muted);display:flex;align-items:center;justify-content:center;gap:11px;
   flex-wrap:wrap}
 .fbase .tbg{line-height:0;flex:0 0 auto}
 .fbase .tbg img{height:46px;width:auto}
@@ -438,11 +449,11 @@ img.ondark{display:none}
 </ul></div>
 </div>
 <p class="fbase">
+<span>A project of</span>
 <a class="tbg" href="https://biodiversitygroup.org/" aria-label="The Biodiversity Group">
 <img class="onlight" src="/assets/tbg-lockup.png" alt="The Biodiversity Group" width="120" height="56">
 <img class="ondark" src="/assets/tbg-lockup-dark.png" alt="The Biodiversity Group" width="120" height="56">
 </a>
-<span>A project of <a href="https://biodiversitygroup.org/">The Biodiversity Group</a>.</span>
 </p>
 </div></footer>
 <script>
