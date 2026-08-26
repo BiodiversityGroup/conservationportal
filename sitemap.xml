@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://conservationportal.org/</loc><priority>1.0</priority></url>
   <url><loc>https://conservationportal.org/about/</loc><priority>0.6</priority></url>
-  <url><loc>https://conservationportal.org/taxon-specialist-networks/</loc><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/species-and-taxonomy-databases/</loc><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/lost-species-and-rediscovery/</loc><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/zoos-and-ex-situ/</loc><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/funding-and-grants/</loc><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/fundraising/</loc><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/conservation-swag/</loc><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/prizes-awards-and-competitions/</loc><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/biodiversity-finance-mechanisms/</loc><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/fiscal-sponsorship/</loc><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/consulting-and-advisory-services/</loc><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/ai-tools-for-nonprofits/</loc><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/discounted-software-for-nonprofits/</loc><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/legal-insurance-and-back-office/</loc><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/occurrence-and-monitoring-platforms/</loc><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/citizen-science-recording-projects/</loc><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/incident-and-threat-reporting/</loc><priority>0.8</priority></url>
@@ -28,16 +34,10 @@
   <url><loc>https://conservationportal.org/international-treaties-and-policy/</loc><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/permits-ethics-and-genetic-resources/</loc><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/planning-evaluation-and-practice/</loc><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/funding-and-grants/</loc><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/fundraising/</loc><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/conservation-swag/</loc><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/prizes-awards-and-competitions/</loc><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/biodiversity-finance-mechanisms/</loc><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/fiscal-sponsorship/</loc><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/consulting-and-advisory-services/</loc><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/ai-tools-for-nonprofits/</loc><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/discounted-software-for-nonprofits/</loc><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/legal-insurance-and-back-office/</loc><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/taxon-specialist-networks/</loc><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/species-and-taxonomy-databases/</loc><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/lost-species-and-rediscovery/</loc><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/zoos-and-ex-situ/</loc><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/organization-directories/</loc><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/communities-and-networks/</loc><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/jobs-and-careers/</loc><priority>0.8</priority></url>
