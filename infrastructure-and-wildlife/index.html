@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="build" content="2a81bc9d6b0f">
+<meta name="build" content="34dd54c42230">
 <title>Infrastructure and wildlife | Conservation Portal</title>
 <meta name="description" content="Roads, crossings and the collisions that come with them. 2 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/infrastructure-and-wildlife/">
@@ -158,9 +158,13 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 .domain ul{list-style:none;margin:16px 0 0;padding:0;border-top:1px solid var(--hair)}
 .domain li{border-bottom:1px solid var(--hair)}
 .domain li:last-child{border-bottom:0}
+/* The category rows read LEFT, deliberately: a two-line category name centred inside a
+   space-between flex row wraps to a ragged middle and is hard to scan. The block
+   heading and its meta line stay centred. .domain li a is listed in LEFT_OK in
+   07_check_site.py with this reason. */
 .domain li a{display:flex;justify-content:space-between;gap:14px;align-items:baseline;
   padding:9px 2px;text-decoration:none;color:var(--ink);font-size:14.5px;
-  transition:padding-left .16s,color .16s}
+  text-align:left;transition:padding-left .16s,color .16s}
 .domain li a:hover{color:var(--accent);padding-left:6px}
 .domain li a .n{color:var(--muted);font-size:12.5px;font-variant-numeric:tabular-nums;
   flex:0 0 auto}
