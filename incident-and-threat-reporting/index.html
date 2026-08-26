@@ -52,13 +52,9 @@ header{position:sticky;top:0;z-index:20;background:var(--ground);border-bottom:1
 /* logo pinned top left, out of the centered flow so the wordmark stays centered */
 .logo{position:absolute;left:24px;top:50%;transform:translateY(-50%);
   display:flex;align-items:center;line-height:0}
+/* one image for both themes: the frog sits on the brand's own colored disc, which
+   reads on a light and a dark ground alike */
 .logo img{height:38px;width:auto;display:block}
-.logo .on-light{display:block}
-.logo .on-dark{display:none}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo .on-light{display:none}
-  :root:not([data-theme="light"]) .logo .on-dark{display:block}}
-:root[data-theme="dark"] .logo .on-light{display:none}
-:root[data-theme="dark"] .logo .on-dark{display:block}
 @media (max-width:560px){.logo img{height:30px}.logo{left:14px}}
 .wordmark{font-family:Petrona,Georgia,serif;font-size:21px;font-weight:600;
   color:var(--ink);text-decoration:none;letter-spacing:-.015em}
@@ -98,21 +94,27 @@ input[type=search]::placeholder{color:var(--muted)}
 .grouphead h2{font-size:26px}
 .grouphead p{margin:6px 0 0;color:var(--muted);font-size:14px}
 
-/* three across at most, and a short last row stays centered rather than
-   stretching or hugging the left edge */
+/* Exactly three across, and a short last row stays centered. The basis is computed
+   rather than a fixed px value: a fixed basis with shrink allowed lets a fourth card
+   squeeze onto the row, which is what happened before this was measured. */
 .grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:18px}
-.card{flex:0 1 336px;max-width:336px;
+.card{flex:0 0 calc((100% - 32px) / 3);
   background:var(--surface);border:1px solid var(--hair);border-radius:3px;
   padding:24px 22px;text-align:center;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;gap:10px;box-shadow:var(--shadow);
+  align-items:center;justify-content:flex-start;gap:10px;box-shadow:var(--shadow);
   text-decoration:none;color:inherit;transition:border-color .18s,transform .18s}
 .card:hover{border-color:var(--green);transform:translateY(-2px)}
 @media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
 .card .count{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;
   letter-spacing:.1em;color:var(--muted);font-variant-numeric:tabular-nums}
-.card h3{font-size:20px}
+/* Cards in a row are equal height, so vertically centering their contents pushed a
+   short-titled card's whole block downwards and the counts and titles across a row sat
+   at different heights. Top-align instead, and reserve two lines for the title so the
+   descriptions start on the same line as well. */
+.card h3{font-size:20px;min-height:2.3em;display:block;width:100%}
 .card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
-@media (max-width:760px){.card{flex:1 1 100%;max-width:420px}}
+@media (max-width:900px){.card{flex:0 0 calc((100% - 16px) / 2)}}
+@media (max-width:620px){.card{flex:0 0 100%;max-width:420px}}
 
 .catpage{padding-top:52px}
 .catpage h1{font-size:clamp(30px,5vw,46px)}
@@ -144,8 +146,7 @@ footer p{max-width:62ch;margin:0 auto 10px}
 <a class="skip" href="#main">Skip to content</a>
 <header><div class="hbar">
 <a class="logo" href="https://biodiversitygroup.org/" aria-label="The Biodiversity Group">
-<img class="on-light" src="/assets/tbg-frog-on-light.png" alt="The Biodiversity Group" width="102" height="96">
-<img class="on-dark" src="/assets/tbg-frog-on-dark.png" alt="The Biodiversity Group" width="102" height="96">
+<img src="/assets/tbg-logo.png" alt="The Biodiversity Group" width="102" height="96">
 </a>
 <a class="wordmark" href="/">Conservation <span>Portal</span></a>
 <span class="eyebrow"><a href="https://biodiversitygroup.org/">A project of The Biodiversity Group</a></span>
