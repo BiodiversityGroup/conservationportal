@@ -166,6 +166,8 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
 .item p{margin:4px 0 0;font-size:15px;color:var(--muted);max-width:64ch}
+.item p.use{margin:7px 0 0;padding-top:6px;font-size:13.5px;line-height:1.5;
+  border-top:1px solid var(--hair);max-width:64ch}
 .item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
   text-decoration:none;border-bottom:1px solid transparent}
 .item .access:hover{border-bottom-color:currentColor}
@@ -321,43 +323,43 @@ img.ondark{display:none}
 <ul class="list" id="clist">
 <li class="item"><a href="https://scti.tools/vortex/" target="_blank" rel="noopener">
 <span class="nm">Vortex<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Free population viability analysis for extinction-risk simulation</p></a></li><li class="item"><a href="https://circuitscape.org/" target="_blank" rel="noopener">
+<p>Free population viability analysis for extinction-risk simulation</p><p class="use">Run a viability analysis to put a number on extinction risk under competing scenarios</p></a></li><li class="item"><a href="https://circuitscape.org/" target="_blank" rel="noopener">
 <span class="nm">Circuitscape<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Open-source circuit-theory tool for landscape connectivity and gene flow</p></a></li><li class="item"><a href="https://linkagemapper.org/" target="_blank" rel="noopener">
+<p>Open-source circuit-theory tool for landscape connectivity and gene flow</p><p class="use">Model where animals can actually move across a landscape, which is what a corridor argument needs</p></a></li><li class="item"><a href="https://linkagemapper.org/" target="_blank" rel="noopener">
 <span class="nm">Linkage Mapper<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>ArcGIS toolbox that maps and prioritizes wildlife corridors</p></a></li><li class="item"><a href="https://www.boldsystems.org/" target="_blank" rel="noopener">
+<p>ArcGIS toolbox that maps and prioritizes wildlife corridors</p><p class="use">Rank candidate corridors inside ArcGIS so a planner sees priorities, not a connectivity surface</p></a></li><li class="item"><a href="https://www.boldsystems.org/" target="_blank" rel="noopener">
 <span class="nm">BOLD Systems<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>DNA barcode database and analysis workbench for species identification</p></a></li><li class="item"><a href="https://www.tdwg.org/" target="_blank" rel="noopener">
+<p>DNA barcode database and analysis workbench for species identification</p><p class="use">Match a barcode sequence to a species, or check whether your taxon has reference barcodes at all</p></a></li><li class="item"><a href="https://www.tdwg.org/" target="_blank" rel="noopener">
 <span class="nm">TDWG Biodiversity Information Standards<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>The standards body for biodiversity data, and home of Darwin Core, the vocabulary everything from GBIF down uses to share occurrence and specimen records</p></a></li><li class="item"><a href="https://ebioatlas.org/" target="_blank" rel="noopener">
+<p>The standards body for biodiversity data, and home of Darwin Core, the vocabulary everything from GBIF down uses to share occurrence and specimen records</p><p class="use">Format occurrence data as Darwin Core so anyone else can publish or join it</p></a></li><li class="item"><a href="https://ebioatlas.org/" target="_blank" rel="noopener">
 <span class="nm">eBio Atlas<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Open global eDNA biodiversity repository, freshwater focus</p></a></li><li class="item"><a href="https://biodiversityinformatics.amnh.org/open_source/maxent/" target="_blank" rel="noopener">
+<p>Open global eDNA biodiversity repository, freshwater focus</p><p class="use">Deposit or reuse freshwater eDNA results where traditional survey coverage is simply impossible</p></a></li><li class="item"><a href="https://biodiversityinformatics.amnh.org/open_source/maxent/" target="_blank" rel="noopener">
 <span class="nm">Maxent<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Maximum-entropy species distribution modeling software</p></a></li><li class="item"><a href="https://wallaceecomod.github.io/" target="_blank" rel="noopener">
+<p>Maximum-entropy species distribution modeling software</p><p class="use">Run the distribution model reviewers still recognize, which works from presence records alone</p></a></li><li class="item"><a href="https://wallaceecomod.github.io/" target="_blank" rel="noopener">
 <span class="nm">Wallace EcoMod<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Guided R and Shiny platform for reproducible niche modeling</p></a></li><li class="item"><a href="http://www.phidot.org/software/mark/" target="_blank" rel="noopener">
+<p>Guided R and Shiny platform for reproducible niche modeling</p><p class="use">Build a niche model through a guided interface that writes reproducible R code as you go</p></a></li><li class="item"><a href="http://www.phidot.org/software/mark/" target="_blank" rel="noopener">
 <span class="nm">Program MARK<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Capture-recapture survival and population parameter estimation</p></a></li><li class="item"><a href="https://ropensci.org/" target="_blank" rel="noopener">
+<p>Capture-recapture survival and population parameter estimation</p><p class="use">Estimate survival and abundance from capture histories, still the standard for mark-recapture work</p></a></li><li class="item"><a href="https://ropensci.org/" target="_blank" rel="noopener">
 <span class="nm">rOpenSci<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Peer-reviewed hub for open-source R packages used in ecology</p></a></li><li class="item"><a href="https://cran.r-project.org/package=unmarked" target="_blank" rel="noopener">
+<p>Peer-reviewed hub for open-source R packages used in ecology</p><p class="use">Pick an R package that passed peer review rather than gambling on an unmaintained one</p></a></li><li class="item"><a href="https://cran.r-project.org/package=unmarked" target="_blank" rel="noopener">
 <span class="nm">unmarked (R package)<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Fits occupancy, distance sampling and N-mixture abundance models to survey data where detection is imperfect</p></a></li><li class="item"><a href="https://cran.r-project.org/package=camtrapR" target="_blank" rel="noopener">
+<p>Fits occupancy, distance sampling and N-mixture abundance models to survey data where detection is imperfect</p><p class="use">Fit occupancy and abundance models that account for the animals you failed to detect</p></a></li><li class="item"><a href="https://cran.r-project.org/package=camtrapR" target="_blank" rel="noopener">
 <span class="nm">camtrapR (R package)<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Turns raw camera-trap images into detection histories, occupancy model inputs and activity patterns</p></a></li><li class="item"><a href="https://github.com/agentmorris/MegaDetector" target="_blank" rel="noopener">
+<p>Turns raw camera-trap images into detection histories, occupancy model inputs and activity patterns</p><p class="use">Convert camera-trap folders into detection histories without hand-building the matrix yourself</p></a></li><li class="item"><a href="https://github.com/agentmorris/MegaDetector" target="_blank" rel="noopener">
 <span class="nm">MegaDetector<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Free AI model that finds animals, people and vehicles in camera-trap images so you never review a blank frame again</p></a></li><li class="item"><a href="https://addaxdatascience.com/addaxai/" target="_blank" rel="noopener">
+<p>Free AI model that finds animals, people and vehicles in camera-trap images so you never review a blank frame again</p><p class="use">Strip blank frames from a camera-trap set before anyone spends time reviewing images</p></a></li><li class="item"><a href="https://addaxdatascience.com/addaxai/" target="_blank" rel="noopener">
 <span class="nm">AddaxAI<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Runs MegaDetector and species classifiers through a desktop interface, with no coding required. Formerly EcoAssist</p></a></li><li class="item"><a href="https://timelapse.ucalgary.ca/" target="_blank" rel="noopener">
+<p>Runs MegaDetector and species classifiers through a desktop interface, with no coding required. Formerly EcoAssist</p><p class="use">Run MegaDetector without writing code, and keep every image on your own machine</p></a></li><li class="item"><a href="https://timelapse.ucalgary.ca/" target="_blank" rel="noopener">
 <span class="nm">Timelapse2<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Free tool for reviewing and annotating large camera-trap image sets, and it imports MegaDetector results</p></a></li><li class="item"><a href="https://camelotproject.org/" target="_blank" rel="noopener">
+<p>Free tool for reviewing and annotating large camera-trap image sets, and it imports MegaDetector results</p><p class="use">Annotate a large image set fast, importing detector output so you only judge real frames</p></a></li><li class="item"><a href="https://camelotproject.org/" target="_blank" rel="noopener">
 <span class="nm">Camelot<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Free camera-trap database and classification tool that exports straight to camtrapR and PRESENCE</p></a></li><li class="item"><a href="https://ravensoundsoftware.com/" target="_blank" rel="noopener">
+<p>Free camera-trap database and classification tool that exports straight to camtrapR and PRESENCE</p><p class="use">Manage camera-trap images and export straight into camtrapR or PRESENCE for analysis</p></a></li><li class="item"><a href="https://ravensoundsoftware.com/" target="_blank" rel="noopener">
 <span class="nm">Raven<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Cornell Lab sound analysis software for visualizing and measuring animal calls. Raven Lite is free, Raven Pro is paid</p></a></li><li class="item"><a href="https://www.wildlifeacoustics.com/products/kaleidoscope" target="_blank" rel="noopener">
+<p>Cornell Lab sound analysis software for visualizing and measuring animal calls. Raven Lite is free, Raven Pro is paid</p><p class="use">Start with free Raven Lite to measure calls, and buy Pro only when batch work demands it</p></a></li><li class="item"><a href="https://www.wildlifeacoustics.com/products/kaleidoscope" target="_blank" rel="noopener">
 <span class="nm">Kaleidoscope<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Sorts and labels bird song, frog calls and bat echolocation across months of recordings. Lite edition is free</p></a></li><li class="item"><a href="https://cran.r-project.org/package=bioacoustics" target="_blank" rel="noopener">
+<p>Sorts and labels bird song, frog calls and bat echolocation across months of recordings. Lite edition is free</p><p class="use">Sort months of recordings by species, trying the free Lite edition before paying for Pro</p></a></li><li class="item"><a href="https://cran.r-project.org/package=bioacoustics" target="_blank" rel="noopener">
 <span class="nm">bioacoustics (R package)<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Free GPL-3 package that filters noisy audio and extracts acoustic features for classification, reading WAV, WAC, MP3 and ZC</p></a></li>
+<p>Free GPL-3 package that filters noisy audio and extracts acoustic features for classification, reading WAV, WAC, MP3 and ZC</p><p class="use">Filter noisy recordings and extract features in R when commercial software is out of budget</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/spatial-data-and-mapping/">&larr; Spatial data and mapping</a> <a href="/#browse">All categories</a> <a href="/conservation-technology-and-field-equipment/">Conservation technology and field equipment &rarr;</a></p>

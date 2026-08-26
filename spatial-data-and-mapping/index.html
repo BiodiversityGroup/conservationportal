@@ -166,6 +166,8 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
 .item p{margin:4px 0 0;font-size:15px;color:var(--muted);max-width:64ch}
+.item p.use{margin:7px 0 0;padding-top:6px;font-size:13.5px;line-height:1.5;
+  border-top:1px solid var(--hair);max-width:64ch}
 .item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
   text-decoration:none;border-bottom:1px solid transparent}
 .item .access:hover{border-bottom-color:currentColor}
@@ -321,53 +323,53 @@ img.ondark{display:none}
 <ul class="list" id="clist">
 <li class="item"><a href="https://www.protectedplanet.net/" target="_blank" rel="noopener">
 <span class="nm">Protected Planet<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Protected area boundaries (WDPA)</p></a></li><li class="item"><a href="https://mpatlas.org/" target="_blank" rel="noopener">
+<p>Protected area boundaries (WDPA)</p><p class="use">Download WDPA boundaries as the baseline layer for any protected area gap analysis</p></a></li><li class="item"><a href="https://mpatlas.org/" target="_blank" rel="noopener">
 <span class="nm">Marine Protection Atlas<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>MPA protection levels</p></a></li><li class="item"><a href="https://protectedseas.net/" target="_blank" rel="noopener">
+<p>MPA protection levels</p><p class="use">Check whether an MPA actually protects anything, since designation and protection level differ sharply</p></a></li><li class="item"><a href="https://protectedseas.net/" target="_blank" rel="noopener">
 <span class="nm">ProtectedSeas<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Marine managed-area regulations</p></a></li><li class="item"><a href="https://www.padddtracker.org/" target="_blank" rel="noopener">
+<p>Marine managed-area regulations</p><p class="use">Look up what a marine managed area legally prohibits, not just where its boundary sits</p></a></li><li class="item"><a href="https://www.padddtracker.org/" target="_blank" rel="noopener">
 <span class="nm">PADDDtracker<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Protected-area downgrading events</p></a></li><li class="item"><a href="https://globalnaturewatch.org/" target="_blank" rel="noopener">
+<p>Protected-area downgrading events</p><p class="use">Document a protected area being downgraded or degazetted, evidence advocacy rarely has ready</p></a></li><li class="item"><a href="https://globalnaturewatch.org/" target="_blank" rel="noopener">
 <span class="nm">Global Nature Watch<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Forest and ecosystem change monitoring. Renamed from Global Forest Watch, so search both names</p></a></li><li class="item"><a href="https://www.ibat-alliance.org/" target="_blank" rel="noopener">
+<p>Forest and ecosystem change monitoring. Renamed from Global Forest Watch, so search both names</p><p class="use">Set deforestation alerts for your site, and search Global Forest Watch for older citations</p></a></li><li class="item"><a href="https://www.ibat-alliance.org/" target="_blank" rel="noopener">
 <span class="nm">IBAT<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Integrated Biodiversity Assessment Tool</p></a></li><li class="item"><a href="https://unbiodiversitylab.org/" target="_blank" rel="noopener">
+<p>Integrated Biodiversity Assessment Tool</p><p class="use">Screen a project footprint against Red List, KBA and protected area layers in one request</p></a></li><li class="item"><a href="https://unbiodiversitylab.org/" target="_blank" rel="noopener">
 <span class="nm">UN Biodiversity Lab<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Spatial layers for policy</p></a></li><li class="item"><a href="https://data.unep.org/" target="_blank" rel="noopener">
+<p>Spatial layers for policy</p><p class="use">Pull policy-ready spatial layers when a government partner needs a map rather than a dataset</p></a></li><li class="item"><a href="https://data.unep.org/" target="_blank" rel="noopener">
 <span class="nm">World Environment Situation Room<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>UNEP data portal</p></a></li><li class="item"><a href="https://dynamicworld.app/" target="_blank" rel="noopener">
+<p>UNEP data portal</p><p class="use">Note that it reads as coming soon, so plan UNEP data access another way for now</p></a></li><li class="item"><a href="https://dynamicworld.app/" target="_blank" rel="noopener">
 <span class="nm">Dynamic World<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>10 m near-real-time land cover</p></a></li><li class="item"><a href="http://www.globallandcover.com/" target="_blank" rel="noopener">
+<p>10 m near-real-time land cover</p><p class="use">Get 10 meter land cover in near real time when annual products are too coarse temporally</p></a></li><li class="item"><a href="http://www.globallandcover.com/" target="_blank" rel="noopener">
 <span class="nm">GlobeLand30<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>30 m global land cover</p></a></li><li class="item"><a href="https://worldclim.org/" target="_blank" rel="noopener">
+<p>30 m global land cover</p><p class="use">Find a mirror for 30 meter global land cover, because the original host is unreachable</p></a></li><li class="item"><a href="https://worldclim.org/" target="_blank" rel="noopener">
 <span class="nm">WorldClim<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Climate surfaces</p></a></li><li class="item"><a href="https://earthexplorer.usgs.gov/" target="_blank" rel="noopener">
+<p>Climate surfaces</p><p class="use">Download the climate surfaces almost every distribution model on this page expects as input</p></a></li><li class="item"><a href="https://earthexplorer.usgs.gov/" target="_blank" rel="noopener">
 <span class="nm">EarthExplorer<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>USGS imagery</p></a></li><li class="item"><a href="https://www.planet.com/nicfi/" target="_blank" rel="noopener">
+<p>USGS imagery</p><p class="use">Order historic aerial photography to show what a site looked like decades before your baseline</p></a></li><li class="item"><a href="https://www.planet.com/nicfi/" target="_blank" rel="noopener">
 <span class="nm">Planet NICFI<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>High-resolution tropics imagery</p></a></li><li class="item"><a href="https://geospatial.tnc.org/" target="_blank" rel="noopener">
+<p>High-resolution tropics imagery</p><p class="use">Confirm the tropical imagery program still covers you, since the page now redirects into sales</p></a></li><li class="item"><a href="https://geospatial.tnc.org/" target="_blank" rel="noopener">
 <span class="nm">TNC Geospatial Conservation Atlas<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>TNC spatial layers</p></a></li><li class="item"><a href="https://www.conservationgateway.org/" target="_blank" rel="noopener">
+<p>TNC spatial layers</p><p class="use">Borrow finished conservation map layers instead of rebuilding equivalents from raw data</p></a></li><li class="item"><a href="https://www.conservationgateway.org/" target="_blank" rel="noopener">
 <span class="nm">Conservation Gateway<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>TNC methods and data</p></a></li><li class="item"><a href="http://www.landscope.org/" target="_blank" rel="noopener">
+<p>TNC methods and data</p><p class="use">Read the method behind a TNC approach before adopting it, including what did not work</p></a></li><li class="item"><a href="http://www.landscope.org/" target="_blank" rel="noopener">
 <span class="nm">LandScope America<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>US conservation priority mapping</p></a></li><li class="item"><a href="https://databasin.org/" target="_blank" rel="noopener">
+<p>US conservation priority mapping</p><p class="use">Treat these US priority layers as unavailable and source them from state natural heritage programs</p></a></li><li class="item"><a href="https://databasin.org/" target="_blank" rel="noopener">
 <span class="nm">Data Basin<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Conservation datasets and workspaces</p></a></li><li class="item"><a href="https://conservationeasement.us/" target="_blank" rel="noopener">
+<p>Conservation datasets and workspaces</p><p class="use">Share a working map with collaborators who have no GIS software installed</p></a></li><li class="item"><a href="https://conservationeasement.us/" target="_blank" rel="noopener">
 <span class="nm">National Conservation Easement Database<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>US conservation easements</p></a></li><li class="item"><a href="https://ejatlas.org/" target="_blank" rel="noopener">
+<p>US conservation easements</p><p class="use">Use it for historic easement records, but note that updates stopped in January 2025</p></a></li><li class="item"><a href="https://ejatlas.org/" target="_blank" rel="noopener">
 <span class="nm">EJAtlas<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Environmental justice conflict map</p></a></li><li class="item"><a href="https://trase.earth/" target="_blank" rel="noopener">
+<p>Environmental justice conflict map</p><p class="use">Find whether a community conflict already surrounds your site before proposing a project there</p></a></li><li class="item"><a href="https://trase.earth/" target="_blank" rel="noopener">
 <span class="nm">TRASE<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Commodity supply-chain deforestation links</p></a></li><li class="item"><a href="https://le.mu/" target="_blank" rel="noopener">
+<p>Commodity supply-chain deforestation links</p><p class="use">Trace a commodity back to the places it deforests, which names the companies accountable</p></a></li><li class="item"><a href="https://le.mu/" target="_blank" rel="noopener">
 <span class="nm">Lemu<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Biosphere atlas app</p></a></li><li class="item"><a href="http://www.globalreefrecord.org/" target="_blank" rel="noopener">
+<p>Biosphere atlas app</p><p class="use">Note that it now sells corporate nature intelligence, so treat the atlas as a commercial product</p></a></li><li class="item"><a href="http://www.globalreefrecord.org/" target="_blank" rel="noopener">
 <span class="nm">Global Reef Record<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Reef survey imagery</p></a></li><li class="item"><a href="https://data.footprintnetwork.org/" target="_blank" rel="noopener">
+<p>Reef survey imagery</p><p class="use">Compare your reef survey imagery against an open baseline collected across many countries</p></a></li><li class="item"><a href="https://data.footprintnetwork.org/" target="_blank" rel="noopener">
 <span class="nm">Global Footprint Network<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Ecological footprint accounts</p></a></li><li class="item"><a href="https://mesowest.utah.edu/" target="_blank" rel="noopener">
+<p>Ecological footprint accounts</p><p class="use">Pull national footprint accounts when a proposal needs a consumption figure rather than a species one</p></a></li><li class="item"><a href="https://mesowest.utah.edu/" target="_blank" rel="noopener">
 <span class="nm">MesoWest<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Live surface weather</p></a></li>
+<p>Live surface weather</p><p class="use">Grab live surface weather for a field site, noting the service sunsets in December 2026</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/bioblitzes-and-awareness-days/">&larr; Bioblitzes and awareness days</a> <a href="/#browse">All categories</a> <a href="/analytical-methods-and-modeling-tools/">Analytical methods and modeling tools &rarr;</a></p>
