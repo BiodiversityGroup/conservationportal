@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Funding and grants | Conservation Portal</title>
-<meta name="description" content="Grant databases, the funders themselves, and the networks behind them. 19 hand-checked resources for conservationists.">
+<meta name="description" content="Grant databases, the funders themselves, and the networks behind them. 18 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/funding-and-grants/">
 <meta property="og:title" content="Funding and grants | Conservation Portal">
-<meta property="og:description" content="Grant databases, the funders themselves, and the networks behind them. 19 hand-checked resources for conservationists.">
+<meta property="og:description" content="Grant databases, the funders themselves, and the networks behind them. 18 hand-checked resources for conservationists.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://conservationportal.org/funding-and-grants/">
 <meta property="og:site_name" content="Conservation Portal">
@@ -47,8 +47,19 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 .skip:focus{position:static;display:inline-block;padding:8px}
 
 header{position:sticky;top:0;z-index:20;background:var(--ground);border-bottom:1px solid var(--hair)}
-.hbar{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;
-  align-items:center;justify-content:center;gap:14px}
+.hbar{max-width:1180px;margin:0 auto;padding:12px 24px;display:flex;
+  align-items:center;justify-content:center;gap:14px;position:relative}
+/* logo pinned top left, out of the centered flow so the wordmark stays centered */
+.logo{position:absolute;left:24px;top:50%;transform:translateY(-50%);
+  display:flex;align-items:center;line-height:0}
+.logo img{height:38px;width:auto;display:block}
+.logo .on-light{display:block}
+.logo .on-dark{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo .on-light{display:none}
+  :root:not([data-theme="light"]) .logo .on-dark{display:block}}
+:root[data-theme="dark"] .logo .on-light{display:none}
+:root[data-theme="dark"] .logo .on-dark{display:block}
+@media (max-width:560px){.logo img{height:30px}.logo{left:14px}}
 .wordmark{font-family:Petrona,Georgia,serif;font-size:21px;font-weight:600;
   color:var(--ink);text-decoration:none;letter-spacing:-.015em}
 .wordmark span{color:var(--green-deep)}
@@ -87,21 +98,21 @@ input[type=search]::placeholder{color:var(--muted)}
 .grouphead h2{font-size:26px}
 .grouphead p{margin:6px 0 0;color:var(--muted);font-size:14px}
 
-.grid{display:grid;gap:14px;margin-top:18px;
-  grid-template-columns:repeat(auto-fill,minmax(272px,1fr))}
-.card{background:var(--surface);border:1px solid var(--hair);border-radius:3px;
-  padding:22px 20px 20px;text-align:center;display:flex;flex-direction:column;
-  align-items:center;gap:9px;box-shadow:var(--shadow);text-decoration:none;color:inherit;
-  transition:border-color .18s,transform .18s}
+/* three across at most, and a short last row stays centered rather than
+   stretching or hugging the left edge */
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:18px}
+.card{flex:0 1 336px;max-width:336px;
+  background:var(--surface);border:1px solid var(--hair);border-radius:3px;
+  padding:24px 22px;text-align:center;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:10px;box-shadow:var(--shadow);
+  text-decoration:none;color:inherit;transition:border-color .18s,transform .18s}
 .card:hover{border-color:var(--green);transform:translateY(-2px)}
 @media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
 .card .count{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;
   letter-spacing:.1em;color:var(--muted);font-variant-numeric:tabular-nums}
 .card h3{font-size:20px}
 .card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
-.card .egs{margin-top:auto;padding-top:12px;font-size:12px;color:var(--muted);
-  font-family:"IBM Plex Mono",ui-monospace,monospace;line-height:1.7;
-  border-top:1px solid var(--hair);width:100%}
+@media (max-width:760px){.card{flex:1 1 100%;max-width:420px}}
 
 .catpage{padding-top:52px}
 .catpage h1{font-size:clamp(30px,5vw,46px)}
@@ -116,12 +127,9 @@ input[type=search]::placeholder{color:var(--muted)}
   text-decoration:none;letter-spacing:-.01em}
 .item a.nm:hover{text-decoration:underline;text-underline-offset:4px}
 .item p{margin:6px auto 0;font-size:15.5px;color:var(--muted);max-width:56ch;line-height:1.55}
-.item .dom{display:block;margin-top:9px;font-size:11.5px;color:var(--muted);letter-spacing:.04em}
-.item.dead a.nm{color:var(--muted)}
 .tag{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.1em;
   text-transform:uppercase;border-radius:2px;padding:1px 5px}
 .tag.new{color:var(--orange);border:1px solid currentColor;font-weight:700}
-.tag.dead{color:var(--muted);border:1px dashed var(--hair)}
 .hint{color:var(--muted);font-size:15px;margin:32px auto 0}
 .nav2{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:30px auto 0;font-size:15px}
 
@@ -130,97 +138,79 @@ footer{border-top:1px solid var(--hair);margin-top:24px;padding:34px 24px 60px;
 footer p{max-width:62ch;margin:0 auto 10px}
 .hidden{display:none}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Funding and grants | Conservation Portal", "url": "https://conservationportal.org/funding-and-grants/", "description": "Grant databases, the funders themselves, and the networks behind them.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "mainEntity": {"@type": "ItemList", "numberOfItems": 19, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Phoenix Species Project", "url": "https://phoenixspeciesproject.org/"}, {"@type": "ListItem", "position": 2, "name": "Terra Viva Grants Directory", "url": "https://terravivagrants.org/"}, {"@type": "ListItem", "position": 3, "name": "fundsforNGOs", "url": "https://www2.fundsforngos.org/"}, {"@type": "ListItem", "position": 4, "name": "Foundation Directory Online", "url": "https://fconline.foundationcenter.org/"}, {"@type": "ListItem", "position": 5, "name": "GrantSpace", "url": "https://grantspace.org/"}, {"@type": "ListItem", "position": 6, "name": "Peak Proposals free grant search list", "url": "https://www.peakproposals.com/"}, {"@type": "ListItem", "position": 7, "name": "Unfunded List", "url": "https://unfundedlist.com/"}, {"@type": "ListItem", "position": 8, "name": "Conservation Leadership Programme", "url": "https://www.conservationleadershipprogramme.org/"}, {"@type": "ListItem", "position": 9, "name": "Mohamed bin Zayed Species Conservation Fund", "url": "https://www.speciesconservation.org/"}, {"@type": "ListItem", "position": 10, "name": "CEPF", "url": "https://www.cepf.net/"}, {"@type": "ListItem", "position": 11, "name": "Jana Robeyst Trust Fund", "url": "https://janatrustfund.org/"}, {"@type": "ListItem", "position": 12, "name": "Fondation Ensemble", "url": "https://fondationensemble.org/"}, {"@type": "ListItem", "position": 13, "name": "Environmental Funders Network", "url": "https://greenfunders.org/"}, {"@type": "ListItem", "position": 14, "name": "United Philanthropy Forum", "url": "https://unitedphilforum.org/"}, {"@type": "ListItem", "position": 15, "name": "Grants.gov", "url": "https://grants.gov/"}, {"@type": "ListItem", "position": 16, "name": "Instrumentl", "url": "https://www.instrumentl.com/"}, {"@type": "ListItem", "position": 17, "name": "GrantScape", "url": "https://thegrantscape.com/"}, {"@type": "ListItem", "position": 18, "name": "Open Philanthropy grants database", "url": "https://www.openphilanthropy.org/"}, {"@type": "ListItem", "position": 19, "name": "Animal Funding Atlas", "url": "https://animalfundingatlas.org/"}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Funding and grants | Conservation Portal", "url": "https://conservationportal.org/funding-and-grants/", "description": "Grant databases, the funders themselves, and the networks behind them.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "mainEntity": {"@type": "ItemList", "numberOfItems": 18, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Phoenix Species Project", "url": "https://phoenixspeciesproject.org/"}, {"@type": "ListItem", "position": 2, "name": "Terra Viva Grants Directory", "url": "https://terravivagrants.org/"}, {"@type": "ListItem", "position": 3, "name": "fundsforNGOs", "url": "https://www2.fundsforngos.org/"}, {"@type": "ListItem", "position": 4, "name": "Foundation Directory Online", "url": "https://fconline.foundationcenter.org/"}, {"@type": "ListItem", "position": 5, "name": "GrantSpace", "url": "https://grantspace.org/"}, {"@type": "ListItem", "position": 6, "name": "Peak Proposals free grant search list", "url": "https://www.peakproposals.com/"}, {"@type": "ListItem", "position": 7, "name": "Unfunded List", "url": "https://unfundedlist.com/"}, {"@type": "ListItem", "position": 8, "name": "Conservation Leadership Programme", "url": "https://www.conservationleadershipprogramme.org/"}, {"@type": "ListItem", "position": 9, "name": "Mohamed bin Zayed Species Conservation Fund", "url": "https://www.speciesconservation.org/"}, {"@type": "ListItem", "position": 10, "name": "CEPF", "url": "https://www.cepf.net/"}, {"@type": "ListItem", "position": 11, "name": "Jana Robeyst Trust Fund", "url": "https://janatrustfund.org/"}, {"@type": "ListItem", "position": 12, "name": "Fondation Ensemble", "url": "https://fondationensemble.org/"}, {"@type": "ListItem", "position": 13, "name": "Environmental Funders Network", "url": "https://greenfunders.org/"}, {"@type": "ListItem", "position": 14, "name": "United Philanthropy Forum", "url": "https://unitedphilforum.org/"}, {"@type": "ListItem", "position": 15, "name": "Grants.gov", "url": "https://grants.gov/"}, {"@type": "ListItem", "position": 16, "name": "Instrumentl", "url": "https://www.instrumentl.com/"}, {"@type": "ListItem", "position": 17, "name": "GrantScape", "url": "https://thegrantscape.com/"}, {"@type": "ListItem", "position": 18, "name": "Open Philanthropy grants database", "url": "https://www.openphilanthropy.org/"}]}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header><div class="hbar">
+<a class="logo" href="https://biodiversitygroup.org/" aria-label="The Biodiversity Group">
+<img class="on-light" src="/assets/tbg-frog-on-light.png" alt="The Biodiversity Group" width="102" height="96">
+<img class="on-dark" src="/assets/tbg-frog-on-dark.png" alt="The Biodiversity Group" width="102" height="96">
+</a>
 <a class="wordmark" href="/">Conservation <span>Portal</span></a>
-<span class="eyebrow">A project of The Biodiversity Group</span>
+<span class="eyebrow"><a href="https://biodiversitygroup.org/">A project of The Biodiversity Group</a></span>
 </div></header>
 <main id="main">
 <div class="catpage">
 <p class="eyebrow">Money and services</p>
 <h1>Funding and grants</h1>
 <p class="blurb">Grant databases, the funders themselves, and the networks behind them.</p>
-<div class="rule"><span class="eyebrow">19 resources &middot; 1 added in the August 2026 review</span></div>
+<div class="rule"><span class="eyebrow">18 resources</span></div>
 <ul class="list">
 <li class="item">
 <span class="top"><a class="nm" href="https://phoenixspeciesproject.org/" target="_blank" rel="noopener">Phoenix Species Project</a><span class="tag new">new</span></span>
 <p>Re:wild, the Bezos Earth Fund and IUCN SSC putting $200M into recovering 100 Critically Endangered and Extinct-in-the-Wild species across 30 countries</p>
-<span class="dom mono">phoenixspeciesproject.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://terravivagrants.org/" target="_blank" rel="noopener">Terra Viva Grants Directory</a></span>
 <p>Grants for agriculture, energy and environment in developing countries</p>
-<span class="dom mono">terravivagrants.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://www2.fundsforngos.org/" target="_blank" rel="noopener">fundsforNGOs</a></span>
 <p>Grant listings and proposal resources</p>
-<span class="dom mono">www2.fundsforngos.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://fconline.foundationcenter.org/" target="_blank" rel="noopener">Foundation Directory Online</a></span>
 <p>Candid funder database, paywalled</p>
-<span class="dom mono">fconline.foundationcenter.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://grantspace.org/" target="_blank" rel="noopener">GrantSpace</a></span>
 <p>Candid knowledge base, including finding a fiscal sponsor</p>
-<span class="dom mono">grantspace.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://www.peakproposals.com/" target="_blank" rel="noopener">Peak Proposals free grant search list</a></span>
 <p>Guide to free grant-funding search sources</p>
-<span class="dom mono">peakproposals.com</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://unfundedlist.com/" target="_blank" rel="noopener">Unfunded List</a></span>
 <p>Feedback on unfunded proposals</p>
-<span class="dom mono">unfundedlist.com</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://www.conservationleadershipprogramme.org/" target="_blank" rel="noopener">Conservation Leadership Programme</a></span>
 <p>Early-career conservation team grants</p>
-<span class="dom mono">conservationleadershipprogramme.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://www.speciesconservation.org/" target="_blank" rel="noopener">Mohamed bin Zayed Species Conservation Fund</a></span>
 <p>Species grants with a public grant database</p>
-<span class="dom mono">speciesconservation.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://www.cepf.net/" target="_blank" rel="noopener">CEPF</a></span>
 <p>Hotspot grants with public grantee lists</p>
-<span class="dom mono">cepf.net</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://janatrustfund.org/" target="_blank" rel="noopener">Jana Robeyst Trust Fund</a></span>
 <p>Small grants for African conservation</p>
-<span class="dom mono">janatrustfund.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://fondationensemble.org/" target="_blank" rel="noopener">Fondation Ensemble</a></span>
 <p>French foundation funding biodiversity</p>
-<span class="dom mono">fondationensemble.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://greenfunders.org/" target="_blank" rel="noopener">Environmental Funders Network</a></span>
 <p>UK environmental philanthropy resources</p>
-<span class="dom mono">greenfunders.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://unitedphilforum.org/" target="_blank" rel="noopener">United Philanthropy Forum</a></span>
 <p>US philanthropy association network</p>
-<span class="dom mono">unitedphilforum.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://grants.gov/" target="_blank" rel="noopener">Grants.gov</a></span>
 <p>US federal grants</p>
-<span class="dom mono">grants.gov</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://www.instrumentl.com/" target="_blank" rel="noopener">Instrumentl</a></span>
 <p>Grant discovery platform, paid</p>
-<span class="dom mono">instrumentl.com</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://thegrantscape.com/" target="_blank" rel="noopener">GrantScape</a></span>
 <p>Grant discovery</p>
-<span class="dom mono">thegrantscape.com</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://www.openphilanthropy.org/" target="_blank" rel="noopener">Open Philanthropy grants database</a></span>
 <p>Grant listings of a major funder</p>
-<span class="dom mono">openphilanthropy.org</span>
-</li><li class="item dead">
-<span class="top"><a class="nm" href="https://animalfundingatlas.org/" target="_blank" rel="noopener nofollow">Animal Funding Atlas</a><span class="tag dead">dead link</span></span>
-<p>Was a funder and grant map for animal causes. Domain taken over by spam in 2025, kept as a lead in case the dataset resurfaces</p>
-<span class="dom mono">animalfundingatlas.org</span>
 </li>
 </ul>
 <p class="nav2"><a href="/planning-evaluation-and-practice/">&larr; Planning, evaluation and practice</a> <a href="/">All categories</a> <a href="/fundraising/">Fundraising &rarr;</a></p>
@@ -231,8 +221,6 @@ footer p{max-width:62ch;margin:0 auto 10px}
 <p>A curated shelf of resources for wildlife conservationists, built and maintained by
 <a href="https://biodiversitygroup.org/">The Biodiversity Group</a>.
 Know something that belongs here? <a href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%20suggestion">Tell us</a>.</p>
-<p>Entries marked NEW were added in the August 2026 review. Entries marked DEAD LINK are kept
-on purpose, so nobody spends an afternoon looking for something that is gone.</p>
 </footer>
 </body>
 </html>

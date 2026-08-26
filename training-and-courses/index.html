@@ -47,8 +47,19 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 .skip:focus{position:static;display:inline-block;padding:8px}
 
 header{position:sticky;top:0;z-index:20;background:var(--ground);border-bottom:1px solid var(--hair)}
-.hbar{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;
-  align-items:center;justify-content:center;gap:14px}
+.hbar{max-width:1180px;margin:0 auto;padding:12px 24px;display:flex;
+  align-items:center;justify-content:center;gap:14px;position:relative}
+/* logo pinned top left, out of the centered flow so the wordmark stays centered */
+.logo{position:absolute;left:24px;top:50%;transform:translateY(-50%);
+  display:flex;align-items:center;line-height:0}
+.logo img{height:38px;width:auto;display:block}
+.logo .on-light{display:block}
+.logo .on-dark{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo .on-light{display:none}
+  :root:not([data-theme="light"]) .logo .on-dark{display:block}}
+:root[data-theme="dark"] .logo .on-light{display:none}
+:root[data-theme="dark"] .logo .on-dark{display:block}
+@media (max-width:560px){.logo img{height:30px}.logo{left:14px}}
 .wordmark{font-family:Petrona,Georgia,serif;font-size:21px;font-weight:600;
   color:var(--ink);text-decoration:none;letter-spacing:-.015em}
 .wordmark span{color:var(--green-deep)}
@@ -87,21 +98,21 @@ input[type=search]::placeholder{color:var(--muted)}
 .grouphead h2{font-size:26px}
 .grouphead p{margin:6px 0 0;color:var(--muted);font-size:14px}
 
-.grid{display:grid;gap:14px;margin-top:18px;
-  grid-template-columns:repeat(auto-fill,minmax(272px,1fr))}
-.card{background:var(--surface);border:1px solid var(--hair);border-radius:3px;
-  padding:22px 20px 20px;text-align:center;display:flex;flex-direction:column;
-  align-items:center;gap:9px;box-shadow:var(--shadow);text-decoration:none;color:inherit;
-  transition:border-color .18s,transform .18s}
+/* three across at most, and a short last row stays centered rather than
+   stretching or hugging the left edge */
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:18px}
+.card{flex:0 1 336px;max-width:336px;
+  background:var(--surface);border:1px solid var(--hair);border-radius:3px;
+  padding:24px 22px;text-align:center;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:10px;box-shadow:var(--shadow);
+  text-decoration:none;color:inherit;transition:border-color .18s,transform .18s}
 .card:hover{border-color:var(--green);transform:translateY(-2px)}
 @media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
 .card .count{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;
   letter-spacing:.1em;color:var(--muted);font-variant-numeric:tabular-nums}
 .card h3{font-size:20px}
 .card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
-.card .egs{margin-top:auto;padding-top:12px;font-size:12px;color:var(--muted);
-  font-family:"IBM Plex Mono",ui-monospace,monospace;line-height:1.7;
-  border-top:1px solid var(--hair);width:100%}
+@media (max-width:760px){.card{flex:1 1 100%;max-width:420px}}
 
 .catpage{padding-top:52px}
 .catpage h1{font-size:clamp(30px,5vw,46px)}
@@ -116,12 +127,9 @@ input[type=search]::placeholder{color:var(--muted)}
   text-decoration:none;letter-spacing:-.01em}
 .item a.nm:hover{text-decoration:underline;text-underline-offset:4px}
 .item p{margin:6px auto 0;font-size:15.5px;color:var(--muted);max-width:56ch;line-height:1.55}
-.item .dom{display:block;margin-top:9px;font-size:11.5px;color:var(--muted);letter-spacing:.04em}
-.item.dead a.nm{color:var(--muted)}
 .tag{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.1em;
   text-transform:uppercase;border-radius:2px;padding:1px 5px}
 .tag.new{color:var(--orange);border:1px solid currentColor;font-weight:700}
-.tag.dead{color:var(--muted);border:1px dashed var(--hair)}
 .hint{color:var(--muted);font-size:15px;margin:32px auto 0}
 .nav2{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:30px auto 0;font-size:15px}
 
@@ -135,80 +143,68 @@ footer p{max-width:62ch;margin:0 auto 10px}
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header><div class="hbar">
+<a class="logo" href="https://biodiversitygroup.org/" aria-label="The Biodiversity Group">
+<img class="on-light" src="/assets/tbg-frog-on-light.png" alt="The Biodiversity Group" width="102" height="96">
+<img class="on-dark" src="/assets/tbg-frog-on-dark.png" alt="The Biodiversity Group" width="102" height="96">
+</a>
 <a class="wordmark" href="/">Conservation <span>Portal</span></a>
-<span class="eyebrow">A project of The Biodiversity Group</span>
+<span class="eyebrow"><a href="https://biodiversitygroup.org/">A project of The Biodiversity Group</a></span>
 </div></header>
 <main id="main">
 <div class="catpage">
 <p class="eyebrow">Knowledge and communication</p>
 <h1>Training and courses</h1>
 <p class="blurb">Free and low-cost courses in GIS, statistics, planning and nonprofit skills.</p>
-<div class="rule"><span class="eyebrow">16 resources &middot; 3 added in the August 2026 review</span></div>
+<div class="rule"><span class="eyebrow">16 resources</span></div>
 <ul class="list">
 <li class="item">
 <span class="top"><a class="nm" href="https://www.conservationtraining.org/" target="_blank" rel="noopener">ConservationTraining (TNC)</a></span>
 <p>Free TNC courses, including GIS and Open Standards</p>
-<span class="dom mono">conservationtraining.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://get.nonprofitready.org/" target="_blank" rel="noopener">NonprofitReady</a></span>
 <p>Free nonprofit skills courses</p>
-<span class="dom mono">get.nonprofitready.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://acumenacademy.org/" target="_blank" rel="noopener">Acumen Academy</a></span>
 <p>Social-sector courses</p>
-<span class="dom mono">acumenacademy.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://www.codecademy.com/" target="_blank" rel="noopener">Codecademy</a></span>
 <p>R, Python and statistics courses</p>
-<span class="dom mono">codecademy.com</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://docs.qgis.org/" target="_blank" rel="noopener">QGIS training manual</a></span>
 <p>Free GIS training</p>
-<span class="dom mono">docs.qgis.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://www.edx.org/" target="_blank" rel="noopener">edX</a></span>
 <p>MOOCs, including land management</p>
-<span class="dom mono">edx.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://www.tropical-biology.org/" target="_blank" rel="noopener">Tropical Biology Association</a></span>
 <p>Field courses and statistics guides</p>
-<span class="dom mono">tropical-biology.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://www.centerforwildlifestudies.org/" target="_blank" rel="noopener">Center for Wildlife Studies</a></span>
 <p>Wildlife science short courses</p>
-<span class="dom mono">centerforwildlifestudies.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://kinshipfellows.org/" target="_blank" rel="noopener">Kinship Conservation Fellows</a></span>
 <p>Market-based conservation fellowship</p>
-<span class="dom mono">kinshipfellows.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://unleash.org/" target="_blank" rel="noopener">UNLEASH</a></span>
 <p>SDG innovation labs</p>
-<span class="dom mono">unleash.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://www.oneworld.training/" target="_blank" rel="noopener">One World RIFF</a></span>
 <p>Facilitation training</p>
-<span class="dom mono">oneworld.training</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://volpro.net/" target="_blank" rel="noopener">VolunteerPro</a></span>
 <p>Volunteer-management training</p>
-<span class="dom mono">volpro.net</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://www.speciesonthebrink.org/" target="_blank" rel="noopener">ASAP partner resources</a></span>
 <p>Asian Species Action Partnership resources</p>
-<span class="dom mono">speciesonthebrink.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://training.wildteam.org.uk/course/grant-writing" target="_blank" rel="noopener">WildTeam grant writing course</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://training.wildteam.org.uk/course/grant-writing" target="_blank" rel="noopener">WildTeam grant writing course</a></span>
 <p>Online course in grant writing for wildlife conservation</p>
-<span class="dom mono">training.wildteam.org.uk</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://www.conservationleadershipprogramme.org/awards-opportunities/team-awards/help-resources/project-manuals/" target="_blank" rel="noopener">Conservation Leadership Programme project manuals</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://www.conservationleadershipprogramme.org/awards-opportunities/team-awards/help-resources/project-manuals/" target="_blank" rel="noopener">Conservation Leadership Programme project manuals</a></span>
 <p>Free manuals on fundraising and proposal writing for field teams</p>
-<span class="dom mono">conservationleadershipprogramme.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://mooc-conservation.org/" target="_blank" rel="noopener">MOOC Conservation</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://mooc-conservation.org/" target="_blank" rel="noopener">MOOC Conservation</a></span>
 <p>Free certifying courses on protected area management for rangers and managers, taught in French with some English</p>
-<span class="dom mono">mooc-conservation.org</span>
 </li>
 </ul>
 <p class="nav2"><a href="/literature-evidence-and-data-access/">&larr; Literature, evidence and data access</a> <a href="/">All categories</a> <a href="/communication-design-and-outreach/">Communication, design and outreach &rarr;</a></p>
@@ -219,8 +215,6 @@ footer p{max-width:62ch;margin:0 auto 10px}
 <p>A curated shelf of resources for wildlife conservationists, built and maintained by
 <a href="https://biodiversitygroup.org/">The Biodiversity Group</a>.
 Know something that belongs here? <a href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%20suggestion">Tell us</a>.</p>
-<p>Entries marked NEW were added in the August 2026 review. Entries marked DEAD LINK are kept
-on purpose, so nobody spends an afternoon looking for something that is gone.</p>
 </footer>
 </body>
 </html>

@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Fundraising | Conservation Portal</title>
-<meta name="description" content="Ways to raise money directly instead of applying for a grant: platforms, giving federations and campaign apps. 8 hand-checked resources for conservationists.">
+<meta name="description" content="Ways to raise money directly instead of applying for a grant: platforms, giving federations and campaign apps. 9 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/fundraising/">
 <meta property="og:title" content="Fundraising | Conservation Portal">
-<meta property="og:description" content="Ways to raise money directly instead of applying for a grant: platforms, giving federations and campaign apps. 8 hand-checked resources for conservationists.">
+<meta property="og:description" content="Ways to raise money directly instead of applying for a grant: platforms, giving federations and campaign apps. 9 hand-checked resources for conservationists.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://conservationportal.org/fundraising/">
 <meta property="og:site_name" content="Conservation Portal">
@@ -47,8 +47,19 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 .skip:focus{position:static;display:inline-block;padding:8px}
 
 header{position:sticky;top:0;z-index:20;background:var(--ground);border-bottom:1px solid var(--hair)}
-.hbar{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;
-  align-items:center;justify-content:center;gap:14px}
+.hbar{max-width:1180px;margin:0 auto;padding:12px 24px;display:flex;
+  align-items:center;justify-content:center;gap:14px;position:relative}
+/* logo pinned top left, out of the centered flow so the wordmark stays centered */
+.logo{position:absolute;left:24px;top:50%;transform:translateY(-50%);
+  display:flex;align-items:center;line-height:0}
+.logo img{height:38px;width:auto;display:block}
+.logo .on-light{display:block}
+.logo .on-dark{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo .on-light{display:none}
+  :root:not([data-theme="light"]) .logo .on-dark{display:block}}
+:root[data-theme="dark"] .logo .on-light{display:none}
+:root[data-theme="dark"] .logo .on-dark{display:block}
+@media (max-width:560px){.logo img{height:30px}.logo{left:14px}}
 .wordmark{font-family:Petrona,Georgia,serif;font-size:21px;font-weight:600;
   color:var(--ink);text-decoration:none;letter-spacing:-.015em}
 .wordmark span{color:var(--green-deep)}
@@ -87,21 +98,21 @@ input[type=search]::placeholder{color:var(--muted)}
 .grouphead h2{font-size:26px}
 .grouphead p{margin:6px 0 0;color:var(--muted);font-size:14px}
 
-.grid{display:grid;gap:14px;margin-top:18px;
-  grid-template-columns:repeat(auto-fill,minmax(272px,1fr))}
-.card{background:var(--surface);border:1px solid var(--hair);border-radius:3px;
-  padding:22px 20px 20px;text-align:center;display:flex;flex-direction:column;
-  align-items:center;gap:9px;box-shadow:var(--shadow);text-decoration:none;color:inherit;
-  transition:border-color .18s,transform .18s}
+/* three across at most, and a short last row stays centered rather than
+   stretching or hugging the left edge */
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:18px}
+.card{flex:0 1 336px;max-width:336px;
+  background:var(--surface);border:1px solid var(--hair);border-radius:3px;
+  padding:24px 22px;text-align:center;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:10px;box-shadow:var(--shadow);
+  text-decoration:none;color:inherit;transition:border-color .18s,transform .18s}
 .card:hover{border-color:var(--green);transform:translateY(-2px)}
 @media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
 .card .count{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;
   letter-spacing:.1em;color:var(--muted);font-variant-numeric:tabular-nums}
 .card h3{font-size:20px}
 .card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
-.card .egs{margin-top:auto;padding-top:12px;font-size:12px;color:var(--muted);
-  font-family:"IBM Plex Mono",ui-monospace,monospace;line-height:1.7;
-  border-top:1px solid var(--hair);width:100%}
+@media (max-width:760px){.card{flex:1 1 100%;max-width:420px}}
 
 .catpage{padding-top:52px}
 .catpage h1{font-size:clamp(30px,5vw,46px)}
@@ -116,12 +127,9 @@ input[type=search]::placeholder{color:var(--muted)}
   text-decoration:none;letter-spacing:-.01em}
 .item a.nm:hover{text-decoration:underline;text-underline-offset:4px}
 .item p{margin:6px auto 0;font-size:15.5px;color:var(--muted);max-width:56ch;line-height:1.55}
-.item .dom{display:block;margin-top:9px;font-size:11.5px;color:var(--muted);letter-spacing:.04em}
-.item.dead a.nm{color:var(--muted)}
 .tag{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.1em;
   text-transform:uppercase;border-radius:2px;padding:1px 5px}
 .tag.new{color:var(--orange);border:1px solid currentColor;font-weight:700}
-.tag.dead{color:var(--muted);border:1px dashed var(--hair)}
 .hint{color:var(--muted);font-size:15px;margin:32px auto 0}
 .nav2{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:30px auto 0;font-size:15px}
 
@@ -130,53 +138,52 @@ footer{border-top:1px solid var(--hair);margin-top:24px;padding:34px 24px 60px;
 footer p{max-width:62ch;margin:0 auto 10px}
 .hidden{display:none}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Fundraising | Conservation Portal", "url": "https://conservationportal.org/fundraising/", "description": "Ways to raise money directly instead of applying for a grant: platforms, giving federations and campaign apps.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "mainEntity": {"@type": "ItemList", "numberOfItems": 8, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GlobalGiving", "url": "https://www.globalgiving.org/"}, {"@type": "ListItem", "position": 2, "name": "Milkywire", "url": "https://www.milkywire.com/"}, {"@type": "ListItem", "position": 3, "name": "Conserve Now", "url": "https://conservenow.org/"}, {"@type": "ListItem", "position": 4, "name": "Key Conservation", "url": "https://keyconservation.org/"}, {"@type": "ListItem", "position": 5, "name": "Experiment.com", "url": "https://experiment.com/"}, {"@type": "ListItem", "position": 6, "name": "JustGiving", "url": "https://www.justgiving.com/"}, {"@type": "ListItem", "position": 7, "name": "BiddingForGood", "url": "https://www.biddingforgood.com/"}, {"@type": "ListItem", "position": 8, "name": "Omaze", "url": "https://omaze.com/"}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Fundraising | Conservation Portal", "url": "https://conservationportal.org/fundraising/", "description": "Ways to raise money directly instead of applying for a grant: platforms, giving federations and campaign apps.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "mainEntity": {"@type": "ItemList", "numberOfItems": 9, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TBG shop", "url": "https://biodiversitygroup.org/shop/"}, {"@type": "ListItem", "position": 2, "name": "GlobalGiving", "url": "https://www.globalgiving.org/"}, {"@type": "ListItem", "position": 3, "name": "Milkywire", "url": "https://www.milkywire.com/"}, {"@type": "ListItem", "position": 4, "name": "Conserve Now", "url": "https://conservenow.org/"}, {"@type": "ListItem", "position": 5, "name": "Key Conservation", "url": "https://keyconservation.org/"}, {"@type": "ListItem", "position": 6, "name": "Experiment.com", "url": "https://experiment.com/"}, {"@type": "ListItem", "position": 7, "name": "JustGiving", "url": "https://www.justgiving.com/"}, {"@type": "ListItem", "position": 8, "name": "BiddingForGood", "url": "https://www.biddingforgood.com/"}, {"@type": "ListItem", "position": 9, "name": "Omaze", "url": "https://omaze.com/"}]}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header><div class="hbar">
+<a class="logo" href="https://biodiversitygroup.org/" aria-label="The Biodiversity Group">
+<img class="on-light" src="/assets/tbg-frog-on-light.png" alt="The Biodiversity Group" width="102" height="96">
+<img class="on-dark" src="/assets/tbg-frog-on-dark.png" alt="The Biodiversity Group" width="102" height="96">
+</a>
 <a class="wordmark" href="/">Conservation <span>Portal</span></a>
-<span class="eyebrow">A project of The Biodiversity Group</span>
+<span class="eyebrow"><a href="https://biodiversitygroup.org/">A project of The Biodiversity Group</a></span>
 </div></header>
 <main id="main">
 <div class="catpage">
 <p class="eyebrow">Money and services</p>
 <h1>Fundraising</h1>
 <p class="blurb">Ways to raise money directly instead of applying for a grant: platforms, giving federations and campaign apps.</p>
-<div class="rule"><span class="eyebrow">8 resources &middot; 1 added in the August 2026 review</span></div>
+<div class="rule"><span class="eyebrow">9 resources</span></div>
 <ul class="list">
 <li class="item">
+<span class="top"><a class="nm" href="https://biodiversitygroup.org/shop/" target="_blank" rel="noopener">TBG shop</a><span class="tag new">new</span></span>
+<p>Conservation merchandise whose proceeds fund the fieldwork, run on Etsy as Aall Forms of Life. We run this one</p>
+</li><li class="item">
 <span class="top"><a class="nm" href="https://www.globalgiving.org/" target="_blank" rel="noopener">GlobalGiving</a></span>
 <p>Crowdfunding for vetted projects worldwide</p>
-<span class="dom mono">globalgiving.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://www.milkywire.com/" target="_blank" rel="noopener">Milkywire</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://www.milkywire.com/" target="_blank" rel="noopener">Milkywire</a></span>
 <p>Corporate impact firm whose Climate Transformation Fund runs an annual open call, grants averaging $150k to $250k</p>
-<span class="dom mono">milkywire.com</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://conservenow.org/" target="_blank" rel="noopener">Conserve Now</a></span>
 <p>Giving federation that pools donations across certified conservation charities, so a small member gets in front of donors who would never find it alone</p>
-<span class="dom mono">conservenow.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://keyconservation.org/" target="_blank" rel="noopener">Key Conservation</a></span>
 <p>App that puts a live campaign in front of supporters when a project needs money now</p>
-<span class="dom mono">keyconservation.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://experiment.com/" target="_blank" rel="noopener">Experiment.com</a></span>
 <p>Crowdfunding for scientific research</p>
-<span class="dom mono">experiment.com</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://www.justgiving.com/" target="_blank" rel="noopener">JustGiving</a></span>
 <p>Fundraising platform for individual supporters running their own appeals</p>
-<span class="dom mono">justgiving.com</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://www.biddingforgood.com/" target="_blank" rel="noopener">BiddingForGood</a></span>
 <p>Charity auction platform</p>
-<span class="dom mono">biddingforgood.com</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://omaze.com/" target="_blank" rel="noopener">Omaze</a></span>
 <p>Prize-draw fundraising</p>
-<span class="dom mono">omaze.com</span>
 </li>
 </ul>
 <p class="nav2"><a href="/funding-and-grants/">&larr; Funding and grants</a> <a href="/">All categories</a> <a href="/prizes-awards-and-competitions/">Prizes, awards and competitions &rarr;</a></p>
@@ -187,8 +194,6 @@ footer p{max-width:62ch;margin:0 auto 10px}
 <p>A curated shelf of resources for wildlife conservationists, built and maintained by
 <a href="https://biodiversitygroup.org/">The Biodiversity Group</a>.
 Know something that belongs here? <a href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%20suggestion">Tell us</a>.</p>
-<p>Entries marked NEW were added in the August 2026 review. Entries marked DEAD LINK are kept
-on purpose, so nobody spends an afternoon looking for something that is gone.</p>
 </footer>
 </body>
 </html>

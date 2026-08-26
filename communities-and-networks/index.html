@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Communities and networks | Conservation Portal</title>
-<meta name="description" content="Peer groups, professional societies and skills-matching platforms. 13 hand-checked resources for conservationists.">
+<meta name="description" content="Peer groups, professional societies and skills-matching platforms. 14 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/communities-and-networks/">
 <meta property="og:title" content="Communities and networks | Conservation Portal">
-<meta property="og:description" content="Peer groups, professional societies and skills-matching platforms. 13 hand-checked resources for conservationists.">
+<meta property="og:description" content="Peer groups, professional societies and skills-matching platforms. 14 hand-checked resources for conservationists.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://conservationportal.org/communities-and-networks/">
 <meta property="og:site_name" content="Conservation Portal">
@@ -47,8 +47,19 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 .skip:focus{position:static;display:inline-block;padding:8px}
 
 header{position:sticky;top:0;z-index:20;background:var(--ground);border-bottom:1px solid var(--hair)}
-.hbar{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;
-  align-items:center;justify-content:center;gap:14px}
+.hbar{max-width:1180px;margin:0 auto;padding:12px 24px;display:flex;
+  align-items:center;justify-content:center;gap:14px;position:relative}
+/* logo pinned top left, out of the centered flow so the wordmark stays centered */
+.logo{position:absolute;left:24px;top:50%;transform:translateY(-50%);
+  display:flex;align-items:center;line-height:0}
+.logo img{height:38px;width:auto;display:block}
+.logo .on-light{display:block}
+.logo .on-dark{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo .on-light{display:none}
+  :root:not([data-theme="light"]) .logo .on-dark{display:block}}
+:root[data-theme="dark"] .logo .on-light{display:none}
+:root[data-theme="dark"] .logo .on-dark{display:block}
+@media (max-width:560px){.logo img{height:30px}.logo{left:14px}}
 .wordmark{font-family:Petrona,Georgia,serif;font-size:21px;font-weight:600;
   color:var(--ink);text-decoration:none;letter-spacing:-.015em}
 .wordmark span{color:var(--green-deep)}
@@ -87,21 +98,21 @@ input[type=search]::placeholder{color:var(--muted)}
 .grouphead h2{font-size:26px}
 .grouphead p{margin:6px 0 0;color:var(--muted);font-size:14px}
 
-.grid{display:grid;gap:14px;margin-top:18px;
-  grid-template-columns:repeat(auto-fill,minmax(272px,1fr))}
-.card{background:var(--surface);border:1px solid var(--hair);border-radius:3px;
-  padding:22px 20px 20px;text-align:center;display:flex;flex-direction:column;
-  align-items:center;gap:9px;box-shadow:var(--shadow);text-decoration:none;color:inherit;
-  transition:border-color .18s,transform .18s}
+/* three across at most, and a short last row stays centered rather than
+   stretching or hugging the left edge */
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:18px}
+.card{flex:0 1 336px;max-width:336px;
+  background:var(--surface);border:1px solid var(--hair);border-radius:3px;
+  padding:24px 22px;text-align:center;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:10px;box-shadow:var(--shadow);
+  text-decoration:none;color:inherit;transition:border-color .18s,transform .18s}
 .card:hover{border-color:var(--green);transform:translateY(-2px)}
 @media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
 .card .count{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;
   letter-spacing:.1em;color:var(--muted);font-variant-numeric:tabular-nums}
 .card h3{font-size:20px}
 .card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
-.card .egs{margin-top:auto;padding-top:12px;font-size:12px;color:var(--muted);
-  font-family:"IBM Plex Mono",ui-monospace,monospace;line-height:1.7;
-  border-top:1px solid var(--hair);width:100%}
+@media (max-width:760px){.card{flex:1 1 100%;max-width:420px}}
 
 .catpage{padding-top:52px}
 .catpage h1{font-size:clamp(30px,5vw,46px)}
@@ -116,12 +127,9 @@ input[type=search]::placeholder{color:var(--muted)}
   text-decoration:none;letter-spacing:-.01em}
 .item a.nm:hover{text-decoration:underline;text-underline-offset:4px}
 .item p{margin:6px auto 0;font-size:15.5px;color:var(--muted);max-width:56ch;line-height:1.55}
-.item .dom{display:block;margin-top:9px;font-size:11.5px;color:var(--muted);letter-spacing:.04em}
-.item.dead a.nm{color:var(--muted)}
 .tag{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.1em;
   text-transform:uppercase;border-radius:2px;padding:1px 5px}
 .tag.new{color:var(--orange);border:1px solid currentColor;font-weight:700}
-.tag.dead{color:var(--muted);border:1px dashed var(--hair)}
 .hint{color:var(--muted);font-size:15px;margin:32px auto 0}
 .nav2{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:30px auto 0;font-size:15px}
 
@@ -130,73 +138,67 @@ footer{border-top:1px solid var(--hair);margin-top:24px;padding:34px 24px 60px;
 footer p{max-width:62ch;margin:0 auto 10px}
 .hidden{display:none}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Communities and networks | Conservation Portal", "url": "https://conservationportal.org/communities-and-networks/", "description": "Peer groups, professional societies and skills-matching platforms.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "mainEntity": {"@type": "ItemList", "numberOfItems": 13, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "WildHub", "url": "https://wildhub.community/"}, {"@type": "ListItem", "position": 2, "name": "Women In Nature Network", "url": "https://womeninnaturenetwork.org/"}, {"@type": "ListItem", "position": 3, "name": "WE Africa", "url": "https://womenforenvironment.org/"}, {"@type": "ListItem", "position": 4, "name": "500 Women Scientists", "url": "https://500womenscientists.org/"}, {"@type": "ListItem", "position": 5, "name": "Environmental Evaluators Network", "url": "https://environmentalevaluators.net/"}, {"@type": "ListItem", "position": 6, "name": "Ashoka", "url": "https://www.ashoka.org/"}, {"@type": "ListItem", "position": 7, "name": "NEXUS", "url": "https://nexusglobal.org/"}, {"@type": "ListItem", "position": 8, "name": "We Make Change", "url": "https://wemakechange.org/"}, {"@type": "ListItem", "position": 9, "name": "Taproot Plus", "url": "https://taprootplus.org/"}, {"@type": "ListItem", "position": 10, "name": "Global Hand", "url": "https://www.globalhand.org/"}, {"@type": "ListItem", "position": 11, "name": "Society for Conservation Biology", "url": "https://conbio.org/"}, {"@type": "ListItem", "position": 12, "name": "The Wildlife Society", "url": "https://wildlife.org/"}, {"@type": "ListItem", "position": 13, "name": "IUCN PAPACO", "url": "https://papaco.org/"}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Communities and networks | Conservation Portal", "url": "https://conservationportal.org/communities-and-networks/", "description": "Peer groups, professional societies and skills-matching platforms.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "mainEntity": {"@type": "ItemList", "numberOfItems": 14, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TBG conservation conference list", "url": "https://biodiversitygroup.org/conservation-conference-list/"}, {"@type": "ListItem", "position": 2, "name": "WildHub", "url": "https://wildhub.community/"}, {"@type": "ListItem", "position": 3, "name": "Women In Nature Network", "url": "https://womeninnaturenetwork.org/"}, {"@type": "ListItem", "position": 4, "name": "WE Africa", "url": "https://womenforenvironment.org/"}, {"@type": "ListItem", "position": 5, "name": "500 Women Scientists", "url": "https://500womenscientists.org/"}, {"@type": "ListItem", "position": 6, "name": "Environmental Evaluators Network", "url": "https://environmentalevaluators.net/"}, {"@type": "ListItem", "position": 7, "name": "Ashoka", "url": "https://www.ashoka.org/"}, {"@type": "ListItem", "position": 8, "name": "NEXUS", "url": "https://nexusglobal.org/"}, {"@type": "ListItem", "position": 9, "name": "We Make Change", "url": "https://wemakechange.org/"}, {"@type": "ListItem", "position": 10, "name": "Taproot Plus", "url": "https://taprootplus.org/"}, {"@type": "ListItem", "position": 11, "name": "Global Hand", "url": "https://www.globalhand.org/"}, {"@type": "ListItem", "position": 12, "name": "Society for Conservation Biology", "url": "https://conbio.org/"}, {"@type": "ListItem", "position": 13, "name": "The Wildlife Society", "url": "https://wildlife.org/"}, {"@type": "ListItem", "position": 14, "name": "IUCN PAPACO", "url": "https://papaco.org/"}]}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header><div class="hbar">
+<a class="logo" href="https://biodiversitygroup.org/" aria-label="The Biodiversity Group">
+<img class="on-light" src="/assets/tbg-frog-on-light.png" alt="The Biodiversity Group" width="102" height="96">
+<img class="on-dark" src="/assets/tbg-frog-on-dark.png" alt="The Biodiversity Group" width="102" height="96">
+</a>
 <a class="wordmark" href="/">Conservation <span>Portal</span></a>
-<span class="eyebrow">A project of The Biodiversity Group</span>
+<span class="eyebrow"><a href="https://biodiversitygroup.org/">A project of The Biodiversity Group</a></span>
 </div></header>
 <main id="main">
 <div class="catpage">
 <p class="eyebrow">People</p>
 <h1>Communities and networks</h1>
 <p class="blurb">Peer groups, professional societies and skills-matching platforms.</p>
-<div class="rule"><span class="eyebrow">13 resources &middot; 3 added in the August 2026 review</span></div>
+<div class="rule"><span class="eyebrow">14 resources</span></div>
 <ul class="list">
 <li class="item">
+<span class="top"><a class="nm" href="https://biodiversitygroup.org/conservation-conference-list/" target="_blank" rel="noopener">TBG conservation conference list</a><span class="tag new">new</span></span>
+<p>Over 200 conservation conferences through 2028 in a searchable table, with dates, locations and subject keywords. Check dates with the organizer, because scam listings circulate. We run this one</p>
+</li><li class="item">
 <span class="top"><a class="nm" href="https://wildhub.community/" target="_blank" rel="noopener">WildHub</a></span>
 <p>Conservation professionals community</p>
-<span class="dom mono">wildhub.community</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://womeninnaturenetwork.org/" target="_blank" rel="noopener">Women In Nature Network</a></span>
 <p>Women in conservation network</p>
-<span class="dom mono">womeninnaturenetwork.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://womenforenvironment.org/" target="_blank" rel="noopener">WE Africa</a></span>
 <p>African women environmental leadership</p>
-<span class="dom mono">womenforenvironment.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://500womenscientists.org/" target="_blank" rel="noopener">500 Women Scientists</a></span>
 <p>Scientist network</p>
-<span class="dom mono">500womenscientists.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://environmentalevaluators.net/" target="_blank" rel="noopener">Environmental Evaluators Network</a></span>
 <p>Evaluation community</p>
-<span class="dom mono">environmentalevaluators.net</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://www.ashoka.org/" target="_blank" rel="noopener">Ashoka</a></span>
 <p>Social entrepreneur fellowship</p>
-<span class="dom mono">ashoka.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://nexusglobal.org/" target="_blank" rel="noopener">NEXUS</a></span>
 <p>Wealth and social entrepreneurship network</p>
-<span class="dom mono">nexusglobal.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://wemakechange.org/" target="_blank" rel="noopener">We Make Change</a></span>
 <p>Skills volunteering for causes</p>
-<span class="dom mono">wemakechange.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://taprootplus.org/" target="_blank" rel="noopener">Taproot Plus</a></span>
 <p>Pro bono professional matching</p>
-<span class="dom mono">taprootplus.org</span>
 </li><li class="item">
 <span class="top"><a class="nm" href="https://www.globalhand.org/" target="_blank" rel="noopener">Global Hand</a></span>
 <p>Corporate and NGO partnership matching</p>
-<span class="dom mono">globalhand.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://conbio.org/" target="_blank" rel="noopener">Society for Conservation Biology</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://conbio.org/" target="_blank" rel="noopener">Society for Conservation Biology</a></span>
 <p>The main international society for conservation biology, with 36 chapters and dues reduced or waived for lower-income countries</p>
-<span class="dom mono">conbio.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://wildlife.org/" target="_blank" rel="noopener">The Wildlife Society</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://wildlife.org/" target="_blank" rel="noopener">The Wildlife Society</a></span>
 <p>The main professional association for wildlife biologists in North America, and host of its largest annual conference</p>
-<span class="dom mono">wildlife.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://papaco.org/" target="_blank" rel="noopener">IUCN PAPACO</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://papaco.org/" target="_blank" rel="noopener">IUCN PAPACO</a></span>
 <p>IUCN program for African protected areas, running free training, a monthly newsletter and job postings for West and Central Africa. In French</p>
-<span class="dom mono">papaco.org</span>
 </li>
 </ul>
 <p class="nav2"><a href="/organization-directories/">&larr; Organization directories</a> <a href="/">All categories</a> <a href="/jobs-and-careers/">Jobs and careers &rarr;</a></p>
@@ -207,8 +209,6 @@ footer p{max-width:62ch;margin:0 auto 10px}
 <p>A curated shelf of resources for wildlife conservationists, built and maintained by
 <a href="https://biodiversitygroup.org/">The Biodiversity Group</a>.
 Know something that belongs here? <a href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%20suggestion">Tell us</a>.</p>
-<p>Entries marked NEW were added in the August 2026 review. Entries marked DEAD LINK are kept
-on purpose, so nobody spends an afternoon looking for something that is gone.</p>
 </footer>
 </body>
 </html>

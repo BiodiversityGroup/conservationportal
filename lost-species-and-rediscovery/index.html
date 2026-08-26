@@ -47,8 +47,19 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 .skip:focus{position:static;display:inline-block;padding:8px}
 
 header{position:sticky;top:0;z-index:20;background:var(--ground);border-bottom:1px solid var(--hair)}
-.hbar{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;
-  align-items:center;justify-content:center;gap:14px}
+.hbar{max-width:1180px;margin:0 auto;padding:12px 24px;display:flex;
+  align-items:center;justify-content:center;gap:14px;position:relative}
+/* logo pinned top left, out of the centered flow so the wordmark stays centered */
+.logo{position:absolute;left:24px;top:50%;transform:translateY(-50%);
+  display:flex;align-items:center;line-height:0}
+.logo img{height:38px;width:auto;display:block}
+.logo .on-light{display:block}
+.logo .on-dark{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo .on-light{display:none}
+  :root:not([data-theme="light"]) .logo .on-dark{display:block}}
+:root[data-theme="dark"] .logo .on-light{display:none}
+:root[data-theme="dark"] .logo .on-dark{display:block}
+@media (max-width:560px){.logo img{height:30px}.logo{left:14px}}
 .wordmark{font-family:Petrona,Georgia,serif;font-size:21px;font-weight:600;
   color:var(--ink);text-decoration:none;letter-spacing:-.015em}
 .wordmark span{color:var(--green-deep)}
@@ -87,21 +98,21 @@ input[type=search]::placeholder{color:var(--muted)}
 .grouphead h2{font-size:26px}
 .grouphead p{margin:6px 0 0;color:var(--muted);font-size:14px}
 
-.grid{display:grid;gap:14px;margin-top:18px;
-  grid-template-columns:repeat(auto-fill,minmax(272px,1fr))}
-.card{background:var(--surface);border:1px solid var(--hair);border-radius:3px;
-  padding:22px 20px 20px;text-align:center;display:flex;flex-direction:column;
-  align-items:center;gap:9px;box-shadow:var(--shadow);text-decoration:none;color:inherit;
-  transition:border-color .18s,transform .18s}
+/* three across at most, and a short last row stays centered rather than
+   stretching or hugging the left edge */
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:18px}
+.card{flex:0 1 336px;max-width:336px;
+  background:var(--surface);border:1px solid var(--hair);border-radius:3px;
+  padding:24px 22px;text-align:center;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:10px;box-shadow:var(--shadow);
+  text-decoration:none;color:inherit;transition:border-color .18s,transform .18s}
 .card:hover{border-color:var(--green);transform:translateY(-2px)}
 @media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
 .card .count{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;
   letter-spacing:.1em;color:var(--muted);font-variant-numeric:tabular-nums}
 .card h3{font-size:20px}
 .card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
-.card .egs{margin-top:auto;padding-top:12px;font-size:12px;color:var(--muted);
-  font-family:"IBM Plex Mono",ui-monospace,monospace;line-height:1.7;
-  border-top:1px solid var(--hair);width:100%}
+@media (max-width:760px){.card{flex:1 1 100%;max-width:420px}}
 
 .catpage{padding-top:52px}
 .catpage h1{font-size:clamp(30px,5vw,46px)}
@@ -116,12 +127,9 @@ input[type=search]::placeholder{color:var(--muted)}
   text-decoration:none;letter-spacing:-.01em}
 .item a.nm:hover{text-decoration:underline;text-underline-offset:4px}
 .item p{margin:6px auto 0;font-size:15.5px;color:var(--muted);max-width:56ch;line-height:1.55}
-.item .dom{display:block;margin-top:9px;font-size:11.5px;color:var(--muted);letter-spacing:.04em}
-.item.dead a.nm{color:var(--muted)}
 .tag{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.1em;
   text-transform:uppercase;border-radius:2px;padding:1px 5px}
 .tag.new{color:var(--orange);border:1px solid currentColor;font-weight:700}
-.tag.dead{color:var(--muted);border:1px dashed var(--hair)}
 .hint{color:var(--muted);font-size:15px;margin:32px auto 0}
 .nav2{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:30px auto 0;font-size:15px}
 
@@ -135,76 +143,65 @@ footer p{max-width:62ch;margin:0 auto 10px}
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header><div class="hbar">
+<a class="logo" href="https://biodiversitygroup.org/" aria-label="The Biodiversity Group">
+<img class="on-light" src="/assets/tbg-frog-on-light.png" alt="The Biodiversity Group" width="102" height="96">
+<img class="on-dark" src="/assets/tbg-frog-on-dark.png" alt="The Biodiversity Group" width="102" height="96">
+</a>
 <a class="wordmark" href="/">Conservation <span>Portal</span></a>
-<span class="eyebrow">A project of The Biodiversity Group</span>
+<span class="eyebrow"><a href="https://biodiversitygroup.org/">A project of The Biodiversity Group</a></span>
 </div></header>
 <main id="main">
 <div class="catpage">
 <p class="eyebrow">Species and status</p>
 <h1>Lost species and rediscovery</h1>
 <p class="blurb">Species nobody has confirmed alive in years, the lists that name them, and where a rediscovery gets reported.</p>
-<div class="rule"><span class="eyebrow">15 resources &middot; 15 added in the August 2026 review</span></div>
+<div class="rule"><span class="eyebrow">15 resources</span></div>
 <ul class="list">
 <li class="item">
 <span class="top"><a class="nm" href="https://speciesblacklist.org/rediscoveries/" target="_blank" rel="noopener">Species Black List rediscoveries</a><span class="tag new">new</span></span>
 <p>Daily feed of rediscovery reports across fourteen national news editions, showing what was reported rather than what is confirmed. We run this one</p>
-<span class="dom mono">speciesblacklist.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://www.rewild.org/lost-species" target="_blank" rel="noopener">Re:wild Search for Lost Species</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://www.rewild.org/lost-species" target="_blank" rel="noopener">Re:wild Search for Lost Species</a></span>
 <p>The master list: 4,350+ species undocumented for ten years or more, nominated by over 100 IUCN specialist groups. Carries the rotating Top 25 Most Wanted and separate target lists for amphibians, turtles, sharks, primates and small mammals</p>
-<span class="dom mono">rewild.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://www.mammalwatching.com/lost-found/" target="_blank" rel="noopener">Lost Mammals Initiative</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://www.mammalwatching.com/lost-found/" target="_blank" rel="noopener">Lost Mammals Initiative</a></span>
 <p>25 lost or barely known mammals, from Thor&#x27;s hero shrew to the saola, run as a community competition with tour-operator prizes. Five are already found</p>
-<span class="dom mono">mammalwatching.com</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://searchforlostbirds.org/" target="_blank" rel="noopener">Search for Lost Birds</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://searchforlostbirds.org/" target="_blank" rel="noopener">Search for Lost Birds</a></span>
 <p>121 lost birds as of January 2026, revised annually with the adds and removes published</p>
-<span class="dom mono">searchforlostbirds.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://shoal.org/search-for-the-lost-fishes/" target="_blank" rel="noopener">Search for the Lost Fishes</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://shoal.org/search-for-the-lost-fishes/" target="_blank" rel="noopener">Search for the Lost Fishes</a></span>
 <p>300+ lost freshwater fishes with a 10 Most Wanted, and it invites outside teams to mount their own expeditions</p>
-<span class="dom mono">shoal.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://www.journaloflostspecies.org/" target="_blank" rel="noopener">Journal of Lost Species</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://www.journaloflostspecies.org/" target="_blank" rel="noopener">Journal of Lost Species</a></span>
 <p>New peer-reviewed journal, free to publish in, that takes unsuccessful searches as well as rediscoveries and explicitly invites amateur naturalists</p>
-<span class="dom mono">journaloflostspecies.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://www.inaturalist.org/projects/11779" target="_blank" rel="noopener">iNaturalist Search for Lost Species project</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://www.inaturalist.org/projects/11779" target="_blank" rel="noopener">iNaturalist Search for Lost Species project</a></span>
 <p>Where sightings of candidate lost species get logged, 13 sub-projects and 750+ observers</p>
-<span class="dom mono">inaturalist.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://www.inaturalist.org/projects/the-lost-insect-species" target="_blank" rel="noopener">The Lost Insect Species</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://www.inaturalist.org/projects/the-lost-insect-species" target="_blank" rel="noopener">The Lost Insect Species</a></span>
 <p>Insects unobserved for fifty years or more, with trips organized to go refind them</p>
-<span class="dom mono">inaturalist.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://www.atelopus.org/harlequin-toads" target="_blank" rel="noopener">Atelopus Survival Initiative</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://www.atelopus.org/harlequin-toads" target="_blank" rel="noopener">Atelopus Survival Initiative</a></span>
 <p>60 organizations across 15 countries chasing harlequin toads, around 40% of which have not been seen since the early 2000s</p>
-<span class="dom mono">atelopus.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="http://www.lostladybug.org/" target="_blank" rel="noopener">Lost Ladybug Project</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="http://www.lostladybug.org/" target="_blank" rel="noopener">Lost Ladybug Project</a></span>
 <p>Cornell hunt for vanished native North American ladybugs. Note the link is http, because https fails on this host</p>
-<span class="dom mono">lostladybug.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://www.artensterben.de/en/" target="_blank" rel="noopener">Artensterben.de</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://www.artensterben.de/en/" target="_blank" rel="noopener">Artensterben.de</a></span>
 <p>Extinctions since 1500 plus an annual rediscovery retrospective, in German and English</p>
-<span class="dom mono">artensterben.de</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://ntbg.org/science/conservation/pepp/" target="_blank" rel="noopener">Hawaii Plant Extinction Prevention Program</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://ntbg.org/science/conservation/pepp/" target="_blank" rel="noopener">Hawaii Plant Extinction Prevention Program</a></span>
 <p>Plants down to fewer than 50 wild individuals, and the closest thing to a systematic lost-plants search</p>
-<span class="dom mono">ntbg.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://www.kew.org/read-and-watch/lost-and-found-fungi" target="_blank" rel="noopener">Kew Lost and Found Fungi</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://www.kew.org/read-and-watch/lost-and-found-fungi" target="_blank" rel="noopener">Kew Lost and Found Fungi</a></span>
 <p>100 of Britain&#x27;s most under-recorded fungi, sent out to volunteer treasure hunts. Delivered 2014 to 2020, so read it as a method rather than a live project</p>
-<span class="dom mono">kew.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://datadryad.org/dataset/doi:10.5061/dryad.v6wwpzh31" target="_blank" rel="noopener">Lost and rediscovered tetrapods dataset</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://datadryad.org/dataset/doi:10.5061/dryad.v6wwpzh31" target="_blank" rel="noopener">Lost and rediscovered tetrapods dataset</a></span>
 <p>Lindken et al. 2024 open dataset of lost and rediscovered tetrapods, with taxonomy, geography and Red List status</p>
-<span class="dom mono">datadryad.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://www.cambridge.org/core/journals/oryx/article/lost-but-not-forgotten-a-new-nomenclature-to-support-a-call-to-rediscover-and-conserve-lost-species/5A148CDB9F0ECB4B11D04BA0D35864B2" target="_blank" rel="noopener">Lost but not forgotten</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://www.cambridge.org/core/journals/oryx/article/lost-but-not-forgotten-a-new-nomenclature-to-support-a-call-to-rediscover-and-conserve-lost-species/5A148CDB9F0ECB4B11D04BA0D35864B2" target="_blank" rel="noopener">Lost but not forgotten</a></span>
 <p>The Oryx paper that defines missing, lost and long-lost. Everything above uses its terms</p>
-<span class="dom mono">cambridge.org</span>
 </li>
 </ul>
 <p class="nav2"><a href="/species-and-taxonomy-databases/">&larr; Species and taxonomy databases</a> <a href="/">All categories</a> <a href="/zoos-and-ex-situ/">Zoos and ex-situ &rarr;</a></p>
@@ -215,8 +212,6 @@ footer p{max-width:62ch;margin:0 auto 10px}
 <p>A curated shelf of resources for wildlife conservationists, built and maintained by
 <a href="https://biodiversitygroup.org/">The Biodiversity Group</a>.
 Know something that belongs here? <a href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%20suggestion">Tell us</a>.</p>
-<p>Entries marked NEW were added in the August 2026 review. Entries marked DEAD LINK are kept
-on purpose, so nobody spends an afternoon looking for something that is gone.</p>
 </footer>
 </body>
 </html>

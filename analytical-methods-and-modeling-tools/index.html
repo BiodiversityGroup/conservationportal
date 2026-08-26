@@ -47,8 +47,19 @@ a:focus-visible,button:focus-visible,input:focus-visible{
 .skip:focus{position:static;display:inline-block;padding:8px}
 
 header{position:sticky;top:0;z-index:20;background:var(--ground);border-bottom:1px solid var(--hair)}
-.hbar{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;
-  align-items:center;justify-content:center;gap:14px}
+.hbar{max-width:1180px;margin:0 auto;padding:12px 24px;display:flex;
+  align-items:center;justify-content:center;gap:14px;position:relative}
+/* logo pinned top left, out of the centered flow so the wordmark stays centered */
+.logo{position:absolute;left:24px;top:50%;transform:translateY(-50%);
+  display:flex;align-items:center;line-height:0}
+.logo img{height:38px;width:auto;display:block}
+.logo .on-light{display:block}
+.logo .on-dark{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo .on-light{display:none}
+  :root:not([data-theme="light"]) .logo .on-dark{display:block}}
+:root[data-theme="dark"] .logo .on-light{display:none}
+:root[data-theme="dark"] .logo .on-dark{display:block}
+@media (max-width:560px){.logo img{height:30px}.logo{left:14px}}
 .wordmark{font-family:Petrona,Georgia,serif;font-size:21px;font-weight:600;
   color:var(--ink);text-decoration:none;letter-spacing:-.015em}
 .wordmark span{color:var(--green-deep)}
@@ -87,21 +98,21 @@ input[type=search]::placeholder{color:var(--muted)}
 .grouphead h2{font-size:26px}
 .grouphead p{margin:6px 0 0;color:var(--muted);font-size:14px}
 
-.grid{display:grid;gap:14px;margin-top:18px;
-  grid-template-columns:repeat(auto-fill,minmax(272px,1fr))}
-.card{background:var(--surface);border:1px solid var(--hair);border-radius:3px;
-  padding:22px 20px 20px;text-align:center;display:flex;flex-direction:column;
-  align-items:center;gap:9px;box-shadow:var(--shadow);text-decoration:none;color:inherit;
-  transition:border-color .18s,transform .18s}
+/* three across at most, and a short last row stays centered rather than
+   stretching or hugging the left edge */
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:18px}
+.card{flex:0 1 336px;max-width:336px;
+  background:var(--surface);border:1px solid var(--hair);border-radius:3px;
+  padding:24px 22px;text-align:center;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:10px;box-shadow:var(--shadow);
+  text-decoration:none;color:inherit;transition:border-color .18s,transform .18s}
 .card:hover{border-color:var(--green);transform:translateY(-2px)}
 @media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
 .card .count{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;
   letter-spacing:.1em;color:var(--muted);font-variant-numeric:tabular-nums}
 .card h3{font-size:20px}
 .card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
-.card .egs{margin-top:auto;padding-top:12px;font-size:12px;color:var(--muted);
-  font-family:"IBM Plex Mono",ui-monospace,monospace;line-height:1.7;
-  border-top:1px solid var(--hair);width:100%}
+@media (max-width:760px){.card{flex:1 1 100%;max-width:420px}}
 
 .catpage{padding-top:52px}
 .catpage h1{font-size:clamp(30px,5vw,46px)}
@@ -116,12 +127,9 @@ input[type=search]::placeholder{color:var(--muted)}
   text-decoration:none;letter-spacing:-.01em}
 .item a.nm:hover{text-decoration:underline;text-underline-offset:4px}
 .item p{margin:6px auto 0;font-size:15.5px;color:var(--muted);max-width:56ch;line-height:1.55}
-.item .dom{display:block;margin-top:9px;font-size:11.5px;color:var(--muted);letter-spacing:.04em}
-.item.dead a.nm{color:var(--muted)}
 .tag{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.1em;
   text-transform:uppercase;border-radius:2px;padding:1px 5px}
 .tag.new{color:var(--orange);border:1px solid currentColor;font-weight:700}
-.tag.dead{color:var(--muted);border:1px dashed var(--hair)}
 .hint{color:var(--muted);font-size:15px;margin:32px auto 0}
 .nav2{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:30px auto 0;font-size:15px}
 
@@ -135,92 +143,77 @@ footer p{max-width:62ch;margin:0 auto 10px}
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header><div class="hbar">
+<a class="logo" href="https://biodiversitygroup.org/" aria-label="The Biodiversity Group">
+<img class="on-light" src="/assets/tbg-frog-on-light.png" alt="The Biodiversity Group" width="102" height="96">
+<img class="on-dark" src="/assets/tbg-frog-on-dark.png" alt="The Biodiversity Group" width="102" height="96">
+</a>
 <a class="wordmark" href="/">Conservation <span>Portal</span></a>
-<span class="eyebrow">A project of The Biodiversity Group</span>
+<span class="eyebrow"><a href="https://biodiversitygroup.org/">A project of The Biodiversity Group</a></span>
 </div></header>
 <main id="main">
 <div class="catpage">
 <p class="eyebrow">Recording and data</p>
 <h1>Analytical methods and modeling tools</h1>
 <p class="blurb">Software for viability, connectivity, occupancy, camera traps and acoustics.</p>
-<div class="rule"><span class="eyebrow">19 resources &middot; 19 added in the August 2026 review</span></div>
+<div class="rule"><span class="eyebrow">19 resources</span></div>
 <ul class="list">
 <li class="item">
-<span class="top"><a class="nm" href="https://scti.tools/vortex/" target="_blank" rel="noopener">Vortex</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://scti.tools/vortex/" target="_blank" rel="noopener">Vortex</a></span>
 <p>Free population viability analysis for extinction-risk simulation</p>
-<span class="dom mono">scti.tools</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://circuitscape.org/" target="_blank" rel="noopener">Circuitscape</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://circuitscape.org/" target="_blank" rel="noopener">Circuitscape</a></span>
 <p>Open-source circuit-theory tool for landscape connectivity and gene flow</p>
-<span class="dom mono">circuitscape.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://linkagemapper.org/" target="_blank" rel="noopener">Linkage Mapper</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://linkagemapper.org/" target="_blank" rel="noopener">Linkage Mapper</a></span>
 <p>ArcGIS toolbox that maps and prioritizes wildlife corridors</p>
-<span class="dom mono">linkagemapper.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://www.boldsystems.org/" target="_blank" rel="noopener">BOLD Systems</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://www.boldsystems.org/" target="_blank" rel="noopener">BOLD Systems</a></span>
 <p>DNA barcode database and analysis workbench for species identification</p>
-<span class="dom mono">boldsystems.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://www.tdwg.org/" target="_blank" rel="noopener">TDWG Biodiversity Information Standards</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://www.tdwg.org/" target="_blank" rel="noopener">TDWG Biodiversity Information Standards</a></span>
 <p>The standards body for biodiversity data, and home of Darwin Core, the vocabulary everything from GBIF down uses to share occurrence and specimen records</p>
-<span class="dom mono">tdwg.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://ebioatlas.org/" target="_blank" rel="noopener">eBio Atlas</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://ebioatlas.org/" target="_blank" rel="noopener">eBio Atlas</a></span>
 <p>Open global eDNA biodiversity repository, freshwater focus</p>
-<span class="dom mono">ebioatlas.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://biodiversityinformatics.amnh.org/open_source/maxent/" target="_blank" rel="noopener">Maxent</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://biodiversityinformatics.amnh.org/open_source/maxent/" target="_blank" rel="noopener">Maxent</a></span>
 <p>Maximum-entropy species distribution modeling software</p>
-<span class="dom mono">biodiversityinformatics.amnh.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://wallaceecomod.github.io/" target="_blank" rel="noopener">Wallace EcoMod</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://wallaceecomod.github.io/" target="_blank" rel="noopener">Wallace EcoMod</a></span>
 <p>Guided R and Shiny platform for reproducible niche modeling</p>
-<span class="dom mono">wallaceecomod.github.io</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="http://www.phidot.org/software/mark/" target="_blank" rel="noopener">Program MARK</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="http://www.phidot.org/software/mark/" target="_blank" rel="noopener">Program MARK</a></span>
 <p>Capture-recapture survival and population parameter estimation</p>
-<span class="dom mono">phidot.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://ropensci.org/" target="_blank" rel="noopener">rOpenSci</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://ropensci.org/" target="_blank" rel="noopener">rOpenSci</a></span>
 <p>Peer-reviewed hub for open-source R packages used in ecology</p>
-<span class="dom mono">ropensci.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://cran.r-project.org/package=unmarked" target="_blank" rel="noopener">unmarked (R package)</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://cran.r-project.org/package=unmarked" target="_blank" rel="noopener">unmarked (R package)</a></span>
 <p>Fits occupancy, distance sampling and N-mixture abundance models to survey data where detection is imperfect</p>
-<span class="dom mono">cran.r-project.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://cran.r-project.org/package=camtrapR" target="_blank" rel="noopener">camtrapR (R package)</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://cran.r-project.org/package=camtrapR" target="_blank" rel="noopener">camtrapR (R package)</a></span>
 <p>Turns raw camera-trap images into detection histories, occupancy model inputs and activity patterns</p>
-<span class="dom mono">cran.r-project.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://github.com/agentmorris/MegaDetector" target="_blank" rel="noopener">MegaDetector</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://github.com/agentmorris/MegaDetector" target="_blank" rel="noopener">MegaDetector</a></span>
 <p>Free AI model that finds animals, people and vehicles in camera-trap images so you never review a blank frame again</p>
-<span class="dom mono">github.com</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://addaxdatascience.com/addaxai/" target="_blank" rel="noopener">AddaxAI</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://addaxdatascience.com/addaxai/" target="_blank" rel="noopener">AddaxAI</a></span>
 <p>Runs MegaDetector and species classifiers through a desktop interface, with no coding required. Formerly EcoAssist</p>
-<span class="dom mono">addaxdatascience.com</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://timelapse.ucalgary.ca/" target="_blank" rel="noopener">Timelapse2</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://timelapse.ucalgary.ca/" target="_blank" rel="noopener">Timelapse2</a></span>
 <p>Free tool for reviewing and annotating large camera-trap image sets, and it imports MegaDetector results</p>
-<span class="dom mono">timelapse.ucalgary.ca</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://camelotproject.org/" target="_blank" rel="noopener">Camelot</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://camelotproject.org/" target="_blank" rel="noopener">Camelot</a></span>
 <p>Free camera-trap database and classification tool that exports straight to camtrapR and PRESENCE</p>
-<span class="dom mono">camelotproject.org</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://ravensoundsoftware.com/" target="_blank" rel="noopener">Raven</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://ravensoundsoftware.com/" target="_blank" rel="noopener">Raven</a></span>
 <p>Cornell Lab sound analysis software for visualizing and measuring animal calls. Raven Lite is free, Raven Pro is paid</p>
-<span class="dom mono">ravensoundsoftware.com</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://www.wildlifeacoustics.com/products/kaleidoscope" target="_blank" rel="noopener">Kaleidoscope</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://www.wildlifeacoustics.com/products/kaleidoscope" target="_blank" rel="noopener">Kaleidoscope</a></span>
 <p>Sorts and labels bird song, frog calls and bat echolocation across months of recordings. Lite edition is free</p>
-<span class="dom mono">wildlifeacoustics.com</span>
 </li><li class="item">
-<span class="top"><a class="nm" href="https://cran.r-project.org/package=bioacoustics" target="_blank" rel="noopener">bioacoustics (R package)</a><span class="tag new">new</span></span>
+<span class="top"><a class="nm" href="https://cran.r-project.org/package=bioacoustics" target="_blank" rel="noopener">bioacoustics (R package)</a></span>
 <p>Free GPL-3 package that filters noisy audio and extracts acoustic features for classification, reading WAV, WAC, MP3 and ZC</p>
-<span class="dom mono">cran.r-project.org</span>
 </li>
 </ul>
 <p class="nav2"><a href="/spatial-data-and-mapping/">&larr; Spatial data and mapping</a> <a href="/">All categories</a> <a href="/conservation-technology-and-field-equipment/">Conservation technology and field equipment &rarr;</a></p>
@@ -231,8 +224,6 @@ footer p{max-width:62ch;margin:0 auto 10px}
 <p>A curated shelf of resources for wildlife conservationists, built and maintained by
 <a href="https://biodiversitygroup.org/">The Biodiversity Group</a>.
 Know something that belongs here? <a href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%20suggestion">Tell us</a>.</p>
-<p>Entries marked NEW were added in the August 2026 review. Entries marked DEAD LINK are kept
-on purpose, so nobody spends an afternoon looking for something that is gone.</p>
 </footer>
 </body>
 </html>
