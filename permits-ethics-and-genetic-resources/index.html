@@ -243,11 +243,14 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 .fgrid li{margin-bottom:7px}
 .fgrid a{font-size:14.5px;text-decoration:none}
 .fgrid a:hover{text-decoration:underline}
-.fbase{border-top:1px solid var(--hair);margin-top:34px;padding-top:20px;font-size:13.5px;
-  color:var(--muted)}
+.fbase{border-top:1px solid var(--hair);margin-top:34px;padding-top:22px;font-size:13.5px;
+  color:var(--muted);display:flex;align-items:center;justify-content:center;gap:14px;
+  flex-wrap:wrap}
+.fbase .tbg{line-height:0;flex:0 0 auto}
+.fbase .tbg img{height:30px;width:auto;display:block}
 .hidden{display:none}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Permits, ethics and genetic resources | Conservation Portal", "url": "https://conservationportal.org/permits-ethics-and-genetic-resources/", "description": "Nagoya, CITES paperwork and the approvals a field project needs before it starts.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Rules and planning", "item": "https://conservationportal.org/categories/"}, {"@type": "ListItem", "position": 3, "name": "Permits, ethics and genetic resources", "item": "https://conservationportal.org/permits-ethics-and-genetic-resources/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 4, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Access and Benefit-sharing Clearing-House", "url": "https://absch.cbd.int/"}, {"@type": "ListItem", "position": 2, "name": "Nagoya Protocol explanatory guide", "url": "https://portals.iucn.org/library/efiles/documents/eplp-083.pdf"}, {"@type": "ListItem", "position": 3, "name": "ABS Clearing-House guide for researchers", "url": "https://www.research-services.admin.cam.ac.uk/sites/default/files/absch_guide.pdf"}, {"@type": "ListItem", "position": 4, "name": "CITES permit system", "url": "https://cites.org/eng/prog/Permit_system"}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Permits, ethics and genetic resources | Conservation Portal", "url": "https://conservationportal.org/permits-ethics-and-genetic-resources/", "description": "Nagoya, CITES paperwork and the approvals a field project needs before it starts.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Rules and planning", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Permits, ethics and genetic resources", "item": "https://conservationportal.org/permits-ethics-and-genetic-resources/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 4, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Access and Benefit-sharing Clearing-House", "url": "https://absch.cbd.int/"}, {"@type": "ListItem", "position": 2, "name": "Nagoya Protocol explanatory guide", "url": "https://portals.iucn.org/library/efiles/documents/eplp-083.pdf"}, {"@type": "ListItem", "position": 3, "name": "ABS Clearing-House guide for researchers", "url": "https://www.research-services.admin.cam.ac.uk/sites/default/files/absch_guide.pdf"}, {"@type": "ListItem", "position": 4, "name": "CITES permit system", "url": "https://cites.org/eng/prog/Permit_system"}]}}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -257,12 +260,12 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 <img class="lockup ondark" src="/assets/logo-lockup-dark.png" alt="Conservation Portal" width="191" height="68">
 <img class="mark" src="/assets/logo-mark.png" alt="" width="52" height="64">
 </a>
-<nav class="top"><a href="/#browse">Browse</a><a href="/categories/">Categories</a><a class="nav-hide" href="/about/">About</a><a class="btn" href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%3A%20suggest%20a%20resource">Submit a resource</a></nav>
+<nav class="top"><a href="/#browse">Browse</a><a class="nav-hide" href="/about/">About</a><a class="btn" href="mailto:info@biodiversitygroup.org?subject=Conservation%20Portal%3A%20suggest%20a%20resource">Submit a resource</a></nav>
 </div></header>
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">
-<a href="/">Home</a><span>/</span><a href="/categories/">Rules and planning</a>
+<a href="/">Home</a><span>/</span><a href="/#browse">Rules and planning</a>
 <span>/</span>Permits, ethics and genetic resources
 </nav>
 <section class="cathead">
@@ -286,7 +289,7 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 <p>How export, import and re-export permits actually work, including for scientific samples</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
-<p class="nav2"><a href="/international-treaties-and-policy/">&larr; International treaties and policy</a> <a href="/categories/">All categories</a> <a href="/planning-evaluation-and-practice/">Planning, evaluation and practice &rarr;</a></p>
+<p class="nav2"><a href="/international-treaties-and-policy/">&larr; International treaties and policy</a> <a href="/#browse">All categories</a> <a href="/planning-evaluation-and-practice/">Planning, evaluation and practice &rarr;</a></p>
 </div>
 
 <script>
@@ -318,19 +321,24 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 </div>
 <div><h4>Explore</h4><ul>
 <li><a href="/#browse">Browse all</a></li>
-<li><a href="/categories/">Categories</a></li>
 <li><a href="/#recent">Recently added</a></li>
 </ul></div>
 <div><h4>Contribute</h4><ul>
-<li><a href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%3A%20suggest%20a%20resource">Suggest a resource</a></li>
-<li><a href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%3A%20broken%20link">Report a broken link</a></li>
+<li><a href="mailto:info@biodiversitygroup.org?subject=Conservation%20Portal%3A%20suggest%20a%20resource">Suggest a resource</a></li>
+<li><a href="mailto:info@biodiversitygroup.org?subject=Conservation%20Portal%3A%20broken%20link">Report a broken link</a></li>
 </ul></div>
 <div><h4>About</h4><ul>
 <li><a href="/about/">About the Portal</a></li>
 <li><a href="https://biodiversitygroup.org/">The Biodiversity Group</a></li>
 </ul></div>
 </div>
-<p class="fbase">A project of <a href="https://biodiversitygroup.org/">The Biodiversity Group</a>.</p>
+<p class="fbase">
+<a class="tbg" href="https://biodiversitygroup.org/" aria-label="The Biodiversity Group">
+<img class="onlight" src="/assets/tbg-lockup.png" alt="The Biodiversity Group" width="120" height="56">
+<img class="ondark" src="/assets/tbg-lockup-dark.png" alt="The Biodiversity Group" width="120" height="56">
+</a>
+<span>A project of <a href="https://biodiversitygroup.org/">The Biodiversity Group</a>.</span>
+</p>
 </div></footer>
 <script>
 (function(){

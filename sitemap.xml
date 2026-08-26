@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://conservationportal.org/</loc><priority>1.0</priority></url>
-  <url><loc>https://conservationportal.org/categories/</loc><priority>0.6</priority></url>
   <url><loc>https://conservationportal.org/about/</loc><priority>0.6</priority></url>
   <url><loc>https://conservationportal.org/taxon-specialist-networks/</loc><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/species-and-taxonomy-databases/</loc><priority>0.8</priority></url>
@@ -30,6 +29,7 @@
   <url><loc>https://conservationportal.org/planning-evaluation-and-practice/</loc><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/funding-and-grants/</loc><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/fundraising/</loc><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/conservation-swag/</loc><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/prizes-awards-and-competitions/</loc><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/biodiversity-finance-mechanisms/</loc><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/fiscal-sponsorship/</loc><priority>0.8</priority></url>
