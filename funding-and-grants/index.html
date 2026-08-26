@@ -102,7 +102,11 @@ input[type=search]::placeholder{color:var(--muted)}
   background:var(--surface);border:1px solid var(--hair);border-radius:3px;
   padding:24px 22px;text-align:center;display:flex;flex-direction:column;
   align-items:center;justify-content:flex-start;gap:10px;box-shadow:var(--shadow);
-  text-decoration:none;color:inherit;transition:border-color .18s,transform .18s}
+  text-decoration:none;transition:border-color .18s,transform .18s;
+  /* set explicitly: color:inherit here lost to the theme-scoped `a` rules, which have
+     higher specificity, so titles came out green in dark and near-black in light by
+     accident rather than by choice */
+  color:var(--ink)}
 .card:hover{border-color:var(--green);transform:translateY(-2px)}
 @media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
 .card .count{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;
@@ -111,7 +115,7 @@ input[type=search]::placeholder{color:var(--muted)}
    short-titled card's whole block downwards and the counts and titles across a row sat
    at different heights. Top-align instead, and reserve two lines for the title so the
    descriptions start on the same line as well. */
-.card h3{font-size:20px;min-height:2.3em;display:block;width:100%}
+.card h3{font-size:20px;min-height:2.3em;display:block;width:100%;color:var(--green-deep)}
 .card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
 @media (max-width:900px){.card{flex:0 0 calc((100% - 16px) / 2)}}
 @media (max-width:620px){.card{flex:0 0 100%;max-width:420px}}
