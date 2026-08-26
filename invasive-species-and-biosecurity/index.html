@@ -134,14 +134,14 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
   grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
 @media (max-width:740px){.domains{grid-template-columns:1fr}}
 .domain{background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
-  padding:24px 24px 20px;text-align:left;
+  padding:24px 24px 20px;
   /* the mark's angled panel, echoed once per block */
   clip-path:polygon(18px 0,100% 0,100% 100%,0 100%,0 18px)}
-.domain .dh{display:flex;align-items:center;gap:12px}
+.domain .dh{display:flex;align-items:center;justify-content:center;gap:12px}
 .domain .dh svg{width:24px;height:24px;flex:0 0 24px;stroke:var(--accent);fill:none;
   stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .domain h3{font-size:21px}
-.domain .dmeta{margin:3px 0 0 36px;font-size:13px;color:var(--muted);
+.domain .dmeta{margin:3px auto 0;font-size:13px;color:var(--muted);
   font-variant-numeric:tabular-nums}
 .domain ul{list-style:none;margin:16px 0 0;padding:0;border-top:1px solid var(--hair)}
 .domain li{border-bottom:1px solid var(--hair)}
@@ -154,7 +154,11 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
   flex:0 0 auto}
 
 /* ---------- compact resource rows ---------- */
-.list{max-width:760px;margin:26px auto 0;text-align:left;list-style:none;padding:0;
+/* CENTERED BY DEFAULT. Scott's standing rule across every TBG site is centre
+   everything, body copy included. Set it on the CONTAINER so anything added to a row
+   later inherits it instead of quietly arriving left-aligned. 07_check_site.py fails the
+   build if any of these selectors regains text-align:left. */
+.list{max-width:760px;margin:26px auto 0;list-style:none;padding:0;
   background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow)}
 .item{border-top:1px solid var(--hair)}
 .item:first-child{border-top:0}
@@ -165,8 +169,8 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
   color:var(--forest);display:inline-flex;align-items:center;gap:7px}
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
-.item p{margin:4px 0 0;font-size:15px;color:var(--muted);max-width:64ch}
-.item p.use{margin:7px 0 0;padding-top:6px;font-size:13.5px;line-height:1.5;
+.item p{margin:4px auto 0;font-size:15px;color:var(--muted);max-width:64ch}
+.item p.use{margin:7px auto 0;padding-top:6px;font-size:13.5px;line-height:1.5;
   border-top:1px solid var(--hair);max-width:64ch}
 .item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
   text-decoration:none;border-bottom:1px solid transparent}
@@ -198,7 +202,7 @@ mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
 @media (max-width:700px){.recent{grid-template-columns:1fr}}
 .recent a{display:block;background:var(--surface);border:1px solid var(--hair);
-  padding:18px 20px;text-decoration:none;color:inherit;text-align:left;
+  padding:18px 20px;text-decoration:none;color:inherit;
   box-shadow:var(--shadow);transition:border-color .16s,transform .16s;
   clip-path:polygon(14px 0,100% 0,100% 100%,0 100%,0 14px)}
 .recent a:hover{border-color:var(--accent);transform:translateY(-2px)}
@@ -219,10 +223,12 @@ mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .allcats .n{color:var(--muted);font-size:12.5px;font-variant-numeric:tabular-nums}
 
 /* ---------- prose (about) ---------- */
-.prose{max-width:66ch;margin:0 auto;text-align:left}
+.prose{max-width:66ch;margin:0 auto}
 .prose h2{font-size:23px;margin:34px 0 10px}
 .prose p{margin:0 0 14px}
-.prose ul{margin:0 0 16px;padding-left:22px}
+/* the one deliberate exception: bullets centre badly, so the list block is centred
+   but its own text reads left */
+.prose ul{margin:0 auto 16px;padding-left:22px;text-align:left;max-width:60ch}
 .prose li{margin-bottom:7px}
 /* The donate button is deliberately single-look: fixed deep forest in both themes, not
    token-driven. --forest lightens on the dark theme, and the frog artwork is white on
@@ -243,12 +249,13 @@ footer{border-top:1px solid var(--hair);margin-top:64px;padding:34px 0 30px;
   background:var(--surface-2)}
 /* align-items:start stops the short columns stretching and leaving dead space under
    their last link */
-.fgrid{display:grid;gap:26px 30px;text-align:left;align-items:start;
+.fgrid{display:grid;gap:26px 30px;align-items:start;
   grid-template-columns:1.7fr 1fr 1fr 1fr}
 @media (max-width:800px){.fgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.fgrid{grid-template-columns:1fr}}
 .fgrid img{height:52px;width:auto;margin:0 0 10px}
-.fgrid p{margin:0;color:var(--muted);font-size:14px;max-width:34ch}
+.fgrid > div{text-align:center}
+.fgrid p{margin:0 auto;color:var(--muted);font-size:14px;max-width:34ch}
 .fgrid h4{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
   font-family:Inter,sans-serif;font-weight:700;margin:0 0 9px}
 .fgrid ul{list-style:none;margin:0;padding:0}
