@@ -77,17 +77,7 @@ header.stuck .hbar{padding:9px 24px}
 .brand img{height:34px;width:auto;display:block;transition:height .2s}
 header.stuck .brand img{height:27px}
 .brand .mark{display:none}
-/* The export's "Conservation" wordmark is dark ink, so a relit copy is used on dark
-   grounds. Declared light-first, then swapped, so the un-stamped system state works.
-   Selectors are img.* rather than bare .*: .brand img above sets display:block and at
-   (0,1,1) it outranked a bare .ondark, so BOTH header lockups rendered in light mode. */
-img.onlight{display:block}
-img.ondark{display:none}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]) .onlight{display:none}
-  :root:not([data-theme="light"]) .ondark{display:block}}
-:root[data-theme="dark"] .onlight{display:none}
-:root[data-theme="dark"] .ondark{display:block}
+/* theme-swapped logo pairs are governed at the very END of this stylesheet, see there */
 nav.top{display:flex;align-items:center;gap:26px;flex-wrap:wrap;justify-content:flex-end}
 nav.top a{font-size:14.5px;text-decoration:none;color:var(--ink);white-space:nowrap}
 nav.top a:hover{color:var(--accent)}
@@ -268,6 +258,31 @@ footer{border-top:1px solid var(--hair);margin-top:64px;padding:34px 0 30px;
 .fbase .tbg{line-height:0;flex:0 0 auto}
 .fbase .tbg img{height:46px;width:auto;display:block}
 .hidden{display:none}
+
+/* =====================================================================
+   THEME-SWAPPED LOGO PAIRS. KEEP THIS BLOCK LAST.
+
+   Two lockups ship for each mark, one with dark artwork and one relit for dark
+   grounds, and exactly one must render. Every sizing rule above also sets
+   `display:block` on its images, at the same (0,1,1) specificity as `img.ondark`,
+   so whichever comes LATER in this stylesheet wins.
+
+   That bit twice. First the header rendered both lockups in light mode. It was
+   fixed there, then reintroduced in the footer the moment `.fgrid img` gained a
+   display property, because those rules sit after the swap. Fixing the symptom
+   in one place did not fix the pattern.
+
+   Living at the end makes source order guarantee the swap wins, whatever is added
+   above. Verify BOTH directions after touching any logo CSS: a swap that looks
+   right in one theme can be rendering two images in the other.
+   ===================================================================== */
+img.onlight{display:block}
+img.ondark{display:none}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) img.onlight{display:none}
+  :root:not([data-theme="light"]) img.ondark{display:block}}
+:root[data-theme="dark"] img.onlight{display:none}
+:root[data-theme="dark"] img.ondark{display:block}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Taxon specialist networks | Conservation Portal", "url": "https://conservationportal.org/taxon-specialist-networks/", "description": "The people who assess and act on a single group, from bees to bats to fungi.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Species and status", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Taxon specialist networks", "item": "https://conservationportal.org/taxon-specialist-networks/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 15, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Botanic Gardens Conservation International", "url": "https://www.bgci.org/"}, {"@type": "ListItem", "position": 2, "name": "IUCN SSC Global Tree Specialist Group", "url": "https://iucn.org/our-union/commissions/group/iucn-ssc-global-tree-specialist-group"}, {"@type": "ListItem", "position": 3, "name": "Xerces Society for Invertebrate Conservation", "url": "https://xerces.org/"}, {"@type": "ListItem", "position": 4, "name": "IUCN SSC Wild Bee Specialist Group", "url": "https://iucn.org/our-union/commissions/group/iucn-ssc-wild-bee-specialist-group"}, {"@type": "ListItem", "position": 5, "name": "International Whaling Commission", "url": "https://iwc.int/"}, {"@type": "ListItem", "position": 6, "name": "Society for Marine Mammalogy", "url": "https://marinemammalscience.org/"}, {"@type": "ListItem", "position": 7, "name": "IUCN SSC Cetacean Specialist Group", "url": "https://iucn-csg.org/"}, {"@type": "ListItem", "position": 8, "name": "IUCN SSC Fungal Conservation Committee", "url": "https://iucn.org/our-union/commissions/group/iucn-ssc-fungal-conservation-committee"}, {"@type": "ListItem", "position": 9, "name": "Fungi Foundation", "url": "https://www.ffungi.org/"}, {"@type": "ListItem", "position": 10, "name": "IUCN SSC Freshwater Fish Specialist Group", "url": "https://freshwaterfish.org/"}, {"@type": "ListItem", "position": 11, "name": "Alliance for Freshwater Life", "url": "https://allianceforfreshwaterlife.org/"}, {"@type": "ListItem", "position": 12, "name": "Bat Conservation International", "url": "https://www.batcon.org/"}, {"@type": "ListItem", "position": 13, "name": "IUCN SSC Bat Specialist Group", "url": "https://www.iucnbsg.org/"}, {"@type": "ListItem", "position": 14, "name": "IUCN SSC Coral Specialist Group", "url": "https://iucncoralsg.org/"}, {"@type": "ListItem", "position": 15, "name": "IUCN SSC Amphibian Specialist Group", "url": "https://www.iucn-amphibians.org/"}]}}</script>
 </head>

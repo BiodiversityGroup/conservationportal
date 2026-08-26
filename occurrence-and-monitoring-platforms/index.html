@@ -77,17 +77,7 @@ header.stuck .hbar{padding:9px 24px}
 .brand img{height:34px;width:auto;display:block;transition:height .2s}
 header.stuck .brand img{height:27px}
 .brand .mark{display:none}
-/* The export's "Conservation" wordmark is dark ink, so a relit copy is used on dark
-   grounds. Declared light-first, then swapped, so the un-stamped system state works.
-   Selectors are img.* rather than bare .*: .brand img above sets display:block and at
-   (0,1,1) it outranked a bare .ondark, so BOTH header lockups rendered in light mode. */
-img.onlight{display:block}
-img.ondark{display:none}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]) .onlight{display:none}
-  :root:not([data-theme="light"]) .ondark{display:block}}
-:root[data-theme="dark"] .onlight{display:none}
-:root[data-theme="dark"] .ondark{display:block}
+/* theme-swapped logo pairs are governed at the very END of this stylesheet, see there */
 nav.top{display:flex;align-items:center;gap:26px;flex-wrap:wrap;justify-content:flex-end}
 nav.top a{font-size:14.5px;text-decoration:none;color:var(--ink);white-space:nowrap}
 nav.top a:hover{color:var(--accent)}
@@ -268,6 +258,31 @@ footer{border-top:1px solid var(--hair);margin-top:64px;padding:34px 0 30px;
 .fbase .tbg{line-height:0;flex:0 0 auto}
 .fbase .tbg img{height:46px;width:auto;display:block}
 .hidden{display:none}
+
+/* =====================================================================
+   THEME-SWAPPED LOGO PAIRS. KEEP THIS BLOCK LAST.
+
+   Two lockups ship for each mark, one with dark artwork and one relit for dark
+   grounds, and exactly one must render. Every sizing rule above also sets
+   `display:block` on its images, at the same (0,1,1) specificity as `img.ondark`,
+   so whichever comes LATER in this stylesheet wins.
+
+   That bit twice. First the header rendered both lockups in light mode. It was
+   fixed there, then reintroduced in the footer the moment `.fgrid img` gained a
+   display property, because those rules sit after the swap. Fixing the symptom
+   in one place did not fix the pattern.
+
+   Living at the end makes source order guarantee the swap wins, whatever is added
+   above. Verify BOTH directions after touching any logo CSS: a swap that looks
+   right in one theme can be rendering two images in the other.
+   ===================================================================== */
+img.onlight{display:block}
+img.ondark{display:none}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) img.onlight{display:none}
+  :root:not([data-theme="light"]) img.ondark{display:block}}
+:root[data-theme="dark"] img.onlight{display:none}
+:root[data-theme="dark"] img.ondark{display:block}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Occurrence and monitoring platforms | Conservation Portal", "url": "https://conservationportal.org/occurrence-and-monitoring-platforms/", "description": "The infrastructure you build a survey on: observation platforms, camera-trap pipelines, tracking repositories and sound libraries.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://conservationportal.org/"}, {"@type": "ListItem", "position": 2, "name": "Recording and data", "item": "https://conservationportal.org/#browse"}, {"@type": "ListItem", "position": 3, "name": "Occurrence and monitoring platforms", "item": "https://conservationportal.org/occurrence-and-monitoring-platforms/"}]}, "mainEntity": {"@type": "ItemList", "numberOfItems": 11, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "iNaturalist", "url": "https://www.inaturalist.org/"}, {"@type": "ListItem", "position": 2, "name": "eBird", "url": "https://ebird.org/"}, {"@type": "ListItem", "position": 3, "name": "Zooniverse", "url": "https://www.zooniverse.org/"}, {"@type": "ListItem", "position": 4, "name": "eMammal", "url": "https://emammal.si.edu/"}, {"@type": "ListItem", "position": 5, "name": "Wildlife Insights", "url": "https://www.wildlifeinsights.org/"}, {"@type": "ListItem", "position": 6, "name": "ZSL Instant Wild", "url": "https://instantwild.zsl.org/"}, {"@type": "ListItem", "position": 7, "name": "Movebank", "url": "https://www.movebank.org/"}, {"@type": "ListItem", "position": 8, "name": "Wildbook", "url": "https://wildbook.org/"}, {"@type": "ListItem", "position": 9, "name": "ARBIMON", "url": "https://arbimon.org/"}, {"@type": "ListItem", "position": 10, "name": "xeno-canto", "url": "https://xeno-canto.org/"}, {"@type": "ListItem", "position": 11, "name": "NEON", "url": "https://www.neonscience.org/"}]}}</script>
 </head>
