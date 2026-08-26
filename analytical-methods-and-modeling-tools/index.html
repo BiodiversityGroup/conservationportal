@@ -77,6 +77,15 @@ header.stuck .hbar{padding:9px 24px}
 .brand img{height:34px;width:auto;display:block;transition:height .2s}
 header.stuck .brand img{height:27px}
 .brand .mark{display:none}
+/* The export's "Conservation" wordmark is dark ink, so a relit copy is used on dark
+   grounds. Declared light-first, then swapped, so the un-stamped system state works. */
+.onlight{display:block}
+.ondark{display:none}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .onlight{display:none}
+  :root:not([data-theme="light"]) .ondark{display:block}}
+:root[data-theme="dark"] .onlight{display:none}
+:root[data-theme="dark"] .ondark{display:block}
 nav.top{display:flex;align-items:center;gap:26px;flex-wrap:wrap;justify-content:flex-end}
 nav.top a{font-size:14.5px;text-decoration:none;color:var(--ink);white-space:nowrap}
 nav.top a:hover{color:var(--accent)}
@@ -242,8 +251,9 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 <a class="skip" href="#main">Skip to content</a>
 <header id="hdr"><div class="hbar">
 <a class="brand" href="/" aria-label="Conservation Portal home">
-<img class="lockup" src="/assets/logo-lockup.png" alt="Conservation Portal" width="191" height="68">
-<img class="mark" src="/assets/logo-mark.png" alt="Conservation Portal" width="52" height="64">
+<img class="lockup onlight" src="/assets/logo-lockup.png" alt="Conservation Portal" width="191" height="68">
+<img class="lockup ondark" src="/assets/logo-lockup-dark.png" alt="Conservation Portal" width="191" height="68">
+<img class="mark" src="/assets/logo-mark.png" alt="" width="52" height="64">
 </a>
 <nav class="top"><a href="/#browse">Browse</a><a href="/categories/">Categories</a><a class="nav-hide" href="/about/">About</a><a class="btn" href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%3A%20suggest%20a%20resource">Submit a resource</a></nav>
 </div></header>
@@ -330,7 +340,8 @@ footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
 <footer><div class="wrap">
 <div class="fgrid">
 <div>
-<img src="/assets/logo-lockup.png" alt="Conservation Portal" width="191" height="68">
+<img class="onlight" src="/assets/logo-lockup.png" alt="Conservation Portal" width="191" height="68">
+<img class="ondark" src="/assets/logo-lockup-dark.png" alt="Conservation Portal" width="191" height="68">
 <p>A curated directory of tools and resources for wildlife conservationists.</p>
 </div>
 <div><h4>Explore</h4><ul>
