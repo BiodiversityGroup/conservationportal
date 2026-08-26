@@ -74,7 +74,9 @@ header.stuck{border-bottom-color:var(--hair);box-shadow:0 1px 12px rgba(23,34,41
   justify-content:space-between;gap:20px;transition:padding .2s}
 header.stuck .hbar{padding:9px 24px}
 .brand{display:flex;align-items:center;line-height:0;flex:0 0 auto}
-.brand img{height:34px;width:auto;display:block;transition:height .2s}
+/* no display here: the theme-swap block at the end of this file owns display for the
+   paired lockups, and any display set in a sizing rule competes with it */
+.brand img{height:34px;width:auto;transition:height .2s}
 header.stuck .brand img{height:27px}
 .brand .mark{display:none}
 /* theme-swapped logo pairs are governed at the very END of this stylesheet, see there */
@@ -243,7 +245,7 @@ footer{border-top:1px solid var(--hair);margin-top:64px;padding:34px 0 30px;
   grid-template-columns:1.7fr 1fr 1fr 1fr}
 @media (max-width:800px){.fgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.fgrid{grid-template-columns:1fr}}
-.fgrid img{height:52px;width:auto;margin:0 0 10px;display:block}
+.fgrid img{height:52px;width:auto;margin:0 0 10px}
 .fgrid p{margin:0;color:var(--muted);font-size:14px;max-width:34ch}
 .fgrid h4{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
   font-family:Inter,sans-serif;font-weight:700;margin:0 0 9px}
@@ -256,7 +258,7 @@ footer{border-top:1px solid var(--hair);margin-top:64px;padding:34px 0 30px;
   color:var(--muted);display:flex;align-items:center;justify-content:center;gap:16px;
   flex-wrap:wrap}
 .fbase .tbg{line-height:0;flex:0 0 auto}
-.fbase .tbg img{height:46px;width:auto;display:block}
+.fbase .tbg img{height:46px;width:auto}
 .hidden{display:none}
 
 /* =====================================================================
@@ -272,9 +274,14 @@ footer{border-top:1px solid var(--hair);margin-top:64px;padding:34px 0 30px;
    display property, because those rules sit after the swap. Fixing the symptom
    in one place did not fix the pattern.
 
-   Living at the end makes source order guarantee the swap wins, whatever is added
-   above. Verify BOTH directions after touching any logo CSS: a swap that looks
-   right in one theme can be rendering two images in the other.
+   Living at the end is NOT sufficient on its own: `.fbase .tbg img` is (0,2,1) and beat
+   `img.ondark` (0,1,1) whatever the order. So the rule is now stricter than placement:
+   NO sizing rule may set `display` on a paired lockup. These rules are the only
+   authority for it, which is why `.brand img`, `.fgrid img` and `.fbase .tbg img` all
+   set height and width only.
+
+   Verify BOTH directions after touching any logo CSS: a swap that looks right in one
+   theme can be rendering two images stacked in the other.
    ===================================================================== */
 img.onlight{display:block}
 img.ondark{display:none}
