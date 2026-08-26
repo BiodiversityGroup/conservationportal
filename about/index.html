@@ -174,6 +174,9 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
 .item p{margin:4px 0 0;font-size:15px;color:var(--muted);max-width:64ch}
+.item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
+  text-decoration:none;border-bottom:1px solid transparent}
+.item .access:hover{border-bottom-color:currentColor}
 .pill{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
   background:var(--pill-bg);color:var(--pill-ink);border-radius:100px;padding:2px 8px;
   margin-left:9px;vertical-align:2px;white-space:nowrap}
@@ -227,6 +230,13 @@ mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .prose p{margin:0 0 14px}
 .prose ul{margin:0 0 16px;padding-left:22px}
 .prose li{margin-bottom:7px}
+.prose .cta{text-align:center;margin:26px 0 8px}
+.donate{display:inline-block;background:var(--forest);color:var(--paper);font-weight:700;
+  font-size:16px;text-decoration:none;padding:14px 30px;
+  clip-path:polygon(12px 0,100% 0,100% 100%,0 100%,0 12px);transition:background .16s}
+.donate:hover{background:var(--teal);color:var(--paper)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .donate{color:#0F1714}}
+:root[data-theme="dark"] .donate{color:#0F1714}
 
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--hair);margin-top:76px;padding:44px 0 60px;
@@ -274,8 +284,7 @@ easily find.</p>
 <p>The tools exist. Grant databases, species registers, camera-trap platforms, ranger
 toolkits, job boards, reporting systems. What the sector has never had is one place to
 put them, so most conservationists find them by accident, late, or never.</p>
-<p>Conservation Portal holds <b>558 resources</b> across <b>42 categories</b>.
-Every entry was opened and read by a person before it went on the list.</p>
+<p>Conservation Portal holds <b>559 resources</b> across <b>42 categories</b>.</p>
 
 <h2>Why the sector needs a shelf</h2>
 <p>Conservation is not badly organized because anyone is careless. It is thousands of
@@ -324,9 +333,16 @@ existed.</p>
 died since it was checked,
 <a href="mailto:info@biodiversitygroup.org?subject=Conservation%20Portal%3A%20suggest%20a%20resource">send
 it over</a>.</p>
-<p>Conservation Portal is a project of
-<a href="https://biodiversitygroup.org/">The Biodiversity Group</a>, a 501(c)(3)
-working on the species most conservation funding overlooks.</p>
+
+<h2>Help keep it going</h2>
+<p>Conservation Portal is free, has no advertising and asks nothing of you. It is paid for
+by <a href="https://biodiversitygroup.org/">The Biodiversity Group</a>, a 501(c)(3) working
+on the species most conservation funding overlooks, and by people who donate to it.</p>
+<p>A donation funds the fieldwork, and it funds the unglamorous hours that keep lists like
+this one honest: opening every link, chasing the ones that died, and writing down what a
+resource actually does.</p>
+<p class="cta"><a class="donate" href="https://biodiversitygroup.org/donate/">Donate
+now</a></p>
 </div>
 </div>
 </main>
