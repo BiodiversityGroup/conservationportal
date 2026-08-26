@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Citizen science recording projects | Conservation Portal</title>
+<meta name="description" content="Individual schemes you send records to, by taxon and by country. Most want a photograph and five minutes. 32 hand-checked resources for conservationists.">
+<link rel="canonical" href="https://conservationportal.org/citizen-science-recording-projects/">
+<meta property="og:title" content="Citizen science recording projects | Conservation Portal">
+<meta property="og:description" content="Individual schemes you send records to, by taxon and by country. Most want a photograph and five minutes. 32 hand-checked resources for conservationists.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://conservationportal.org/citizen-science-recording-projects/">
+<meta property="og:site_name" content="Conservation Portal">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400..700;1,400&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap">
+<style>
+:root{
+  --ground:#f4f7f3; --surface:#fff; --ink:#263028; --muted:#5f6b5f; --hair:#d5ddd4;
+  --green:#2e7d52; --green-deep:#1f5a3a; --orange:#c8490a;
+  --shadow:0 1px 2px rgba(38,48,40,.05),0 8px 24px rgba(38,48,40,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#171c18; --surface:#1f2620; --ink:#e7ece6; --muted:#9aa79a; --hair:#333d34;
+  --green:#6dc292; --green-deep:#8fd6ab; --orange:#ff9052;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+}}
+:root[data-theme="dark"]{
+  --ground:#171c18; --surface:#1f2620; --ink:#e7ece6; --muted:#9aa79a; --hair:#333d34;
+  --green:#6dc292; --green-deep:#8fd6ab; --orange:#ff9052;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;
+  font-size:17px;line-height:1.6;text-align:center;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Petrona,Georgia,serif;font-weight:600;text-wrap:balance;
+  margin:0;line-height:1.15;letter-spacing:-.01em}
+a{color:var(--green-deep);text-decoration-thickness:1px;text-underline-offset:3px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) a{color:var(--green)}}
+:root[data-theme="dark"] a{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible{
+  outline:2px solid var(--green);outline-offset:3px;border-radius:2px}
+.mono,.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{position:static;display:inline-block;padding:8px}
+
+header{position:sticky;top:0;z-index:20;background:var(--ground);border-bottom:1px solid var(--hair)}
+.hbar{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;
+  align-items:center;justify-content:center;gap:14px}
+.wordmark{font-family:Petrona,Georgia,serif;font-size:21px;font-weight:600;
+  color:var(--ink);text-decoration:none;letter-spacing:-.015em}
+.wordmark span{color:var(--green-deep)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .wordmark span{color:var(--green)}}
+:root[data-theme="dark"] .wordmark span{color:var(--green)}
+.hbar .eyebrow{border-left:1px solid var(--hair);padding-left:14px}
+@media (max-width:640px){.hbar .eyebrow{display:none}}
+
+main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
+.hero{padding:72px 0 8px}
+.hero h1{font-size:clamp(38px,6.4vw,64px);margin:14px 0 0}
+.lede{max-width:62ch;margin:26px auto 0;font-size:19px}
+.lede.second{margin-top:18px;color:var(--muted);font-size:17px}
+.shelf{color:var(--green-deep);font-weight:700}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .shelf{color:var(--green)}}
+:root[data-theme="dark"] .shelf{color:var(--green)}
+
+.stats{display:flex;justify-content:center;flex-wrap:wrap;margin:40px auto 0;max-width:640px;
+  border:1px solid var(--hair);border-radius:3px;background:var(--surface);
+  box-shadow:var(--shadow);overflow:hidden}
+.stat{flex:1 1 33%;min-width:150px;padding:20px 16px;border-left:1px solid var(--hair)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font-family:Petrona,Georgia,serif;font-size:34px;font-weight:600;
+  font-variant-numeric:tabular-nums;line-height:1}
+.stat .eyebrow{margin-top:8px;display:block}
+
+.searchwrap{margin:44px auto 0;max-width:520px}
+input[type=search]{width:100%;padding:13px 18px;font:inherit;font-size:16px;text-align:center;
+  color:var(--ink);background:var(--surface);border:1px solid var(--hair);
+  border-radius:3px;box-shadow:var(--shadow)}
+input[type=search]::placeholder{color:var(--muted)}
+
+.rule{display:flex;align-items:center;gap:16px;margin:56px auto 24px}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:var(--hair)}
+.grouphead{margin:56px 0 6px}
+.grouphead h2{font-size:26px}
+.grouphead p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+.grid{display:grid;gap:14px;margin-top:18px;
+  grid-template-columns:repeat(auto-fill,minmax(272px,1fr))}
+.card{background:var(--surface);border:1px solid var(--hair);border-radius:3px;
+  padding:22px 20px 20px;text-align:center;display:flex;flex-direction:column;
+  align-items:center;gap:9px;box-shadow:var(--shadow);text-decoration:none;color:inherit;
+  transition:border-color .18s,transform .18s}
+.card:hover{border-color:var(--green);transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+.card .count{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;
+  letter-spacing:.1em;color:var(--muted);font-variant-numeric:tabular-nums}
+.card h3{font-size:20px}
+.card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
+.card .egs{margin-top:auto;padding-top:12px;font-size:12px;color:var(--muted);
+  font-family:"IBM Plex Mono",ui-monospace,monospace;line-height:1.7;
+  border-top:1px solid var(--hair);width:100%}
+
+.catpage{padding-top:52px}
+.catpage h1{font-size:clamp(30px,5vw,46px)}
+.catpage .blurb{max-width:56ch;margin:16px auto 0;color:var(--muted)}
+.list{max-width:720px;margin:36px auto 0;background:var(--surface);
+  border:1px solid var(--hair);border-radius:3px;box-shadow:var(--shadow);overflow:hidden;
+  text-align:center;list-style:none;padding:0}
+.item{padding:22px;border-top:1px solid var(--hair)}
+.item:first-child{border-top:0}
+.item .top{display:flex;align-items:baseline;justify-content:center;gap:9px;flex-wrap:wrap}
+.item a.nm{font-family:Petrona,Georgia,serif;font-size:20px;font-weight:600;
+  text-decoration:none;letter-spacing:-.01em}
+.item a.nm:hover{text-decoration:underline;text-underline-offset:4px}
+.item p{margin:6px auto 0;font-size:15.5px;color:var(--muted);max-width:56ch;line-height:1.55}
+.item .dom{display:block;margin-top:9px;font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+.item.dead a.nm{color:var(--muted)}
+.tag{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;border-radius:2px;padding:1px 5px}
+.tag.new{color:var(--orange);border:1px solid currentColor;font-weight:700}
+.tag.dead{color:var(--muted);border:1px dashed var(--hair)}
+.hint{color:var(--muted);font-size:15px;margin:32px auto 0}
+.nav2{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:30px auto 0;font-size:15px}
+
+footer{border-top:1px solid var(--hair);margin-top:24px;padding:34px 24px 60px;
+  color:var(--muted);font-size:14px}
+footer p{max-width:62ch;margin:0 auto 10px}
+.hidden{display:none}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Citizen science recording projects | Conservation Portal", "url": "https://conservationportal.org/citizen-science-recording-projects/", "description": "Individual schemes you send records to, by taxon and by country. Most want a photograph and five minutes.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "mainEntity": {"@type": "ItemList", "numberOfItems": 32, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "HerpMapper", "url": "https://www.herpmapper.org/"}, {"@type": "ListItem", "position": 2, "name": "FrogID", "url": "https://www.frogid.net.au/"}, {"@type": "ListItem", "position": 3, "name": "JellyWatch", "url": "https://jellywatch.org/"}, {"@type": "ListItem", "position": 4, "name": "NANPA citizen science", "url": "https://nanpa.org/"}, {"@type": "ListItem", "position": 5, "name": "Global Sawfish Encounters", "url": "https://www.floridamuseum.ufl.edu/sawfish/"}, {"@type": "ListItem", "position": 6, "name": "Online Jaguar Observation Database", "url": "https://jaguardata.info/"}, {"@type": "ListItem", "position": 7, "name": "Latest Sightings", "url": "https://www.latestsightings.com/"}, {"@type": "ListItem", "position": 8, "name": "Seabirds.net", "url": "http://seabirds.net/"}, {"@type": "ListItem", "position": 9, "name": "Bumble Bee Watch", "url": "https://www.bumblebeewatch.org/"}, {"@type": "ListItem", "position": 10, "name": "European Butterfly Monitoring Scheme", "url": "https://butterfly-monitoring.net/"}, {"@type": "ListItem", "position": 11, "name": "Tagfalter-Monitoring Deutschland", "url": "https://www.ufz.de/tagfalter-monitoring/"}, {"@type": "ListItem", "position": 12, "name": "Catalan Butterfly Monitoring Scheme", "url": "https://www.catalanbms.org/"}, {"@type": "ListItem", "position": 13, "name": "Correo Real", "url": "https://www.correoreal.mx/"}, {"@type": "ListItem", "position": 14, "name": "Butterflies of India", "url": "https://www.ifoundbutterflies.org/"}, {"@type": "ListItem", "position": 15, "name": "Mosquito Alert", "url": "https://www.mosquitoalert.com/"}, {"@type": "ListItem", "position": 16, "name": "Mueckenatlas", "url": "https://mueckenatlas.com/"}, {"@type": "ListItem", "position": 17, "name": "Riverfly Monitoring Initiative", "url": "https://riverflies.org/"}, {"@type": "ListItem", "position": 18, "name": "British Dragonfly Society recording scheme", "url": "https://british-dragonflies.org.uk/recording/bds-recording-scheme/"}, {"@type": "ListItem", "position": 19, "name": "UK Glow Worm Survey", "url": "https://www.glowworms.org.uk/"}, {"@type": "ListItem", "position": 20, "name": "FrogWatch USA", "url": "https://www.akronzoo.org/frogwatch"}, {"@type": "ListItem", "position": 21, "name": "RAVON", "url": "https://www.ravon.nl/"}, {"@type": "ListItem", "position": 22, "name": "TurtleSAT", "url": "https://www.turtlesat.org.au/"}, {"@type": "ListItem", "position": 23, "name": "Great Eggcase Hunt", "url": "https://www.sharktrust.org/greateggcasehunt"}, {"@type": "ListItem", "position": 24, "name": "Big Seaweed Search", "url": "https://www.nhm.ac.uk/take-part/monitor-and-encourage-nature/big-seaweed-search.html"}, {"@type": "ListItem", "position": 25, "name": "National Plant Monitoring Scheme", "url": "https://www.npms.org.uk/"}, {"@type": "ListItem", "position": 26, "name": "Nature's Calendar", "url": "https://naturescalendar.woodlandtrust.org.uk/"}, {"@type": "ListItem", "position": 27, "name": "SeasonWatch", "url": "https://www.seasonwatch.in/"}, {"@type": "ListItem", "position": 28, "name": "Fungimap", "url": "https://fungimap.org.au/"}, {"@type": "ListItem", "position": 29, "name": "Hedgehog Street", "url": "https://www.hedgehogstreet.org/"}, {"@type": "ListItem", "position": 30, "name": "Vigie-Chiro", "url": "https://www.vigienature.fr/fr/vigie-chiro"}, {"@type": "ListItem", "position": 31, "name": "National Dormouse Monitoring Programme", "url": "https://ptes.org/campaigns/dormice/surveying-and-monitoring-hazel-dormice/national-dormouse-database-ndd/"}, {"@type": "ListItem", "position": 32, "name": "ADU Virtual Museum (LepiMAP, FrogMAP, OdonataMAP, ReptileMAP)", "url": "https://vmus.adu.org.za"}]}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="hbar">
+<a class="wordmark" href="/">Conservation <span>Portal</span></a>
+<span class="eyebrow">A project of The Biodiversity Group</span>
+</div></header>
+<main id="main">
+<div class="catpage">
+<p class="eyebrow">Recording and data</p>
+<h1>Citizen science recording projects</h1>
+<p class="blurb">Individual schemes you send records to, by taxon and by country. Most want a photograph and five minutes.</p>
+<div class="rule"><span class="eyebrow">32 resources &middot; 24 added in the August 2026 review</span></div>
+<ul class="list">
+<li class="item">
+<span class="top"><a class="nm" href="https://www.herpmapper.org/" target="_blank" rel="noopener">HerpMapper</a></span>
+<p>Herp occurrence reporting</p>
+<span class="dom mono">herpmapper.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.frogid.net.au/" target="_blank" rel="noopener">FrogID</a></span>
+<p>Australian frog call project</p>
+<span class="dom mono">frogid.net.au</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://jellywatch.org/" target="_blank" rel="noopener">JellyWatch</a></span>
+<p>Marine invertebrate sightings</p>
+<span class="dom mono">jellywatch.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://nanpa.org/" target="_blank" rel="noopener">NANPA citizen science</a></span>
+<p>Photography-based citizen science</p>
+<span class="dom mono">nanpa.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.floridamuseum.ufl.edu/sawfish/" target="_blank" rel="noopener">Global Sawfish Encounters</a></span>
+<p>Sawfish sighting map</p>
+<span class="dom mono">floridamuseum.ufl.edu</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://jaguardata.info/" target="_blank" rel="noopener">Online Jaguar Observation Database</a></span>
+<p>Jaguar sightings</p>
+<span class="dom mono">jaguardata.info</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.latestsightings.com/" target="_blank" rel="noopener">Latest Sightings</a></span>
+<p>Safari sighting app</p>
+<span class="dom mono">latestsightings.com</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="http://seabirds.net/" target="_blank" rel="noopener">Seabirds.net</a></span>
+<p>Seabird colony registry</p>
+<span class="dom mono">seabirds.net</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.bumblebeewatch.org/" target="_blank" rel="noopener">Bumble Bee Watch</a><span class="tag new">new</span></span>
+<p>Photograph a bumblebee anywhere in the US or Canada and an expert verifies the species. Running at over 16,000 sightings a month</p>
+<span class="dom mono">bumblebeewatch.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://butterfly-monitoring.net/" target="_blank" rel="noopener">European Butterfly Monitoring Scheme</a><span class="tag new">new</span></span>
+<p>Pan-European butterfly and moth transect counts across 6,000+ transects, with a recording app in ten or more languages</p>
+<span class="dom mono">butterfly-monitoring.net</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.ufz.de/tagfalter-monitoring/" target="_blank" rel="noopener">Tagfalter-Monitoring Deutschland</a><span class="tag new">new</span></span>
+<p>Germany&#x27;s weekly volunteer butterfly transect walks, running since 2005. In German</p>
+<span class="dom mono">ufz.de</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.catalanbms.org/" target="_blank" rel="noopener">Catalan Butterfly Monitoring Scheme</a><span class="tag new">new</span></span>
+<p>Butterfly transects across Catalonia, the Balearics and Andorra since 1994. In Catalan</p>
+<span class="dom mono">catalanbms.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.correoreal.mx/" target="_blank" rel="noopener">Correo Real</a><span class="tag new">new</span></span>
+<p>Mexico&#x27;s monarch migration monitoring network, run by Profauna since 1992. Report by form, WhatsApp or email. In Spanish</p>
+<span class="dom mono">correoreal.mx</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.ifoundbutterflies.org/" target="_blank" rel="noopener">Butterflies of India</a><span class="tag new">new</span></span>
+<p>Peer-reviewed national butterfly database for India, built largely from public photographs</p>
+<span class="dom mono">ifoundbutterflies.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.mosquitoalert.com/" target="_blank" rel="noopener">Mosquito Alert</a><span class="tag new">new</span></span>
+<p>Photo-report invasive mosquitoes, bites and breeding sites. Spanish in origin, now international. Spanish, Catalan and English</p>
+<span class="dom mono">mosquitoalert.com</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://mueckenatlas.com/" target="_blank" rel="noopener">Mueckenatlas</a><span class="tag new">new</span></span>
+<p>Germany asks you to post the actual mosquito in, for identification and mapping. Over 42,000 specimens sent in. In German</p>
+<span class="dom mono">mueckenatlas.com</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://riverflies.org/" target="_blank" rel="noopener">Riverfly Monitoring Initiative</a><span class="tag new">new</span></span>
+<p>UK anglers and volunteers kick-sample mayflies, stoneflies and caddisflies as an early warning on water quality</p>
+<span class="dom mono">riverflies.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://british-dragonflies.org.uk/recording/bds-recording-scheme/" target="_blank" rel="noopener">British Dragonfly Society recording scheme</a><span class="tag new">new</span></span>
+<p>National dragonfly and damselfly records through county recorders and iRecord, UK</p>
+<span class="dom mono">british-dragonflies.org.uk</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.glowworms.org.uk/" target="_blank" rel="noopener">UK Glow Worm Survey</a><span class="tag new">new</span></span>
+<p>Volunteer counts of glow-worms at known sites, feeding the Biological Records Centre</p>
+<span class="dom mono">glowworms.org.uk</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.akronzoo.org/frogwatch" target="_blank" rel="noopener">FrogWatch USA</a><span class="tag new">new</span></span>
+<p>Trained volunteers report frog and toad breeding calls from February to August across the US</p>
+<span class="dom mono">akronzoo.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.ravon.nl/" target="_blank" rel="noopener">RAVON</a><span class="tag new">new</span></span>
+<p>The Netherlands&#x27; volunteer recording networks for reptiles, amphibians and freshwater fish. In Dutch</p>
+<span class="dom mono">ravon.nl</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.turtlesat.org.au/" target="_blank" rel="noopener">TurtleSAT</a><span class="tag new">new</span></span>
+<p>Map Australian freshwater turtle sightings, nests and road deaths. Over 34,000 records and 2,000 nests protected</p>
+<span class="dom mono">turtlesat.org.au</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.sharktrust.org/greateggcasehunt" target="_blank" rel="noopener">Great Eggcase Hunt</a><span class="tag new">new</span></span>
+<p>Report shark, skate and ray eggcases found on the beach. UK-led with a newer Australian arm</p>
+<span class="dom mono">sharktrust.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.nhm.ac.uk/take-part/monitor-and-encourage-nature/big-seaweed-search.html" target="_blank" rel="noopener">Big Seaweed Search</a><span class="tag new">new</span></span>
+<p>Timed seaweed surveys on UK shores, run by the Natural History Museum with the Marine Conservation Society</p>
+<span class="dom mono">nhm.ac.uk</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.npms.org.uk/" target="_blank" rel="noopener">National Plant Monitoring Scheme</a><span class="tag new">new</span></span>
+<p>Survey indicator plants in a randomly allocated 1 km square, UK. Ten years of data as of 2025</p>
+<span class="dom mono">npms.org.uk</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://naturescalendar.woodlandtrust.org.uk/" target="_blank" rel="noopener">Nature&#x27;s Calendar</a><span class="tag new">new</span></span>
+<p>UK phenology records for plants, animals and fungi, continuing a series that starts in 1736</p>
+<span class="dom mono">naturescalendar.woodlandtrust.org.uk</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.seasonwatch.in/" target="_blank" rel="noopener">SeasonWatch</a><span class="tag new">new</span></span>
+<p>Track leaf flush, flowering and fruiting on 130+ common Indian tree species</p>
+<span class="dom mono">seasonwatch.in</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://fungimap.org.au/" target="_blank" rel="noopener">Fungimap</a><span class="tag new">new</span></span>
+<p>Australia&#x27;s national fungal recording scheme, with nearly 5,000 observers on its annual hunt</p>
+<span class="dom mono">fungimap.org.au</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.hedgehogstreet.org/" target="_blank" rel="noopener">Hedgehog Street</a><span class="tag new">new</span></span>
+<p>Report UK hedgehog sightings and map the holes they move through between gardens</p>
+<span class="dom mono">hedgehogstreet.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.vigienature.fr/fr/vigie-chiro" target="_blank" rel="noopener">Vigie-Chiro</a><span class="tag new">new</span></span>
+<p>France&#x27;s volunteer bat acoustic monitoring, by fixed point, car transect or roost count, with automated call identification. In French</p>
+<span class="dom mono">vigienature.fr</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://ptes.org/campaigns/dormice/surveying-and-monitoring-hazel-dormice/national-dormouse-database-ndd/" target="_blank" rel="noopener">National Dormouse Monitoring Programme</a><span class="tag new">new</span></span>
+<p>Volunteer nest-box monitoring for hazel dormouse across the UK</p>
+<span class="dom mono">ptes.org</span>
+</li><li class="item dead">
+<span class="top"><a class="nm" href="https://vmus.adu.org.za" target="_blank" rel="noopener nofollow">ADU Virtual Museum (LepiMAP, FrogMAP, OdonataMAP, ReptileMAP)</a><span class="tag new">new</span><span class="tag dead">dead link</span></span>
+<p>Africa-wide photo atlases that stopped accepting records at the end of 2024. Data and images moved to Observation.org, and the certificate has expired, so expect a browser warning</p>
+<span class="dom mono">vmus.adu.org.za</span>
+</li>
+</ul>
+<p class="nav2"><a href="/occurrence-and-monitoring-platforms/">&larr; Occurrence and monitoring platforms</a> <a href="/">All categories</a> <a href="/incident-and-threat-reporting/">Incident and threat reporting &rarr;</a></p>
+</div>
+</main>
+<footer>
+<p class="eyebrow">Conservation Portal</p>
+<p>A curated shelf of resources for wildlife conservationists, built and maintained by
+<a href="https://biodiversitygroup.org/">The Biodiversity Group</a>.
+Know something that belongs here? <a href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%20suggestion">Tell us</a>.</p>
+<p>Entries marked NEW were added in the August 2026 review. Entries marked DEAD LINK are kept
+on purpose, so nobody spends an afternoon looking for something that is gone.</p>
+</footer>
+</body>
+</html>

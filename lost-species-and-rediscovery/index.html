@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lost species and rediscovery | Conservation Portal</title>
+<meta name="description" content="Species nobody has confirmed alive in years, the lists that name them, and where a rediscovery gets reported. 23 hand-checked resources for conservationists.">
+<link rel="canonical" href="https://conservationportal.org/lost-species-and-rediscovery/">
+<meta property="og:title" content="Lost species and rediscovery | Conservation Portal">
+<meta property="og:description" content="Species nobody has confirmed alive in years, the lists that name them, and where a rediscovery gets reported. 23 hand-checked resources for conservationists.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://conservationportal.org/lost-species-and-rediscovery/">
+<meta property="og:site_name" content="Conservation Portal">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400..700;1,400&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap">
+<style>
+:root{
+  --ground:#f4f7f3; --surface:#fff; --ink:#263028; --muted:#5f6b5f; --hair:#d5ddd4;
+  --green:#2e7d52; --green-deep:#1f5a3a; --orange:#c8490a;
+  --shadow:0 1px 2px rgba(38,48,40,.05),0 8px 24px rgba(38,48,40,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#171c18; --surface:#1f2620; --ink:#e7ece6; --muted:#9aa79a; --hair:#333d34;
+  --green:#6dc292; --green-deep:#8fd6ab; --orange:#ff9052;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+}}
+:root[data-theme="dark"]{
+  --ground:#171c18; --surface:#1f2620; --ink:#e7ece6; --muted:#9aa79a; --hair:#333d34;
+  --green:#6dc292; --green-deep:#8fd6ab; --orange:#ff9052;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;
+  font-size:17px;line-height:1.6;text-align:center;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Petrona,Georgia,serif;font-weight:600;text-wrap:balance;
+  margin:0;line-height:1.15;letter-spacing:-.01em}
+a{color:var(--green-deep);text-decoration-thickness:1px;text-underline-offset:3px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) a{color:var(--green)}}
+:root[data-theme="dark"] a{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible{
+  outline:2px solid var(--green);outline-offset:3px;border-radius:2px}
+.mono,.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{position:static;display:inline-block;padding:8px}
+
+header{position:sticky;top:0;z-index:20;background:var(--ground);border-bottom:1px solid var(--hair)}
+.hbar{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;
+  align-items:center;justify-content:center;gap:14px}
+.wordmark{font-family:Petrona,Georgia,serif;font-size:21px;font-weight:600;
+  color:var(--ink);text-decoration:none;letter-spacing:-.015em}
+.wordmark span{color:var(--green-deep)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .wordmark span{color:var(--green)}}
+:root[data-theme="dark"] .wordmark span{color:var(--green)}
+.hbar .eyebrow{border-left:1px solid var(--hair);padding-left:14px}
+@media (max-width:640px){.hbar .eyebrow{display:none}}
+
+main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
+.hero{padding:72px 0 8px}
+.hero h1{font-size:clamp(38px,6.4vw,64px);margin:14px 0 0}
+.lede{max-width:62ch;margin:26px auto 0;font-size:19px}
+.lede.second{margin-top:18px;color:var(--muted);font-size:17px}
+.shelf{color:var(--green-deep);font-weight:700}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .shelf{color:var(--green)}}
+:root[data-theme="dark"] .shelf{color:var(--green)}
+
+.stats{display:flex;justify-content:center;flex-wrap:wrap;margin:40px auto 0;max-width:640px;
+  border:1px solid var(--hair);border-radius:3px;background:var(--surface);
+  box-shadow:var(--shadow);overflow:hidden}
+.stat{flex:1 1 33%;min-width:150px;padding:20px 16px;border-left:1px solid var(--hair)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font-family:Petrona,Georgia,serif;font-size:34px;font-weight:600;
+  font-variant-numeric:tabular-nums;line-height:1}
+.stat .eyebrow{margin-top:8px;display:block}
+
+.searchwrap{margin:44px auto 0;max-width:520px}
+input[type=search]{width:100%;padding:13px 18px;font:inherit;font-size:16px;text-align:center;
+  color:var(--ink);background:var(--surface);border:1px solid var(--hair);
+  border-radius:3px;box-shadow:var(--shadow)}
+input[type=search]::placeholder{color:var(--muted)}
+
+.rule{display:flex;align-items:center;gap:16px;margin:56px auto 24px}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:var(--hair)}
+.grouphead{margin:56px 0 6px}
+.grouphead h2{font-size:26px}
+.grouphead p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+.grid{display:grid;gap:14px;margin-top:18px;
+  grid-template-columns:repeat(auto-fill,minmax(272px,1fr))}
+.card{background:var(--surface);border:1px solid var(--hair);border-radius:3px;
+  padding:22px 20px 20px;text-align:center;display:flex;flex-direction:column;
+  align-items:center;gap:9px;box-shadow:var(--shadow);text-decoration:none;color:inherit;
+  transition:border-color .18s,transform .18s}
+.card:hover{border-color:var(--green);transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+.card .count{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;
+  letter-spacing:.1em;color:var(--muted);font-variant-numeric:tabular-nums}
+.card h3{font-size:20px}
+.card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
+.card .egs{margin-top:auto;padding-top:12px;font-size:12px;color:var(--muted);
+  font-family:"IBM Plex Mono",ui-monospace,monospace;line-height:1.7;
+  border-top:1px solid var(--hair);width:100%}
+
+.catpage{padding-top:52px}
+.catpage h1{font-size:clamp(30px,5vw,46px)}
+.catpage .blurb{max-width:56ch;margin:16px auto 0;color:var(--muted)}
+.list{max-width:720px;margin:36px auto 0;background:var(--surface);
+  border:1px solid var(--hair);border-radius:3px;box-shadow:var(--shadow);overflow:hidden;
+  text-align:center;list-style:none;padding:0}
+.item{padding:22px;border-top:1px solid var(--hair)}
+.item:first-child{border-top:0}
+.item .top{display:flex;align-items:baseline;justify-content:center;gap:9px;flex-wrap:wrap}
+.item a.nm{font-family:Petrona,Georgia,serif;font-size:20px;font-weight:600;
+  text-decoration:none;letter-spacing:-.01em}
+.item a.nm:hover{text-decoration:underline;text-underline-offset:4px}
+.item p{margin:6px auto 0;font-size:15.5px;color:var(--muted);max-width:56ch;line-height:1.55}
+.item .dom{display:block;margin-top:9px;font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+.item.dead a.nm{color:var(--muted)}
+.tag{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;border-radius:2px;padding:1px 5px}
+.tag.new{color:var(--orange);border:1px solid currentColor;font-weight:700}
+.tag.dead{color:var(--muted);border:1px dashed var(--hair)}
+.hint{color:var(--muted);font-size:15px;margin:32px auto 0}
+.nav2{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:30px auto 0;font-size:15px}
+
+footer{border-top:1px solid var(--hair);margin-top:24px;padding:34px 24px 60px;
+  color:var(--muted);font-size:14px}
+footer p{max-width:62ch;margin:0 auto 10px}
+.hidden{display:none}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Lost species and rediscovery | Conservation Portal", "url": "https://conservationportal.org/lost-species-and-rediscovery/", "description": "Species nobody has confirmed alive in years, the lists that name them, and where a rediscovery gets reported.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "mainEntity": {"@type": "ItemList", "numberOfItems": 23, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Re:wild Search for Lost Species", "url": "https://www.rewild.org/lost-species"}, {"@type": "ListItem", "position": 2, "name": "Top 25 Most Wanted Lost Species", "url": "https://www.rewild.org/lost-species/top-25-most-wanted-lost-species"}, {"@type": "ListItem", "position": 3, "name": "Lost Mammals Initiative", "url": "https://www.mammalwatching.com/lost-found/"}, {"@type": "ListItem", "position": 4, "name": "Search for Lost Birds", "url": "https://searchforlostbirds.org/"}, {"@type": "ListItem", "position": 5, "name": "Search for the Lost Fishes", "url": "https://shoal.org/search-for-the-lost-fishes/"}, {"@type": "ListItem", "position": 6, "name": "Journal of Lost Species", "url": "https://www.journaloflostspecies.org/"}, {"@type": "ListItem", "position": 7, "name": "Species Black List rediscoveries", "url": "https://speciesblacklist.org/rediscoveries/"}, {"@type": "ListItem", "position": 8, "name": "TBG Lost Species list", "url": "https://speciesblacklist.org/lost-species/"}, {"@type": "ListItem", "position": 9, "name": "Phoenix Species Project", "url": "https://phoenixspeciesproject.org/"}, {"@type": "ListItem", "position": 10, "name": "iNaturalist Search for Lost Species project", "url": "https://www.inaturalist.org/projects/11779"}, {"@type": "ListItem", "position": 11, "name": "The Lost Insect Species", "url": "https://www.inaturalist.org/projects/the-lost-insect-species"}, {"@type": "ListItem", "position": 12, "name": "Atelopus Survival Initiative", "url": "https://www.atelopus.org/harlequin-toads"}, {"@type": "ListItem", "position": 13, "name": "Re:wild Lost Amphibians", "url": "https://www.rewild.org/lost-species/lost-amphibians"}, {"@type": "ListItem", "position": 14, "name": "Re:wild Lost Turtles", "url": "https://www.rewild.org/lost-species/lost-turtles"}, {"@type": "ListItem", "position": 15, "name": "Re:wild Lost Sharks", "url": "https://www.rewild.org/lost-species/lost-sharks"}, {"@type": "ListItem", "position": 16, "name": "Re:wild Lost Primates", "url": "https://www.rewild.org/lost-species/lost-primates"}, {"@type": "ListItem", "position": 17, "name": "Re:wild Lost Small Mammals", "url": "https://www.rewild.org/lost-species/lost-small-mammals"}, {"@type": "ListItem", "position": 18, "name": "Lost Ladybug Project", "url": "http://www.lostladybug.org/"}, {"@type": "ListItem", "position": 19, "name": "Artensterben.de", "url": "https://www.artensterben.de/en/"}, {"@type": "ListItem", "position": 20, "name": "Hawaii Plant Extinction Prevention Program", "url": "https://ntbg.org/science/conservation/pepp/"}, {"@type": "ListItem", "position": 21, "name": "Kew Lost and Found Fungi", "url": "https://www.kew.org/read-and-watch/lost-and-found-fungi"}, {"@type": "ListItem", "position": 22, "name": "Lost and rediscovered tetrapods dataset", "url": "https://datadryad.org/dataset/doi:10.5061/dryad.v6wwpzh31"}, {"@type": "ListItem", "position": 23, "name": "Lost but not forgotten", "url": "https://www.cambridge.org/core/journals/oryx/article/lost-but-not-forgotten-a-new-nomenclature-to-support-a-call-to-rediscover-and-conserve-lost-species/5A148CDB9F0ECB4B11D04BA0D35864B2"}]}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="hbar">
+<a class="wordmark" href="/">Conservation <span>Portal</span></a>
+<span class="eyebrow">A project of The Biodiversity Group</span>
+</div></header>
+<main id="main">
+<div class="catpage">
+<p class="eyebrow">Species and status</p>
+<h1>Lost species and rediscovery</h1>
+<p class="blurb">Species nobody has confirmed alive in years, the lists that name them, and where a rediscovery gets reported.</p>
+<div class="rule"><span class="eyebrow">23 resources &middot; 23 added in the August 2026 review</span></div>
+<ul class="list">
+<li class="item">
+<span class="top"><a class="nm" href="https://www.rewild.org/lost-species" target="_blank" rel="noopener">Re:wild Search for Lost Species</a><span class="tag new">new</span></span>
+<p>The master list: 4,350+ species undocumented for ten years or more, nominated by over 100 IUCN specialist groups</p>
+<span class="dom mono">rewild.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.rewild.org/lost-species/top-25-most-wanted-lost-species" target="_blank" rel="noopener">Top 25 Most Wanted Lost Species</a><span class="tag new">new</span></span>
+<p>The rotating headline list, and the reason most people have heard of any of this</p>
+<span class="dom mono">rewild.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.mammalwatching.com/lost-found/" target="_blank" rel="noopener">Lost Mammals Initiative</a><span class="tag new">new</span></span>
+<p>25 lost or barely known mammals, from Thor&#x27;s hero shrew to the saola, run as a community competition with tour-operator prizes. Five are already found</p>
+<span class="dom mono">mammalwatching.com</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://searchforlostbirds.org/" target="_blank" rel="noopener">Search for Lost Birds</a><span class="tag new">new</span></span>
+<p>121 lost birds as of January 2026, revised annually with the adds and removes published</p>
+<span class="dom mono">searchforlostbirds.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://shoal.org/search-for-the-lost-fishes/" target="_blank" rel="noopener">Search for the Lost Fishes</a><span class="tag new">new</span></span>
+<p>300+ lost freshwater fishes with a 10 Most Wanted, and it invites outside teams to mount their own expeditions</p>
+<span class="dom mono">shoal.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.journaloflostspecies.org/" target="_blank" rel="noopener">Journal of Lost Species</a><span class="tag new">new</span></span>
+<p>New peer-reviewed journal, free to publish in, that takes unsuccessful searches as well as rediscoveries and explicitly invites amateur naturalists</p>
+<span class="dom mono">journaloflostspecies.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://speciesblacklist.org/rediscoveries/" target="_blank" rel="noopener">Species Black List rediscoveries</a><span class="tag new">new</span></span>
+<p>Daily feed of rediscovery reports across fourteen national news editions, showing what was reported rather than what is confirmed. We run this one</p>
+<span class="dom mono">speciesblacklist.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://speciesblacklist.org/lost-species/" target="_blank" rel="noopener">TBG Lost Species list</a><span class="tag new">new</span></span>
+<p>2,137 species not confirmed alive for over ten years, under the Long and Rodriguez nomenclature. We run this one</p>
+<span class="dom mono">speciesblacklist.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://phoenixspeciesproject.org/" target="_blank" rel="noopener">Phoenix Species Project</a><span class="tag new">new</span></span>
+<p>Launched August 2026 with $200M to recover 100 Critically Endangered and Extinct-in-the-Wild species across 30 countries</p>
+<span class="dom mono">phoenixspeciesproject.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.inaturalist.org/projects/11779" target="_blank" rel="noopener">iNaturalist Search for Lost Species project</a><span class="tag new">new</span></span>
+<p>Where sightings of candidate lost species get logged, 13 sub-projects and 750+ observers</p>
+<span class="dom mono">inaturalist.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.inaturalist.org/projects/the-lost-insect-species" target="_blank" rel="noopener">The Lost Insect Species</a><span class="tag new">new</span></span>
+<p>Insects unobserved for fifty years or more, with trips organized to go refind them</p>
+<span class="dom mono">inaturalist.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.atelopus.org/harlequin-toads" target="_blank" rel="noopener">Atelopus Survival Initiative</a><span class="tag new">new</span></span>
+<p>60 organizations across 15 countries chasing harlequin toads, around 40% of which have not been seen since the early 2000s</p>
+<span class="dom mono">atelopus.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.rewild.org/lost-species/lost-amphibians" target="_blank" rel="noopener">Re:wild Lost Amphibians</a><span class="tag new">new</span></span>
+<p>Lost amphibian target list, successor to the 2010 Global Search for Lost Frogs</p>
+<span class="dom mono">rewild.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.rewild.org/lost-species/lost-turtles" target="_blank" rel="noopener">Re:wild Lost Turtles</a><span class="tag new">new</span></span>
+<p>Lost turtle and tortoise target list with the Turtle Conservancy</p>
+<span class="dom mono">rewild.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.rewild.org/lost-species/lost-sharks" target="_blank" rel="noopener">Re:wild Lost Sharks</a><span class="tag new">new</span></span>
+<p>Lost shark and ray target list</p>
+<span class="dom mono">rewild.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.rewild.org/lost-species/lost-primates" target="_blank" rel="noopener">Re:wild Lost Primates</a><span class="tag new">new</span></span>
+<p>Lost primate target list</p>
+<span class="dom mono">rewild.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.rewild.org/lost-species/lost-small-mammals" target="_blank" rel="noopener">Re:wild Lost Small Mammals</a><span class="tag new">new</span></span>
+<p>Lost small mammal target list, the institutional counterpart to the Lost Mammals Initiative</p>
+<span class="dom mono">rewild.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="http://www.lostladybug.org/" target="_blank" rel="noopener">Lost Ladybug Project</a><span class="tag new">new</span></span>
+<p>Cornell hunt for vanished native North American ladybugs. Note the link is http, because https fails on this host</p>
+<span class="dom mono">lostladybug.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.artensterben.de/en/" target="_blank" rel="noopener">Artensterben.de</a><span class="tag new">new</span></span>
+<p>Extinctions since 1500 plus an annual rediscovery retrospective, in German and English</p>
+<span class="dom mono">artensterben.de</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://ntbg.org/science/conservation/pepp/" target="_blank" rel="noopener">Hawaii Plant Extinction Prevention Program</a><span class="tag new">new</span></span>
+<p>Plants down to fewer than 50 wild individuals, and the closest thing to a systematic lost-plants search</p>
+<span class="dom mono">ntbg.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.kew.org/read-and-watch/lost-and-found-fungi" target="_blank" rel="noopener">Kew Lost and Found Fungi</a><span class="tag new">new</span></span>
+<p>100 of Britain&#x27;s most under-recorded fungi, sent out to volunteer treasure hunts. Delivered 2014 to 2020, so read it as a method rather than a live project</p>
+<span class="dom mono">kew.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://datadryad.org/dataset/doi:10.5061/dryad.v6wwpzh31" target="_blank" rel="noopener">Lost and rediscovered tetrapods dataset</a><span class="tag new">new</span></span>
+<p>Lindken et al. 2024 open dataset of lost and rediscovered tetrapods, with taxonomy, geography and Red List status</p>
+<span class="dom mono">datadryad.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.cambridge.org/core/journals/oryx/article/lost-but-not-forgotten-a-new-nomenclature-to-support-a-call-to-rediscover-and-conserve-lost-species/5A148CDB9F0ECB4B11D04BA0D35864B2" target="_blank" rel="noopener">Lost but not forgotten</a><span class="tag new">new</span></span>
+<p>The Oryx paper that defines missing, lost and long-lost. Everything above uses its terms</p>
+<span class="dom mono">cambridge.org</span>
+</li>
+</ul>
+<p class="nav2"><a href="/species-and-taxonomy-databases/">&larr; Species and taxonomy databases</a> <a href="/">All categories</a> <a href="/zoos-and-ex-situ/">Zoos and ex-situ &rarr;</a></p>
+</div>
+</main>
+<footer>
+<p class="eyebrow">Conservation Portal</p>
+<p>A curated shelf of resources for wildlife conservationists, built and maintained by
+<a href="https://biodiversitygroup.org/">The Biodiversity Group</a>.
+Know something that belongs here? <a href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%20suggestion">Tell us</a>.</p>
+<p>Entries marked NEW were added in the August 2026 review. Entries marked DEAD LINK are kept
+on purpose, so nobody spends an afternoon looking for something that is gone.</p>
+</footer>
+</body>
+</html>

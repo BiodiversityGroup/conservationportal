@@ -1,0 +1,3 @@
+# build output is copied in by scripts/08_sync_pages_repo.py
+Thumbs.db
+.DS_Store

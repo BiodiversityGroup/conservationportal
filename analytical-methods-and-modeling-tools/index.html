@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Analytical methods and modeling tools | Conservation Portal</title>
+<meta name="description" content="Software for viability, connectivity, occupancy, camera traps and acoustics. 20 hand-checked resources for conservationists.">
+<link rel="canonical" href="https://conservationportal.org/analytical-methods-and-modeling-tools/">
+<meta property="og:title" content="Analytical methods and modeling tools | Conservation Portal">
+<meta property="og:description" content="Software for viability, connectivity, occupancy, camera traps and acoustics. 20 hand-checked resources for conservationists.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://conservationportal.org/analytical-methods-and-modeling-tools/">
+<meta property="og:site_name" content="Conservation Portal">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400..700;1,400&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap">
+<style>
+:root{
+  --ground:#f4f7f3; --surface:#fff; --ink:#263028; --muted:#5f6b5f; --hair:#d5ddd4;
+  --green:#2e7d52; --green-deep:#1f5a3a; --orange:#c8490a;
+  --shadow:0 1px 2px rgba(38,48,40,.05),0 8px 24px rgba(38,48,40,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#171c18; --surface:#1f2620; --ink:#e7ece6; --muted:#9aa79a; --hair:#333d34;
+  --green:#6dc292; --green-deep:#8fd6ab; --orange:#ff9052;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+}}
+:root[data-theme="dark"]{
+  --ground:#171c18; --surface:#1f2620; --ink:#e7ece6; --muted:#9aa79a; --hair:#333d34;
+  --green:#6dc292; --green-deep:#8fd6ab; --orange:#ff9052;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;
+  font-size:17px;line-height:1.6;text-align:center;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Petrona,Georgia,serif;font-weight:600;text-wrap:balance;
+  margin:0;line-height:1.15;letter-spacing:-.01em}
+a{color:var(--green-deep);text-decoration-thickness:1px;text-underline-offset:3px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) a{color:var(--green)}}
+:root[data-theme="dark"] a{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible{
+  outline:2px solid var(--green);outline-offset:3px;border-radius:2px}
+.mono,.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{position:static;display:inline-block;padding:8px}
+
+header{position:sticky;top:0;z-index:20;background:var(--ground);border-bottom:1px solid var(--hair)}
+.hbar{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;
+  align-items:center;justify-content:center;gap:14px}
+.wordmark{font-family:Petrona,Georgia,serif;font-size:21px;font-weight:600;
+  color:var(--ink);text-decoration:none;letter-spacing:-.015em}
+.wordmark span{color:var(--green-deep)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .wordmark span{color:var(--green)}}
+:root[data-theme="dark"] .wordmark span{color:var(--green)}
+.hbar .eyebrow{border-left:1px solid var(--hair);padding-left:14px}
+@media (max-width:640px){.hbar .eyebrow{display:none}}
+
+main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
+.hero{padding:72px 0 8px}
+.hero h1{font-size:clamp(38px,6.4vw,64px);margin:14px 0 0}
+.lede{max-width:62ch;margin:26px auto 0;font-size:19px}
+.lede.second{margin-top:18px;color:var(--muted);font-size:17px}
+.shelf{color:var(--green-deep);font-weight:700}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .shelf{color:var(--green)}}
+:root[data-theme="dark"] .shelf{color:var(--green)}
+
+.stats{display:flex;justify-content:center;flex-wrap:wrap;margin:40px auto 0;max-width:640px;
+  border:1px solid var(--hair);border-radius:3px;background:var(--surface);
+  box-shadow:var(--shadow);overflow:hidden}
+.stat{flex:1 1 33%;min-width:150px;padding:20px 16px;border-left:1px solid var(--hair)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font-family:Petrona,Georgia,serif;font-size:34px;font-weight:600;
+  font-variant-numeric:tabular-nums;line-height:1}
+.stat .eyebrow{margin-top:8px;display:block}
+
+.searchwrap{margin:44px auto 0;max-width:520px}
+input[type=search]{width:100%;padding:13px 18px;font:inherit;font-size:16px;text-align:center;
+  color:var(--ink);background:var(--surface);border:1px solid var(--hair);
+  border-radius:3px;box-shadow:var(--shadow)}
+input[type=search]::placeholder{color:var(--muted)}
+
+.rule{display:flex;align-items:center;gap:16px;margin:56px auto 24px}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:var(--hair)}
+.grouphead{margin:56px 0 6px}
+.grouphead h2{font-size:26px}
+.grouphead p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+.grid{display:grid;gap:14px;margin-top:18px;
+  grid-template-columns:repeat(auto-fill,minmax(272px,1fr))}
+.card{background:var(--surface);border:1px solid var(--hair);border-radius:3px;
+  padding:22px 20px 20px;text-align:center;display:flex;flex-direction:column;
+  align-items:center;gap:9px;box-shadow:var(--shadow);text-decoration:none;color:inherit;
+  transition:border-color .18s,transform .18s}
+.card:hover{border-color:var(--green);transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+.card .count{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;
+  letter-spacing:.1em;color:var(--muted);font-variant-numeric:tabular-nums}
+.card h3{font-size:20px}
+.card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
+.card .egs{margin-top:auto;padding-top:12px;font-size:12px;color:var(--muted);
+  font-family:"IBM Plex Mono",ui-monospace,monospace;line-height:1.7;
+  border-top:1px solid var(--hair);width:100%}
+
+.catpage{padding-top:52px}
+.catpage h1{font-size:clamp(30px,5vw,46px)}
+.catpage .blurb{max-width:56ch;margin:16px auto 0;color:var(--muted)}
+.list{max-width:720px;margin:36px auto 0;background:var(--surface);
+  border:1px solid var(--hair);border-radius:3px;box-shadow:var(--shadow);overflow:hidden;
+  text-align:center;list-style:none;padding:0}
+.item{padding:22px;border-top:1px solid var(--hair)}
+.item:first-child{border-top:0}
+.item .top{display:flex;align-items:baseline;justify-content:center;gap:9px;flex-wrap:wrap}
+.item a.nm{font-family:Petrona,Georgia,serif;font-size:20px;font-weight:600;
+  text-decoration:none;letter-spacing:-.01em}
+.item a.nm:hover{text-decoration:underline;text-underline-offset:4px}
+.item p{margin:6px auto 0;font-size:15.5px;color:var(--muted);max-width:56ch;line-height:1.55}
+.item .dom{display:block;margin-top:9px;font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+.item.dead a.nm{color:var(--muted)}
+.tag{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;border-radius:2px;padding:1px 5px}
+.tag.new{color:var(--orange);border:1px solid currentColor;font-weight:700}
+.tag.dead{color:var(--muted);border:1px dashed var(--hair)}
+.hint{color:var(--muted);font-size:15px;margin:32px auto 0}
+.nav2{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:30px auto 0;font-size:15px}
+
+footer{border-top:1px solid var(--hair);margin-top:24px;padding:34px 24px 60px;
+  color:var(--muted);font-size:14px}
+footer p{max-width:62ch;margin:0 auto 10px}
+.hidden{display:none}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Analytical methods and modeling tools | Conservation Portal", "url": "https://conservationportal.org/analytical-methods-and-modeling-tools/", "description": "Software for viability, connectivity, occupancy, camera traps and acoustics.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "mainEntity": {"@type": "ItemList", "numberOfItems": 20, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Vortex", "url": "https://scti.tools/vortex/"}, {"@type": "ListItem", "position": 2, "name": "Circuitscape", "url": "https://circuitscape.org/"}, {"@type": "ListItem", "position": 3, "name": "Linkage Mapper", "url": "https://linkagemapper.org/"}, {"@type": "ListItem", "position": 4, "name": "BOLD Systems", "url": "https://www.boldsystems.org/"}, {"@type": "ListItem", "position": 5, "name": "TDWG Biodiversity Information Standards", "url": "https://www.tdwg.org/"}, {"@type": "ListItem", "position": 6, "name": "Darwin Core", "url": "https://www.tdwg.org/standards/dwc/"}, {"@type": "ListItem", "position": 7, "name": "eBio Atlas", "url": "https://ebioatlas.org/"}, {"@type": "ListItem", "position": 8, "name": "Maxent", "url": "https://biodiversityinformatics.amnh.org/open_source/maxent/"}, {"@type": "ListItem", "position": 9, "name": "Wallace EcoMod", "url": "https://wallaceecomod.github.io/"}, {"@type": "ListItem", "position": 10, "name": "Program MARK", "url": "http://www.phidot.org/software/mark/"}, {"@type": "ListItem", "position": 11, "name": "rOpenSci", "url": "https://ropensci.org/"}, {"@type": "ListItem", "position": 12, "name": "unmarked (R package)", "url": "https://cran.r-project.org/package=unmarked"}, {"@type": "ListItem", "position": 13, "name": "camtrapR (R package)", "url": "https://cran.r-project.org/package=camtrapR"}, {"@type": "ListItem", "position": 14, "name": "MegaDetector", "url": "https://github.com/agentmorris/MegaDetector"}, {"@type": "ListItem", "position": 15, "name": "AddaxAI", "url": "https://addaxdatascience.com/addaxai/"}, {"@type": "ListItem", "position": 16, "name": "Timelapse2", "url": "https://timelapse.ucalgary.ca/"}, {"@type": "ListItem", "position": 17, "name": "Camelot", "url": "https://camelotproject.org/"}, {"@type": "ListItem", "position": 18, "name": "Raven", "url": "https://ravensoundsoftware.com/"}, {"@type": "ListItem", "position": 19, "name": "Kaleidoscope", "url": "https://www.wildlifeacoustics.com/products/kaleidoscope"}, {"@type": "ListItem", "position": 20, "name": "bioacoustics (R package)", "url": "https://cran.r-project.org/package=bioacoustics"}]}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="hbar">
+<a class="wordmark" href="/">Conservation <span>Portal</span></a>
+<span class="eyebrow">A project of The Biodiversity Group</span>
+</div></header>
+<main id="main">
+<div class="catpage">
+<p class="eyebrow">Recording and data</p>
+<h1>Analytical methods and modeling tools</h1>
+<p class="blurb">Software for viability, connectivity, occupancy, camera traps and acoustics.</p>
+<div class="rule"><span class="eyebrow">20 resources &middot; 20 added in the August 2026 review</span></div>
+<ul class="list">
+<li class="item">
+<span class="top"><a class="nm" href="https://scti.tools/vortex/" target="_blank" rel="noopener">Vortex</a><span class="tag new">new</span></span>
+<p>Free population viability analysis for extinction-risk simulation</p>
+<span class="dom mono">scti.tools</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://circuitscape.org/" target="_blank" rel="noopener">Circuitscape</a><span class="tag new">new</span></span>
+<p>Open-source circuit-theory tool for landscape connectivity and gene flow</p>
+<span class="dom mono">circuitscape.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://linkagemapper.org/" target="_blank" rel="noopener">Linkage Mapper</a><span class="tag new">new</span></span>
+<p>ArcGIS toolbox that maps and prioritizes wildlife corridors</p>
+<span class="dom mono">linkagemapper.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.boldsystems.org/" target="_blank" rel="noopener">BOLD Systems</a><span class="tag new">new</span></span>
+<p>DNA barcode database and analysis workbench for species identification</p>
+<span class="dom mono">boldsystems.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.tdwg.org/" target="_blank" rel="noopener">TDWG Biodiversity Information Standards</a><span class="tag new">new</span></span>
+<p>Standards body for interoperable biodiversity data formats</p>
+<span class="dom mono">tdwg.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.tdwg.org/standards/dwc/" target="_blank" rel="noopener">Darwin Core</a><span class="tag new">new</span></span>
+<p>Core vocabulary for sharing occurrence, specimen and observation data</p>
+<span class="dom mono">tdwg.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://ebioatlas.org/" target="_blank" rel="noopener">eBio Atlas</a><span class="tag new">new</span></span>
+<p>Open global eDNA biodiversity repository, freshwater focus</p>
+<span class="dom mono">ebioatlas.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://biodiversityinformatics.amnh.org/open_source/maxent/" target="_blank" rel="noopener">Maxent</a><span class="tag new">new</span></span>
+<p>Maximum-entropy species distribution modeling software</p>
+<span class="dom mono">biodiversityinformatics.amnh.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://wallaceecomod.github.io/" target="_blank" rel="noopener">Wallace EcoMod</a><span class="tag new">new</span></span>
+<p>Guided R and Shiny platform for reproducible niche modeling</p>
+<span class="dom mono">wallaceecomod.github.io</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="http://www.phidot.org/software/mark/" target="_blank" rel="noopener">Program MARK</a><span class="tag new">new</span></span>
+<p>Capture-recapture survival and population parameter estimation</p>
+<span class="dom mono">phidot.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://ropensci.org/" target="_blank" rel="noopener">rOpenSci</a><span class="tag new">new</span></span>
+<p>Peer-reviewed hub for open-source R packages used in ecology</p>
+<span class="dom mono">ropensci.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://cran.r-project.org/package=unmarked" target="_blank" rel="noopener">unmarked (R package)</a><span class="tag new">new</span></span>
+<p>Fits occupancy, distance sampling and N-mixture abundance models to survey data where detection is imperfect</p>
+<span class="dom mono">cran.r-project.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://cran.r-project.org/package=camtrapR" target="_blank" rel="noopener">camtrapR (R package)</a><span class="tag new">new</span></span>
+<p>Turns raw camera-trap images into detection histories, occupancy model inputs and activity patterns</p>
+<span class="dom mono">cran.r-project.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://github.com/agentmorris/MegaDetector" target="_blank" rel="noopener">MegaDetector</a><span class="tag new">new</span></span>
+<p>Free AI model that finds animals, people and vehicles in camera-trap images so you never review a blank frame again</p>
+<span class="dom mono">github.com</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://addaxdatascience.com/addaxai/" target="_blank" rel="noopener">AddaxAI</a><span class="tag new">new</span></span>
+<p>Runs MegaDetector and species classifiers through a desktop interface, with no coding required. Formerly EcoAssist</p>
+<span class="dom mono">addaxdatascience.com</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://timelapse.ucalgary.ca/" target="_blank" rel="noopener">Timelapse2</a><span class="tag new">new</span></span>
+<p>Free tool for reviewing and annotating large camera-trap image sets, and it imports MegaDetector results</p>
+<span class="dom mono">timelapse.ucalgary.ca</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://camelotproject.org/" target="_blank" rel="noopener">Camelot</a><span class="tag new">new</span></span>
+<p>Free camera-trap database and classification tool that exports straight to camtrapR and PRESENCE</p>
+<span class="dom mono">camelotproject.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://ravensoundsoftware.com/" target="_blank" rel="noopener">Raven</a><span class="tag new">new</span></span>
+<p>Cornell Lab sound analysis software for visualizing and measuring animal calls. Raven Lite is free, Raven Pro is paid</p>
+<span class="dom mono">ravensoundsoftware.com</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.wildlifeacoustics.com/products/kaleidoscope" target="_blank" rel="noopener">Kaleidoscope</a><span class="tag new">new</span></span>
+<p>Sorts and labels bird song, frog calls and bat echolocation across months of recordings. Lite edition is free</p>
+<span class="dom mono">wildlifeacoustics.com</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://cran.r-project.org/package=bioacoustics" target="_blank" rel="noopener">bioacoustics (R package)</a><span class="tag new">new</span></span>
+<p>Free GPL-3 package that filters noisy audio and extracts acoustic features for classification, reading WAV, WAC, MP3 and ZC</p>
+<span class="dom mono">cran.r-project.org</span>
+</li>
+</ul>
+<p class="nav2"><a href="/spatial-data-and-mapping/">&larr; Spatial data and mapping</a> <a href="/">All categories</a> <a href="/conservation-technology-and-field-equipment/">Conservation technology and field equipment &rarr;</a></p>
+</div>
+</main>
+<footer>
+<p class="eyebrow">Conservation Portal</p>
+<p>A curated shelf of resources for wildlife conservationists, built and maintained by
+<a href="https://biodiversitygroup.org/">The Biodiversity Group</a>.
+Know something that belongs here? <a href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%20suggestion">Tell us</a>.</p>
+<p>Entries marked NEW were added in the August 2026 review. Entries marked DEAD LINK are kept
+on purpose, so nobody spends an afternoon looking for something that is gone.</p>
+</footer>
+</body>
+</html>

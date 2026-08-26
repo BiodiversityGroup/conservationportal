@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Planning, evaluation and practice | Conservation Portal</title>
+<meta name="description" content="Frameworks for designing a project and finding out whether it worked. 16 hand-checked resources for conservationists.">
+<link rel="canonical" href="https://conservationportal.org/planning-evaluation-and-practice/">
+<meta property="og:title" content="Planning, evaluation and practice | Conservation Portal">
+<meta property="og:description" content="Frameworks for designing a project and finding out whether it worked. 16 hand-checked resources for conservationists.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://conservationportal.org/planning-evaluation-and-practice/">
+<meta property="og:site_name" content="Conservation Portal">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400..700;1,400&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap">
+<style>
+:root{
+  --ground:#f4f7f3; --surface:#fff; --ink:#263028; --muted:#5f6b5f; --hair:#d5ddd4;
+  --green:#2e7d52; --green-deep:#1f5a3a; --orange:#c8490a;
+  --shadow:0 1px 2px rgba(38,48,40,.05),0 8px 24px rgba(38,48,40,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#171c18; --surface:#1f2620; --ink:#e7ece6; --muted:#9aa79a; --hair:#333d34;
+  --green:#6dc292; --green-deep:#8fd6ab; --orange:#ff9052;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+}}
+:root[data-theme="dark"]{
+  --ground:#171c18; --surface:#1f2620; --ink:#e7ece6; --muted:#9aa79a; --hair:#333d34;
+  --green:#6dc292; --green-deep:#8fd6ab; --orange:#ff9052;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;
+  font-size:17px;line-height:1.6;text-align:center;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Petrona,Georgia,serif;font-weight:600;text-wrap:balance;
+  margin:0;line-height:1.15;letter-spacing:-.01em}
+a{color:var(--green-deep);text-decoration-thickness:1px;text-underline-offset:3px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) a{color:var(--green)}}
+:root[data-theme="dark"] a{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible{
+  outline:2px solid var(--green);outline-offset:3px;border-radius:2px}
+.mono,.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{position:static;display:inline-block;padding:8px}
+
+header{position:sticky;top:0;z-index:20;background:var(--ground);border-bottom:1px solid var(--hair)}
+.hbar{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;
+  align-items:center;justify-content:center;gap:14px}
+.wordmark{font-family:Petrona,Georgia,serif;font-size:21px;font-weight:600;
+  color:var(--ink);text-decoration:none;letter-spacing:-.015em}
+.wordmark span{color:var(--green-deep)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .wordmark span{color:var(--green)}}
+:root[data-theme="dark"] .wordmark span{color:var(--green)}
+.hbar .eyebrow{border-left:1px solid var(--hair);padding-left:14px}
+@media (max-width:640px){.hbar .eyebrow{display:none}}
+
+main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
+.hero{padding:72px 0 8px}
+.hero h1{font-size:clamp(38px,6.4vw,64px);margin:14px 0 0}
+.lede{max-width:62ch;margin:26px auto 0;font-size:19px}
+.lede.second{margin-top:18px;color:var(--muted);font-size:17px}
+.shelf{color:var(--green-deep);font-weight:700}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .shelf{color:var(--green)}}
+:root[data-theme="dark"] .shelf{color:var(--green)}
+
+.stats{display:flex;justify-content:center;flex-wrap:wrap;margin:40px auto 0;max-width:640px;
+  border:1px solid var(--hair);border-radius:3px;background:var(--surface);
+  box-shadow:var(--shadow);overflow:hidden}
+.stat{flex:1 1 33%;min-width:150px;padding:20px 16px;border-left:1px solid var(--hair)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font-family:Petrona,Georgia,serif;font-size:34px;font-weight:600;
+  font-variant-numeric:tabular-nums;line-height:1}
+.stat .eyebrow{margin-top:8px;display:block}
+
+.searchwrap{margin:44px auto 0;max-width:520px}
+input[type=search]{width:100%;padding:13px 18px;font:inherit;font-size:16px;text-align:center;
+  color:var(--ink);background:var(--surface);border:1px solid var(--hair);
+  border-radius:3px;box-shadow:var(--shadow)}
+input[type=search]::placeholder{color:var(--muted)}
+
+.rule{display:flex;align-items:center;gap:16px;margin:56px auto 24px}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:var(--hair)}
+.grouphead{margin:56px 0 6px}
+.grouphead h2{font-size:26px}
+.grouphead p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+.grid{display:grid;gap:14px;margin-top:18px;
+  grid-template-columns:repeat(auto-fill,minmax(272px,1fr))}
+.card{background:var(--surface);border:1px solid var(--hair);border-radius:3px;
+  padding:22px 20px 20px;text-align:center;display:flex;flex-direction:column;
+  align-items:center;gap:9px;box-shadow:var(--shadow);text-decoration:none;color:inherit;
+  transition:border-color .18s,transform .18s}
+.card:hover{border-color:var(--green);transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+.card .count{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;
+  letter-spacing:.1em;color:var(--muted);font-variant-numeric:tabular-nums}
+.card h3{font-size:20px}
+.card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
+.card .egs{margin-top:auto;padding-top:12px;font-size:12px;color:var(--muted);
+  font-family:"IBM Plex Mono",ui-monospace,monospace;line-height:1.7;
+  border-top:1px solid var(--hair);width:100%}
+
+.catpage{padding-top:52px}
+.catpage h1{font-size:clamp(30px,5vw,46px)}
+.catpage .blurb{max-width:56ch;margin:16px auto 0;color:var(--muted)}
+.list{max-width:720px;margin:36px auto 0;background:var(--surface);
+  border:1px solid var(--hair);border-radius:3px;box-shadow:var(--shadow);overflow:hidden;
+  text-align:center;list-style:none;padding:0}
+.item{padding:22px;border-top:1px solid var(--hair)}
+.item:first-child{border-top:0}
+.item .top{display:flex;align-items:baseline;justify-content:center;gap:9px;flex-wrap:wrap}
+.item a.nm{font-family:Petrona,Georgia,serif;font-size:20px;font-weight:600;
+  text-decoration:none;letter-spacing:-.01em}
+.item a.nm:hover{text-decoration:underline;text-underline-offset:4px}
+.item p{margin:6px auto 0;font-size:15.5px;color:var(--muted);max-width:56ch;line-height:1.55}
+.item .dom{display:block;margin-top:9px;font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+.item.dead a.nm{color:var(--muted)}
+.tag{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;border-radius:2px;padding:1px 5px}
+.tag.new{color:var(--orange);border:1px solid currentColor;font-weight:700}
+.tag.dead{color:var(--muted);border:1px dashed var(--hair)}
+.hint{color:var(--muted);font-size:15px;margin:32px auto 0}
+.nav2{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:30px auto 0;font-size:15px}
+
+footer{border-top:1px solid var(--hair);margin-top:24px;padding:34px 24px 60px;
+  color:var(--muted);font-size:14px}
+footer p{max-width:62ch;margin:0 auto 10px}
+.hidden{display:none}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Planning, evaluation and practice | Conservation Portal", "url": "https://conservationportal.org/planning-evaluation-and-practice/", "description": "Frameworks for designing a project and finding out whether it worked.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "mainEntity": {"@type": "ItemList", "numberOfItems": 16, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Conservation Measures Partnership", "url": "https://www.conservationmeasures.org/"}, {"@type": "ListItem", "position": 2, "name": "Conservation Coaches Network", "url": "https://www.ccnetglobal.com/"}, {"@type": "ListItem", "position": 3, "name": "Foundations of Success", "url": "https://fosonline.org/"}, {"@type": "ListItem", "position": 4, "name": "Miradi", "url": "https://miradi.org/"}, {"@type": "ListItem", "position": 5, "name": "Conservation Planning Database", "url": "https://database.conservationplanning.org/"}, {"@type": "ListItem", "position": 6, "name": "Prism evaluation toolkit", "url": "https://conservationevaluation.org/"}, {"@type": "ListItem", "position": 7, "name": "Conservation Learning Initiative", "url": "https://conservation-learning.org/"}, {"@type": "ListItem", "position": 8, "name": "WCS Failure Factors", "url": "https://programs.wcs.org/failurefactors/"}, {"@type": "ListItem", "position": 9, "name": "Transforming Conservation", "url": "https://transformingconservation.org/"}, {"@type": "ListItem", "position": 10, "name": "Future of Conservation survey", "url": "https://www.futureconservation.org/"}, {"@type": "ListItem", "position": 11, "name": "PCLG tools", "url": "https://povertyandconservation.info/"}, {"@type": "ListItem", "position": 12, "name": "Community Voice Method", "url": "http://communityvoicemethod.org/"}, {"@type": "ListItem", "position": 13, "name": "IUCN conservation tools", "url": "https://www.iucn.org/resources/conservation-tools"}, {"@type": "ListItem", "position": 14, "name": "NatureServe tools and services", "url": "https://www.natureserve.org/"}, {"@type": "ListItem", "position": 15, "name": "ConservationTools.org", "url": "https://conservationtools.org/"}, {"@type": "ListItem", "position": 16, "name": "LandScale", "url": "https://www.landscale.org/"}]}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="hbar">
+<a class="wordmark" href="/">Conservation <span>Portal</span></a>
+<span class="eyebrow">A project of The Biodiversity Group</span>
+</div></header>
+<main id="main">
+<div class="catpage">
+<p class="eyebrow">Rules and planning</p>
+<h1>Planning, evaluation and practice</h1>
+<p class="blurb">Frameworks for designing a project and finding out whether it worked.</p>
+<div class="rule"><span class="eyebrow">16 resources &middot; 1 added in the August 2026 review</span></div>
+<ul class="list">
+<li class="item">
+<span class="top"><a class="nm" href="https://www.conservationmeasures.org/" target="_blank" rel="noopener">Conservation Measures Partnership</a></span>
+<p>The Open Standards framework</p>
+<span class="dom mono">conservationmeasures.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.ccnetglobal.com/" target="_blank" rel="noopener">Conservation Coaches Network</a></span>
+<p>Open Standards coaching community</p>
+<span class="dom mono">ccnetglobal.com</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://fosonline.org/" target="_blank" rel="noopener">Foundations of Success</a></span>
+<p>Adaptive management and evaluation training</p>
+<span class="dom mono">fosonline.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://miradi.org/" target="_blank" rel="noopener">Miradi</a><span class="tag new">new</span></span>
+<p>Project planning and monitoring software built on the Conservation Standards</p>
+<span class="dom mono">miradi.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://database.conservationplanning.org/" target="_blank" rel="noopener">Conservation Planning Database</a></span>
+<p>Systematic planning exercise catalog</p>
+<span class="dom mono">database.conservationplanning.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://conservationevaluation.org/" target="_blank" rel="noopener">Prism evaluation toolkit</a></span>
+<p>Evaluation toolkit for small and medium projects</p>
+<span class="dom mono">conservationevaluation.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://conservation-learning.org/" target="_blank" rel="noopener">Conservation Learning Initiative</a></span>
+<p>Learning-from-evidence resources</p>
+<span class="dom mono">conservation-learning.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://programs.wcs.org/failurefactors/" target="_blank" rel="noopener">WCS Failure Factors</a></span>
+<p>Cataloging why projects fail</p>
+<span class="dom mono">programs.wcs.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://transformingconservation.org/" target="_blank" rel="noopener">Transforming Conservation</a></span>
+<p>Systems thinking resources</p>
+<span class="dom mono">transformingconservation.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.futureconservation.org/" target="_blank" rel="noopener">Future of Conservation survey</a></span>
+<p>Values-mapping for conservationists</p>
+<span class="dom mono">futureconservation.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://povertyandconservation.info/" target="_blank" rel="noopener">PCLG tools</a></span>
+<p>Poverty and conservation tools and methods</p>
+<span class="dom mono">povertyandconservation.info</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="http://communityvoicemethod.org/" target="_blank" rel="noopener">Community Voice Method</a></span>
+<p>Film-based community consultation</p>
+<span class="dom mono">communityvoicemethod.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.iucn.org/resources/conservation-tools" target="_blank" rel="noopener">IUCN conservation tools</a></span>
+<p>IUCN tools index</p>
+<span class="dom mono">iucn.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.natureserve.org/" target="_blank" rel="noopener">NatureServe tools and services</a></span>
+<p>Ranking methods and Biotics</p>
+<span class="dom mono">natureserve.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://conservationtools.org/" target="_blank" rel="noopener">ConservationTools.org</a></span>
+<p>Land conservation guides</p>
+<span class="dom mono">conservationtools.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.landscale.org/" target="_blank" rel="noopener">LandScale</a></span>
+<p>Landscape sustainability assessment</p>
+<span class="dom mono">landscale.org</span>
+</li>
+</ul>
+<p class="nav2"><a href="/permits-ethics-and-genetic-resources/">&larr; Permits, ethics and genetic resources</a> <a href="/">All categories</a> <a href="/funding-and-grants/">Funding and grants &rarr;</a></p>
+</div>
+</main>
+<footer>
+<p class="eyebrow">Conservation Portal</p>
+<p>A curated shelf of resources for wildlife conservationists, built and maintained by
+<a href="https://biodiversitygroup.org/">The Biodiversity Group</a>.
+Know something that belongs here? <a href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%20suggestion">Tell us</a>.</p>
+<p>Entries marked NEW were added in the August 2026 review. Entries marked DEAD LINK are kept
+on purpose, so nobody spends an afternoon looking for something that is gone.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Training and courses | Conservation Portal</title>
+<meta name="description" content="Free and low-cost courses in GIS, statistics, planning and nonprofit skills. 16 hand-checked resources for conservationists.">
+<link rel="canonical" href="https://conservationportal.org/training-and-courses/">
+<meta property="og:title" content="Training and courses | Conservation Portal">
+<meta property="og:description" content="Free and low-cost courses in GIS, statistics, planning and nonprofit skills. 16 hand-checked resources for conservationists.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://conservationportal.org/training-and-courses/">
+<meta property="og:site_name" content="Conservation Portal">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400..700;1,400&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap">
+<style>
+:root{
+  --ground:#f4f7f3; --surface:#fff; --ink:#263028; --muted:#5f6b5f; --hair:#d5ddd4;
+  --green:#2e7d52; --green-deep:#1f5a3a; --orange:#c8490a;
+  --shadow:0 1px 2px rgba(38,48,40,.05),0 8px 24px rgba(38,48,40,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#171c18; --surface:#1f2620; --ink:#e7ece6; --muted:#9aa79a; --hair:#333d34;
+  --green:#6dc292; --green-deep:#8fd6ab; --orange:#ff9052;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+}}
+:root[data-theme="dark"]{
+  --ground:#171c18; --surface:#1f2620; --ink:#e7ece6; --muted:#9aa79a; --hair:#333d34;
+  --green:#6dc292; --green-deep:#8fd6ab; --orange:#ff9052;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;
+  font-size:17px;line-height:1.6;text-align:center;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Petrona,Georgia,serif;font-weight:600;text-wrap:balance;
+  margin:0;line-height:1.15;letter-spacing:-.01em}
+a{color:var(--green-deep);text-decoration-thickness:1px;text-underline-offset:3px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) a{color:var(--green)}}
+:root[data-theme="dark"] a{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible{
+  outline:2px solid var(--green);outline-offset:3px;border-radius:2px}
+.mono,.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{position:static;display:inline-block;padding:8px}
+
+header{position:sticky;top:0;z-index:20;background:var(--ground);border-bottom:1px solid var(--hair)}
+.hbar{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;
+  align-items:center;justify-content:center;gap:14px}
+.wordmark{font-family:Petrona,Georgia,serif;font-size:21px;font-weight:600;
+  color:var(--ink);text-decoration:none;letter-spacing:-.015em}
+.wordmark span{color:var(--green-deep)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .wordmark span{color:var(--green)}}
+:root[data-theme="dark"] .wordmark span{color:var(--green)}
+.hbar .eyebrow{border-left:1px solid var(--hair);padding-left:14px}
+@media (max-width:640px){.hbar .eyebrow{display:none}}
+
+main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
+.hero{padding:72px 0 8px}
+.hero h1{font-size:clamp(38px,6.4vw,64px);margin:14px 0 0}
+.lede{max-width:62ch;margin:26px auto 0;font-size:19px}
+.lede.second{margin-top:18px;color:var(--muted);font-size:17px}
+.shelf{color:var(--green-deep);font-weight:700}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .shelf{color:var(--green)}}
+:root[data-theme="dark"] .shelf{color:var(--green)}
+
+.stats{display:flex;justify-content:center;flex-wrap:wrap;margin:40px auto 0;max-width:640px;
+  border:1px solid var(--hair);border-radius:3px;background:var(--surface);
+  box-shadow:var(--shadow);overflow:hidden}
+.stat{flex:1 1 33%;min-width:150px;padding:20px 16px;border-left:1px solid var(--hair)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font-family:Petrona,Georgia,serif;font-size:34px;font-weight:600;
+  font-variant-numeric:tabular-nums;line-height:1}
+.stat .eyebrow{margin-top:8px;display:block}
+
+.searchwrap{margin:44px auto 0;max-width:520px}
+input[type=search]{width:100%;padding:13px 18px;font:inherit;font-size:16px;text-align:center;
+  color:var(--ink);background:var(--surface);border:1px solid var(--hair);
+  border-radius:3px;box-shadow:var(--shadow)}
+input[type=search]::placeholder{color:var(--muted)}
+
+.rule{display:flex;align-items:center;gap:16px;margin:56px auto 24px}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:var(--hair)}
+.grouphead{margin:56px 0 6px}
+.grouphead h2{font-size:26px}
+.grouphead p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+.grid{display:grid;gap:14px;margin-top:18px;
+  grid-template-columns:repeat(auto-fill,minmax(272px,1fr))}
+.card{background:var(--surface);border:1px solid var(--hair);border-radius:3px;
+  padding:22px 20px 20px;text-align:center;display:flex;flex-direction:column;
+  align-items:center;gap:9px;box-shadow:var(--shadow);text-decoration:none;color:inherit;
+  transition:border-color .18s,transform .18s}
+.card:hover{border-color:var(--green);transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+.card .count{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;
+  letter-spacing:.1em;color:var(--muted);font-variant-numeric:tabular-nums}
+.card h3{font-size:20px}
+.card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
+.card .egs{margin-top:auto;padding-top:12px;font-size:12px;color:var(--muted);
+  font-family:"IBM Plex Mono",ui-monospace,monospace;line-height:1.7;
+  border-top:1px solid var(--hair);width:100%}
+
+.catpage{padding-top:52px}
+.catpage h1{font-size:clamp(30px,5vw,46px)}
+.catpage .blurb{max-width:56ch;margin:16px auto 0;color:var(--muted)}
+.list{max-width:720px;margin:36px auto 0;background:var(--surface);
+  border:1px solid var(--hair);border-radius:3px;box-shadow:var(--shadow);overflow:hidden;
+  text-align:center;list-style:none;padding:0}
+.item{padding:22px;border-top:1px solid var(--hair)}
+.item:first-child{border-top:0}
+.item .top{display:flex;align-items:baseline;justify-content:center;gap:9px;flex-wrap:wrap}
+.item a.nm{font-family:Petrona,Georgia,serif;font-size:20px;font-weight:600;
+  text-decoration:none;letter-spacing:-.01em}
+.item a.nm:hover{text-decoration:underline;text-underline-offset:4px}
+.item p{margin:6px auto 0;font-size:15.5px;color:var(--muted);max-width:56ch;line-height:1.55}
+.item .dom{display:block;margin-top:9px;font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+.item.dead a.nm{color:var(--muted)}
+.tag{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;border-radius:2px;padding:1px 5px}
+.tag.new{color:var(--orange);border:1px solid currentColor;font-weight:700}
+.tag.dead{color:var(--muted);border:1px dashed var(--hair)}
+.hint{color:var(--muted);font-size:15px;margin:32px auto 0}
+.nav2{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:30px auto 0;font-size:15px}
+
+footer{border-top:1px solid var(--hair);margin-top:24px;padding:34px 24px 60px;
+  color:var(--muted);font-size:14px}
+footer p{max-width:62ch;margin:0 auto 10px}
+.hidden{display:none}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Training and courses | Conservation Portal", "url": "https://conservationportal.org/training-and-courses/", "description": "Free and low-cost courses in GIS, statistics, planning and nonprofit skills.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "mainEntity": {"@type": "ItemList", "numberOfItems": 16, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ConservationTraining (TNC)", "url": "https://www.conservationtraining.org/"}, {"@type": "ListItem", "position": 2, "name": "NonprofitReady", "url": "https://get.nonprofitready.org/"}, {"@type": "ListItem", "position": 3, "name": "Acumen Academy", "url": "https://acumenacademy.org/"}, {"@type": "ListItem", "position": 4, "name": "Codecademy", "url": "https://www.codecademy.com/"}, {"@type": "ListItem", "position": 5, "name": "QGIS training manual", "url": "https://docs.qgis.org/"}, {"@type": "ListItem", "position": 6, "name": "edX", "url": "https://www.edx.org/"}, {"@type": "ListItem", "position": 7, "name": "Tropical Biology Association", "url": "https://www.tropical-biology.org/"}, {"@type": "ListItem", "position": 8, "name": "Center for Wildlife Studies", "url": "https://www.centerforwildlifestudies.org/"}, {"@type": "ListItem", "position": 9, "name": "Kinship Conservation Fellows", "url": "https://kinshipfellows.org/"}, {"@type": "ListItem", "position": 10, "name": "UNLEASH", "url": "https://unleash.org/"}, {"@type": "ListItem", "position": 11, "name": "One World RIFF", "url": "https://www.oneworld.training/"}, {"@type": "ListItem", "position": 12, "name": "VolunteerPro", "url": "https://volpro.net/"}, {"@type": "ListItem", "position": 13, "name": "ASAP partner resources", "url": "https://www.speciesonthebrink.org/"}, {"@type": "ListItem", "position": 14, "name": "WildTeam grant writing course", "url": "https://training.wildteam.org.uk/course/grant-writing"}, {"@type": "ListItem", "position": 15, "name": "Conservation Leadership Programme project manuals", "url": "https://www.conservationleadershipprogramme.org/awards-opportunities/team-awards/help-resources/project-manuals/"}, {"@type": "ListItem", "position": 16, "name": "MOOC Conservation", "url": "https://mooc-conservation.org/"}]}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="hbar">
+<a class="wordmark" href="/">Conservation <span>Portal</span></a>
+<span class="eyebrow">A project of The Biodiversity Group</span>
+</div></header>
+<main id="main">
+<div class="catpage">
+<p class="eyebrow">Knowledge and communication</p>
+<h1>Training and courses</h1>
+<p class="blurb">Free and low-cost courses in GIS, statistics, planning and nonprofit skills.</p>
+<div class="rule"><span class="eyebrow">16 resources &middot; 3 added in the August 2026 review</span></div>
+<ul class="list">
+<li class="item">
+<span class="top"><a class="nm" href="https://www.conservationtraining.org/" target="_blank" rel="noopener">ConservationTraining (TNC)</a></span>
+<p>Free TNC courses, including GIS and Open Standards</p>
+<span class="dom mono">conservationtraining.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://get.nonprofitready.org/" target="_blank" rel="noopener">NonprofitReady</a></span>
+<p>Free nonprofit skills courses</p>
+<span class="dom mono">get.nonprofitready.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://acumenacademy.org/" target="_blank" rel="noopener">Acumen Academy</a></span>
+<p>Social-sector courses</p>
+<span class="dom mono">acumenacademy.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.codecademy.com/" target="_blank" rel="noopener">Codecademy</a></span>
+<p>R, Python and statistics courses</p>
+<span class="dom mono">codecademy.com</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://docs.qgis.org/" target="_blank" rel="noopener">QGIS training manual</a></span>
+<p>Free GIS training</p>
+<span class="dom mono">docs.qgis.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.edx.org/" target="_blank" rel="noopener">edX</a></span>
+<p>MOOCs, including land management</p>
+<span class="dom mono">edx.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.tropical-biology.org/" target="_blank" rel="noopener">Tropical Biology Association</a></span>
+<p>Field courses and statistics guides</p>
+<span class="dom mono">tropical-biology.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.centerforwildlifestudies.org/" target="_blank" rel="noopener">Center for Wildlife Studies</a></span>
+<p>Wildlife science short courses</p>
+<span class="dom mono">centerforwildlifestudies.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://kinshipfellows.org/" target="_blank" rel="noopener">Kinship Conservation Fellows</a></span>
+<p>Market-based conservation fellowship</p>
+<span class="dom mono">kinshipfellows.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://unleash.org/" target="_blank" rel="noopener">UNLEASH</a></span>
+<p>SDG innovation labs</p>
+<span class="dom mono">unleash.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.oneworld.training/" target="_blank" rel="noopener">One World RIFF</a></span>
+<p>Facilitation training</p>
+<span class="dom mono">oneworld.training</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://volpro.net/" target="_blank" rel="noopener">VolunteerPro</a></span>
+<p>Volunteer-management training</p>
+<span class="dom mono">volpro.net</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.speciesonthebrink.org/" target="_blank" rel="noopener">ASAP partner resources</a></span>
+<p>Asian Species Action Partnership resources</p>
+<span class="dom mono">speciesonthebrink.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://training.wildteam.org.uk/course/grant-writing" target="_blank" rel="noopener">WildTeam grant writing course</a><span class="tag new">new</span></span>
+<p>Online course in grant writing for wildlife conservation</p>
+<span class="dom mono">training.wildteam.org.uk</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.conservationleadershipprogramme.org/awards-opportunities/team-awards/help-resources/project-manuals/" target="_blank" rel="noopener">Conservation Leadership Programme project manuals</a><span class="tag new">new</span></span>
+<p>Free manuals on fundraising and proposal writing for field teams</p>
+<span class="dom mono">conservationleadershipprogramme.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://mooc-conservation.org/" target="_blank" rel="noopener">MOOC Conservation</a><span class="tag new">new</span></span>
+<p>Free certifying courses on protected area management for rangers and managers, taught in French with some English</p>
+<span class="dom mono">mooc-conservation.org</span>
+</li>
+</ul>
+<p class="nav2"><a href="/literature-evidence-and-data-access/">&larr; Literature, evidence and data access</a> <a href="/">All categories</a> <a href="/communication-design-and-outreach/">Communication, design and outreach &rarr;</a></p>
+</div>
+</main>
+<footer>
+<p class="eyebrow">Conservation Portal</p>
+<p>A curated shelf of resources for wildlife conservationists, built and maintained by
+<a href="https://biodiversitygroup.org/">The Biodiversity Group</a>.
+Know something that belongs here? <a href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%20suggestion">Tell us</a>.</p>
+<p>Entries marked NEW were added in the August 2026 review. Entries marked DEAD LINK are kept
+on purpose, so nobody spends an afternoon looking for something that is gone.</p>
+</footer>
+</body>
+</html>

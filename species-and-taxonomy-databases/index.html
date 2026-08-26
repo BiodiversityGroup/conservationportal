@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Species and taxonomy databases | Conservation Portal</title>
+<meta name="description" content="Names, threat status, distributions and the records behind them. 33 hand-checked resources for conservationists.">
+<link rel="canonical" href="https://conservationportal.org/species-and-taxonomy-databases/">
+<meta property="og:title" content="Species and taxonomy databases | Conservation Portal">
+<meta property="og:description" content="Names, threat status, distributions and the records behind them. 33 hand-checked resources for conservationists.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://conservationportal.org/species-and-taxonomy-databases/">
+<meta property="og:site_name" content="Conservation Portal">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400..700;1,400&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap">
+<style>
+:root{
+  --ground:#f4f7f3; --surface:#fff; --ink:#263028; --muted:#5f6b5f; --hair:#d5ddd4;
+  --green:#2e7d52; --green-deep:#1f5a3a; --orange:#c8490a;
+  --shadow:0 1px 2px rgba(38,48,40,.05),0 8px 24px rgba(38,48,40,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#171c18; --surface:#1f2620; --ink:#e7ece6; --muted:#9aa79a; --hair:#333d34;
+  --green:#6dc292; --green-deep:#8fd6ab; --orange:#ff9052;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+}}
+:root[data-theme="dark"]{
+  --ground:#171c18; --surface:#1f2620; --ink:#e7ece6; --muted:#9aa79a; --hair:#333d34;
+  --green:#6dc292; --green-deep:#8fd6ab; --orange:#ff9052;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;
+  font-size:17px;line-height:1.6;text-align:center;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Petrona,Georgia,serif;font-weight:600;text-wrap:balance;
+  margin:0;line-height:1.15;letter-spacing:-.01em}
+a{color:var(--green-deep);text-decoration-thickness:1px;text-underline-offset:3px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) a{color:var(--green)}}
+:root[data-theme="dark"] a{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible{
+  outline:2px solid var(--green);outline-offset:3px;border-radius:2px}
+.mono,.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{position:static;display:inline-block;padding:8px}
+
+header{position:sticky;top:0;z-index:20;background:var(--ground);border-bottom:1px solid var(--hair)}
+.hbar{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;
+  align-items:center;justify-content:center;gap:14px}
+.wordmark{font-family:Petrona,Georgia,serif;font-size:21px;font-weight:600;
+  color:var(--ink);text-decoration:none;letter-spacing:-.015em}
+.wordmark span{color:var(--green-deep)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .wordmark span{color:var(--green)}}
+:root[data-theme="dark"] .wordmark span{color:var(--green)}
+.hbar .eyebrow{border-left:1px solid var(--hair);padding-left:14px}
+@media (max-width:640px){.hbar .eyebrow{display:none}}
+
+main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
+.hero{padding:72px 0 8px}
+.hero h1{font-size:clamp(38px,6.4vw,64px);margin:14px 0 0}
+.lede{max-width:62ch;margin:26px auto 0;font-size:19px}
+.lede.second{margin-top:18px;color:var(--muted);font-size:17px}
+.shelf{color:var(--green-deep);font-weight:700}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .shelf{color:var(--green)}}
+:root[data-theme="dark"] .shelf{color:var(--green)}
+
+.stats{display:flex;justify-content:center;flex-wrap:wrap;margin:40px auto 0;max-width:640px;
+  border:1px solid var(--hair);border-radius:3px;background:var(--surface);
+  box-shadow:var(--shadow);overflow:hidden}
+.stat{flex:1 1 33%;min-width:150px;padding:20px 16px;border-left:1px solid var(--hair)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font-family:Petrona,Georgia,serif;font-size:34px;font-weight:600;
+  font-variant-numeric:tabular-nums;line-height:1}
+.stat .eyebrow{margin-top:8px;display:block}
+
+.searchwrap{margin:44px auto 0;max-width:520px}
+input[type=search]{width:100%;padding:13px 18px;font:inherit;font-size:16px;text-align:center;
+  color:var(--ink);background:var(--surface);border:1px solid var(--hair);
+  border-radius:3px;box-shadow:var(--shadow)}
+input[type=search]::placeholder{color:var(--muted)}
+
+.rule{display:flex;align-items:center;gap:16px;margin:56px auto 24px}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:var(--hair)}
+.grouphead{margin:56px 0 6px}
+.grouphead h2{font-size:26px}
+.grouphead p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+.grid{display:grid;gap:14px;margin-top:18px;
+  grid-template-columns:repeat(auto-fill,minmax(272px,1fr))}
+.card{background:var(--surface);border:1px solid var(--hair);border-radius:3px;
+  padding:22px 20px 20px;text-align:center;display:flex;flex-direction:column;
+  align-items:center;gap:9px;box-shadow:var(--shadow);text-decoration:none;color:inherit;
+  transition:border-color .18s,transform .18s}
+.card:hover{border-color:var(--green);transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+.card .count{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;
+  letter-spacing:.1em;color:var(--muted);font-variant-numeric:tabular-nums}
+.card h3{font-size:20px}
+.card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
+.card .egs{margin-top:auto;padding-top:12px;font-size:12px;color:var(--muted);
+  font-family:"IBM Plex Mono",ui-monospace,monospace;line-height:1.7;
+  border-top:1px solid var(--hair);width:100%}
+
+.catpage{padding-top:52px}
+.catpage h1{font-size:clamp(30px,5vw,46px)}
+.catpage .blurb{max-width:56ch;margin:16px auto 0;color:var(--muted)}
+.list{max-width:720px;margin:36px auto 0;background:var(--surface);
+  border:1px solid var(--hair);border-radius:3px;box-shadow:var(--shadow);overflow:hidden;
+  text-align:center;list-style:none;padding:0}
+.item{padding:22px;border-top:1px solid var(--hair)}
+.item:first-child{border-top:0}
+.item .top{display:flex;align-items:baseline;justify-content:center;gap:9px;flex-wrap:wrap}
+.item a.nm{font-family:Petrona,Georgia,serif;font-size:20px;font-weight:600;
+  text-decoration:none;letter-spacing:-.01em}
+.item a.nm:hover{text-decoration:underline;text-underline-offset:4px}
+.item p{margin:6px auto 0;font-size:15.5px;color:var(--muted);max-width:56ch;line-height:1.55}
+.item .dom{display:block;margin-top:9px;font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+.item.dead a.nm{color:var(--muted)}
+.tag{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;border-radius:2px;padding:1px 5px}
+.tag.new{color:var(--orange);border:1px solid currentColor;font-weight:700}
+.tag.dead{color:var(--muted);border:1px dashed var(--hair)}
+.hint{color:var(--muted);font-size:15px;margin:32px auto 0}
+.nav2{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:30px auto 0;font-size:15px}
+
+footer{border-top:1px solid var(--hair);margin-top:24px;padding:34px 24px 60px;
+  color:var(--muted);font-size:14px}
+footer p{max-width:62ch;margin:0 auto 10px}
+.hidden{display:none}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Species and taxonomy databases | Conservation Portal", "url": "https://conservationportal.org/species-and-taxonomy-databases/", "description": "Names, threat status, distributions and the records behind them.", "isPartOf": {"@type": "WebSite", "name": "Conservation Portal", "url": "https://conservationportal.org/"}, "mainEntity": {"@type": "ItemList", "numberOfItems": 33, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GBIF", "url": "https://www.gbif.org/"}, {"@type": "ListItem", "position": 2, "name": "IUCN Red List", "url": "https://www.iucnredlist.org/"}, {"@type": "ListItem", "position": 3, "name": "Catalogue of Life", "url": "https://www.catalogueoflife.org/"}, {"@type": "ListItem", "position": 4, "name": "ITIS", "url": "https://itis.gov/"}, {"@type": "ListItem", "position": 5, "name": "Encyclopedia of Life", "url": "https://eol.org/"}, {"@type": "ListItem", "position": 6, "name": "NatureServe Explorer", "url": "https://explorer.natureserve.org/"}, {"@type": "ListItem", "position": 7, "name": "Species+", "url": "https://speciesplus.net/"}, {"@type": "ListItem", "position": 8, "name": "Map of Life", "url": "https://mol.org/"}, {"@type": "ListItem", "position": 9, "name": "Reptile Database", "url": "http://www.reptile-database.org/"}, {"@type": "ListItem", "position": 10, "name": "Amphibian Species of the World", "url": "https://amphibiansoftheworld.amnh.org/"}, {"@type": "ListItem", "position": 11, "name": "AmphibiaWeb", "url": "https://amphibiaweb.org/"}, {"@type": "ListItem", "position": 12, "name": "Amphibian Conservation Needs Assessments", "url": "https://www.conservationneeds.org/"}, {"@type": "ListItem", "position": 13, "name": "Mammal Diversity Database", "url": "https://www.mammaldiversity.org/"}, {"@type": "ListItem", "position": 14, "name": "All The World's Primates", "url": "https://alltheworldsprimates.org/"}, {"@type": "ListItem", "position": 15, "name": "Elephant Database", "url": "https://www.elephant.se/"}, {"@type": "ListItem", "position": 16, "name": "Rhino Resource Center", "url": "http://www.rhinoresourcecenter.com/"}, {"@type": "ListItem", "position": 17, "name": "AnimalBase", "url": "https://animalbase.org/"}, {"@type": "ListItem", "position": 18, "name": "Avian Knowledge Network", "url": "https://avianknowledge.net/"}, {"@type": "ListItem", "position": 19, "name": "FishBase", "url": "https://fishbase.org/"}, {"@type": "ListItem", "position": 20, "name": "Shark-Base", "url": "https://shark-base.org/"}, {"@type": "ListItem", "position": 21, "name": "OBIS", "url": "https://obis.org/"}, {"@type": "ListItem", "position": 22, "name": "WoRMS", "url": "https://www.marinespecies.org/"}, {"@type": "ListItem", "position": 23, "name": "GlobalFungi", "url": "https://globalfungi.com/"}, {"@type": "ListItem", "position": 24, "name": "SEINet / Symbiota", "url": "https://swbiodiversity.org/seinet/"}, {"@type": "ListItem", "position": 25, "name": "Calflora", "url": "https://www.calflora.org/"}, {"@type": "ListItem", "position": 26, "name": "Jepson eFlora", "url": "https://ucjeps.berkeley.edu/"}, {"@type": "ListItem", "position": 27, "name": "antmaps.org", "url": "https://antmaps.org/"}, {"@type": "ListItem", "position": 28, "name": "Recently Extinct Plants and Animals Database", "url": "https://recentlyextinctspecies.com/"}, {"@type": "ListItem", "position": 29, "name": "Threatened Island Biodiversity Database", "url": "https://tib.islandconservation.org/"}, {"@type": "ListItem", "position": 30, "name": "World Database of Key Biodiversity Areas", "url": "https://www.keybiodiversityareas.org/"}, {"@type": "ListItem", "position": 31, "name": "Alliance for Zero Extinction", "url": "https://zeroextinction.org/"}, {"@type": "ListItem", "position": 32, "name": "Local Biodiversity Outlooks", "url": "https://localbiodiversityoutlooks.net/"}, {"@type": "ListItem", "position": 33, "name": "snakeDatabase LD50", "url": "https://snakedatabase.org/"}]}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="hbar">
+<a class="wordmark" href="/">Conservation <span>Portal</span></a>
+<span class="eyebrow">A project of The Biodiversity Group</span>
+</div></header>
+<main id="main">
+<div class="catpage">
+<p class="eyebrow">Species and status</p>
+<h1>Species and taxonomy databases</h1>
+<p class="blurb">Names, threat status, distributions and the records behind them.</p>
+<div class="rule"><span class="eyebrow">33 resources</span></div>
+<ul class="list">
+<li class="item">
+<span class="top"><a class="nm" href="https://www.gbif.org/" target="_blank" rel="noopener">GBIF</a></span>
+<p>Global occurrence records</p>
+<span class="dom mono">gbif.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.iucnredlist.org/" target="_blank" rel="noopener">IUCN Red List</a></span>
+<p>Global threat assessments</p>
+<span class="dom mono">iucnredlist.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.catalogueoflife.org/" target="_blank" rel="noopener">Catalogue of Life</a></span>
+<p>Names backbone</p>
+<span class="dom mono">catalogueoflife.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://itis.gov/" target="_blank" rel="noopener">ITIS</a></span>
+<p>Taxonomic names, strongest for North America</p>
+<span class="dom mono">itis.gov</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://eol.org/" target="_blank" rel="noopener">Encyclopedia of Life</a></span>
+<p>Species pages and an education arm</p>
+<span class="dom mono">eol.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://explorer.natureserve.org/" target="_blank" rel="noopener">NatureServe Explorer</a></span>
+<p>Conservation status ranks including plants and invertebrates, North America</p>
+<span class="dom mono">explorer.natureserve.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://speciesplus.net/" target="_blank" rel="noopener">Species+</a></span>
+<p>CITES and CMS listings per species</p>
+<span class="dom mono">speciesplus.net</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://mol.org/" target="_blank" rel="noopener">Map of Life</a></span>
+<p>Range maps and indicators</p>
+<span class="dom mono">mol.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="http://www.reptile-database.org/" target="_blank" rel="noopener">Reptile Database</a></span>
+<p>Reptile taxonomy</p>
+<span class="dom mono">reptile-database.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://amphibiansoftheworld.amnh.org/" target="_blank" rel="noopener">Amphibian Species of the World</a></span>
+<p>Amphibian taxonomy</p>
+<span class="dom mono">amphibiansoftheworld.amnh.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://amphibiaweb.org/" target="_blank" rel="noopener">AmphibiaWeb</a></span>
+<p>Amphibian species accounts</p>
+<span class="dom mono">amphibiaweb.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.conservationneeds.org/" target="_blank" rel="noopener">Amphibian Conservation Needs Assessments</a></span>
+<p>Per-species conservation needs</p>
+<span class="dom mono">conservationneeds.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.mammaldiversity.org/" target="_blank" rel="noopener">Mammal Diversity Database</a></span>
+<p>Mammal taxonomy</p>
+<span class="dom mono">mammaldiversity.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://alltheworldsprimates.org/" target="_blank" rel="noopener">All The World&#x27;s Primates</a></span>
+<p>Primate species accounts</p>
+<span class="dom mono">alltheworldsprimates.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.elephant.se/" target="_blank" rel="noopener">Elephant Database</a></span>
+<p>Elephant records</p>
+<span class="dom mono">elephant.se</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="http://www.rhinoresourcecenter.com/" target="_blank" rel="noopener">Rhino Resource Center</a></span>
+<p>Rhino literature and images</p>
+<span class="dom mono">rhinoresourcecenter.com</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://animalbase.org/" target="_blank" rel="noopener">AnimalBase</a></span>
+<p>Early zoological names and types</p>
+<span class="dom mono">animalbase.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://avianknowledge.net/" target="_blank" rel="noopener">Avian Knowledge Network</a></span>
+<p>Bird data network</p>
+<span class="dom mono">avianknowledge.net</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://fishbase.org/" target="_blank" rel="noopener">FishBase</a></span>
+<p>Fish species data</p>
+<span class="dom mono">fishbase.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://shark-base.org/" target="_blank" rel="noopener">Shark-Base</a></span>
+<p>Elasmobranch records</p>
+<span class="dom mono">shark-base.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://obis.org/" target="_blank" rel="noopener">OBIS</a></span>
+<p>Marine occurrences</p>
+<span class="dom mono">obis.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.marinespecies.org/" target="_blank" rel="noopener">WoRMS</a></span>
+<p>Marine species register</p>
+<span class="dom mono">marinespecies.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://globalfungi.com/" target="_blank" rel="noopener">GlobalFungi</a></span>
+<p>Fungal occurrence database</p>
+<span class="dom mono">globalfungi.com</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://swbiodiversity.org/seinet/" target="_blank" rel="noopener">SEINet / Symbiota</a></span>
+<p>Herbarium networks with a checklist generator</p>
+<span class="dom mono">swbiodiversity.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.calflora.org/" target="_blank" rel="noopener">Calflora</a></span>
+<p>California plant occurrences and rarity</p>
+<span class="dom mono">calflora.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://ucjeps.berkeley.edu/" target="_blank" rel="noopener">Jepson eFlora</a></span>
+<p>California flora</p>
+<span class="dom mono">ucjeps.berkeley.edu</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://antmaps.org/" target="_blank" rel="noopener">antmaps.org</a></span>
+<p>Ant distributions</p>
+<span class="dom mono">antmaps.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://recentlyextinctspecies.com/" target="_blank" rel="noopener">Recently Extinct Plants and Animals Database</a></span>
+<p>Extinctions including plants and invertebrates</p>
+<span class="dom mono">recentlyextinctspecies.com</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://tib.islandconservation.org/" target="_blank" rel="noopener">Threatened Island Biodiversity Database</a></span>
+<p>Islands crossed with threatened species and invasives</p>
+<span class="dom mono">tib.islandconservation.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://www.keybiodiversityareas.org/" target="_blank" rel="noopener">World Database of Key Biodiversity Areas</a></span>
+<p>KBA boundaries and triggers</p>
+<span class="dom mono">keybiodiversityareas.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://zeroextinction.org/" target="_blank" rel="noopener">Alliance for Zero Extinction</a></span>
+<p>AZE sites and species</p>
+<span class="dom mono">zeroextinction.org</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://localbiodiversityoutlooks.net/" target="_blank" rel="noopener">Local Biodiversity Outlooks</a></span>
+<p>Community biodiversity reporting</p>
+<span class="dom mono">localbiodiversityoutlooks.net</span>
+</li><li class="item">
+<span class="top"><a class="nm" href="https://snakedatabase.org/" target="_blank" rel="noopener">snakeDatabase LD50</a></span>
+<p>Venom and LD50 reference</p>
+<span class="dom mono">snakedatabase.org</span>
+</li>
+</ul>
+<p class="nav2"><a href="/taxon-specialist-networks/">&larr; Taxon specialist networks</a> <a href="/">All categories</a> <a href="/lost-species-and-rediscovery/">Lost species and rediscovery &rarr;</a></p>
+</div>
+</main>
+<footer>
+<p class="eyebrow">Conservation Portal</p>
+<p>A curated shelf of resources for wildlife conservationists, built and maintained by
+<a href="https://biodiversitygroup.org/">The Biodiversity Group</a>.
+Know something that belongs here? <a href="mailto:business@biodiversitygroup.org?subject=Conservation%20Portal%20suggestion">Tell us</a>.</p>
+<p>Entries marked NEW were added in the August 2026 review. Entries marked DEAD LINK are kept
+on purpose, so nobody spends an afternoon looking for something that is gone.</p>
+</footer>
+</body>
+</html>
