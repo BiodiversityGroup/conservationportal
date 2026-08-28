@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="build" content="d62e251804f9">
+<meta name="build" content="a061dc438150">
 <title>Fiscal sponsorship | Conservation Portal</title>
 <meta name="description" content="Host organizations that let a project raise tax-deductible money without incorporating, and the guides for choosing one. 21 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/fiscal-sponsorship/">
@@ -138,8 +138,17 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 /* ---------- eight domain blocks ---------- */
 .domains{display:grid;gap:16px;margin-top:26px;
   grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.domain.wide{grid-column:span 2}
+.domain.wide ul{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.domain.wide ul li{border-bottom:1px solid var(--hair)}
+@media (max-width:1000px){
+  .domain.wide{grid-column:auto}
+  .domain.wide ul{grid-template-columns:1fr}}
 @media (max-width:740px){.domains{grid-template-columns:1fr}}
-.domain{background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
+/* scroll-margin so a breadcrumb landing on #money-and-services is not hidden under
+   the sticky header */
+.domain{scroll-margin-top:104px;
+  background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
   padding:24px 24px 20px;
   /* the mark's angled panel, echoed once per block */
   clip-path:polygon(18px 0,100% 0,100% 100%,0 100%,0 18px)}
@@ -179,15 +188,22 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
   color:var(--forest);display:inline-flex;align-items:center;gap:7px}
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
-.item p{margin:4px auto 0;font-size:15px;color:var(--muted);max-width:64ch}
-.item p.use{margin:7px auto 0;padding-top:6px;font-size:13.5px;line-height:1.5;
+/* three deliberately distinct levels: name strongest, descriptor smallest and muted,
+   use-note normal weight and full size because it is what distinguishes one entry
+   from the next. If these ever look equal the pages read as a wall. */
+.item p{margin:4px auto 0;font-size:13.5px;line-height:1.55;color:var(--muted);
+  max-width:66ch}
+.item p.use{margin:8px auto 0;padding-top:7px;font-size:15px;line-height:1.55;
+  color:var(--ink);
   border-top:1px solid var(--hair);max-width:64ch}
 .item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
   text-decoration:none;border-bottom:1px solid transparent}
 .item .access:hover{border-bottom-color:currentColor}
-.pill{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
-  background:var(--pill-bg);color:var(--pill-ink);border-radius:100px;padding:2px 8px;
-  margin-left:9px;vertical-align:2px;white-space:nowrap}
+.badge{font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+  border-radius:100px;padding:2px 8px;margin-left:8px;vertical-align:2px;white-space:nowrap;
+  border:1px solid transparent}
+.badge.new{background:var(--pill-bg);color:var(--pill-ink)}
+.badge.tbg{background:transparent;color:var(--accent);border-color:var(--accent)}
 mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .item p.tags{margin:7px auto 0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
@@ -333,7 +349,7 @@ img.ondark{display:none}
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">
-<a href="/">Home</a><span>/</span><a href="/#browse">Money and services</a>
+<a href="/">Home</a><span>/</span><a href="/#money-and-services">Money and services</a>
 <span>/</span>Fiscal sponsorship
 </nav>
 <section class="cathead">
@@ -359,48 +375,48 @@ img.ondark{display:none}
 </div>
 <ul class="list" id="clist">
 <li class="item"><a href="https://biodiversitygroup.org/fiscal-sponsorship/" target="_blank" rel="noopener">
-<span class="nm">The Biodiversity Group<span class="arw" aria-hidden="true">&#8599;</span></span><span class="pill">new</span>
-<p>Altruistic fiscal sponsorship for wildlife conservation nonprofits worldwide. We run this one</p><p class="use">Apply for US tax-deductible status without incorporating, at the lowest affiliation fees we could find</p></a></li><li class="item"><a href="https://multiplier.org/become-a-project/" target="_blank" rel="noopener">
+<span class="nm">The Biodiversity Group<span class="arw" aria-hidden="true">&#8599;</span></span><span class="badge tbg" title="Run by The Biodiversity Group">TBG project</span><span class="badge new" title="Recently added">New</span>
+<p>Altruistic fiscal sponsorship for wildlife conservation nonprofits worldwide</p><p class="tags"><span class="tag">Service</span><span class="tag">Global</span></p><p class="use">Apply for US tax-deductible status without incorporating, at the lowest affiliation fees we could find</p></a></li><li class="item"><a href="https://multiplier.org/become-a-project/" target="_blank" rel="noopener">
 <span class="nm">Multiplier<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Environmental fiscal sponsor hosting climate, ocean and conservation projects</p><p class="use">Apply on a rolling basis, with roughly six weeks from first inquiry to approval</p></a></li><li class="item"><a href="https://www.rewild.org/conservation-partners" target="_blank" rel="noopener">
+<p>Environmental fiscal sponsor hosting climate, ocean and conservation projects</p><p class="tags"><span class="tag">Service</span></p><p class="use">Apply on a rolling basis, with roughly six weeks from first inquiry to approval</p></a></li><li class="item"><a href="https://www.rewild.org/conservation-partners" target="_blank" rel="noopener">
 <span class="nm">Re:wild Conservation Partners<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Hosts around 40 sponsored conservation programs, taking on legal and financial responsibility</p><p class="use">Approach if you want a well-known name carrying your legal and financial risk</p></a></li><li class="item"><a href="https://www.earthshare.org/fiscal-sponsorship/" target="_blank" rel="noopener">
+<p>Hosts around 40 sponsored conservation programs, taking on legal and financial responsibility</p><p class="tags"><span class="tag">Service</span></p><p class="use">Approach if you want a well-known name carrying your legal and financial risk</p></a></li><li class="item"><a href="https://www.earthshare.org/fiscal-sponsorship/" target="_blank" rel="noopener">
 <span class="nm">EarthShare<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Fiscal sponsor for environmental projects, requires most of the work to be conservation</p><p class="use">Check the conservation-share requirement first, since a mixed-mission project may not qualify at all</p></a></li><li class="item"><a href="https://oceanfdn.org/community-foundation-services/fiscal-sponsorship-program/" target="_blank" rel="noopener">
+<p>Fiscal sponsor for environmental projects, requires most of the work to be conservation</p><p class="tags"><span class="tag">Service</span></p><p class="use">Check the conservation-share requirement first, since a mixed-mission project may not qualify at all</p></a></li><li class="item"><a href="https://oceanfdn.org/community-foundation-services/fiscal-sponsorship-program/" target="_blank" rel="noopener">
 <span class="nm">The Ocean Foundation<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Marine conservation fiscal sponsor, accepts projects from anywhere in the world</p><p class="use">Apply from anywhere if the work is marine, which most US sponsors will not accept</p></a></li><li class="item"><a href="https://www.windwardfund.org/services-and-approach" target="_blank" rel="noopener">
+<p>Marine conservation fiscal sponsor, accepts projects from anywhere in the world</p><p class="tags"><span class="tag">Service</span><span class="tag">Global</span></p><p class="use">Apply from anywhere if the work is marine, which most US sponsors will not accept</p></a></li><li class="item"><a href="https://www.windwardfund.org/services-and-approach" target="_blank" rel="noopener">
 <span class="nm">Windward Fund<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Environmental fiscal sponsor with a land and biodiversity portfolio</p><p class="use">Look here when the project is land or biodiversity rather than climate campaigning</p></a></li><li class="item"><a href="https://wildnet.org/approach/conservation-partners/" target="_blank" rel="noopener">
+<p>Environmental fiscal sponsor with a land and biodiversity portfolio</p><p class="tags"><span class="tag">Service</span></p><p class="use">Look here when the project is land or biodiversity rather than climate campaigning</p></a></li><li class="item"><a href="https://wildnet.org/approach/conservation-partners/" target="_blank" rel="noopener">
 <span class="nm">Wildlife Conservation Network<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Fiscal sponsorship for invited partner organizations, not open applications</p><p class="use">Do not apply, since partners are invited, but study who they pick and why</p></a></li><li class="item"><a href="https://myowf.org/fiscalsponsorship" target="_blank" rel="noopener">
+<p>Fiscal sponsorship for invited partner organizations, not open applications</p><p class="tags"><span class="tag">Service</span></p><p class="use">Do not apply, since partners are invited, but study who they pick and why</p></a></li><li class="item"><a href="https://myowf.org/fiscalsponsorship" target="_blank" rel="noopener">
 <span class="nm">Oregon Wildlife Foundation<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Fiscal sponsor for wildlife and habitat projects in Oregon</p><p class="use">Use it for Oregon work, where a local sponsor beats a national one on credibility</p></a></li><li class="item"><a href="https://www.conservationsouth.org/fiscal-sponsorships.html" target="_blank" rel="noopener">
+<p>Fiscal sponsor for wildlife and habitat projects in Oregon</p><p class="tags"><span class="tag">Service</span><span class="tag">US</span></p><p class="use">Use it for Oregon work, where a local sponsor beats a national one on credibility</p></a></li><li class="item"><a href="https://www.conservationsouth.org/fiscal-sponsorships.html" target="_blank" rel="noopener">
 <span class="nm">Southern Conservation Partners<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Fiscal sponsor for land protection and habitat projects in the southern US</p><p class="use">Approach for land protection in the southern US, where regional knowledge matters most</p></a></li><li class="item"><a href="https://earthisland.org/" target="_blank" rel="noopener">
+<p>Fiscal sponsor for land protection and habitat projects in the southern US</p><p class="tags"><span class="tag">Service</span><span class="tag">US</span></p><p class="use">Approach for land protection in the southern US, where regional knowledge matters most</p></a></li><li class="item"><a href="https://earthisland.org/" target="_blank" rel="noopener">
 <span class="nm">Earth Island Institute<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Long-running environmental fiscal sponsor, with a public directory of its projects</p><p class="use">Browse the project directory to see what a sponsored project looks like before becoming one</p></a></li><li class="item"><a href="https://communityinitiatives.org/" target="_blank" rel="noopener">
+<p>Long-running environmental fiscal sponsor, with a public directory of its projects</p><p class="tags"><span class="tag">Service</span></p><p class="use">Browse the project directory to see what a sponsored project looks like before becoming one</p></a></li><li class="item"><a href="https://communityinitiatives.org/" target="_blank" rel="noopener">
 <span class="nm">Community Initiatives<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Large general-purpose fiscal sponsor, including environmental and animal projects</p><p class="use">Consider it when the project is not purely conservation, which narrower sponsors will refuse</p></a></li><li class="item"><a href="https://tides.org/" target="_blank" rel="noopener">
+<p>Large general-purpose fiscal sponsor, including environmental and animal projects</p><p class="tags"><span class="tag">Service</span></p><p class="use">Consider it when the project is not purely conservation, which narrower sponsors will refuse</p></a></li><li class="item"><a href="https://tides.org/" target="_blank" rel="noopener">
 <span class="nm">Tides<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Large fiscal sponsor and donor-advised platform</p><p class="use">Use it for scale and donor-advised infrastructure rather than for any conservation expertise</p></a></li><li class="item"><a href="https://ppf.org/fiscal-sponsorship/" target="_blank" rel="noopener">
+<p>Large fiscal sponsor and donor-advised platform</p><p class="tags"><span class="tag">Service</span></p><p class="use">Use it for scale and donor-advised infrastructure rather than for any conservation expertise</p></a></li><li class="item"><a href="https://ppf.org/fiscal-sponsorship/" target="_blank" rel="noopener">
 <span class="nm">Players Philanthropy Fund<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Low-cost fiscal sponsor for charitable projects of any cause, around 500 of them</p><p class="use">Compare its fees against the others, since low cost is the entire proposition</p></a></li><li class="item"><a href="https://tsne.org/fiscal-sponsorship/" target="_blank" rel="noopener">
+<p>Low-cost fiscal sponsor for charitable projects of any cause, around 500 of them</p><p class="tags"><span class="tag">Service</span></p><p class="use">Compare its fees against the others, since low cost is the entire proposition</p></a></li><li class="item"><a href="https://tsne.org/fiscal-sponsorship/" target="_blank" rel="noopener">
 <span class="nm">TSNE<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Long-established sponsor offering the widest range of sponsorship models</p><p class="use">Ask which model they would use, because they offer more of them than anyone</p></a></li><li class="item"><a href="https://panoramaglobal.org/what-we-do/fiscal-sponsorship/" target="_blank" rel="noopener">
+<p>Long-established sponsor offering the widest range of sponsorship models</p><p class="tags"><span class="tag">Service</span></p><p class="use">Ask which model they would use, because they offer more of them than anyone</p></a></li><li class="item"><a href="https://panoramaglobal.org/what-we-do/fiscal-sponsorship/" target="_blank" rel="noopener">
 <span class="nm">Panorama Global<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Global fiscal sponsor for social-impact and climate initiatives, 20+ countries</p><p class="use">Approach when a project spans several countries, which most US sponsors handle badly</p></a></li><li class="item"><a href="https://fiscalsponsors.org/" target="_blank" rel="noopener">
+<p>Global fiscal sponsor for social-impact and climate initiatives, 20+ countries</p><p class="tags"><span class="tag">Service</span><span class="tag">Global</span></p><p class="use">Approach when a project spans several countries, which most US sponsors handle badly</p></a></li><li class="item"><a href="https://fiscalsponsors.org/" target="_blank" rel="noopener">
 <span class="nm">National Network of Fiscal Sponsors<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Directory of fiscal sponsors and the standards they sign up to</p><p class="use">Check whether a sponsor has signed the sector standards before you sign anything</p></a></li><li class="item"><a href="https://fiscalsponsordirectory.org/" target="_blank" rel="noopener">
+<p>Directory of fiscal sponsors and the standards they sign up to</p><p class="tags"><span class="tag">Service</span></p><p class="use">Check whether a sponsor has signed the sector standards before you sign anything</p></a></li><li class="item"><a href="https://fiscalsponsordirectory.org/" target="_blank" rel="noopener">
 <span class="nm">Fiscal Sponsor Directory<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Searchable directory of 420 sponsors across the US, Puerto Rico and Canada</p><p class="use">Search 420 sponsors by cause and state instead of guessing from a shortlist</p></a></li><li class="item"><a href="https://nonprofitlawblog.com/how-to-find-a-fiscal-sponsor/" target="_blank" rel="noopener">
+<p>Searchable directory of 420 sponsors across the US, Puerto Rico and Canada</p><p class="tags"><span class="tag">Service</span><span class="tag">US</span></p><p class="use">Search 420 sponsors by cause and state instead of guessing from a shortlist</p></a></li><li class="item"><a href="https://nonprofitlawblog.com/how-to-find-a-fiscal-sponsor/" target="_blank" rel="noopener">
 <span class="nm">How to Find a Fiscal Sponsor<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Legal guide to choosing a sponsor, with a 15-point checklist for vetting one</p><p class="use">Work its fifteen-point checklist through a candidate sponsor before signing any agreement</p></a></li><li class="item"><a href="https://www.adlercolvin.com/fiscal-sponsorship-six-ways-to-do-it-right-a-synopsis/" target="_blank" rel="noopener">
+<p>Legal guide to choosing a sponsor, with a 15-point checklist for vetting one</p><p class="tags"><span class="tag">Service</span></p><p class="use">Work its fifteen-point checklist through a candidate sponsor before signing any agreement</p></a></li><li class="item"><a href="https://www.adlercolvin.com/fiscal-sponsorship-six-ways-to-do-it-right-a-synopsis/" target="_blank" rel="noopener">
 <span class="nm">Fiscal Sponsorship: Six Ways To Do It Right<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>The models explained by Gregory Colvin, who defined them</p><p class="use">Work out which of the six models you are being offered, since they differ enormously</p></a></li><li class="item"><a href="https://fiscalsponsorship.com/" target="_blank" rel="noopener">
+<p>The models explained by Gregory Colvin, who defined them</p><p class="tags"><span class="tag">Service</span></p><p class="use">Work out which of the six models you are being offered, since they differ enormously</p></a></li><li class="item"><a href="https://fiscalsponsorship.com/" target="_blank" rel="noopener">
 <span class="nm">fiscalsponsorship.com<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Checklists, transfer guidelines and templates for sponsors and projects</p><p class="use">Take the templates and transfer guidelines, especially if you might change sponsors later</p></a></li><li class="item"><a href="https://learning.candid.org/fiscal-sponsorship/278305" target="_blank" rel="noopener">
+<p>Checklists, transfer guidelines and templates for sponsors and projects</p><p class="tags"><span class="tag">Service</span></p><p class="use">Take the templates and transfer guidelines, especially if you might change sponsors later</p></a></li><li class="item"><a href="https://learning.candid.org/fiscal-sponsorship/278305" target="_blank" rel="noopener">
 <span class="nm">Fiscal Sponsorship (Candid Learning)<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Plain-language introduction to how fiscal sponsorship works</p><p class="use">Send this to a board member who has never heard of fiscal sponsorship</p></a></li>
+<p>Plain-language introduction to how fiscal sponsorship works</p><p class="tags"><span class="tag">Service</span></p><p class="use">Send this to a board member who has never heard of fiscal sponsorship</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/biodiversity-finance-mechanisms/">&larr; Biodiversity finance mechanisms</a> <a href="/#browse">All categories</a> <a href="/consulting-and-advisory-services/">Consulting and advisory services &rarr;</a></p>

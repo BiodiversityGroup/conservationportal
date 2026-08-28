@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="build" content="d62e251804f9">
+<meta name="build" content="a061dc438150">
 <title>Conservation technology and field equipment | Conservation Portal</title>
 <meta name="description" content="Recorders, tags, triggers, dogs, and the community that builds them. 14 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/conservation-technology-and-field-equipment/">
@@ -138,8 +138,17 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 /* ---------- eight domain blocks ---------- */
 .domains{display:grid;gap:16px;margin-top:26px;
   grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.domain.wide{grid-column:span 2}
+.domain.wide ul{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.domain.wide ul li{border-bottom:1px solid var(--hair)}
+@media (max-width:1000px){
+  .domain.wide{grid-column:auto}
+  .domain.wide ul{grid-template-columns:1fr}}
 @media (max-width:740px){.domains{grid-template-columns:1fr}}
-.domain{background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
+/* scroll-margin so a breadcrumb landing on #money-and-services is not hidden under
+   the sticky header */
+.domain{scroll-margin-top:104px;
+  background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
   padding:24px 24px 20px;
   /* the mark's angled panel, echoed once per block */
   clip-path:polygon(18px 0,100% 0,100% 100%,0 100%,0 18px)}
@@ -179,15 +188,22 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
   color:var(--forest);display:inline-flex;align-items:center;gap:7px}
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
-.item p{margin:4px auto 0;font-size:15px;color:var(--muted);max-width:64ch}
-.item p.use{margin:7px auto 0;padding-top:6px;font-size:13.5px;line-height:1.5;
+/* three deliberately distinct levels: name strongest, descriptor smallest and muted,
+   use-note normal weight and full size because it is what distinguishes one entry
+   from the next. If these ever look equal the pages read as a wall. */
+.item p{margin:4px auto 0;font-size:13.5px;line-height:1.55;color:var(--muted);
+  max-width:66ch}
+.item p.use{margin:8px auto 0;padding-top:7px;font-size:15px;line-height:1.55;
+  color:var(--ink);
   border-top:1px solid var(--hair);max-width:64ch}
 .item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
   text-decoration:none;border-bottom:1px solid transparent}
 .item .access:hover{border-bottom-color:currentColor}
-.pill{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
-  background:var(--pill-bg);color:var(--pill-ink);border-radius:100px;padding:2px 8px;
-  margin-left:9px;vertical-align:2px;white-space:nowrap}
+.badge{font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+  border-radius:100px;padding:2px 8px;margin-left:8px;vertical-align:2px;white-space:nowrap;
+  border:1px solid transparent}
+.badge.new{background:var(--pill-bg);color:var(--pill-ink)}
+.badge.tbg{background:transparent;color:var(--accent);border-color:var(--accent)}
 mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .item p.tags{margin:7px auto 0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
@@ -333,7 +349,7 @@ img.ondark{display:none}
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">
-<a href="/">Home</a><span>/</span><a href="/#browse">Recording and data</a>
+<a href="/">Home</a><span>/</span><a href="/#recording-and-data">Recording and data</a>
 <span>/</span>Conservation technology and field equipment
 </nav>
 <section class="cathead">
@@ -359,34 +375,34 @@ img.ondark{display:none}
 </div>
 <ul class="list" id="clist">
 <li class="item"><a href="https://biodiversitygroup.org/conservation-equipped/" target="_blank" rel="noopener">
-<span class="nm">Conservation Equipped<span class="arw" aria-hidden="true">&#8599;</span></span><span class="pill">new</span>
-<p>Donate the cameras, laptops, phones and field gear you no longer use. TBG refurbishes what comes in and disburses it to our Fiscal Sponsorship Alliance members, so a camera sitting in a drawer becomes someone&#x27;s missing field kit. We run this one</p><p class="use">Send the gear you have stopped using, rather than leaving it in a drawer to depreciate</p></a></li><li class="item"><a href="https://wildlabs.net/" target="_blank" rel="noopener">
+<span class="nm">Conservation Equipped<span class="arw" aria-hidden="true">&#8599;</span></span><span class="badge tbg" title="Run by The Biodiversity Group">TBG project</span><span class="badge new" title="Recently added">New</span>
+<p>Donate the cameras, laptops, phones and field gear you no longer use. TBG refurbishes what comes in and disburses it to our Fiscal Sponsorship Alliance members, so a camera sitting in a drawer becomes someone&#x27;s missing field kit</p><p class="tags"><span class="tag">Equipment</span></p><p class="use">Send the gear you have stopped using, rather than leaving it in a drawer to depreciate</p></a></li><li class="item"><a href="https://wildlabs.net/" target="_blank" rel="noopener">
 <span class="nm">WILDLABS<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>The conservation-tech community</p><p class="use">Ask a hardware question where people who already broke that device will answer it</p></a></li><li class="item"><a href="https://conservationxlabs.com/" target="_blank" rel="noopener">
+<p>The conservation-tech community</p><p class="tags"><span class="tag">Equipment</span></p><p class="use">Ask a hardware question where people who already broke that device will answer it</p></a></li><li class="item"><a href="https://conservationxlabs.com/" target="_blank" rel="noopener">
 <span class="nm">Conservation X Labs<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Tech innovation challenges and the Digital Makerspace</p><p class="use">Enter an innovation challenge, or post a technical problem on the Digital Makerspace for collaborators</p></a></li><li class="item"><a href="https://www.tech4conservation.org/" target="_blank" rel="noopener">
+<p>Tech innovation challenges and the Digital Makerspace</p><p class="tags"><span class="tag">Equipment</span></p><p class="use">Enter an innovation challenge, or post a technical problem on the Digital Makerspace for collaborators</p></a></li><li class="item"><a href="https://www.tech4conservation.org/" target="_blank" rel="noopener">
 <span class="nm">Tech 4 Conservation<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>AI and technology for conservation</p><p class="use">Approach a nonprofit for AI help when you have imagery but no data science capacity</p></a></li><li class="item"><a href="https://smartconservationtools.org/" target="_blank" rel="noopener">
+<p>AI and technology for conservation</p><p class="tags"><span class="tag">Equipment</span></p><p class="use">Approach a nonprofit for AI help when you have imagery but no data science capacity</p></a></li><li class="item"><a href="https://smartconservationtools.org/" target="_blank" rel="noopener">
 <span class="nm">SMART<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Ranger patrol monitoring standard</p><p class="use">Standardize ranger patrol recording so effort and encounter data become comparable across a protected area</p></a></li><li class="item"><a href="https://www.openacousticdevices.info/" target="_blank" rel="noopener">
+<p>Ranger patrol monitoring standard</p><p class="tags"><span class="tag">Equipment</span></p><p class="use">Standardize ranger patrol recording so effort and encounter data become comparable across a protected area</p></a></li><li class="item"><a href="https://www.openacousticdevices.info/" target="_blank" rel="noopener">
 <span class="nm">AudioMoth<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Open low-cost acoustic logger</p><p class="use">Build an acoustic array from cheap open hardware instead of buying a handful of recorders</p></a></li><li class="item"><a href="https://www.wildlifeacoustics.com/" target="_blank" rel="noopener">
+<p>Open low-cost acoustic logger</p><p class="tags"><span class="tag">Equipment</span></p><p class="use">Build an acoustic array from cheap open hardware instead of buying a handful of recorders</p></a></li><li class="item"><a href="https://www.wildlifeacoustics.com/" target="_blank" rel="noopener">
 <span class="nm">Wildlife Acoustics<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Bat and bird recorders</p><p class="use">Buy recorders when the survey turns on reliability rather than the number of units deployed</p></a></li><li class="item"><a href="https://store.camtraptions.com/" target="_blank" rel="noopener">
+<p>Bat and bird recorders</p><p class="tags"><span class="tag">Equipment</span></p><p class="use">Buy recorders when the survey turns on reliability rather than the number of units deployed</p></a></li><li class="item"><a href="https://store.camtraptions.com/" target="_blank" rel="noopener">
 <span class="nm">Camtraptions<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Camera-trap photography gear</p><p class="use">Get sensors and housings when you need a DSLR camera trap rather than a trail camera</p></a></li><li class="item"><a href="https://www.cognisys-inc.com/" target="_blank" rel="noopener">
+<p>Camera-trap photography gear</p><p class="tags"><span class="tag">Equipment</span></p><p class="use">Get sensors and housings when you need a DSLR camera trap rather than a trail camera</p></a></li><li class="item"><a href="https://www.cognisys-inc.com/" target="_blank" rel="noopener">
 <span class="nm">Cognisys<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Camera triggers</p><p class="use">Source high-speed and macro triggers for images a standard motion sensor cannot catch</p></a></li><li class="item"><a href="https://www.telemetrysolutions.com/" target="_blank" rel="noopener">
+<p>Camera triggers</p><p class="tags"><span class="tag">Equipment</span></p><p class="use">Source high-speed and macro triggers for images a standard motion sensor cannot catch</p></a></li><li class="item"><a href="https://www.telemetrysolutions.com/" target="_blank" rel="noopener">
 <span class="nm">Telemetry Solutions<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>GPS tags from 5 g</p><p class="use">Check tag weight against your species first, since 5 grams sets the smallest animal you can collar</p></a></li><li class="item"><a href="https://wildtrack.org/" target="_blank" rel="noopener">
+<p>GPS tags from 5 g</p><p class="tags"><span class="tag">Equipment</span></p><p class="use">Check tag weight against your species first, since 5 grams sets the smallest animal you can collar</p></a></li><li class="item"><a href="https://wildtrack.org/" target="_blank" rel="noopener">
 <span class="nm">WildTrack<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Footprint identification technique</p><p class="use">Identify species and individuals from footprints, which needs no capture and no batteries</p></a></li><li class="item"><a href="https://wd4c.org/" target="_blank" rel="noopener">
+<p>Footprint identification technique</p><p class="tags"><span class="tag">Equipment</span></p><p class="use">Identify species and individuals from footprints, which needs no capture and no batteries</p></a></li><li class="item"><a href="https://wd4c.org/" target="_blank" rel="noopener">
 <span class="nm">Working Dogs for Conservation<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Detection dogs</p><p class="use">Bring in detection dogs when the target is scat, carcasses or contraband people cannot find</p></a></li><li class="item"><a href="https://lighthawk.org/" target="_blank" rel="noopener">
+<p>Detection dogs</p><p class="tags"><span class="tag">Equipment</span></p><p class="use">Bring in detection dogs when the target is scat, carcasses or contraband people cannot find</p></a></li><li class="item"><a href="https://lighthawk.org/" target="_blank" rel="noopener">
 <span class="nm">LightHawk<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Donated conservation flights</p><p class="use">Request a donated flight for aerial survey, or to show a decision maker the site from above</p></a></li><li class="item"><a href="https://www.forestry-suppliers.com/" target="_blank" rel="noopener">
+<p>Donated conservation flights</p><p class="tags"><span class="tag">Equipment</span></p><p class="use">Request a donated flight for aerial survey, or to show a decision maker the site from above</p></a></li><li class="item"><a href="https://www.forestry-suppliers.com/" target="_blank" rel="noopener">
 <span class="nm">Forestry Suppliers<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Field equipment vendor</p><p class="use">Source field kit from one vendor when a grant needs itemized equipment quotes</p></a></li>
+<p>Field equipment vendor</p><p class="tags"><span class="tag">Equipment</span></p><p class="use">Source field kit from one vendor when a grant needs itemized equipment quotes</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/analytical-methods-and-modeling-tools/">&larr; Analytical methods and modeling tools</a> <a href="/#browse">All categories</a> <a href="/invasive-species-and-biosecurity/">Invasive species and biosecurity &rarr;</a></p>

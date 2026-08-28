@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="build" content="d62e251804f9">
+<meta name="build" content="a061dc438150">
 <title>AI tools for nonprofits | Conservation Portal</title>
 <meta name="description" content="Discounted AI platforms, grant-writing tools and the ethics guidance to use them without embarrassing yourself. 10 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/ai-tools-for-nonprofits/">
@@ -138,8 +138,17 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 /* ---------- eight domain blocks ---------- */
 .domains{display:grid;gap:16px;margin-top:26px;
   grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.domain.wide{grid-column:span 2}
+.domain.wide ul{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.domain.wide ul li{border-bottom:1px solid var(--hair)}
+@media (max-width:1000px){
+  .domain.wide{grid-column:auto}
+  .domain.wide ul{grid-template-columns:1fr}}
 @media (max-width:740px){.domains{grid-template-columns:1fr}}
-.domain{background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
+/* scroll-margin so a breadcrumb landing on #money-and-services is not hidden under
+   the sticky header */
+.domain{scroll-margin-top:104px;
+  background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
   padding:24px 24px 20px;
   /* the mark's angled panel, echoed once per block */
   clip-path:polygon(18px 0,100% 0,100% 100%,0 100%,0 18px)}
@@ -179,15 +188,22 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
   color:var(--forest);display:inline-flex;align-items:center;gap:7px}
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
-.item p{margin:4px auto 0;font-size:15px;color:var(--muted);max-width:64ch}
-.item p.use{margin:7px auto 0;padding-top:6px;font-size:13.5px;line-height:1.5;
+/* three deliberately distinct levels: name strongest, descriptor smallest and muted,
+   use-note normal weight and full size because it is what distinguishes one entry
+   from the next. If these ever look equal the pages read as a wall. */
+.item p{margin:4px auto 0;font-size:13.5px;line-height:1.55;color:var(--muted);
+  max-width:66ch}
+.item p.use{margin:8px auto 0;padding-top:7px;font-size:15px;line-height:1.55;
+  color:var(--ink);
   border-top:1px solid var(--hair);max-width:64ch}
 .item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
   text-decoration:none;border-bottom:1px solid transparent}
 .item .access:hover{border-bottom-color:currentColor}
-.pill{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
-  background:var(--pill-bg);color:var(--pill-ink);border-radius:100px;padding:2px 8px;
-  margin-left:9px;vertical-align:2px;white-space:nowrap}
+.badge{font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+  border-radius:100px;padding:2px 8px;margin-left:8px;vertical-align:2px;white-space:nowrap;
+  border:1px solid transparent}
+.badge.new{background:var(--pill-bg);color:var(--pill-ink)}
+.badge.tbg{background:transparent;color:var(--accent);border-color:var(--accent)}
 mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .item p.tags{margin:7px auto 0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
@@ -333,7 +349,7 @@ img.ondark{display:none}
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">
-<a href="/">Home</a><span>/</span><a href="/#browse">Money and services</a>
+<a href="/">Home</a><span>/</span><a href="/#money-and-services">Money and services</a>
 <span>/</span>AI tools for nonprofits
 </nav>
 <section class="cathead">
@@ -360,25 +376,25 @@ img.ondark{display:none}
 <ul class="list" id="clist">
 <li class="item"><a href="https://claude.com/solutions/nonprofits" target="_blank" rel="noopener">
 <span class="nm">Claude for Nonprofits<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Up to 75% off Team and Enterprise plans for 501(c)(3)s and international equivalents, with a free AI fluency course. Excludes government and higher education</p><p class="use">Apply for the discount and take the free fluency course before rolling anything out to staff</p></a></li><li class="item"><a href="https://www.google.com/nonprofits/offerings/workspace/" target="_blank" rel="noopener">
+<p>Up to 75% off Team and Enterprise plans for 501(c)(3)s and international equivalents, with a free AI fluency course. Excludes government and higher education</p><p class="tags"><span class="tag">Tool</span><span class="tag">Global</span></p><p class="use">Apply for the discount and take the free fluency course before rolling anything out to staff</p></a></li><li class="item"><a href="https://www.google.com/nonprofits/offerings/workspace/" target="_blank" rel="noopener">
 <span class="nm">Google Workspace for Nonprofits<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Free Workspace for eligible nonprofits up to 2,000 users, which is how Gemini and NotebookLM reach the sector at no cost. Paid tiers are discounted</p><p class="use">Get the free tier first, since it is how most small groups reach Gemini and NotebookLM</p></a></li><li class="item"><a href="https://help.openai.com/en/articles/9359041-openai-for-nonprofits" target="_blank" rel="noopener">
+<p>Free Workspace for eligible nonprofits up to 2,000 users, which is how Gemini and NotebookLM reach the sector at no cost. Paid tiers are discounted</p><p class="tags"><span class="tag">Tool</span></p><p class="use">Get the free tier first, since it is how most small groups reach Gemini and NotebookLM</p></a></li><li class="item"><a href="https://help.openai.com/en/articles/9359041-openai-for-nonprofits" target="_blank" rel="noopener">
 <span class="nm">OpenAI for Nonprofits<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>ChatGPT Business at $8 per user per month on annual billing, and up to 75% off Enterprise through sales. The API is excluded</p><p class="use">Compare the per-seat price against real usage before switching a whole team over</p></a></li><li class="item"><a href="https://www.microsoft.com/en-us/nonprofits/empower-your-nonprofit-with-ai" target="_blank" rel="noopener">
+<p>ChatGPT Business at $8 per user per month on annual billing, and up to 75% off Enterprise through sales. The API is excluded</p><p class="tags"><span class="tag">Tool</span><span class="tag">Paid</span></p><p class="use">Compare the per-seat price against real usage before switching a whole team over</p></a></li><li class="item"><a href="https://www.microsoft.com/en-us/nonprofits/empower-your-nonprofit-with-ai" target="_blank" rel="noopener">
 <span class="nm">Microsoft for Nonprofits: AI<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Copilot Chat is included with any Microsoft 365 nonprofit subscription. Full Copilot is discounted, not free, and needs a paid base license on top</p><p class="use">Check what base license you already pay for, because Copilot needs one underneath it</p></a></li><li class="item"><a href="https://grantable.co/" target="_blank" rel="noopener">
+<p>Copilot Chat is included with any Microsoft 365 nonprofit subscription. Full Copilot is discounted, not free, and needs a paid base license on top</p><p class="tags"><span class="tag">Tool</span></p><p class="use">Check what base license you already pay for, because Copilot needs one underneath it</p></a></li><li class="item"><a href="https://grantable.co/" target="_blank" rel="noopener">
 <span class="nm">Grantable<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Drafts proposals from your own past submissions and prospects funders. Free tier, then $25 a month for nonprofits under $500k</p><p class="use">Draft from your own past proposals rather than a blank page, then check the fit scores</p></a></li><li class="item"><a href="https://onehundrednights.com/" target="_blank" rel="noopener">
+<p>Drafts proposals from your own past submissions and prospects funders. Free tier, then $25 a month for nonprofits under $500k</p><p class="tags"><span class="tag">Tool</span><span class="tag">Free tier</span></p><p class="use">Draft from your own past proposals rather than a blank page, then check the fit scores</p></a></li><li class="item"><a href="https://onehundrednights.com/" target="_blank" rel="noopener">
 <span class="nm">One Hundred Nights<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>AI consulting for nonprofits only, plus a free directory of 350+ reviewed AI tools if you would rather work it out yourself</p><p class="use">Use the free reviewed tool directory before paying anyone at all for AI advice</p></a></li><li class="item"><a href="https://nethope.org/toolkits/humanitarian-ai-code-of-conduct/" target="_blank" rel="noopener">
+<p>AI consulting for nonprofits only, plus a free directory of 350+ reviewed AI tools if you would rather work it out yourself</p><p class="tags"><span class="tag">Tool</span><span class="tag">Free</span></p><p class="use">Use the free reviewed tool directory before paying anyone at all for AI advice</p></a></li><li class="item"><a href="https://nethope.org/toolkits/humanitarian-ai-code-of-conduct/" target="_blank" rel="noopener">
 <span class="nm">NetHope Humanitarian AI Code of Conduct<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Thirteen principles for AI in humanitarian, development and conservation work, including a ban on synthetic imagery of program participants. Free</p><p class="use">Adopt it as your own AI policy, which is faster than drafting one from nothing</p></a></li><li class="item"><a href="https://www.semanticscholar.org/" target="_blank" rel="noopener">
+<p>Thirteen principles for AI in humanitarian, development and conservation work, including a ban on synthetic imagery of program participants. Free</p><p class="tags"><span class="tag">Tool</span><span class="tag">Free</span></p><p class="use">Adopt it as your own AI policy, which is faster than drafting one from nothing</p></a></li><li class="item"><a href="https://www.semanticscholar.org/" target="_blank" rel="noopener">
 <span class="nm">Semantic Scholar<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Free literature search with AI-generated paper summaries and citation context, from the Allen Institute for AI, plus an open API if you want to build on it</p><p class="use">Search the literature free, and pull the API when you need citations at scale</p></a></li><li class="item"><a href="https://www.researchrabbit.ai/" target="_blank" rel="noopener">
+<p>Free literature search with AI-generated paper summaries and citation context, from the Allen Institute for AI, plus an open API if you want to build on it</p><p class="tags"><span class="tag">Tool</span><span class="tag">Free</span></p><p class="use">Search the literature free, and pull the API when you need citations at scale</p></a></li><li class="item"><a href="https://www.researchrabbit.ai/" target="_blank" rel="noopener">
 <span class="nm">ResearchRabbit<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Give it a few papers you already trust and it builds a citation map outward from them, then keeps recommending. Free</p><p class="use">Start from three good papers and let it surface the ones your search terms missed</p></a></li><li class="item"><a href="https://consensus.app/" target="_blank" rel="noopener">
+<p>Give it a few papers you already trust and it builds a citation map outward from them, then keeps recommending. Free</p><p class="tags"><span class="tag">Tool</span><span class="tag">Free</span></p><p class="use">Start from three good papers and let it surface the ones your search terms missed</p></a></li><li class="item"><a href="https://consensus.app/" target="_blank" rel="noopener">
 <span class="nm">Consensus<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Ask a research question and it answers from the literature, showing how much the papers agree rather than handing you one sentence. Free tier with capped searches</p><p class="use">Ask a question rather than guessing keywords, then check how much the papers actually agree</p></a></li>
+<p>Ask a research question and it answers from the literature, showing how much the papers agree rather than handing you one sentence. Free tier with capped searches</p><p class="tags"><span class="tag">Tool</span><span class="tag">Free tier</span></p><p class="use">Ask a question rather than guessing keywords, then check how much the papers actually agree</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/consulting-and-advisory-services/">&larr; Consulting and advisory services</a> <a href="/#browse">All categories</a> <a href="/discounted-software-for-nonprofits/">Discounted software for nonprofits &rarr;</a></p>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="build" content="d62e251804f9">
+<meta name="build" content="a061dc438150">
 <title>Communities and networks | Conservation Portal</title>
 <meta name="description" content="Peer groups, professional societies and skills-matching platforms. 14 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/communities-and-networks/">
@@ -138,8 +138,17 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 /* ---------- eight domain blocks ---------- */
 .domains{display:grid;gap:16px;margin-top:26px;
   grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.domain.wide{grid-column:span 2}
+.domain.wide ul{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.domain.wide ul li{border-bottom:1px solid var(--hair)}
+@media (max-width:1000px){
+  .domain.wide{grid-column:auto}
+  .domain.wide ul{grid-template-columns:1fr}}
 @media (max-width:740px){.domains{grid-template-columns:1fr}}
-.domain{background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
+/* scroll-margin so a breadcrumb landing on #money-and-services is not hidden under
+   the sticky header */
+.domain{scroll-margin-top:104px;
+  background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
   padding:24px 24px 20px;
   /* the mark's angled panel, echoed once per block */
   clip-path:polygon(18px 0,100% 0,100% 100%,0 100%,0 18px)}
@@ -179,15 +188,22 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
   color:var(--forest);display:inline-flex;align-items:center;gap:7px}
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
-.item p{margin:4px auto 0;font-size:15px;color:var(--muted);max-width:64ch}
-.item p.use{margin:7px auto 0;padding-top:6px;font-size:13.5px;line-height:1.5;
+/* three deliberately distinct levels: name strongest, descriptor smallest and muted,
+   use-note normal weight and full size because it is what distinguishes one entry
+   from the next. If these ever look equal the pages read as a wall. */
+.item p{margin:4px auto 0;font-size:13.5px;line-height:1.55;color:var(--muted);
+  max-width:66ch}
+.item p.use{margin:8px auto 0;padding-top:7px;font-size:15px;line-height:1.55;
+  color:var(--ink);
   border-top:1px solid var(--hair);max-width:64ch}
 .item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
   text-decoration:none;border-bottom:1px solid transparent}
 .item .access:hover{border-bottom-color:currentColor}
-.pill{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
-  background:var(--pill-bg);color:var(--pill-ink);border-radius:100px;padding:2px 8px;
-  margin-left:9px;vertical-align:2px;white-space:nowrap}
+.badge{font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+  border-radius:100px;padding:2px 8px;margin-left:8px;vertical-align:2px;white-space:nowrap;
+  border:1px solid transparent}
+.badge.new{background:var(--pill-bg);color:var(--pill-ink)}
+.badge.tbg{background:transparent;color:var(--accent);border-color:var(--accent)}
 mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .item p.tags{margin:7px auto 0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
@@ -333,7 +349,7 @@ img.ondark{display:none}
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">
-<a href="/">Home</a><span>/</span><a href="/#browse">People</a>
+<a href="/">Home</a><span>/</span><a href="/#people">People</a>
 <span>/</span>Communities and networks
 </nav>
 <section class="cathead">
@@ -359,34 +375,34 @@ img.ondark{display:none}
 </div>
 <ul class="list" id="clist">
 <li class="item"><a href="https://biodiversitygroup.org/conservation-conference-list/" target="_blank" rel="noopener">
-<span class="nm">TBG conservation conference list<span class="arw" aria-hidden="true">&#8599;</span></span><span class="pill">new</span>
-<p>Over 200 conservation conferences through 2028 in a searchable table, with dates, locations and subject keywords. Check dates with the organizer, because scam listings circulate. We run this one</p><p class="tags"><span class="tag">Events</span></p><p class="use">Plan a year of travel from one table, confirming dates with organizers because scam listings circulate</p></a></li><li class="item"><a href="https://wildhub.community/" target="_blank" rel="noopener">
+<span class="nm">TBG conservation conference list<span class="arw" aria-hidden="true">&#8599;</span></span><span class="badge tbg" title="Run by The Biodiversity Group">TBG project</span><span class="badge new" title="Recently added">New</span>
+<p>Over 200 conservation conferences through 2028 in a searchable table, with dates, locations and subject keywords. Check dates with the organizer, because scam listings circulate</p><p class="tags"><span class="tag">Events</span></p><p class="use">Plan a year of travel from one table, confirming dates with organizers because scam listings circulate</p></a></li><li class="item"><a href="https://wildhub.community/" target="_blank" rel="noopener">
 <span class="nm">WildHub<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Conservation professionals community</p><p class="use">Post a work problem rather than a question, since the community answers with what it tried</p></a></li><li class="item"><a href="https://womeninnaturenetwork.org/" target="_blank" rel="noopener">
+<p>Conservation professionals community</p><p class="tags"><span class="tag">Network</span></p><p class="use">Post a work problem rather than a question, since the community answers with what it tried</p></a></li><li class="item"><a href="https://womeninnaturenetwork.org/" target="_blank" rel="noopener">
 <span class="nm">Women In Nature Network<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Women in conservation network</p><p class="use">Join or point a colleague at it when isolation is the real retention problem</p></a></li><li class="item"><a href="https://womenforenvironment.org/" target="_blank" rel="noopener">
+<p>Women in conservation network</p><p class="tags"><span class="tag">Network</span></p><p class="use">Join or point a colleague at it when isolation is the real retention problem</p></a></li><li class="item"><a href="https://womenforenvironment.org/" target="_blank" rel="noopener">
 <span class="nm">WE Africa<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>African women environmental leadership</p><p class="use">Nominate an African woman on your team for leadership development you could not fund</p></a></li><li class="item"><a href="https://500womenscientists.org/" target="_blank" rel="noopener">
+<p>African women environmental leadership</p><p class="tags"><span class="tag">Network</span><span class="tag">Africa</span></p><p class="use">Nominate an African woman on your team for leadership development you could not fund</p></a></li><li class="item"><a href="https://500womenscientists.org/" target="_blank" rel="noopener">
 <span class="nm">500 Women Scientists<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Scientist network</p><p class="use">Use its local pods to find a speaker or reviewer without going through an institution</p></a></li><li class="item"><a href="https://environmentalevaluators.net/" target="_blank" rel="noopener">
+<p>Scientist network</p><p class="tags"><span class="tag">Network</span></p><p class="use">Use its local pods to find a speaker or reviewer without going through an institution</p></a></li><li class="item"><a href="https://environmentalevaluators.net/" target="_blank" rel="noopener">
 <span class="nm">Environmental Evaluators Network<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Evaluation community</p><p class="use">Look for evaluation practice here, though the site was returning a server error</p></a></li><li class="item"><a href="https://www.ashoka.org/" target="_blank" rel="noopener">
+<p>Evaluation community</p><p class="tags"><span class="tag">Network</span></p><p class="use">Look for evaluation practice here, though the site was returning a server error</p></a></li><li class="item"><a href="https://www.ashoka.org/" target="_blank" rel="noopener">
 <span class="nm">Ashoka<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Social entrepreneur fellowship</p><p class="use">Apply for a fellowship if you are the founder rather than the project</p></a></li><li class="item"><a href="https://nexusglobal.org/" target="_blank" rel="noopener">
+<p>Social entrepreneur fellowship</p><p class="tags"><span class="tag">Network</span></p><p class="use">Apply for a fellowship if you are the founder rather than the project</p></a></li><li class="item"><a href="https://nexusglobal.org/" target="_blank" rel="noopener">
 <span class="nm">NEXUS<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Wealth and social entrepreneurship network</p><p class="use">Enter it to reach young wealth holders, who fund very differently from foundations</p></a></li><li class="item"><a href="https://wemakechange.org/" target="_blank" rel="noopener">
+<p>Wealth and social entrepreneurship network</p><p class="tags"><span class="tag">Network</span></p><p class="use">Enter it to reach young wealth holders, who fund very differently from foundations</p></a></li><li class="item"><a href="https://wemakechange.org/" target="_blank" rel="noopener">
 <span class="nm">We Make Change<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Skills volunteering for causes</p><p class="use">Post a three-hour task and get skilled remote help you would otherwise pay for</p></a></li><li class="item"><a href="https://taprootfoundation.org/" target="_blank" rel="noopener">
+<p>Skills volunteering for causes</p><p class="tags"><span class="tag">Network</span></p><p class="use">Post a three-hour task and get skilled remote help you would otherwise pay for</p></a></li><li class="item"><a href="https://taprootfoundation.org/" target="_blank" rel="noopener">
 <span class="nm">Taproot Foundation<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Pro bono professional matching for nonprofits</p><p class="use">Request pro bono marketing, HR or strategy work rather than trying to hire it</p></a></li><li class="item"><a href="https://www.globalhand.org/" target="_blank" rel="noopener">
+<p>Pro bono professional matching for nonprofits</p><p class="tags"><span class="tag">Network</span></p><p class="use">Request pro bono marketing, HR or strategy work rather than trying to hire it</p></a></li><li class="item"><a href="https://www.globalhand.org/" target="_blank" rel="noopener">
 <span class="nm">Global Hand<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Corporate and NGO partnership matching</p><p class="use">Post a specific need when you want corporate in-kind support instead of cash</p></a></li><li class="item"><a href="https://conbio.org/" target="_blank" rel="noopener">
+<p>Corporate and NGO partnership matching</p><p class="tags"><span class="tag">Network</span></p><p class="use">Post a specific need when you want corporate in-kind support instead of cash</p></a></li><li class="item"><a href="https://conbio.org/" target="_blank" rel="noopener">
 <span class="nm">Society for Conservation Biology<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>The main international society for conservation biology, with 36 chapters and dues reduced or waived for lower-income countries</p><p class="use">Join with reduced or waived dues from a lower-income country, then use your local chapter</p></a></li><li class="item"><a href="https://wildlife.org/" target="_blank" rel="noopener">
+<p>The main international society for conservation biology, with 36 chapters and dues reduced or waived for lower-income countries</p><p class="tags"><span class="tag">Network</span><span class="tag">Global</span></p><p class="use">Join with reduced or waived dues from a lower-income country, then use your local chapter</p></a></li><li class="item"><a href="https://wildlife.org/" target="_blank" rel="noopener">
 <span class="nm">The Wildlife Society<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>The main professional association for wildlife biologists in North America, and host of its largest annual conference</p><p class="use">Join for the conference, which is where North American wildlife hiring actually happens</p></a></li><li class="item"><a href="https://papaco.org/" target="_blank" rel="noopener">
+<p>The main professional association for wildlife biologists in North America, and host of its largest annual conference</p><p class="tags"><span class="tag">Network</span><span class="tag">US</span></p><p class="use">Join for the conference, which is where North American wildlife hiring actually happens</p></a></li><li class="item"><a href="https://papaco.org/" target="_blank" rel="noopener">
 <span class="nm">IUCN PAPACO<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>IUCN program for African protected areas, running free training, a monthly newsletter and job postings for West and Central Africa. In French</p><p class="use">Take the free protected area training and job listings, strongest for West and Central Africa</p></a></li>
+<p>IUCN program for African protected areas, running free training, a monthly newsletter and job postings for West and Central Africa. In French</p><p class="tags"><span class="tag">Network</span><span class="tag">Europe</span></p><p class="use">Take the free protected area training and job listings, strongest for West and Central Africa</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/organization-directories/">&larr; Organization directories</a> <a href="/#browse">All categories</a> <a href="/jobs-and-careers/">Jobs and careers &rarr;</a></p>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="build" content="d62e251804f9">
+<meta name="build" content="a061dc438150">
 <title>Bioblitzes and awareness days | Conservation Portal</title>
 <meta name="description" content="Fixed-window events you can join, or host your own chapter of. 22 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/bioblitzes-and-awareness-days/">
@@ -138,8 +138,17 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 /* ---------- eight domain blocks ---------- */
 .domains{display:grid;gap:16px;margin-top:26px;
   grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.domain.wide{grid-column:span 2}
+.domain.wide ul{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.domain.wide ul li{border-bottom:1px solid var(--hair)}
+@media (max-width:1000px){
+  .domain.wide{grid-column:auto}
+  .domain.wide ul{grid-template-columns:1fr}}
 @media (max-width:740px){.domains{grid-template-columns:1fr}}
-.domain{background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
+/* scroll-margin so a breadcrumb landing on #money-and-services is not hidden under
+   the sticky header */
+.domain{scroll-margin-top:104px;
+  background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
   padding:24px 24px 20px;
   /* the mark's angled panel, echoed once per block */
   clip-path:polygon(18px 0,100% 0,100% 100%,0 100%,0 18px)}
@@ -179,15 +188,22 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
   color:var(--forest);display:inline-flex;align-items:center;gap:7px}
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
-.item p{margin:4px auto 0;font-size:15px;color:var(--muted);max-width:64ch}
-.item p.use{margin:7px auto 0;padding-top:6px;font-size:13.5px;line-height:1.5;
+/* three deliberately distinct levels: name strongest, descriptor smallest and muted,
+   use-note normal weight and full size because it is what distinguishes one entry
+   from the next. If these ever look equal the pages read as a wall. */
+.item p{margin:4px auto 0;font-size:13.5px;line-height:1.55;color:var(--muted);
+  max-width:66ch}
+.item p.use{margin:8px auto 0;padding-top:7px;font-size:15px;line-height:1.55;
+  color:var(--ink);
   border-top:1px solid var(--hair);max-width:64ch}
 .item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
   text-decoration:none;border-bottom:1px solid transparent}
 .item .access:hover{border-bottom-color:currentColor}
-.pill{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
-  background:var(--pill-bg);color:var(--pill-ink);border-radius:100px;padding:2px 8px;
-  margin-left:9px;vertical-align:2px;white-space:nowrap}
+.badge{font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+  border-radius:100px;padding:2px 8px;margin-left:8px;vertical-align:2px;white-space:nowrap;
+  border:1px solid transparent}
+.badge.new{background:var(--pill-bg);color:var(--pill-ink)}
+.badge.tbg{background:transparent;color:var(--accent);border-color:var(--accent)}
 mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .item p.tags{margin:7px auto 0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
@@ -333,7 +349,7 @@ img.ondark{display:none}
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">
-<a href="/">Home</a><span>/</span><a href="/#browse">Recording and data</a>
+<a href="/">Home</a><span>/</span><a href="/#recording-and-data">Recording and data</a>
 <span>/</span>Bioblitzes and awareness days
 </nav>
 <section class="cathead">
@@ -360,49 +376,49 @@ img.ondark{display:none}
 <ul class="list" id="clist">
 <li class="item"><a href="https://www.citynaturechallenge.org/" target="_blank" rel="noopener">
 <span class="nm">City Nature Challenge<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>City-versus-city iNaturalist bioblitz over four days at the end of April. Cities and organizations sign up as organizers</p><p class="use">Sign your city up as an organizer and get four days of concentrated local records</p></a></li><li class="item"><a href="https://www.greatsouthernbioblitz.org/" target="_blank" rel="noopener">
+<p>City-versus-city iNaturalist bioblitz over four days at the end of April. Cities and organizations sign up as organizers</p><p class="tags"><span class="tag">Events</span></p><p class="use">Sign your city up as an organizer and get four days of concentrated local records</p></a></li><li class="item"><a href="https://www.greatsouthernbioblitz.org/" target="_blank" rel="noopener">
 <span class="nm">Great Southern Bioblitz<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>The Southern Hemisphere counterpart, four days in spring. You can register your own region</p><p class="use">Register your region for the spring counterpart, so southern seasons are not sampled off-cycle</p></a></li><li class="item"><a href="https://citizenscience.asia/naturechallenge/" target="_blank" rel="noopener">
+<p>The Southern Hemisphere counterpart, four days in spring. You can register your own region</p><p class="tags"><span class="tag">Events</span></p><p class="use">Register your region for the spring counterpart, so southern seasons are not sampled off-cycle</p></a></li><li class="item"><a href="https://citizenscience.asia/naturechallenge/" target="_blank" rel="noopener">
 <span class="nm">Asia Nature Challenge<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Asia-wide iNaturalist bioblitz with an open call for collaborating organizers. Dates have moved between September and October, and no 2026 edition is announced yet</p><p class="use">Offer to co-organize, and confirm dates directly since no 2026 edition is announced yet</p></a></li><li class="item"><a href="https://nationalmothweek.org/" target="_blank" rel="noopener">
+<p>Asia-wide iNaturalist bioblitz with an open call for collaborating organizers. Dates have moved between September and October, and no 2026 edition is announced yet</p><p class="tags"><span class="tag">Events</span><span class="tag">Asia</span></p><p class="use">Offer to co-organize, and confirm dates directly since no 2026 edition is announced yet</p></a></li><li class="item"><a href="https://nationalmothweek.org/" target="_blank" rel="noopener">
 <span class="nm">National Moth Week<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Worldwide moth-ing in the last full week of July. Registering your event is the first thing the site asks you to do</p><p class="use">Register a moth night in late July and be listed alongside events worldwide</p></a></li><li class="item"><a href="https://www.audubon.org/community-science/christmas-bird-count" target="_blank" rel="noopener">
+<p>Worldwide moth-ing in the last full week of July. Registering your event is the first thing the site asks you to do</p><p class="tags"><span class="tag">Events</span><span class="tag">Global</span></p><p class="use">Register a moth night in late July and be listed alongside events worldwide</p></a></li><li class="item"><a href="https://www.audubon.org/community-science/christmas-bird-count" target="_blank" rel="noopener">
 <span class="nm">Audubon Christmas Bird Count<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>December 14 to January 5. The compiler system lets a group run its own count circle, which makes it the strongest host-your-own event here</p><p class="use">Run your own count circle through the compiler system, the easiest way to host a real survey</p></a></li><li class="item"><a href="https://batweek.org/" target="_blank" rel="noopener">
+<p>December 14 to January 5. The compiler system lets a group run its own count circle, which makes it the strongest host-your-own event here</p><p class="tags"><span class="tag">Events</span></p><p class="use">Run your own count circle through the compiler system, the easiest way to host a real survey</p></a></li><li class="item"><a href="https://batweek.org/" target="_blank" rel="noopener">
 <span class="nm">Bat Week<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>October 24 to 31 every year, with a full organizer toolkit</p><p class="use">Take the organizer toolkit and run a late-October event without designing materials yourself</p></a></li><li class="item"><a href="https://www.pollinator.org/pollinator-week" target="_blank" rel="noopener">
+<p>October 24 to 31 every year, with a full organizer toolkit</p><p class="tags"><span class="tag">Events</span></p><p class="use">Take the organizer toolkit and run a late-October event without designing materials yourself</p></a></li><li class="item"><a href="https://www.pollinator.org/pollinator-week" target="_blank" rel="noopener">
 <span class="nm">Pollinator Week<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Late June, with a toolkit and a map you can add your own activity to</p><p class="use">Add your late-June activity to the map so local people can actually find it</p></a></li><li class="item"><a href="https://www.worldmigratorybirdday.org/" target="_blank" rel="noopener">
+<p>Late June, with a toolkit and a map you can add your own activity to</p><p class="tags"><span class="tag">Events</span></p><p class="use">Add your late-June activity to the map so local people can actually find it</p></a></li><li class="item"><a href="https://www.worldmigratorybirdday.org/" target="_blank" rel="noopener">
 <span class="nm">World Migratory Bird Day<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Two peak days a year, in May and October, with an event registration form and campaign toolkit</p><p class="use">Register an event on either peak day and reuse the ready-made campaign material</p></a></li><li class="item"><a href="https://www.wildlifeday.org/" target="_blank" rel="noopener">
+<p>Two peak days a year, in May and October, with an event registration form and campaign toolkit</p><p class="tags"><span class="tag">Events</span></p><p class="use">Register an event on either peak day and reuse the ready-made campaign material</p></a></li><li class="item"><a href="https://www.wildlifeday.org/" target="_blank" rel="noopener">
 <span class="nm">World Wildlife Day<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>March 3, the UN and CITES day, with an annual theme and posters in three languages</p><p class="use">Build March 3 outreach around the annual theme, with posters already available in three languages</p></a></li><li class="item"><a href="https://www.endangered.org/endangered-species-day/" target="_blank" rel="noopener">
+<p>March 3, the UN and CITES day, with an annual theme and posters in three languages</p><p class="tags"><span class="tag">Events</span></p><p class="use">Build March 3 outreach around the annual theme, with posters already available in three languages</p></a></li><li class="item"><a href="https://www.endangered.org/endangered-species-day/" target="_blank" rel="noopener">
 <span class="nm">Endangered Species Day<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Third Friday in May, with events across the whole month and a promotion toolkit</p><p class="use">Schedule anywhere across May rather than only the third Friday, which the toolkit supports</p></a></li><li class="item"><a href="https://www.worldwetlandsday.org/" target="_blank" rel="noopener">
+<p>Third Friday in May, with events across the whole month and a promotion toolkit</p><p class="tags"><span class="tag">Events</span></p><p class="use">Schedule anywhere across May rather than only the third Friday, which the toolkit supports</p></a></li><li class="item"><a href="https://www.worldwetlandsday.org/" target="_blank" rel="noopener">
 <span class="nm">World Wetlands Day<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>February 2, with a Ramsar materials pack and a global event map</p><p class="use">Pull the Ramsar materials pack for February 2 and add your event to the global map</p></a></li><li class="item"><a href="https://vultureday.org/" target="_blank" rel="noopener">
+<p>February 2, with a Ramsar materials pack and a global event map</p><p class="tags"><span class="tag">Events</span><span class="tag">Global</span></p><p class="use">Pull the Ramsar materials pack for February 2 and add your event to the global map</p></a></li><li class="item"><a href="https://vultureday.org/" target="_blank" rel="noopener">
 <span class="nm">International Vulture Awareness Day<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>First Saturday of September. Submit your event and it appears on the activities page within a couple of days</p><p class="use">Submit a September event and see it listed within days, fast for an awareness day</p></a></li><li class="item"><a href="https://savethefrogs.com/day/" target="_blank" rel="noopener">
+<p>First Saturday of September. Submit your event and it appears on the activities page within a couple of days</p><p class="tags"><span class="tag">Events</span></p><p class="use">Submit a September event and see it listed within days, fast for an awareness day</p></a></li><li class="item"><a href="https://savethefrogs.com/day/" target="_blank" rel="noopener">
 <span class="nm">Save The Frogs Day<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>April 28 every year, with free event registration</p><p class="use">Register a free amphibian education event on April 28 and be listed globally</p></a></li><li class="item"><a href="https://www.worldfishmigrationday.com/" target="_blank" rel="noopener">
+<p>April 28 every year, with free event registration</p><p class="tags"><span class="tag">Events</span></p><p class="use">Register a free amphibian education event on April 28 and be listed globally</p></a></li><li class="item"><a href="https://www.worldfishmigrationday.com/" target="_blank" rel="noopener">
 <span class="nm">World Fish Migration Day<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Late May, every second year, and it invites you to register your own event</p><p class="use">Register a river event on the biennial date, useful for dam removal and fish passage campaigning</p></a></li><li class="item"><a href="https://wedigbio.org/" target="_blank" rel="noopener">
+<p>Late May, every second year, and it invites you to register your own event</p><p class="tags"><span class="tag">Events</span></p><p class="use">Register a river event on the biennial date, useful for dam removal and fish passage campaigning</p></a></li><li class="item"><a href="https://wedigbio.org/" target="_blank" rel="noopener">
 <span class="nm">WeDigBio<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Four-day specimen digitization and transcription blitz, twice a year in April and October. Institutions can register events</p><p class="use">Get a specimen backlog transcribed in four days by registering your collection as a host</p></a></li><li class="item"><a href="https://cwf-fcf.org/en/conserve/inaturalist/bioblitz.html" target="_blank" rel="noopener">
+<p>Four-day specimen digitization and transcription blitz, twice a year in April and October. Institutions can register events</p><p class="tags"><span class="tag">Events</span></p><p class="use">Get a specimen backlog transcribed in four days by registering your collection as a host</p></a></li><li class="item"><a href="https://cwf-fcf.org/en/conserve/inaturalist/bioblitz.html" target="_blank" rel="noopener">
 <span class="nm">CWF Great Canadian Bioblitz<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Late September observation window with an identification week after</p><p class="use">Use the identification week after the recording window to clean records before they reach GBIF</p></a></li><li class="item"><a href="https://ebird.org/globalbigday" target="_blank" rel="noopener">
+<p>Late September observation window with an identification week after</p><p class="tags"><span class="tag">Events</span></p><p class="use">Use the identification week after the recording window to clean records before they reach GBIF</p></a></li><li class="item"><a href="https://ebird.org/globalbigday" target="_blank" rel="noopener">
 <span class="nm">eBird Big Days<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>One day of worldwide birding, twice a year: the second Saturday of May and again in October. Participation only, there is no local chapter to run</p><p class="use">Join rather than host, and use the single-day snapshot as a global effort comparison</p></a></li><li class="item"><a href="https://www.birdcount.org/" target="_blank" rel="noopener">
+<p>One day of worldwide birding, twice a year: the second Saturday of May and again in October. Participation only, there is no local chapter to run</p><p class="tags"><span class="tag">Events</span><span class="tag">Global</span></p><p class="use">Join rather than host, and use the single-day snapshot as a global effort comparison</p></a></li><li class="item"><a href="https://www.birdcount.org/" target="_blank" rel="noopener">
 <span class="nm">Great Backyard Bird Count<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Four days in mid-February, from Cornell, Audubon and Birds Canada</p><p class="use">Point beginners at four days in February when you want volume rather than expertise</p></a></li><li class="item"><a href="https://bigbutterflycount.butterfly-conservation.org/" target="_blank" rel="noopener">
+<p>Four days in mid-February, from Cornell, Audubon and Birds Canada</p><p class="tags"><span class="tag">Events</span><span class="tag">Canada</span></p><p class="use">Point beginners at four days in February when you want volume rather than expertise</p></a></li><li class="item"><a href="https://bigbutterflycount.butterfly-conservation.org/" target="_blank" rel="noopener">
 <span class="nm">Big Butterfly Count<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>UK fifteen-minute butterfly counts across three weeks from mid-July</p><p class="use">Ask volunteers for fifteen minutes, the shortest commitment here, across three weeks of summer</p></a></li><li class="item"><a href="https://www.frogid.net.au/participate/frogid-week/" target="_blank" rel="noopener">
+<p>UK fifteen-minute butterfly counts across three weeks from mid-July</p><p class="tags"><span class="tag">Events</span><span class="tag">UK</span></p><p class="use">Ask volunteers for fifteen minutes, the shortest commitment here, across three weeks of summer</p></a></li><li class="item"><a href="https://www.frogid.net.au/participate/frogid-week/" target="_blank" rel="noopener">
 <span class="nm">FrogID Week<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Australian frog-call recording blitz in early November, run by the Australian Museum</p><p class="use">Concentrate call recording into November, where a burst of effort yields usable seasonal comparisons</p></a></li><li class="item"><a href="https://aussiebirdcount.org.au/" target="_blank" rel="noopener">
+<p>Australian frog-call recording blitz in early November, run by the Australian Museum</p><p class="tags"><span class="tag">Events</span><span class="tag">Australia</span></p><p class="use">Concentrate call recording into November, where a burst of effort yields usable seasonal comparisons</p></a></li><li class="item"><a href="https://aussiebirdcount.org.au/" target="_blank" rel="noopener">
 <span class="nm">Aussie Bird Count<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Third week of October</p><p class="use">Ask for twenty minutes in October, with school and council material already prepared for you</p></a></li><li class="item"><a href="https://www.rspb.org.uk/whats-happening/big-garden-birdwatch" target="_blank" rel="noopener">
+<p>Third week of October</p><p class="tags"><span class="tag">Events</span></p><p class="use">Ask for twenty minutes in October, with school and council material already prepared for you</p></a></li><li class="item"><a href="https://www.rspb.org.uk/whats-happening/big-garden-birdwatch" target="_blank" rel="noopener">
 <span class="nm">RSPB Big Garden Birdwatch<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>One weekend in late January, and one of the largest by participant count</p><p class="use">Reach the largest participant pool here, which matters when the goal is public engagement</p></a></li>
+<p>One weekend in late January, and one of the largest by participant count</p><p class="tags"><span class="tag">Events</span></p><p class="use">Reach the largest participant pool here, which matters when the goal is public engagement</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/incident-and-threat-reporting/">&larr; Incident and threat reporting</a> <a href="/#browse">All categories</a> <a href="/spatial-data-and-mapping/">Spatial data and mapping &rarr;</a></p>

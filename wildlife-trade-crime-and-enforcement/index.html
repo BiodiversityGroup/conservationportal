@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="build" content="d62e251804f9">
+<meta name="build" content="a061dc438150">
 <title>Wildlife trade, crime and enforcement | Conservation Portal</title>
 <meta name="description" content="Trade records, seizure data, investigations and ranger tools. 17 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/wildlife-trade-crime-and-enforcement/">
@@ -138,8 +138,17 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 /* ---------- eight domain blocks ---------- */
 .domains{display:grid;gap:16px;margin-top:26px;
   grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.domain.wide{grid-column:span 2}
+.domain.wide ul{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.domain.wide ul li{border-bottom:1px solid var(--hair)}
+@media (max-width:1000px){
+  .domain.wide{grid-column:auto}
+  .domain.wide ul{grid-template-columns:1fr}}
 @media (max-width:740px){.domains{grid-template-columns:1fr}}
-.domain{background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
+/* scroll-margin so a breadcrumb landing on #money-and-services is not hidden under
+   the sticky header */
+.domain{scroll-margin-top:104px;
+  background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
   padding:24px 24px 20px;
   /* the mark's angled panel, echoed once per block */
   clip-path:polygon(18px 0,100% 0,100% 100%,0 100%,0 18px)}
@@ -179,15 +188,22 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
   color:var(--forest);display:inline-flex;align-items:center;gap:7px}
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
-.item p{margin:4px auto 0;font-size:15px;color:var(--muted);max-width:64ch}
-.item p.use{margin:7px auto 0;padding-top:6px;font-size:13.5px;line-height:1.5;
+/* three deliberately distinct levels: name strongest, descriptor smallest and muted,
+   use-note normal weight and full size because it is what distinguishes one entry
+   from the next. If these ever look equal the pages read as a wall. */
+.item p{margin:4px auto 0;font-size:13.5px;line-height:1.55;color:var(--muted);
+  max-width:66ch}
+.item p.use{margin:8px auto 0;padding-top:7px;font-size:15px;line-height:1.55;
+  color:var(--ink);
   border-top:1px solid var(--hair);max-width:64ch}
 .item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
   text-decoration:none;border-bottom:1px solid transparent}
 .item .access:hover{border-bottom-color:currentColor}
-.pill{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
-  background:var(--pill-bg);color:var(--pill-ink);border-radius:100px;padding:2px 8px;
-  margin-left:9px;vertical-align:2px;white-space:nowrap}
+.badge{font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+  border-radius:100px;padding:2px 8px;margin-left:8px;vertical-align:2px;white-space:nowrap;
+  border:1px solid transparent}
+.badge.new{background:var(--pill-bg);color:var(--pill-ink)}
+.badge.tbg{background:transparent;color:var(--accent);border-color:var(--accent)}
 mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .item p.tags{margin:7px auto 0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
@@ -333,7 +349,7 @@ img.ondark{display:none}
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">
-<a href="/">Home</a><span>/</span><a href="/#browse">Threats and response</a>
+<a href="/">Home</a><span>/</span><a href="/#threats-and-response">Threats and response</a>
 <span>/</span>Wildlife trade, crime and enforcement
 </nav>
 <section class="cathead">
@@ -360,39 +376,39 @@ img.ondark{display:none}
 <ul class="list" id="clist">
 <li class="item"><a href="https://www.traffic.org/" target="_blank" rel="noopener">
 <span class="nm">TRAFFIC<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>The wildlife trade monitoring network</p><p class="use">Cite its trade reports, which carry more weight with governments than a campaign document</p></a></li><li class="item"><a href="https://eia-international.org/" target="_blank" rel="noopener">
+<p>The wildlife trade monitoring network</p><p class="tags"><span class="tag">Data</span></p><p class="use">Cite its trade reports, which carry more weight with governments than a campaign document</p></a></li><li class="item"><a href="https://eia-international.org/" target="_blank" rel="noopener">
 <span class="nm">Environmental Investigation Agency<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Undercover investigations exposing environmental crime and trafficking</p><p class="use">Read its undercover investigations for supply chain detail no open dataset contains</p></a></li><li class="item"><a href="https://wildlifedashboard.c4ads.org/home" target="_blank" rel="noopener">
+<p>Undercover investigations exposing environmental crime and trafficking</p><p class="tags"><span class="tag">Data</span></p><p class="use">Read its undercover investigations for supply chain detail no open dataset contains</p></a></li><li class="item"><a href="https://wildlifedashboard.c4ads.org/home" target="_blank" rel="noopener">
 <span class="nm">C4ADS Wildlife Seizure Dashboard<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Free dashboard of a decade of global seizure data across 100+ jurisdictions, from the analytics group that supports counter-trafficking investigations worldwide</p><p class="use">Query a decade of seizure records to see which routes and species actually dominate trade</p></a></li><li class="item"><a href="https://www.interpol.int/en/Crimes/Environmental-crime/Wildlife-crime" target="_blank" rel="noopener">
+<p>Free dashboard of a decade of global seizure data across 100+ jurisdictions, from the analytics group that supports counter-trafficking investigations worldwide</p><p class="tags"><span class="tag">Data</span><span class="tag">Global</span></p><p class="use">Query a decade of seizure records to see which routes and species actually dominate trade</p></a></li><li class="item"><a href="https://www.interpol.int/en/Crimes/Environmental-crime/Wildlife-crime" target="_blank" rel="noopener">
 <span class="nm">INTERPOL Wildlife Crime<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>International operations and intelligence sharing against trafficking networks</p><p class="use">Understand how international operations work before expecting police cooperation across a border</p></a></li><li class="item"><a href="https://trade.cites.org/" target="_blank" rel="noopener">
+<p>International operations and intelligence sharing against trafficking networks</p><p class="tags"><span class="tag">Data</span><span class="tag">Global</span></p><p class="use">Understand how international operations work before expecting police cooperation across a border</p></a></li><li class="item"><a href="https://trade.cites.org/" target="_blank" rel="noopener">
 <span class="nm">CITES Trade Database<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Official record of international wildlife trade, 25M+ records since 1975</p><p class="use">Query declared trade volumes by species and country, the only official long series available</p></a></li><li class="item"><a href="https://www.worldbank.org/en/programs/global-wildlife-program" target="_blank" rel="noopener">
+<p>Official record of international wildlife trade, 25M+ records since 1975</p><p class="tags"><span class="tag">Data</span><span class="tag">Global</span></p><p class="use">Query declared trade volumes by species and country, the only official long series available</p></a></li><li class="item"><a href="https://www.worldbank.org/en/programs/global-wildlife-program" target="_blank" rel="noopener">
 <span class="nm">Global Wildlife Program<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>World Bank and GEF anti-poaching partnership across 38 countries</p><p class="use">Check whether your country is in the portfolio, since that shapes what national funding exists</p></a></li><li class="item"><a href="https://www.freeland.org/" target="_blank" rel="noopener">
+<p>World Bank and GEF anti-poaching partnership across 38 countries</p><p class="tags"><span class="tag">Data</span></p><p class="use">Check whether your country is in the portfolio, since that shapes what national funding exists</p></a></li><li class="item"><a href="https://www.freeland.org/" target="_blank" rel="noopener">
 <span class="nm">Freeland Foundation<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Law enforcement and community training across Asia</p><p class="use">Ask about enforcement and community training if your work sits in Southeast Asia</p></a></li><li class="item"><a href="https://wildlifejustice.org/" target="_blank" rel="noopener">
+<p>Law enforcement and community training across Asia</p><p class="tags"><span class="tag">Data</span><span class="tag">Asia</span></p><p class="use">Ask about enforcement and community training if your work sits in Southeast Asia</p></a></li><li class="item"><a href="https://wildlifejustice.org/" target="_blank" rel="noopener">
 <span class="nm">Wildlife Justice Commission<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Intelligence-led investigations into wildlife, fish and timber trafficking</p><p class="use">Pass trafficking intelligence to investigators who can act on it rather than publish it</p></a></li><li class="item"><a href="https://www.worldwildlife.org/threats/illegal-wildlife-trade" target="_blank" rel="noopener">
+<p>Intelligence-led investigations into wildlife, fish and timber trafficking</p><p class="tags"><span class="tag">Data</span></p><p class="use">Pass trafficking intelligence to investigators who can act on it rather than publish it</p></a></li><li class="item"><a href="https://www.worldwildlife.org/threats/illegal-wildlife-trade" target="_blank" rel="noopener">
 <span class="nm">WWF Illegal Wildlife Trade<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Overview of the poaching-to-demand chain and its scale</p><p class="use">Use its overview to brief a board or a journalist on how the trade chain works</p></a></li><li class="item"><a href="https://unitedforwildlife.org/" target="_blank" rel="noopener">
+<p>Overview of the poaching-to-demand chain and its scale</p><p class="tags"><span class="tag">Data</span></p><p class="use">Use its overview to brief a board or a journalist on how the trade chain works</p></a></li><li class="item"><a href="https://unitedforwildlife.org/" target="_blank" rel="noopener">
 <span class="nm">United for Wildlife<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Transport and finance taskforces against illegal wildlife trade</p><p class="use">Route a suspicious shipment or payment through its transport and finance taskforces</p></a></li><li class="item"><a href="https://globalinitiative.net/" target="_blank" rel="noopener">
+<p>Transport and finance taskforces against illegal wildlife trade</p><p class="tags"><span class="tag">Data</span></p><p class="use">Route a suspicious shipment or payment through its transport and finance taskforces</p></a></li><li class="item"><a href="https://globalinitiative.net/" target="_blank" rel="noopener">
 <span class="nm">Global Initiative Against Transnational Organized Crime<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Organized crime analysis, including an environmental crime program</p><p class="use">Read environmental crime as organized crime, which changes who you would work with on it</p></a></li><li class="item"><a href="https://www.peoplenotpoaching.org/" target="_blank" rel="noopener">
+<p>Organized crime analysis, including an environmental crime program</p><p class="tags"><span class="tag">Data</span></p><p class="use">Read environmental crime as organized crime, which changes who you would work with on it</p></a></li><li class="item"><a href="https://www.peoplenotpoaching.org/" target="_blank" rel="noopener">
 <span class="nm">People Not Poaching<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Community anti-poaching case studies</p><p class="use">Read the 160 case studies before designing a community anti-poaching program, so you copy what worked</p></a></li><li class="item"><a href="http://zeropoaching.com/" target="_blank" rel="noopener">
+<p>Community anti-poaching case studies</p><p class="tags"><span class="tag">Data</span></p><p class="use">Read the 160 case studies before designing a community anti-poaching program, so you copy what worked</p></a></li><li class="item"><a href="http://zeropoaching.com/" target="_blank" rel="noopener">
 <span class="nm">Zero Poaching toolkit<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Six-pillar toolkit for stopping poaching at a site: assessment, technology, capacity, community, prosecution and cooperation. The link is http because the https certificate is issued for a different hostname and browsers will warn</p><p class="use">Work through its six pillars when auditing enforcement at a protected area</p></a></li><li class="item"><a href="https://wildleaks.org/" target="_blank" rel="noopener">
+<p>Six-pillar toolkit for stopping poaching at a site: assessment, technology, capacity, community, prosecution and cooperation. The link is http because the https certificate is issued for a different hostname and browsers will warn</p><p class="tags"><span class="tag">Data</span></p><p class="use">Work through its six pillars when auditing enforcement at a protected area</p></a></li><li class="item"><a href="https://wildleaks.org/" target="_blank" rel="noopener">
 <span class="nm">WildLeaks<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Wildlife crime whistleblowing</p><p class="use">Send information anonymously when reporting wildlife crime through official channels would be unsafe</p></a></li><li class="item"><a href="https://sherloc.unodc.org/" target="_blank" rel="noopener">
+<p>Wildlife crime whistleblowing</p><p class="tags"><span class="tag">Data</span></p><p class="use">Send information anonymously when reporting wildlife crime through official channels would be unsafe</p></a></li><li class="item"><a href="https://sherloc.unodc.org/" target="_blank" rel="noopener">
 <span class="nm">SHERLOC<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>UNODC wildlife crime law and case database</p><p class="use">Look up the actual legislation and case law for wildlife crime in a country before advising</p></a></li><li class="item"><a href="https://wildlifetracer.org/" target="_blank" rel="noopener">
+<p>UNODC wildlife crime law and case database</p><p class="tags"><span class="tag">Data</span></p><p class="use">Look up the actual legislation and case law for wildlife crime in a country before advising</p></a></li><li class="item"><a href="https://wildlifetracer.org/" target="_blank" rel="noopener">
 <span class="nm">Wildlife Tracer<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Monitors thousands of wildlife trade records across online marketplaces and forums, from the Centre For Invasive Species Solutions and the University of Adelaide with Australian government funding. Free registration, and the homepage still says beta 1.0 from March 2022</p><p class="use">Register free to watch online trade listings, strongest on Australian biosecurity</p></a></li><li class="item"><a href="https://www.wildlifetradeportal.org/" target="_blank" rel="noopener">
+<p>Monitors thousands of wildlife trade records across online marketplaces and forums, from the Centre For Invasive Species Solutions and the University of Adelaide with Australian government funding. Free registration, and the homepage still says beta 1.0 from March 2022</p><p class="tags"><span class="tag">Data</span><span class="tag">Australia</span></p><p class="use">Register free to watch online trade listings, strongest on Australian biosecurity</p></a></li><li class="item"><a href="https://www.wildlifetradeportal.org/" target="_blank" rel="noopener">
 <span class="nm">Wildlife Trade Portal<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>TRAFFIC&#x27;s open-access wildlife trade seizure database, drawn from its WITIS system of over 720,000 records. Search by species, product, country or incident, view it as charts and maps, and export the result. Free, but you must register</p><p class="use">Query seizure records by species or country, then export them for your own analysis</p></a></li>
+<p>TRAFFIC&#x27;s open-access wildlife trade seizure database, drawn from its WITIS system of over 720,000 records. Search by species, product, country or incident, view it as charts and maps, and export the result. Free, but you must register</p><p class="tags"><span class="tag">Data</span></p><p class="use">Query seizure records by species or country, then export them for your own analysis</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/wildlife-rehabilitation-and-veterinary/">&larr; Wildlife rehabilitation and veterinary</a> <a href="/#browse">All categories</a> <a href="/human-wildlife-conflict-and-coexistence/">Human-wildlife conflict and coexistence &rarr;</a></p>

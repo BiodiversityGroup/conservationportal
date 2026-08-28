@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="build" content="d62e251804f9">
+<meta name="build" content="a061dc438150">
 <title>Positive news and recovery | Conservation Portal</title>
 <meta name="description" content="Evidence that some of this works. Species recoveries, rediscoveries, and solutions reporting worth sending to a tired team. 7 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/positive-news-and-recovery/">
@@ -138,8 +138,17 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 /* ---------- eight domain blocks ---------- */
 .domains{display:grid;gap:16px;margin-top:26px;
   grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.domain.wide{grid-column:span 2}
+.domain.wide ul{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.domain.wide ul li{border-bottom:1px solid var(--hair)}
+@media (max-width:1000px){
+  .domain.wide{grid-column:auto}
+  .domain.wide ul{grid-template-columns:1fr}}
 @media (max-width:740px){.domains{grid-template-columns:1fr}}
-.domain{background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
+/* scroll-margin so a breadcrumb landing on #money-and-services is not hidden under
+   the sticky header */
+.domain{scroll-margin-top:104px;
+  background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
   padding:24px 24px 20px;
   /* the mark's angled panel, echoed once per block */
   clip-path:polygon(18px 0,100% 0,100% 100%,0 100%,0 18px)}
@@ -179,15 +188,22 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
   color:var(--forest);display:inline-flex;align-items:center;gap:7px}
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
-.item p{margin:4px auto 0;font-size:15px;color:var(--muted);max-width:64ch}
-.item p.use{margin:7px auto 0;padding-top:6px;font-size:13.5px;line-height:1.5;
+/* three deliberately distinct levels: name strongest, descriptor smallest and muted,
+   use-note normal weight and full size because it is what distinguishes one entry
+   from the next. If these ever look equal the pages read as a wall. */
+.item p{margin:4px auto 0;font-size:13.5px;line-height:1.55;color:var(--muted);
+  max-width:66ch}
+.item p.use{margin:8px auto 0;padding-top:7px;font-size:15px;line-height:1.55;
+  color:var(--ink);
   border-top:1px solid var(--hair);max-width:64ch}
 .item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
   text-decoration:none;border-bottom:1px solid transparent}
 .item .access:hover{border-bottom-color:currentColor}
-.pill{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
-  background:var(--pill-bg);color:var(--pill-ink);border-radius:100px;padding:2px 8px;
-  margin-left:9px;vertical-align:2px;white-space:nowrap}
+.badge{font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+  border-radius:100px;padding:2px 8px;margin-left:8px;vertical-align:2px;white-space:nowrap;
+  border:1px solid transparent}
+.badge.new{background:var(--pill-bg);color:var(--pill-ink)}
+.badge.tbg{background:transparent;color:var(--accent);border-color:var(--accent)}
 mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .item p.tags{margin:7px auto 0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
@@ -333,7 +349,7 @@ img.ondark{display:none}
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">
-<a href="/">Home</a><span>/</span><a href="/#browse">Knowledge and communication</a>
+<a href="/">Home</a><span>/</span><a href="/#knowledge-and-communication">Knowledge and communication</a>
 <span>/</span>Positive news and recovery
 </nav>
 <section class="cathead">
@@ -359,20 +375,20 @@ img.ondark{display:none}
 </div>
 <ul class="list" id="clist">
 <li class="item"><a href="https://speciesblacklist.org/rediscoveries/" target="_blank" rel="noopener">
-<span class="nm">Species Black List rediscoveries<span class="arw" aria-hidden="true">&#8599;</span></span><span class="pill">new</span>
-<p>Species turning up again after years unrecorded, checked daily across fourteen national news editions. We run this one</p><p class="use">Scan what the press is claiming about a rediscovery before you cite it as confirmed</p></a></li><li class="item"><a href="https://reversethered.org/" target="_blank" rel="noopener">
+<span class="nm">Species Black List rediscoveries<span class="arw" aria-hidden="true">&#8599;</span></span><span class="badge tbg" title="Run by The Biodiversity Group">TBG project</span><span class="badge new" title="Recently added">New</span>
+<p>Species turning up again after years unrecorded, checked daily across fourteen national news editions</p><p class="tags"><span class="tag">News</span></p><p class="use">Scan what the press is claiming about a rediscovery before you cite it as confirmed</p></a></li><li class="item"><a href="https://reversethered.org/" target="_blank" rel="noopener">
 <span class="nm">Reverse the Red<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>IUCN SSC movement for species recovery. You can make a Species Pledge or apply for an Accelerator Award</p><p class="use">Make a Species Pledge, or apply for an Accelerator Award to fund a recovery step</p></a></li><li class="item"><a href="https://conservationoptimism.org/" target="_blank" rel="noopener">
+<p>IUCN SSC movement for species recovery. You can make a Species Pledge or apply for an Accelerator Award</p><p class="tags"><span class="tag">News</span></p><p class="use">Make a Species Pledge, or apply for an Accelerator Award to fund a recovery step</p></a></li><li class="item"><a href="https://conservationoptimism.org/" target="_blank" rel="noopener">
 <span class="nm">Conservation Optimism<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Seven stories of optimism every week, plus a positive communication toolkit, a podcast and regional hubs in Ghana, India, Pakistan and the UK</p><p class="use">Send the weekly stories to a tired team, and take the communication toolkit</p></a></li><li class="item"><a href="https://news.mongabay.com/list/conservation-solutions/" target="_blank" rel="noopener">
+<p>Seven stories of optimism every week, plus a positive communication toolkit, a podcast and regional hubs in Ghana, India, Pakistan and the UK</p><p class="tags"><span class="tag">News</span><span class="tag">UK</span></p><p class="use">Send the weekly stories to a tired team, and take the communication toolkit</p></a></li><li class="item"><a href="https://news.mongabay.com/list/conservation-solutions/" target="_blank" rel="noopener">
 <span class="nm">Mongabay conservation solutions<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>4,155 stories on what actually worked, with an RSS feed you can pipe into a newsletter</p><p class="use">Pipe the RSS feed into your own newsletter instead of curating good news by hand</p></a></li><li class="item"><a href="https://reasonstobecheerful.world/" target="_blank" rel="noopener">
+<p>4,155 stories on what actually worked, with an RSS feed you can pipe into a newsletter</p><p class="tags"><span class="tag">News</span></p><p class="use">Pipe the RSS feed into your own newsletter instead of curating good news by hand</p></a></li><li class="item"><a href="https://reasonstobecheerful.world/" target="_blank" rel="noopener">
 <span class="nm">Reasons to be Cheerful<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Nonprofit solutions journalism with a climate and environment section, publishing several times a week</p><p class="use">Pitch a solutions story here when the outcome, not the crisis, is the news</p></a></li><li class="item"><a href="https://www.positive.news/environment/" target="_blank" rel="noopener">
+<p>Nonprofit solutions journalism with a climate and environment section, publishing several times a week</p><p class="tags"><span class="tag">News</span></p><p class="use">Pitch a solutions story here when the outcome, not the crisis, is the news</p></a></li><li class="item"><a href="https://www.positive.news/environment/" target="_blank" rel="noopener">
 <span class="nm">Positive News<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Environment section with a conservation subcategory, covering rewilding and species recovery</p><p class="use">Point supporters at recovery coverage when the usual news cycle is grinding them down</p></a></li><li class="item"><a href="https://squirrel-news.net/" target="_blank" rel="noopener">
+<p>Environment section with a conservation subcategory, covering rewilding and species recovery</p><p class="tags"><span class="tag">News</span></p><p class="use">Point supporters at recovery coverage when the usual news cycle is grinding them down</p></a></li><li class="item"><a href="https://squirrel-news.net/" target="_blank" rel="noopener">
 <span class="nm">Squirrel News<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Free nonprofit app and newsletter, thirty constructive stories a week curated from other outlets</p><p class="use">Install the free app and get thirty constructive stories a week without searching</p></a></li>
+<p>Free nonprofit app and newsletter, thirty constructive stories a week curated from other outlets</p><p class="tags"><span class="tag">News</span></p><p class="use">Install the free app and get thirty constructive stories a week without searching</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/free-imagery-icons-and-fonts/">&larr; Free imagery, icons and fonts</a> <a href="/#browse">All categories</a> <a href="/blogs-podcasts-and-newsletters/">Blogs, podcasts and newsletters &rarr;</a></p>

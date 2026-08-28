@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="build" content="d62e251804f9">
+<meta name="build" content="a061dc438150">
 <title>Blogs, podcasts and newsletters | Conservation Portal</title>
 <meta name="description" content="What to read and listen to while the fieldwork waits. 19 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/blogs-podcasts-and-newsletters/">
@@ -138,8 +138,17 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 /* ---------- eight domain blocks ---------- */
 .domains{display:grid;gap:16px;margin-top:26px;
   grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.domain.wide{grid-column:span 2}
+.domain.wide ul{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.domain.wide ul li{border-bottom:1px solid var(--hair)}
+@media (max-width:1000px){
+  .domain.wide{grid-column:auto}
+  .domain.wide ul{grid-template-columns:1fr}}
 @media (max-width:740px){.domains{grid-template-columns:1fr}}
-.domain{background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
+/* scroll-margin so a breadcrumb landing on #money-and-services is not hidden under
+   the sticky header */
+.domain{scroll-margin-top:104px;
+  background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
   padding:24px 24px 20px;
   /* the mark's angled panel, echoed once per block */
   clip-path:polygon(18px 0,100% 0,100% 100%,0 100%,0 18px)}
@@ -179,15 +188,22 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
   color:var(--forest);display:inline-flex;align-items:center;gap:7px}
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
-.item p{margin:4px auto 0;font-size:15px;color:var(--muted);max-width:64ch}
-.item p.use{margin:7px auto 0;padding-top:6px;font-size:13.5px;line-height:1.5;
+/* three deliberately distinct levels: name strongest, descriptor smallest and muted,
+   use-note normal weight and full size because it is what distinguishes one entry
+   from the next. If these ever look equal the pages read as a wall. */
+.item p{margin:4px auto 0;font-size:13.5px;line-height:1.55;color:var(--muted);
+  max-width:66ch}
+.item p.use{margin:8px auto 0;padding-top:7px;font-size:15px;line-height:1.55;
+  color:var(--ink);
   border-top:1px solid var(--hair);max-width:64ch}
 .item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
   text-decoration:none;border-bottom:1px solid transparent}
 .item .access:hover{border-bottom-color:currentColor}
-.pill{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
-  background:var(--pill-bg);color:var(--pill-ink);border-radius:100px;padding:2px 8px;
-  margin-left:9px;vertical-align:2px;white-space:nowrap}
+.badge{font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+  border-radius:100px;padding:2px 8px;margin-left:8px;vertical-align:2px;white-space:nowrap;
+  border:1px solid transparent}
+.badge.new{background:var(--pill-bg);color:var(--pill-ink)}
+.badge.tbg{background:transparent;color:var(--accent);border-color:var(--accent)}
 mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .item p.tags{margin:7px auto 0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
@@ -333,7 +349,7 @@ img.ondark{display:none}
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">
-<a href="/">Home</a><span>/</span><a href="/#browse">Knowledge and communication</a>
+<a href="/">Home</a><span>/</span><a href="/#knowledge-and-communication">Knowledge and communication</a>
 <span>/</span>Blogs, podcasts and newsletters
 </nav>
 <section class="cathead">
@@ -360,43 +376,43 @@ img.ondark{display:none}
 <ul class="list" id="clist">
 <li class="item"><a href="https://news.mongabay.com/" target="_blank" rel="noopener">
 <span class="nm">Mongabay<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Conservation news, including a conservation-tech series</p><p class="use">Read the conservation-tech series, and pitch them when you have a story worth reporting</p></a></li><li class="item"><a href="https://conservationbytes.com/" target="_blank" rel="noopener">
+<p>Conservation news, including a conservation-tech series</p><p class="tags"><span class="tag">Reading</span></p><p class="use">Read the conservation-tech series, and pitch them when you have a story worth reporting</p></a></li><li class="item"><a href="https://conservationbytes.com/" target="_blank" rel="noopener">
 <span class="nm">ConservationBytes<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Research blog, Corey Bradshaw</p><p class="use">Read it for blunt argument about conservation science rather than institutional messaging</p></a></li><li class="item"><a href="https://www.iucn.org/crossroads-blog" target="_blank" rel="noopener">
+<p>Research blog, Corey Bradshaw</p><p class="tags"><span class="tag">Reading</span></p><p class="use">Read it for blunt argument about conservation science rather than institutional messaging</p></a></li><li class="item"><a href="https://www.iucn.org/crossroads-blog" target="_blank" rel="noopener">
 <span class="nm">IUCN Crossroads<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>IUCN opinion blog</p><p class="use">Watch which controversies IUCN members are actually willing to air in public</p></a></li><li class="item"><a href="https://conservationvisions.com/" target="_blank" rel="noopener">
+<p>IUCN opinion blog</p><p class="tags"><span class="tag">Reading</span></p><p class="use">Watch which controversies IUCN members are actually willing to air in public</p></a></li><li class="item"><a href="https://conservationvisions.com/" target="_blank" rel="noopener">
 <span class="nm">Conservation Visions<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Wild harvest initiative</p><p class="use">Read the Wild Harvest Initiative when you need the hunting and harvest side of an argument</p></a></li><li class="item"><a href="https://www.jamesborrell.com/" target="_blank" rel="noopener">
+<p>Wild harvest initiative</p><p class="tags"><span class="tag">Reading</span></p><p class="use">Read the Wild Harvest Initiative when you need the hunting and harvest side of an argument</p></a></li><li class="item"><a href="https://www.jamesborrell.com/" target="_blank" rel="noopener">
 <span class="nm">James Borrell<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Fieldwork and careers writing</p><p class="use">Send early-career staff his career writing instead of repeating the same advice yourself</p></a></li><li class="item"><a href="https://therevelator.org/" target="_blank" rel="noopener">
+<p>Fieldwork and careers writing</p><p class="tags"><span class="tag">Reading</span></p><p class="use">Send early-career staff his career writing instead of repeating the same advice yourself</p></a></li><li class="item"><a href="https://therevelator.org/" target="_blank" rel="noopener">
 <span class="nm">The Revelator<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Editorially independent conservation journalism, Center for Biological Diversity</p><p class="use">Read it for reporting that stays independent of the organization funding it</p></a></li><li class="item"><a href="https://www.anthropocenemagazine.org/newsletters/" target="_blank" rel="noopener">
+<p>Editorially independent conservation journalism, Center for Biological Diversity</p><p class="tags"><span class="tag">Reading</span></p><p class="use">Read it for reporting that stays independent of the organization funding it</p></a></li><li class="item"><a href="https://www.anthropocenemagazine.org/newsletters/" target="_blank" rel="noopener">
 <span class="nm">Anthropocene Magazine<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Weekly digest of sustainability and conservation science</p><p class="use">Subscribe to keep up with sustainability science without reading the journals yourself</p></a></li><li class="item"><a href="https://sammatey.substack.com/" target="_blank" rel="noopener">
+<p>Weekly digest of sustainability and conservation science</p><p class="tags"><span class="tag">Reading</span></p><p class="use">Subscribe to keep up with sustainability science without reading the journals yourself</p></a></li><li class="item"><a href="https://sammatey.substack.com/" target="_blank" rel="noopener">
 <span class="nm">The Weekly Anthropocene<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Climate and biodiversity news roundup, Sam Matey</p><p class="use">Get a weekly biodiversity and climate roundup written for people who need hope</p></a></li><li class="item"><a href="https://newsletter.thexylom.com/" target="_blank" rel="noopener">
+<p>Climate and biodiversity news roundup, Sam Matey</p><p class="tags"><span class="tag">Reading</span></p><p class="use">Get a weekly biodiversity and climate roundup written for people who need hope</p></a></li><li class="item"><a href="https://newsletter.thexylom.com/" target="_blank" rel="noopener">
 <span class="nm">The Xylom<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Weekly newsletter on health, climate and environmental disparity</p><p class="use">Subscribe when you want the environmental justice framing most conservation media leaves out</p></a></li><li class="item"><a href="https://naturesarchive.com/" target="_blank" rel="noopener">
+<p>Weekly newsletter on health, climate and environmental disparity</p><p class="tags"><span class="tag">Reading</span></p><p class="use">Subscribe when you want the environmental justice framing most conservation media leaves out</p></a></li><li class="item"><a href="https://naturesarchive.com/" target="_blank" rel="noopener">
 <span class="nm">Nature&#x27;s Archive<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Ecology and natural history interviews, Michael Hawk</p><p class="use">Listen for natural history depth, and note that it is now part of Jumpstart Nature</p></a></li><li class="item"><a href="https://www.indefenseofplants.com/podcast" target="_blank" rel="noopener">
+<p>Ecology and natural history interviews, Michael Hawk</p><p class="tags"><span class="tag">Reading</span></p><p class="use">Listen for natural history depth, and note that it is now part of Jumpstart Nature</p></a></li><li class="item"><a href="https://www.indefenseofplants.com/podcast" target="_blank" rel="noopener">
 <span class="nm">In Defense of Plants<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Botany and plant conservation interviews and field stories</p><p class="use">Send it to anyone who thinks plants are the boring part of a survey</p></a></li><li class="item"><a href="https://biologicaldiversity.org/sounds-wild-podcast/" target="_blank" rel="noopener">
+<p>Botany and plant conservation interviews and field stories</p><p class="tags"><span class="tag">Reading</span></p><p class="use">Send it to anyone who thinks plants are the boring part of a survey</p></a></li><li class="item"><a href="https://biologicaldiversity.org/sounds-wild-podcast/" target="_blank" rel="noopener">
 <span class="nm">Sounds Wild<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Endangered species podcast, Center for Biological Diversity</p><p class="use">Use episodes as background briefing on a listed species before a meeting</p></a></li><li class="item"><a href="https://www.wcs.org/wcs-wild-audio" target="_blank" rel="noopener">
+<p>Endangered species podcast, Center for Biological Diversity</p><p class="tags"><span class="tag">Reading</span></p><p class="use">Use episodes as background briefing on a listed species before a meeting</p></a></li><li class="item"><a href="https://www.wcs.org/wcs-wild-audio" target="_blank" rel="noopener">
 <span class="nm">WCS Wild Audio<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Field reporting from Wildlife Conservation Society projects</p><p class="use">Hear how a large organization tells a field story, useful when you write your own</p></a></li><li class="item"><a href="https://www.bats.org.uk/resources/batchat-the-bat-conservation-trust-podcast" target="_blank" rel="noopener">
+<p>Field reporting from Wildlife Conservation Society projects</p><p class="tags"><span class="tag">Reading</span></p><p class="use">Hear how a large organization tells a field story, useful when you write your own</p></a></li><li class="item"><a href="https://www.bats.org.uk/resources/batchat-the-bat-conservation-trust-podcast" target="_blank" rel="noopener">
 <span class="nm">BatChat<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Bat ecology podcast, UK Bat Conservation Trust</p><p class="use">Catch UK bat survey practice and licensing talk that never reaches a journal</p></a></li><li class="item"><a href="https://www.buzzsprout.com/2156617" target="_blank" rel="noopener">
+<p>Bat ecology podcast, UK Bat Conservation Trust</p><p class="tags"><span class="tag">Reading</span><span class="tag">UK</span></p><p class="use">Catch UK bat survey practice and licensing talk that never reaches a journal</p></a></li><li class="item"><a href="https://www.buzzsprout.com/2156617" target="_blank" rel="noopener">
 <span class="nm">Rewilding the World<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Interviews on rewilding and nature recovery, Ben Goldsmith</p><p class="use">Listen for how rewilding projects were actually financed, not just how they were designed</p></a></li><li class="item"><a href="https://www.speciesunite.com/podcast" target="_blank" rel="noopener">
+<p>Interviews on rewilding and nature recovery, Ben Goldsmith</p><p class="tags"><span class="tag">Reading</span></p><p class="use">Listen for how rewilding projects were actually financed, not just how they were designed</p></a></li><li class="item"><a href="https://www.speciesunite.com/podcast" target="_blank" rel="noopener">
 <span class="nm">Species Unite<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Weekly conversations on animal rights and wildlife protection</p><p class="use">Listen when you need the animal rights perspective on a conservation decision</p></a></li><li class="item"><a href="https://ourwildlives.buzzsprout.com/" target="_blank" rel="noopener">
+<p>Weekly conversations on animal rights and wildlife protection</p><p class="tags"><span class="tag">Reading</span></p><p class="use">Listen when you need the animal rights perspective on a conservation decision</p></a></li><li class="item"><a href="https://ourwildlives.buzzsprout.com/" target="_blank" rel="noopener">
 <span class="nm">Our Wild Lives<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Stories from wildlife professionals in the field, The Wildlife Society</p><p class="use">Play an episode to a student who wants to know what the job is really like</p></a></li><li class="item"><a href="https://www.conservation-careers.com/podcast/" target="_blank" rel="noopener">
+<p>Stories from wildlife professionals in the field, The Wildlife Society</p><p class="tags"><span class="tag">Reading</span></p><p class="use">Play an episode to a student who wants to know what the job is really like</p></a></li><li class="item"><a href="https://www.conservation-careers.com/podcast/" target="_blank" rel="noopener">
 <span class="nm">Conservation Careers Podcast<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Interviews on building a career in conservation</p><p class="use">Listen for how people entered the field, which beats any job description</p></a></li><li class="item"><a href="https://www.fws.gov/page/future-conservation-podcast-series" target="_blank" rel="noopener">
+<p>Interviews on building a career in conservation</p><p class="tags"><span class="tag">Reading</span></p><p class="use">Listen for how people entered the field, which beats any job description</p></a></li><li class="item"><a href="https://www.fws.gov/page/future-conservation-podcast-series" target="_blank" rel="noopener">
 <span class="nm">Future of Conservation<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Conservation science and history series, US Fish and Wildlife Service</p><p class="use">Get the US agency view on conservation history, useful before any federal conversation</p></a></li>
+<p>Conservation science and history series, US Fish and Wildlife Service</p><p class="tags"><span class="tag">Reading</span><span class="tag">US</span></p><p class="use">Get the US agency view on conservation history, useful before any federal conversation</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/positive-news-and-recovery/">&larr; Positive news and recovery</a> <a href="/#browse">All categories</a></p>

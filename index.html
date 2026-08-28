@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="build" content="d62e251804f9">
+<meta name="build" content="a061dc438150">
 <title>Conservation Portal</title>
 <meta name="description" content="611 hand-checked resources for wildlife conservationists across 48 categories: funding, species data, field tech, jobs and training.">
 <link rel="canonical" href="https://conservationportal.org/">
@@ -138,8 +138,17 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 /* ---------- eight domain blocks ---------- */
 .domains{display:grid;gap:16px;margin-top:26px;
   grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.domain.wide{grid-column:span 2}
+.domain.wide ul{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.domain.wide ul li{border-bottom:1px solid var(--hair)}
+@media (max-width:1000px){
+  .domain.wide{grid-column:auto}
+  .domain.wide ul{grid-template-columns:1fr}}
 @media (max-width:740px){.domains{grid-template-columns:1fr}}
-.domain{background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
+/* scroll-margin so a breadcrumb landing on #money-and-services is not hidden under
+   the sticky header */
+.domain{scroll-margin-top:104px;
+  background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
   padding:24px 24px 20px;
   /* the mark's angled panel, echoed once per block */
   clip-path:polygon(18px 0,100% 0,100% 100%,0 100%,0 18px)}
@@ -179,15 +188,22 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
   color:var(--forest);display:inline-flex;align-items:center;gap:7px}
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
-.item p{margin:4px auto 0;font-size:15px;color:var(--muted);max-width:64ch}
-.item p.use{margin:7px auto 0;padding-top:6px;font-size:13.5px;line-height:1.5;
+/* three deliberately distinct levels: name strongest, descriptor smallest and muted,
+   use-note normal weight and full size because it is what distinguishes one entry
+   from the next. If these ever look equal the pages read as a wall. */
+.item p{margin:4px auto 0;font-size:13.5px;line-height:1.55;color:var(--muted);
+  max-width:66ch}
+.item p.use{margin:8px auto 0;padding-top:7px;font-size:15px;line-height:1.55;
+  color:var(--ink);
   border-top:1px solid var(--hair);max-width:64ch}
 .item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
   text-decoration:none;border-bottom:1px solid transparent}
 .item .access:hover{border-bottom-color:currentColor}
-.pill{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
-  background:var(--pill-bg);color:var(--pill-ink);border-radius:100px;padding:2px 8px;
-  margin-left:9px;vertical-align:2px;white-space:nowrap}
+.badge{font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+  border-radius:100px;padding:2px 8px;margin-left:8px;vertical-align:2px;white-space:nowrap;
+  border:1px solid transparent}
+.badge.new{background:var(--pill-bg);color:var(--pill-ink)}
+.badge.tbg{background:transparent;color:var(--accent);border-color:var(--accent)}
 mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .item p.tags{margin:7px auto 0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
@@ -351,42 +367,42 @@ img.ondark{display:none}
 <div id="browse">
 <section class="sechead"><h2>Browse conservation resources</h2>
 <p>Eight domains, 48 categories. More ways to protect wildlife.</p></section>
-<div class="domains"><div class="domain">
+<div class="domains"><div class="domain wide" id="money-and-services">
 <div class="dh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8.5 12 4l9 4.5-9 4.5-9-4.5Z"/><path d="m3 13.5 9 4.5 9-4.5"/></svg>
 <h3>Money and services</h3></div>
 <p class="dmeta">134 resources &middot; 10 categories</p>
-<ul><li><a href="/funding-and-grants/">Funding and grants<span class="n">20</span></a></li><li><a href="/fundraising/">Fundraising<span class="n">10</span></a></li><li><a href="/conservation-swag/">Conservation swag<span class="n">3</span></a></li><li><a href="/prizes-awards-and-competitions/">Prizes, awards and competitions<span class="n">32</span></a></li><li><a href="/biodiversity-finance-mechanisms/">Biodiversity finance mechanisms<span class="n">4</span></a></li><li><a href="/fiscal-sponsorship/">Fiscal sponsorship<span class="n">21</span></a></li><li><a href="/consulting-and-advisory-services/">Consulting and advisory services<span class="n">17</span></a></li><li><a href="/ai-tools-for-nonprofits/">AI tools for nonprofits<span class="n">10</span></a></li><li><a href="/discounted-software-for-nonprofits/">Discounted software for nonprofits<span class="n">10</span></a></li><li><a href="/legal-insurance-and-back-office/">Legal, insurance and back office<span class="n">7</span></a></li></ul></div><div class="domain">
+<ul><li><a href="/funding-and-grants/">Funding and grants<span class="n">20</span></a></li><li><a href="/fundraising/">Fundraising<span class="n">10</span></a></li><li><a href="/conservation-swag/">Conservation swag<span class="n">3</span></a></li><li><a href="/prizes-awards-and-competitions/">Prizes, awards and competitions<span class="n">32</span></a></li><li><a href="/biodiversity-finance-mechanisms/">Biodiversity finance mechanisms<span class="n">4</span></a></li><li><a href="/fiscal-sponsorship/">Fiscal sponsorship<span class="n">21</span></a></li><li><a href="/consulting-and-advisory-services/">Consulting and advisory services<span class="n">17</span></a></li><li><a href="/ai-tools-for-nonprofits/">AI tools for nonprofits<span class="n">10</span></a></li><li><a href="/discounted-software-for-nonprofits/">Discounted software for nonprofits<span class="n">10</span></a></li><li><a href="/legal-insurance-and-back-office/">Legal, insurance and back office<span class="n">7</span></a></li></ul></div><div class="domain wide" id="recording-and-data">
 <div class="dh"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="14" r="2.2"/><path d="M7.5 9.5a6 6 0 0 0 0 9"/><path d="M16.5 9.5a6 6 0 0 1 0 9"/><path d="M12 11.8V4"/></svg>
 <h3>Recording and data</h3></div>
 <p class="dmeta">150 resources &middot; 7 categories</p>
-<ul><li><a href="/occurrence-and-monitoring-platforms/">Occurrence and monitoring platforms<span class="n">13</span></a></li><li><a href="/citizen-science-recording-projects/">Citizen science recording projects<span class="n">31</span></a></li><li><a href="/incident-and-threat-reporting/">Incident and threat reporting<span class="n">27</span></a></li><li><a href="/bioblitzes-and-awareness-days/">Bioblitzes and awareness days<span class="n">22</span></a></li><li><a href="/spatial-data-and-mapping/">Spatial data and mapping<span class="n">24</span></a></li><li><a href="/analytical-methods-and-modeling-tools/">Analytical methods and modeling tools<span class="n">19</span></a></li><li><a href="/conservation-technology-and-field-equipment/">Conservation technology and field equipment<span class="n">14</span></a></li></ul></div><div class="domain">
+<ul><li><a href="/occurrence-and-monitoring-platforms/">Occurrence and monitoring platforms<span class="n">13</span></a></li><li><a href="/citizen-science-recording-projects/">Citizen science recording projects<span class="n">31</span></a></li><li><a href="/incident-and-threat-reporting/">Incident and threat reporting<span class="n">27</span></a></li><li><a href="/bioblitzes-and-awareness-days/">Bioblitzes and awareness days<span class="n">22</span></a></li><li><a href="/spatial-data-and-mapping/">Spatial data and mapping<span class="n">24</span></a></li><li><a href="/analytical-methods-and-modeling-tools/">Analytical methods and modeling tools<span class="n">19</span></a></li><li><a href="/conservation-technology-and-field-equipment/">Conservation technology and field equipment<span class="n">14</span></a></li></ul></div><div class="domain wide" id="threats-and-response">
 <div class="dh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 3 20h18L12 4Z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg>
 <h3>Threats and response</h3></div>
 <p class="dmeta">47 resources &middot; 7 categories</p>
-<ul><li><a href="/invasive-species-and-biosecurity/">Invasive species and biosecurity<span class="n">6</span></a></li><li><a href="/wildlife-health-and-disease/">Wildlife health and disease<span class="n">6</span></a></li><li><a href="/wildlife-rehabilitation-and-veterinary/">Wildlife rehabilitation and veterinary<span class="n">10</span></a></li><li><a href="/wildlife-trade-crime-and-enforcement/">Wildlife trade, crime and enforcement<span class="n">17</span></a></li><li><a href="/human-wildlife-conflict-and-coexistence/">Human-wildlife conflict and coexistence<span class="n">2</span></a></li><li><a href="/infrastructure-and-wildlife/">Infrastructure and wildlife<span class="n">2</span></a></li><li><a href="/climate-adaptation-for-species-and-sites/">Climate adaptation for species and sites<span class="n">4</span></a></li></ul></div><div class="domain">
+<ul><li><a href="/invasive-species-and-biosecurity/">Invasive species and biosecurity<span class="n">6</span></a></li><li><a href="/wildlife-health-and-disease/">Wildlife health and disease<span class="n">6</span></a></li><li><a href="/wildlife-rehabilitation-and-veterinary/">Wildlife rehabilitation and veterinary<span class="n">10</span></a></li><li><a href="/wildlife-trade-crime-and-enforcement/">Wildlife trade, crime and enforcement<span class="n">17</span></a></li><li><a href="/human-wildlife-conflict-and-coexistence/">Human-wildlife conflict and coexistence<span class="n">2</span></a></li><li><a href="/infrastructure-and-wildlife/">Infrastructure and wildlife<span class="n">2</span></a></li><li><a href="/climate-adaptation-for-species-and-sites/">Climate adaptation for species and sites<span class="n">4</span></a></li></ul></div><div class="domain" id="land-sea-and-recovery">
 <div class="dh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20v-6"/><path d="M12 14c0-2.5-1.8-4-4-4 0 2.5 1.5 4 4 4Z"/><path d="M12 14c0-2.5 1.8-4 4-4 0 2.5-1.5 4-4 4Z"/><path d="M4 20h16"/></svg>
 <h3>Land, sea and recovery</h3></div>
 <p class="dmeta">43 resources &middot; 5 categories</p>
-<ul><li><a href="/reintroduction-and-conservation-translocation/">Reintroduction and conservation translocation<span class="n">3</span></a></li><li><a href="/ecological-restoration-and-rewilding/">Ecological restoration and rewilding<span class="n">6</span></a></li><li><a href="/protected-area-management-and-ranger-welfare/">Protected area management and ranger welfare<span class="n">3</span></a></li><li><a href="/indigenous-and-community-led-conservation/">Indigenous and community-led conservation<span class="n">3</span></a></li><li><a href="/conservation-tourism/">Conservation tourism<span class="n">28</span></a></li></ul></div><div class="domain">
+<ul><li><a href="/reintroduction-and-conservation-translocation/">Reintroduction and conservation translocation<span class="n">3</span></a></li><li><a href="/ecological-restoration-and-rewilding/">Ecological restoration and rewilding<span class="n">6</span></a></li><li><a href="/protected-area-management-and-ranger-welfare/">Protected area management and ranger welfare<span class="n">3</span></a></li><li><a href="/indigenous-and-community-led-conservation/">Indigenous and community-led conservation<span class="n">3</span></a></li><li><a href="/conservation-tourism/">Conservation tourism<span class="n">28</span></a></li></ul></div><div class="domain" id="rules-and-planning">
 <div class="dh"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m15 9-4.2 1.8L9 15l4.2-1.8Z"/></svg>
 <h3>Rules and planning</h3></div>
 <p class="dmeta">26 resources &middot; 3 categories</p>
-<ul><li><a href="/international-treaties-and-policy/">International treaties and policy<span class="n">10</span></a></li><li><a href="/permits-ethics-and-genetic-resources/">Permits, ethics and genetic resources<span class="n">4</span></a></li><li><a href="/planning-evaluation-and-practice/">Planning, evaluation and practice<span class="n">12</span></a></li></ul></div><div class="domain">
+<ul><li><a href="/international-treaties-and-policy/">International treaties and policy<span class="n">10</span></a></li><li><a href="/permits-ethics-and-genetic-resources/">Permits, ethics and genetic resources<span class="n">4</span></a></li><li><a href="/planning-evaluation-and-practice/">Planning, evaluation and practice<span class="n">12</span></a></li></ul></div><div class="domain" id="species-and-status">
 <div class="dh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V11"/><path d="M12 11 6 6"/><path d="M12 11l6-5"/><circle cx="6" cy="5" r="2"/><circle cx="18" cy="5" r="2"/></svg>
 <h3>Species and status</h3></div>
 <p class="dmeta">69 resources &middot; 4 categories</p>
-<ul><li><a href="/taxon-specialist-networks/">Taxon specialist networks<span class="n">16</span></a></li><li><a href="/species-and-taxonomy-databases/">Species and taxonomy databases<span class="n">32</span></a></li><li><a href="/lost-species-and-rediscovery/">Lost species and rediscovery<span class="n">15</span></a></li><li><a href="/zoos-and-ex-situ/">Zoos and ex-situ<span class="n">6</span></a></li></ul></div><div class="domain">
+<ul><li><a href="/taxon-specialist-networks/">Taxon specialist networks<span class="n">16</span></a></li><li><a href="/species-and-taxonomy-databases/">Species and taxonomy databases<span class="n">32</span></a></li><li><a href="/lost-species-and-rediscovery/">Lost species and rediscovery<span class="n">15</span></a></li><li><a href="/zoos-and-ex-situ/">Zoos and ex-situ<span class="n">6</span></a></li></ul></div><div class="domain" id="people">
 <div class="dh"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="17" r="2.4"/><circle cx="18" cy="17" r="2.4"/><circle cx="12" cy="6.5" r="2.4"/><path d="m10.4 8.4-2.8 6.3"/><path d="m13.6 8.4 2.8 6.3"/><path d="M8.4 17h7.2"/></svg>
 <h3>People</h3></div>
 <p class="dmeta">44 resources &middot; 6 categories</p>
-<ul><li><a href="/organization-directories/">Organization directories<span class="n">6</span></a></li><li><a href="/communities-and-networks/">Communities and networks<span class="n">14</span></a></li><li><a href="/jobs-and-careers/">Jobs and careers<span class="n">9</span></a></li><li><a href="/volunteering-and-expeditions/">Volunteering and expeditions<span class="n">8</span></a></li><li><a href="/youth-engagement-and-education/">Youth engagement and education<span class="n">4</span></a></li><li><a href="/field-safety-and-remote-medicine/">Field safety and remote medicine<span class="n">3</span></a></li></ul></div><div class="domain">
+<ul><li><a href="/organization-directories/">Organization directories<span class="n">6</span></a></li><li><a href="/communities-and-networks/">Communities and networks<span class="n">14</span></a></li><li><a href="/jobs-and-careers/">Jobs and careers<span class="n">9</span></a></li><li><a href="/volunteering-and-expeditions/">Volunteering and expeditions<span class="n">8</span></a></li><li><a href="/youth-engagement-and-education/">Youth engagement and education<span class="n">4</span></a></li><li><a href="/field-safety-and-remote-medicine/">Field safety and remote medicine<span class="n">3</span></a></li></ul></div><div class="domain" id="knowledge-and-communication">
 <div class="dh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h6a2 2 0 0 1 2 2V20a2.5 2.5 0 0 0-2.5-2.5H4Z"/><path d="M20 5.5h-6a2 2 0 0 0-2 2V20a2.5 2.5 0 0 1 2.5-2.5H20Z"/></svg>
 <h3>Knowledge and communication</h3></div>
 <p class="dmeta">98 resources &middot; 6 categories</p>
 <ul><li><a href="/literature-evidence-and-data-access/">Literature, evidence and data access<span class="n">21</span></a></li><li><a href="/training-and-courses/">Training and courses<span class="n">21</span></a></li><li><a href="/communication-design-and-outreach/">Communication, design and outreach<span class="n">18</span></a></li><li><a href="/free-imagery-icons-and-fonts/">Free imagery, icons and fonts<span class="n">12</span></a></li><li><a href="/positive-news-and-recovery/">Positive news and recovery<span class="n">7</span></a></li><li><a href="/blogs-podcasts-and-newsletters/">Blogs, podcasts and newsletters<span class="n">19</span></a></li></ul></div></div>
 
-<section class="sechead" id="recent"><h2>Recently added</h2>
-<p>Latest additions, 2026-08-26.</p></section>
+<section class="sechead" id="recent"><h2>New to the Portal</h2>
+<p>The most recent additions, and where they landed.</p></section>
 <div class="recent"><a href="https://grants.biodiversitygroup.org/" target="_blank" rel="noopener"><span class="rn">TBG conservation grants database</span><span class="rc">Funding and grants</span></a><a href="https://grantable.co/" target="_blank" rel="noopener"><span class="rn">Grantable</span><span class="rc">Funding and grants</span></a><a href="https://onepercentfortheplanet.org/" target="_blank" rel="noopener"><span class="rn">1% for the Planet</span><span class="rc">Fundraising</span></a><a href="https://earthgives.org/" target="_blank" rel="noopener"><span class="rn">Earth Gives</span><span class="rc">Fundraising</span></a></div>
 </div>
 </div>

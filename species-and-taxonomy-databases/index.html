@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="build" content="d62e251804f9">
+<meta name="build" content="a061dc438150">
 <title>Species and taxonomy databases | Conservation Portal</title>
 <meta name="description" content="Names, threat status, distributions and the records behind them. 32 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/species-and-taxonomy-databases/">
@@ -138,8 +138,17 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 /* ---------- eight domain blocks ---------- */
 .domains{display:grid;gap:16px;margin-top:26px;
   grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.domain.wide{grid-column:span 2}
+.domain.wide ul{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.domain.wide ul li{border-bottom:1px solid var(--hair)}
+@media (max-width:1000px){
+  .domain.wide{grid-column:auto}
+  .domain.wide ul{grid-template-columns:1fr}}
 @media (max-width:740px){.domains{grid-template-columns:1fr}}
-.domain{background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
+/* scroll-margin so a breadcrumb landing on #money-and-services is not hidden under
+   the sticky header */
+.domain{scroll-margin-top:104px;
+  background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
   padding:24px 24px 20px;
   /* the mark's angled panel, echoed once per block */
   clip-path:polygon(18px 0,100% 0,100% 100%,0 100%,0 18px)}
@@ -179,15 +188,22 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
   color:var(--forest);display:inline-flex;align-items:center;gap:7px}
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
-.item p{margin:4px auto 0;font-size:15px;color:var(--muted);max-width:64ch}
-.item p.use{margin:7px auto 0;padding-top:6px;font-size:13.5px;line-height:1.5;
+/* three deliberately distinct levels: name strongest, descriptor smallest and muted,
+   use-note normal weight and full size because it is what distinguishes one entry
+   from the next. If these ever look equal the pages read as a wall. */
+.item p{margin:4px auto 0;font-size:13.5px;line-height:1.55;color:var(--muted);
+  max-width:66ch}
+.item p.use{margin:8px auto 0;padding-top:7px;font-size:15px;line-height:1.55;
+  color:var(--ink);
   border-top:1px solid var(--hair);max-width:64ch}
 .item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
   text-decoration:none;border-bottom:1px solid transparent}
 .item .access:hover{border-bottom-color:currentColor}
-.pill{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
-  background:var(--pill-bg);color:var(--pill-ink);border-radius:100px;padding:2px 8px;
-  margin-left:9px;vertical-align:2px;white-space:nowrap}
+.badge{font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+  border-radius:100px;padding:2px 8px;margin-left:8px;vertical-align:2px;white-space:nowrap;
+  border:1px solid transparent}
+.badge.new{background:var(--pill-bg);color:var(--pill-ink)}
+.badge.tbg{background:transparent;color:var(--accent);border-color:var(--accent)}
 mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .item p.tags{margin:7px auto 0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
@@ -333,7 +349,7 @@ img.ondark{display:none}
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">
-<a href="/">Home</a><span>/</span><a href="/#browse">Species and status</a>
+<a href="/">Home</a><span>/</span><a href="/#species-and-status">Species and status</a>
 <span>/</span>Species and taxonomy databases
 </nav>
 <section class="cathead">
@@ -360,69 +376,69 @@ img.ondark{display:none}
 <ul class="list" id="clist">
 <li class="item"><a href="https://www.gbif.org/" target="_blank" rel="noopener">
 <span class="nm">GBIF<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Global occurrence records</p><p class="use">Download occurrence records for a species or region as the starting dataset for range and gap analysis</p></a></li><li class="item"><a href="https://www.iucnredlist.org/" target="_blank" rel="noopener">
+<p>Global occurrence records</p><p class="tags"><span class="tag">Database</span><span class="tag">Global</span></p><p class="use">Download occurrence records for a species or region as the starting dataset for range and gap analysis</p></a></li><li class="item"><a href="https://www.iucnredlist.org/" target="_blank" rel="noopener">
 <span class="nm">IUCN Red List<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Global threat assessments</p><p class="use">Establish what threat category a species carries, then read the assessment rationale rather than just the label</p></a></li><li class="item"><a href="https://www.catalogueoflife.org/" target="_blank" rel="noopener">
+<p>Global threat assessments</p><p class="tags"><span class="tag">Database</span><span class="tag">Global</span></p><p class="use">Establish what threat category a species carries, then read the assessment rationale rather than just the label</p></a></li><li class="item"><a href="https://www.catalogueoflife.org/" target="_blank" rel="noopener">
 <span class="nm">Catalogue of Life<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Names backbone</p><p class="use">Resolve a scientific name against the global taxonomic backbone before joining datasets built on different name sources</p></a></li><li class="item"><a href="https://itis.gov/" target="_blank" rel="noopener">
+<p>Names backbone</p><p class="tags"><span class="tag">Database</span></p><p class="use">Resolve a scientific name against the global taxonomic backbone before joining datasets built on different name sources</p></a></li><li class="item"><a href="https://itis.gov/" target="_blank" rel="noopener">
 <span class="nm">ITIS<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Taxonomic names, strongest for North America</p><p class="use">Match North American names to a stable federal taxonomy when reconciling a US agency dataset</p></a></li><li class="item"><a href="https://eol.org/" target="_blank" rel="noopener">
+<p>Taxonomic names, strongest for North America</p><p class="tags"><span class="tag">Database</span><span class="tag">US</span></p><p class="use">Match North American names to a stable federal taxonomy when reconciling a US agency dataset</p></a></li><li class="item"><a href="https://eol.org/" target="_blank" rel="noopener">
 <span class="nm">Encyclopedia of Life<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Species pages and an education arm</p><p class="use">Pull ready-made species pages and trait data when building education material rather than writing from scratch</p></a></li><li class="item"><a href="https://explorer.natureserve.org/" target="_blank" rel="noopener">
+<p>Species pages and an education arm</p><p class="tags"><span class="tag">Database</span></p><p class="use">Pull ready-made species pages and trait data when building education material rather than writing from scratch</p></a></li><li class="item"><a href="https://explorer.natureserve.org/" target="_blank" rel="noopener">
 <span class="nm">NatureServe Explorer<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Conservation status ranks including plants and invertebrates, North America</p><p class="use">Look up a subnational rank for plants and invertebrates the global Red List has never assessed</p></a></li><li class="item"><a href="https://speciesplus.net/" target="_blank" rel="noopener">
+<p>Conservation status ranks including plants and invertebrates, North America</p><p class="tags"><span class="tag">Database</span><span class="tag">US</span></p><p class="use">Look up a subnational rank for plants and invertebrates the global Red List has never assessed</p></a></li><li class="item"><a href="https://speciesplus.net/" target="_blank" rel="noopener">
 <span class="nm">Species+<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>CITES and CMS listings per species</p><p class="use">Confirm the current CITES appendix and CMS listing for a species before planning any cross-border shipment</p></a></li><li class="item"><a href="https://mol.org/" target="_blank" rel="noopener">
+<p>CITES and CMS listings per species</p><p class="tags"><span class="tag">Database</span></p><p class="use">Confirm the current CITES appendix and CMS listing for a species before planning any cross-border shipment</p></a></li><li class="item"><a href="https://mol.org/" target="_blank" rel="noopener">
 <span class="nm">Map of Life<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Range maps and indicators</p><p class="use">Overlay modeled ranges to see what should occur at a site you have not yet surveyed</p></a></li><li class="item"><a href="http://www.reptile-database.org/" target="_blank" rel="noopener">
+<p>Range maps and indicators</p><p class="tags"><span class="tag">Database</span></p><p class="use">Overlay modeled ranges to see what should occur at a site you have not yet surveyed</p></a></li><li class="item"><a href="http://www.reptile-database.org/" target="_blank" rel="noopener">
 <span class="nm">Reptile Database<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Reptile taxonomy</p><p class="use">Check whether a reptile name is current before publishing, since the group is split and renamed constantly</p></a></li><li class="item"><a href="https://amphibiansoftheworld.amnh.org/" target="_blank" rel="noopener">
+<p>Reptile taxonomy</p><p class="tags"><span class="tag">Database</span></p><p class="use">Check whether a reptile name is current before publishing, since the group is split and renamed constantly</p></a></li><li class="item"><a href="https://amphibiansoftheworld.amnh.org/" target="_blank" rel="noopener">
 <span class="nm">Amphibian Species of the World<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Amphibian taxonomy</p><p class="use">Settle amphibian nomenclature against the reference most herpetological journals expect authors to follow</p></a></li><li class="item"><a href="https://amphibiaweb.org/" target="_blank" rel="noopener">
+<p>Amphibian taxonomy</p><p class="tags"><span class="tag">Database</span></p><p class="use">Settle amphibian nomenclature against the reference most herpetological journals expect authors to follow</p></a></li><li class="item"><a href="https://amphibiaweb.org/" target="_blank" rel="noopener">
 <span class="nm">AmphibiaWeb<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Amphibian species accounts</p><p class="use">Read a species account and the current global amphibian count when scoping a project or proposal</p></a></li><li class="item"><a href="https://www.conservationneeds.org/" target="_blank" rel="noopener">
+<p>Amphibian species accounts</p><p class="tags"><span class="tag">Database</span></p><p class="use">Read a species account and the current global amphibian count when scoping a project or proposal</p></a></li><li class="item"><a href="https://www.conservationneeds.org/" target="_blank" rel="noopener">
 <span class="nm">Amphibian Conservation Needs Assessments<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Per-species conservation needs</p><p class="use">See which specific actions experts think a species needs, which is more actionable than a threat category</p></a></li><li class="item"><a href="https://www.mammaldiversity.org/" target="_blank" rel="noopener">
+<p>Per-species conservation needs</p><p class="tags"><span class="tag">Database</span></p><p class="use">See which specific actions experts think a species needs, which is more actionable than a threat category</p></a></li><li class="item"><a href="https://www.mammaldiversity.org/" target="_blank" rel="noopener">
 <span class="nm">Mammal Diversity Database<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Mammal taxonomy</p><p class="use">Track mammal taxonomic changes so a species list built last year still matches what reviewers expect</p></a></li><li class="item"><a href="https://alltheworldsprimates.org/" target="_blank" rel="noopener">
+<p>Mammal taxonomy</p><p class="tags"><span class="tag">Database</span></p><p class="use">Track mammal taxonomic changes so a species list built last year still matches what reviewers expect</p></a></li><li class="item"><a href="https://alltheworldsprimates.org/" target="_blank" rel="noopener">
 <span class="nm">All The World&#x27;s Primates<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Primate species accounts</p><p class="use">Look up a primate species account when scoping surveys in a region you do not know</p></a></li><li class="item"><a href="https://www.elephant.se/" target="_blank" rel="noopener">
+<p>Primate species accounts</p><p class="tags"><span class="tag">Database</span></p><p class="use">Look up a primate species account when scoping surveys in a region you do not know</p></a></li><li class="item"><a href="https://www.elephant.se/" target="_blank" rel="noopener">
 <span class="nm">Elephant Database<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Elephant records</p><p class="use">Look up historic captive and wild elephant records when reconstructing a population history</p></a></li><li class="item"><a href="http://www.rhinoresourcecenter.com/" target="_blank" rel="noopener">
+<p>Elephant records</p><p class="tags"><span class="tag">Database</span></p><p class="use">Look up historic captive and wild elephant records when reconstructing a population history</p></a></li><li class="item"><a href="http://www.rhinoresourcecenter.com/" target="_blank" rel="noopener">
 <span class="nm">Rhino Resource Center<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Rhino literature and images</p><p class="use">Search decades of rhino literature and imagery, including old reports that never reached the journals</p></a></li><li class="item"><a href="https://animalbase.org/" target="_blank" rel="noopener">
+<p>Rhino literature and images</p><p class="tags"><span class="tag">Database</span></p><p class="use">Search decades of rhino literature and imagery, including old reports that never reached the journals</p></a></li><li class="item"><a href="https://animalbase.org/" target="_blank" rel="noopener">
 <span class="nm">AnimalBase<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Early zoological names and types</p><p class="use">Trace an early zoological name to its original description and type material when resolving a nomenclatural problem</p></a></li><li class="item"><a href="https://avianknowledge.net/" target="_blank" rel="noopener">
+<p>Early zoological names and types</p><p class="tags"><span class="tag">Database</span></p><p class="use">Trace an early zoological name to its original description and type material when resolving a nomenclatural problem</p></a></li><li class="item"><a href="https://avianknowledge.net/" target="_blank" rel="noopener">
 <span class="nm">Avian Knowledge Network<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Bird data network</p><p class="use">Access pooled US bird monitoring data across agencies instead of negotiating with each one separately</p></a></li><li class="item"><a href="https://fishbase.org/" target="_blank" rel="noopener">
+<p>Bird data network</p><p class="tags"><span class="tag">Database</span></p><p class="use">Access pooled US bird monitoring data across agencies instead of negotiating with each one separately</p></a></li><li class="item"><a href="https://fishbase.org/" target="_blank" rel="noopener">
 <span class="nm">FishBase<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Fish species data</p><p class="use">Pull life history traits, length weight relationships and diet data for stock and vulnerability work</p></a></li><li class="item"><a href="https://shark-base.org/" target="_blank" rel="noopener">
+<p>Fish species data</p><p class="tags"><span class="tag">Database</span></p><p class="use">Pull life history traits, length weight relationships and diet data for stock and vulnerability work</p></a></li><li class="item"><a href="https://shark-base.org/" target="_blank" rel="noopener">
 <span class="nm">Shark-Base<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Elasmobranch records</p><p class="use">Check elasmobranch records when compiling a regional shark and ray species list</p></a></li><li class="item"><a href="https://obis.org/" target="_blank" rel="noopener">
+<p>Elasmobranch records</p><p class="tags"><span class="tag">Database</span></p><p class="use">Check elasmobranch records when compiling a regional shark and ray species list</p></a></li><li class="item"><a href="https://obis.org/" target="_blank" rel="noopener">
 <span class="nm">OBIS<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Marine occurrences</p><p class="use">Download marine occurrence data for a sea area, then check publisher country to judge sampling bias</p></a></li><li class="item"><a href="https://www.marinespecies.org/" target="_blank" rel="noopener">
+<p>Marine occurrences</p><p class="tags"><span class="tag">Database</span></p><p class="use">Download marine occurrence data for a sea area, then check publisher country to judge sampling bias</p></a></li><li class="item"><a href="https://www.marinespecies.org/" target="_blank" rel="noopener">
 <span class="nm">WoRMS<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Marine species register</p><p class="use">Validate marine species names against the accepted register before submitting occurrence data anywhere</p></a></li><li class="item"><a href="https://globalfungi.com/" target="_blank" rel="noopener">
+<p>Marine species register</p><p class="tags"><span class="tag">Database</span></p><p class="use">Validate marine species names against the accepted register before submitting occurrence data anywhere</p></a></li><li class="item"><a href="https://globalfungi.com/" target="_blank" rel="noopener">
 <span class="nm">GlobalFungi<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Fungal occurrence database</p><p class="use">Query soil fungal sequence occurrences when asking whether a habitat&#x27;s fungal community is documented at all</p></a></li><li class="item"><a href="https://swbiodiversity.org/seinet/" target="_blank" rel="noopener">
+<p>Fungal occurrence database</p><p class="tags"><span class="tag">Database</span></p><p class="use">Query soil fungal sequence occurrences when asking whether a habitat&#x27;s fungal community is documented at all</p></a></li><li class="item"><a href="https://swbiodiversity.org/seinet/" target="_blank" rel="noopener">
 <span class="nm">SEINet / Symbiota<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Herbarium networks with a checklist generator</p><p class="use">Generate a herbarium-backed plant checklist for a site, with specimen records standing behind every name</p></a></li><li class="item"><a href="https://www.calflora.org/" target="_blank" rel="noopener">
+<p>Herbarium networks with a checklist generator</p><p class="tags"><span class="tag">Database</span></p><p class="use">Generate a herbarium-backed plant checklist for a site, with specimen records standing behind every name</p></a></li><li class="item"><a href="https://www.calflora.org/" target="_blank" rel="noopener">
 <span class="nm">Calflora<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>California plant occurrences and rarity</p><p class="use">Map documented occurrences of a rare California plant before ground-truthing a proposed development site</p></a></li><li class="item"><a href="https://ucjeps.berkeley.edu/" target="_blank" rel="noopener">
+<p>California plant occurrences and rarity</p><p class="tags"><span class="tag">Database</span><span class="tag">US</span></p><p class="use">Map documented occurrences of a rare California plant before ground-truthing a proposed development site</p></a></li><li class="item"><a href="https://ucjeps.berkeley.edu/" target="_blank" rel="noopener">
 <span class="nm">Jepson eFlora<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>California flora</p><p class="use">Key out a California plant and confirm which name the state&#x27;s floristic standard accepts</p></a></li><li class="item"><a href="https://antmaps.org/" target="_blank" rel="noopener">
+<p>California flora</p><p class="tags"><span class="tag">Database</span><span class="tag">US</span></p><p class="use">Key out a California plant and confirm which name the state&#x27;s floristic standard accepts</p></a></li><li class="item"><a href="https://antmaps.org/" target="_blank" rel="noopener">
 <span class="nm">antmaps.org<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Ant distributions</p><p class="use">Compare ant species lists between two regions to see which introductions are already established</p></a></li><li class="item"><a href="https://recentlyextinctspecies.com/" target="_blank" rel="noopener">
+<p>Ant distributions</p><p class="tags"><span class="tag">Database</span></p><p class="use">Compare ant species lists between two regions to see which introductions are already established</p></a></li><li class="item"><a href="https://recentlyextinctspecies.com/" target="_blank" rel="noopener">
 <span class="nm">Recently Extinct Plants and Animals Database<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Extinctions including plants and invertebrates</p><p class="use">Check whether a species is already treated as extinct, including plants and invertebrates most lists skip</p></a></li><li class="item"><a href="https://www.keybiodiversityareas.org/" target="_blank" rel="noopener">
+<p>Extinctions including plants and invertebrates</p><p class="tags"><span class="tag">Database</span></p><p class="use">Check whether a species is already treated as extinct, including plants and invertebrates most lists skip</p></a></li><li class="item"><a href="https://www.keybiodiversityareas.org/" target="_blank" rel="noopener">
 <span class="nm">World Database of Key Biodiversity Areas<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>KBA boundaries and triggers</p><p class="use">Check whether your project area sits inside a Key Biodiversity Area and which species triggered it</p></a></li><li class="item"><a href="https://zeroextinction.org/" target="_blank" rel="noopener">
+<p>KBA boundaries and triggers</p><p class="tags"><span class="tag">Database</span></p><p class="use">Check whether your project area sits inside a Key Biodiversity Area and which species triggered it</p></a></li><li class="item"><a href="https://zeroextinction.org/" target="_blank" rel="noopener">
 <span class="nm">Alliance for Zero Extinction<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>AZE sites and species</p><p class="use">Find out if a site holds the only population of a threatened species, which reframes the funding case</p></a></li><li class="item"><a href="https://localbiodiversityoutlooks.net/" target="_blank" rel="noopener">
+<p>AZE sites and species</p><p class="tags"><span class="tag">Database</span></p><p class="use">Find out if a site holds the only population of a threatened species, which reframes the funding case</p></a></li><li class="item"><a href="https://localbiodiversityoutlooks.net/" target="_blank" rel="noopener">
 <span class="nm">Local Biodiversity Outlooks<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Community biodiversity reporting</p><p class="use">Cite community-authored case studies when arguing that local and Indigenous action delivers the global targets</p></a></li><li class="item"><a href="https://snakedb.org/" target="_blank" rel="noopener">
+<p>Community biodiversity reporting</p><p class="tags"><span class="tag">Database</span></p><p class="use">Cite community-authored case studies when arguing that local and Indigenous action delivers the global targets</p></a></li><li class="item"><a href="https://snakedb.org/" target="_blank" rel="noopener">
 <span class="nm">snakeDB<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Referenced venom and LD50 data for snake research</p><p class="use">Look up venom and LD50 figures with a source attached, rather than numbers that circulate without one</p></a></li>
+<p>Referenced venom and LD50 data for snake research</p><p class="tags"><span class="tag">Database</span></p><p class="use">Look up venom and LD50 figures with a source attached, rather than numbers that circulate without one</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/taxon-specialist-networks/">&larr; Taxon specialist networks</a> <a href="/#browse">All categories</a> <a href="/lost-species-and-rediscovery/">Lost species and rediscovery &rarr;</a></p>

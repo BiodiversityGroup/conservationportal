@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="build" content="d62e251804f9">
+<meta name="build" content="a061dc438150">
 <title>Funding and grants | Conservation Portal</title>
 <meta name="description" content="Grant databases, the funders themselves, and the networks behind them. 20 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/funding-and-grants/">
@@ -138,8 +138,17 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 /* ---------- eight domain blocks ---------- */
 .domains{display:grid;gap:16px;margin-top:26px;
   grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.domain.wide{grid-column:span 2}
+.domain.wide ul{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.domain.wide ul li{border-bottom:1px solid var(--hair)}
+@media (max-width:1000px){
+  .domain.wide{grid-column:auto}
+  .domain.wide ul{grid-template-columns:1fr}}
 @media (max-width:740px){.domains{grid-template-columns:1fr}}
-.domain{background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
+/* scroll-margin so a breadcrumb landing on #money-and-services is not hidden under
+   the sticky header */
+.domain{scroll-margin-top:104px;
+  background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
   padding:24px 24px 20px;
   /* the mark's angled panel, echoed once per block */
   clip-path:polygon(18px 0,100% 0,100% 100%,0 100%,0 18px)}
@@ -179,15 +188,22 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
   color:var(--forest);display:inline-flex;align-items:center;gap:7px}
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
-.item p{margin:4px auto 0;font-size:15px;color:var(--muted);max-width:64ch}
-.item p.use{margin:7px auto 0;padding-top:6px;font-size:13.5px;line-height:1.5;
+/* three deliberately distinct levels: name strongest, descriptor smallest and muted,
+   use-note normal weight and full size because it is what distinguishes one entry
+   from the next. If these ever look equal the pages read as a wall. */
+.item p{margin:4px auto 0;font-size:13.5px;line-height:1.55;color:var(--muted);
+  max-width:66ch}
+.item p.use{margin:8px auto 0;padding-top:7px;font-size:15px;line-height:1.55;
+  color:var(--ink);
   border-top:1px solid var(--hair);max-width:64ch}
 .item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
   text-decoration:none;border-bottom:1px solid transparent}
 .item .access:hover{border-bottom-color:currentColor}
-.pill{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
-  background:var(--pill-bg);color:var(--pill-ink);border-radius:100px;padding:2px 8px;
-  margin-left:9px;vertical-align:2px;white-space:nowrap}
+.badge{font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+  border-radius:100px;padding:2px 8px;margin-left:8px;vertical-align:2px;white-space:nowrap;
+  border:1px solid transparent}
+.badge.new{background:var(--pill-bg);color:var(--pill-ink)}
+.badge.tbg{background:transparent;color:var(--accent);border-color:var(--accent)}
 mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .item p.tags{margin:7px auto 0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
@@ -333,7 +349,7 @@ img.ondark{display:none}
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">
-<a href="/">Home</a><span>/</span><a href="/#browse">Money and services</a>
+<a href="/">Home</a><span>/</span><a href="/#money-and-services">Money and services</a>
 <span>/</span>Funding and grants
 </nav>
 <section class="cathead">
@@ -359,46 +375,46 @@ img.ondark{display:none}
 </div>
 <ul class="list" id="clist">
 <li class="item"><a href="https://grants.biodiversitygroup.org/" target="_blank" rel="noopener">
-<span class="nm">TBG conservation grants database<span class="arw" aria-hidden="true">&#8599;</span></span><span class="pill">new</span>
-<p>The most comprehensive list of wildlife grants anywhere, over 500 of them, with an assistant that remembers your mission and programs and ranks which grants actually fit you. Open to Fiscal Sponsorship Alliance members only. We run this one</p><p class="use">Get over 500 wildlife grants ranked against your own mission, as a Fiscal Sponsorship Alliance member</p></a><a class="access" href="https://biodiversitygroup.org/fiscal-sponsorship/" target="_blank" rel="noopener">Join the Fiscal Sponsorship Alliance &rarr;</a></li><li class="item"><a href="https://phoenixspeciesproject.org/" target="_blank" rel="noopener">
-<span class="nm">Phoenix Species Project<span class="arw" aria-hidden="true">&#8599;</span></span><span class="pill">new</span>
-<p>Re:wild, the Bezos Earth Fund and IUCN SSC putting $200M into recovering 100 Critically Endangered and Extinct-in-the-Wild species across 30 countries</p><p class="use">See whether your species is among the 100, which decides whether serious money exists</p></a></li><li class="item"><a href="https://terravivagrants.org/" target="_blank" rel="noopener">
+<span class="nm">TBG conservation grants database<span class="arw" aria-hidden="true">&#8599;</span></span><span class="badge tbg" title="Run by The Biodiversity Group">TBG project</span><span class="badge new" title="Recently added">New</span>
+<p>The most comprehensive list of wildlife grants anywhere, over 500 of them, with an assistant that remembers your mission and programs and ranks which grants actually fit you. Open to Fiscal Sponsorship Alliance members only</p><p class="tags"><span class="tag">Database</span><span class="tag">Members only</span></p><p class="use">Get over 500 wildlife grants ranked against your own mission, as a Fiscal Sponsorship Alliance member</p></a><a class="access" href="https://biodiversitygroup.org/fiscal-sponsorship/" target="_blank" rel="noopener">Join the Fiscal Sponsorship Alliance &rarr;</a></li><li class="item"><a href="https://phoenixspeciesproject.org/" target="_blank" rel="noopener">
+<span class="nm">Phoenix Species Project<span class="arw" aria-hidden="true">&#8599;</span></span><span class="badge new" title="Recently added">New</span>
+<p>Re:wild, the Bezos Earth Fund and IUCN SSC putting $200M into recovering 100 Critically Endangered and Extinct-in-the-Wild species across 30 countries</p><p class="tags"><span class="tag">Grants</span></p><p class="use">See whether your species is among the 100, which decides whether serious money exists</p></a></li><li class="item"><a href="https://terravivagrants.org/" target="_blank" rel="noopener">
 <span class="nm">Terra Viva Grants Directory<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Grants for agriculture, energy and environment in developing countries</p><p class="use">Search free listings aimed at developing countries, where most grant databases are weakest</p></a></li><li class="item"><a href="https://www2.fundsforngos.org/" target="_blank" rel="noopener">
+<p>Grants for agriculture, energy and environment in developing countries</p><p class="tags"><span class="tag">Grants</span></p><p class="use">Search free listings aimed at developing countries, where most grant databases are weakest</p></a></li><li class="item"><a href="https://www2.fundsforngos.org/" target="_blank" rel="noopener">
 <span class="nm">fundsforNGOs<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Grant listings and proposal resources</p><p class="use">Scan frequent calls, but verify each at source since the listings are aggregated</p></a></li><li class="item"><a href="https://fconline.foundationcenter.org/" target="_blank" rel="noopener">
+<p>Grant listings and proposal resources</p><p class="tags"><span class="tag">Grants</span></p><p class="use">Scan frequent calls, but verify each at source since the listings are aggregated</p></a></li><li class="item"><a href="https://fconline.foundationcenter.org/" target="_blank" rel="noopener">
 <span class="nm">Foundation Directory Online<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Candid funder database, paywalled</p><p class="use">Reach it through a library or partner if you cannot justify the subscription yourself</p></a></li><li class="item"><a href="https://learning.candid.org/" target="_blank" rel="noopener">
+<p>Candid funder database, paywalled</p><p class="tags"><span class="tag">Grants</span></p><p class="use">Reach it through a library or partner if you cannot justify the subscription yourself</p></a></li><li class="item"><a href="https://learning.candid.org/" target="_blank" rel="noopener">
 <span class="nm">Candid Learning<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Candid&#x27;s free training and knowledge base on funding, formerly GrantSpace</p><p class="use">Take the free training, and search GrantSpace for anything you remember under the old name</p></a></li><li class="item"><a href="https://www.peakproposals.com/" target="_blank" rel="noopener">
+<p>Candid&#x27;s free training and knowledge base on funding, formerly GrantSpace</p><p class="tags"><span class="tag">Grants</span></p><p class="use">Take the free training, and search GrantSpace for anything you remember under the old name</p></a></li><li class="item"><a href="https://www.peakproposals.com/" target="_blank" rel="noopener">
 <span class="nm">Peak Proposals free grant search list<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Guide to free grant-funding search sources</p><p class="use">Start here with no budget, because it lists the genuinely free search sources first</p></a></li><li class="item"><a href="https://unfundedlist.com/" target="_blank" rel="noopener">
+<p>Guide to free grant-funding search sources</p><p class="tags"><span class="tag">Grants</span></p><p class="use">Start here with no budget, because it lists the genuinely free search sources first</p></a></li><li class="item"><a href="https://unfundedlist.com/" target="_blank" rel="noopener">
 <span class="nm">Unfunded List<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Feedback on unfunded proposals</p><p class="use">Send a rejected proposal for outside evaluation before resubmitting it unchanged</p></a></li><li class="item"><a href="https://www.conservationleadershipprogramme.org/" target="_blank" rel="noopener">
+<p>Feedback on unfunded proposals</p><p class="tags"><span class="tag">Grants</span></p><p class="use">Send a rejected proposal for outside evaluation before resubmitting it unchanged</p></a></li><li class="item"><a href="https://www.conservationleadershipprogramme.org/" target="_blank" rel="noopener">
 <span class="nm">Conservation Leadership Programme<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Early-career conservation team grants</p><p class="use">Apply as an early-career team, which is rare when most funders will only fund institutions</p></a></li><li class="item"><a href="https://www.speciesconservation.org/" target="_blank" rel="noopener">
+<p>Early-career conservation team grants</p><p class="tags"><span class="tag">Grants</span></p><p class="use">Apply as an early-career team, which is rare when most funders will only fund institutions</p></a></li><li class="item"><a href="https://www.speciesconservation.org/" target="_blank" rel="noopener">
 <span class="nm">Mohamed bin Zayed Species Conservation Fund<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Species grants with a public grant database</p><p class="use">Search past grants to see the realistic size and shape of an award before applying</p></a></li><li class="item"><a href="https://www.cepf.net/" target="_blank" rel="noopener">
+<p>Species grants with a public grant database</p><p class="tags"><span class="tag">Grants</span></p><p class="use">Search past grants to see the realistic size and shape of an award before applying</p></a></li><li class="item"><a href="https://www.cepf.net/" target="_blank" rel="noopener">
 <span class="nm">CEPF<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Hotspot grants with public grantee lists</p><p class="use">Check whether your hotspot has an open call, and read the grantee list for local partners</p></a></li><li class="item"><a href="https://janatrustfund.org/" target="_blank" rel="noopener">
+<p>Hotspot grants with public grantee lists</p><p class="tags"><span class="tag">Grants</span></p><p class="use">Check whether your hotspot has an open call, and read the grantee list for local partners</p></a></li><li class="item"><a href="https://janatrustfund.org/" target="_blank" rel="noopener">
 <span class="nm">Jana Robeyst Trust Fund<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Small grants for African conservation</p><p class="use">Look for small African conservation grants, confirming the site loads before planning around it</p></a></li><li class="item"><a href="https://fondationensemble.org/" target="_blank" rel="noopener">
+<p>Small grants for African conservation</p><p class="tags"><span class="tag">Grants</span><span class="tag">Africa</span></p><p class="use">Look for small African conservation grants, confirming the site loads before planning around it</p></a></li><li class="item"><a href="https://fondationensemble.org/" target="_blank" rel="noopener">
 <span class="nm">Fondation Ensemble<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>French foundation funding biodiversity</p><p class="use">Apply in French for biodiversity funding, which cuts the competition considerably</p></a></li><li class="item"><a href="https://greenfunders.org/" target="_blank" rel="noopener">
+<p>French foundation funding biodiversity</p><p class="tags"><span class="tag">Grants</span><span class="tag">Europe</span></p><p class="use">Apply in French for biodiversity funding, which cuts the competition considerably</p></a></li><li class="item"><a href="https://greenfunders.org/" target="_blank" rel="noopener">
 <span class="nm">Environmental Funders Network<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>UK environmental philanthropy resources</p><p class="use">Read its fundraiser handbook, and learn who actually funds environmental work in the UK</p></a></li><li class="item"><a href="https://unitedphilforum.org/" target="_blank" rel="noopener">
+<p>UK environmental philanthropy resources</p><p class="tags"><span class="tag">Grants</span><span class="tag">UK</span></p><p class="use">Read its fundraiser handbook, and learn who actually funds environmental work in the UK</p></a></li><li class="item"><a href="https://unitedphilforum.org/" target="_blank" rel="noopener">
 <span class="nm">United Philanthropy Forum<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>US philanthropy association network</p><p class="use">Find the regional US philanthropy association nearest you, which knows local funders best</p></a></li><li class="item"><a href="https://grants.gov/" target="_blank" rel="noopener">
+<p>US philanthropy association network</p><p class="tags"><span class="tag">Grants</span><span class="tag">US</span></p><p class="use">Find the regional US philanthropy association nearest you, which knows local funders best</p></a></li><li class="item"><a href="https://grants.gov/" target="_blank" rel="noopener">
 <span class="nm">Grants.gov<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>US federal grants</p><p class="use">Check eligibility first, since federal registration takes longer than most deadlines allow</p></a></li><li class="item"><a href="https://www.instrumentl.com/" target="_blank" rel="noopener">
+<p>US federal grants</p><p class="tags"><span class="tag">Grants</span><span class="tag">US</span></p><p class="use">Check eligibility first, since federal registration takes longer than most deadlines allow</p></a></li><li class="item"><a href="https://www.instrumentl.com/" target="_blank" rel="noopener">
 <span class="nm">Instrumentl<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Grant discovery platform, paid</p><p class="use">Trial it against your real programs, and note the search limits before committing to a subscription</p></a></li><li class="item"><a href="https://thegrantscape.com/" target="_blank" rel="noopener">
+<p>Grant discovery platform, paid</p><p class="tags"><span class="tag">Grants</span></p><p class="use">Trial it against your real programs, and note the search limits before committing to a subscription</p></a></li><li class="item"><a href="https://thegrantscape.com/" target="_blank" rel="noopener">
 <span class="nm">GrantScape<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Grant discovery</p><p class="use">Compare it against other paid platforms rather than assuming coverage differs much</p></a></li><li class="item"><a href="https://coefficientgiving.org/" target="_blank" rel="noopener">
+<p>Grant discovery</p><p class="tags"><span class="tag">Grants</span></p><p class="use">Compare it against other paid platforms rather than assuming coverage differs much</p></a></li><li class="item"><a href="https://coefficientgiving.org/" target="_blank" rel="noopener">
 <span class="nm">Coefficient Giving<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Grant listings of a major funder, renamed from Open Philanthropy</p><p class="use">Read its published grants for the scale it funds at, and search Open Philanthropy for older history</p></a></li><li class="item"><a href="https://grantable.co/" target="_blank" rel="noopener">
+<p>Grant listings of a major funder, renamed from Open Philanthropy</p><p class="tags"><span class="tag">Grants</span></p><p class="use">Read its published grants for the scale it funds at, and search Open Philanthropy for older history</p></a></li><li class="item"><a href="https://grantable.co/" target="_blank" rel="noopener">
 <span class="nm">Grantable<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Funder prospecting with fit scoring, alongside AI proposal drafting built from your own past submissions. Free tier, then $25 a month for nonprofits under $500k</p><p class="use">Draft from your own past proposals rather than a blank page, then check the fit scores</p></a></li>
+<p>Funder prospecting with fit scoring, alongside AI proposal drafting built from your own past submissions. Free tier, then $25 a month for nonprofits under $500k</p><p class="tags"><span class="tag">Grants</span></p><p class="use">Draft from your own past proposals rather than a blank page, then check the fit scores</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/#browse">All categories</a> <a href="/fundraising/">Fundraising &rarr;</a></p>

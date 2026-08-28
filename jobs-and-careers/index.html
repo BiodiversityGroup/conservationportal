@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="build" content="d62e251804f9">
+<meta name="build" content="a061dc438150">
 <title>Jobs and careers | Conservation Portal</title>
 <meta name="description" content="Where conservation jobs are actually posted. 9 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/jobs-and-careers/">
@@ -138,8 +138,17 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 /* ---------- eight domain blocks ---------- */
 .domains{display:grid;gap:16px;margin-top:26px;
   grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.domain.wide{grid-column:span 2}
+.domain.wide ul{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.domain.wide ul li{border-bottom:1px solid var(--hair)}
+@media (max-width:1000px){
+  .domain.wide{grid-column:auto}
+  .domain.wide ul{grid-template-columns:1fr}}
 @media (max-width:740px){.domains{grid-template-columns:1fr}}
-.domain{background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
+/* scroll-margin so a breadcrumb landing on #money-and-services is not hidden under
+   the sticky header */
+.domain{scroll-margin-top:104px;
+  background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
   padding:24px 24px 20px;
   /* the mark's angled panel, echoed once per block */
   clip-path:polygon(18px 0,100% 0,100% 100%,0 100%,0 18px)}
@@ -179,15 +188,22 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
   color:var(--forest);display:inline-flex;align-items:center;gap:7px}
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
-.item p{margin:4px auto 0;font-size:15px;color:var(--muted);max-width:64ch}
-.item p.use{margin:7px auto 0;padding-top:6px;font-size:13.5px;line-height:1.5;
+/* three deliberately distinct levels: name strongest, descriptor smallest and muted,
+   use-note normal weight and full size because it is what distinguishes one entry
+   from the next. If these ever look equal the pages read as a wall. */
+.item p{margin:4px auto 0;font-size:13.5px;line-height:1.55;color:var(--muted);
+  max-width:66ch}
+.item p.use{margin:8px auto 0;padding-top:7px;font-size:15px;line-height:1.55;
+  color:var(--ink);
   border-top:1px solid var(--hair);max-width:64ch}
 .item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
   text-decoration:none;border-bottom:1px solid transparent}
 .item .access:hover{border-bottom-color:currentColor}
-.pill{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
-  background:var(--pill-bg);color:var(--pill-ink);border-radius:100px;padding:2px 8px;
-  margin-left:9px;vertical-align:2px;white-space:nowrap}
+.badge{font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+  border-radius:100px;padding:2px 8px;margin-left:8px;vertical-align:2px;white-space:nowrap;
+  border:1px solid transparent}
+.badge.new{background:var(--pill-bg);color:var(--pill-ink)}
+.badge.tbg{background:transparent;color:var(--accent);border-color:var(--accent)}
 mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .item p.tags{margin:7px auto 0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
@@ -333,7 +349,7 @@ img.ondark{display:none}
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">
-<a href="/">Home</a><span>/</span><a href="/#browse">People</a>
+<a href="/">Home</a><span>/</span><a href="/#people">People</a>
 <span>/</span>Jobs and careers
 </nav>
 <section class="cathead">
@@ -360,23 +376,23 @@ img.ondark{display:none}
 <ul class="list" id="clist">
 <li class="item"><a href="https://jobs.rwfm.tamu.edu/" target="_blank" rel="noopener">
 <span class="nm">Texas A&amp;M wildlife job board<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>The Natural Resources Job Board, long the default noticeboard for US wildlife and fisheries posts. Note it moved off the old wfscjobs hostname</p><p class="use">Check it weekly, since many US wildlife and fisheries posts appear here first</p></a></li><li class="item"><a href="https://www.conservation-careers.com/" target="_blank" rel="noopener">
+<p>The Natural Resources Job Board, long the default noticeboard for US wildlife and fisheries posts. Note it moved off the old wfscjobs hostname</p><p class="tags"><span class="tag">Job board</span><span class="tag">US</span></p><p class="use">Check it weekly, since many US wildlife and fisheries posts appear here first</p></a></li><li class="item"><a href="https://www.conservation-careers.com/" target="_blank" rel="noopener">
 <span class="nm">Conservation Careers<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Conservation job listings plus advice on how to actually land one</p><p class="use">Open a free account for the listings, then use the advice side before applying anywhere</p></a></li><li class="item"><a href="https://biodiversityconnections.org/" target="_blank" rel="noopener">
+<p>Conservation job listings plus advice on how to actually land one</p><p class="tags"><span class="tag">Job board</span></p><p class="use">Open a free account for the listings, then use the advice side before applying anywhere</p></a></li><li class="item"><a href="https://biodiversityconnections.org/" target="_blank" rel="noopener">
 <span class="nm">Biodiversity Connections<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Blog collecting job openings, fellowships and opportunity calls. Last posted January 2025, so treat the listings as an archive</p><p class="use">Mine the archive to learn what kinds of fellowships exist, not for live openings</p></a></li><li class="item"><a href="https://ornithologyexchange.org/" target="_blank" rel="noopener">
+<p>Blog collecting job openings, fellowships and opportunity calls. Last posted January 2025, so treat the listings as an archive</p><p class="tags"><span class="tag">Job board</span></p><p class="use">Mine the archive to learn what kinds of fellowships exist, not for live openings</p></a></li><li class="item"><a href="https://ornithologyexchange.org/" target="_blank" rel="noopener">
 <span class="nm">Ornithology Exchange job board<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Bird jobs</p><p class="use">Watch it for bird jobs and graduate positions that never reach the general boards</p></a></li><li class="item"><a href="https://www.wiseoceans.com/" target="_blank" rel="noopener">
+<p>Bird jobs</p><p class="tags"><span class="tag">Job board</span></p><p class="use">Watch it for bird jobs and graduate positions that never reach the general boards</p></a></li><li class="item"><a href="https://www.wiseoceans.com/" target="_blank" rel="noopener">
 <span class="nm">WiseOceans job board<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Marine jobs</p><p class="use">Check its careers listings for marine roles, including resort-based education work</p></a></li><li class="item"><a href="https://www.bioblogia.net/" target="_blank" rel="noopener">
+<p>Marine jobs</p><p class="tags"><span class="tag">Job board</span></p><p class="use">Check its careers listings for marine roles, including resort-based education work</p></a></li><li class="item"><a href="https://www.bioblogia.net/" target="_blank" rel="noopener">
 <span class="nm">Bioblogia<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Spanish-language conservation opportunities</p><p class="use">Read it daily if you work in Spanish, since it lists placements no English board carries</p></a></li><li class="item"><a href="https://scgis.org/" target="_blank" rel="noopener">
+<p>Spanish-language conservation opportunities</p><p class="tags"><span class="tag">Job board</span></p><p class="use">Read it daily if you work in Spanish, since it lists placements no English board carries</p></a></li><li class="item"><a href="https://scgis.org/" target="_blank" rel="noopener">
 <span class="nm">Society for Conservation GIS<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>GIS community and scholarships</p><p class="use">Apply to the scholarship program when GIS training is your actual bottleneck</p></a></li><li class="item"><a href="https://www.thesca.org/" target="_blank" rel="noopener">
+<p>GIS community and scholarships</p><p class="tags"><span class="tag">Job board</span></p><p class="use">Apply to the scholarship program when GIS training is your actual bottleneck</p></a></li><li class="item"><a href="https://www.thesca.org/" target="_blank" rel="noopener">
 <span class="nm">Student Conservation Association<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>US conservation service placements</p><p class="use">Point a young person at a paid US placement rather than an unpaid internship</p></a></li><li class="item"><a href="https://www.jamesborrell.com/" target="_blank" rel="noopener">
+<p>US conservation service placements</p><p class="tags"><span class="tag">Job board</span><span class="tag">US</span></p><p class="use">Point a young person at a paid US placement rather than an unpaid internship</p></a></li><li class="item"><a href="https://www.jamesborrell.com/" target="_blank" rel="noopener">
 <span class="nm">James Borrell career resources<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Career guidance writing</p><p class="use">Send early-career staff his career writing instead of repeating the same advice yourself</p></a></li>
+<p>Career guidance writing</p><p class="tags"><span class="tag">Job board</span></p><p class="use">Send early-career staff his career writing instead of repeating the same advice yourself</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/communities-and-networks/">&larr; Communities and networks</a> <a href="/#browse">All categories</a> <a href="/volunteering-and-expeditions/">Volunteering and expeditions &rarr;</a></p>

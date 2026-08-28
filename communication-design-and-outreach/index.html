@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="build" content="d62e251804f9">
+<meta name="build" content="a061dc438150">
 <title>Communication, design and outreach | Conservation Portal</title>
 <meta name="description" content="Tools and partners for telling the story once you have it. 18 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/communication-design-and-outreach/">
@@ -138,8 +138,17 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 /* ---------- eight domain blocks ---------- */
 .domains{display:grid;gap:16px;margin-top:26px;
   grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.domain.wide{grid-column:span 2}
+.domain.wide ul{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.domain.wide ul li{border-bottom:1px solid var(--hair)}
+@media (max-width:1000px){
+  .domain.wide{grid-column:auto}
+  .domain.wide ul{grid-template-columns:1fr}}
 @media (max-width:740px){.domains{grid-template-columns:1fr}}
-.domain{background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
+/* scroll-margin so a breadcrumb landing on #money-and-services is not hidden under
+   the sticky header */
+.domain{scroll-margin-top:104px;
+  background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
   padding:24px 24px 20px;
   /* the mark's angled panel, echoed once per block */
   clip-path:polygon(18px 0,100% 0,100% 100%,0 100%,0 18px)}
@@ -179,15 +188,22 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
   color:var(--forest);display:inline-flex;align-items:center;gap:7px}
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
-.item p{margin:4px auto 0;font-size:15px;color:var(--muted);max-width:64ch}
-.item p.use{margin:7px auto 0;padding-top:6px;font-size:13.5px;line-height:1.5;
+/* three deliberately distinct levels: name strongest, descriptor smallest and muted,
+   use-note normal weight and full size because it is what distinguishes one entry
+   from the next. If these ever look equal the pages read as a wall. */
+.item p{margin:4px auto 0;font-size:13.5px;line-height:1.55;color:var(--muted);
+  max-width:66ch}
+.item p.use{margin:8px auto 0;padding-top:7px;font-size:15px;line-height:1.55;
+  color:var(--ink);
   border-top:1px solid var(--hair);max-width:64ch}
 .item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
   text-decoration:none;border-bottom:1px solid transparent}
 .item .access:hover{border-bottom-color:currentColor}
-.pill{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
-  background:var(--pill-bg);color:var(--pill-ink);border-radius:100px;padding:2px 8px;
-  margin-left:9px;vertical-align:2px;white-space:nowrap}
+.badge{font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+  border-radius:100px;padding:2px 8px;margin-left:8px;vertical-align:2px;white-space:nowrap;
+  border:1px solid transparent}
+.badge.new{background:var(--pill-bg);color:var(--pill-ink)}
+.badge.tbg{background:transparent;color:var(--accent);border-color:var(--accent)}
 mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .item p.tags{margin:7px auto 0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
@@ -333,7 +349,7 @@ img.ondark{display:none}
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">
-<a href="/">Home</a><span>/</span><a href="/#browse">Knowledge and communication</a>
+<a href="/">Home</a><span>/</span><a href="/#knowledge-and-communication">Knowledge and communication</a>
 <span>/</span>Communication, design and outreach
 </nav>
 <section class="cathead">
@@ -360,41 +376,41 @@ img.ondark{display:none}
 <ul class="list" id="clist">
 <li class="item"><a href="https://www.canva.com/" target="_blank" rel="noopener">
 <span class="nm">Canva<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Design tool. Canva for Nonprofits gives eligible organizations the premium tier, including its AI design features, free for a team of up to 50</p><p class="use">Apply for the nonprofit tier before paying, then build templates your whole team reuses</p></a></li><li class="item"><a href="https://piktochart.com/" target="_blank" rel="noopener">
+<p>Design tool. Canva for Nonprofits gives eligible organizations the premium tier, including its AI design features, free for a team of up to 50</p><p class="tags"><span class="tag">Tool</span><span class="tag">Free</span></p><p class="use">Apply for the nonprofit tier before paying, then build templates your whole team reuses</p></a></li><li class="item"><a href="https://piktochart.com/" target="_blank" rel="noopener">
 <span class="nm">Piktochart<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Infographics</p><p class="use">Turn a results table into an infographic when a funder will not read the report</p></a></li><li class="item"><a href="https://hemingwayapp.com/" target="_blank" rel="noopener">
+<p>Infographics</p><p class="tags"><span class="tag">Tool</span></p><p class="use">Turn a results table into an infographic when a funder will not read the report</p></a></li><li class="item"><a href="https://hemingwayapp.com/" target="_blank" rel="noopener">
 <span class="nm">Hemingway Editor<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Prose clarity</p><p class="use">Paste a grant paragraph in and cut until a non-specialist could read it</p></a></li><li class="item"><a href="https://buzzsumo.com/" target="_blank" rel="noopener">
+<p>Prose clarity</p><p class="tags"><span class="tag">Tool</span></p><p class="use">Paste a grant paragraph in and cut until a non-specialist could read it</p></a></li><li class="item"><a href="https://buzzsumo.com/" target="_blank" rel="noopener">
 <span class="nm">BuzzSumo<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Content performance research</p><p class="use">Find which conservation stories already spread before pitching yours the same way</p></a></li><li class="item"><a href="https://www.biointeractive.org/" target="_blank" rel="noopener">
+<p>Content performance research</p><p class="tags"><span class="tag">Tool</span></p><p class="use">Find which conservation stories already spread before pitching yours the same way</p></a></li><li class="item"><a href="https://www.biointeractive.org/" target="_blank" rel="noopener">
 <span class="nm">HHMI BioInteractive<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Free biology teaching media</p><p class="use">Take free classroom-ready biology media instead of producing education content yourself</p></a></li><li class="item"><a href="https://www.skypeascientist.com/" target="_blank" rel="noopener">
+<p>Free biology teaching media</p><p class="tags"><span class="tag">Tool</span><span class="tag">Free</span></p><p class="use">Take free classroom-ready biology media instead of producing education content yourself</p></a></li><li class="item"><a href="https://www.skypeascientist.com/" target="_blank" rel="noopener">
 <span class="nm">Skype a Scientist<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Scientist and classroom matching</p><p class="use">Sign up as the scientist and reach classrooms without building an education program</p></a></li><li class="item"><a href="https://rootsandshoots.org/" target="_blank" rel="noopener">
+<p>Scientist and classroom matching</p><p class="tags"><span class="tag">Tool</span></p><p class="use">Sign up as the scientist and reach classrooms without building an education program</p></a></li><li class="item"><a href="https://rootsandshoots.org/" target="_blank" rel="noopener">
 <span class="nm">Roots &amp; Shoots<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Youth program framework</p><p class="use">Adopt its framework when you want young people running projects rather than attending events</p></a></li><li class="item"><a href="https://www.actionforconservation.org/" target="_blank" rel="noopener">
+<p>Youth program framework</p><p class="tags"><span class="tag">Tool</span></p><p class="use">Adopt its framework when you want young people running projects rather than attending events</p></a></li><li class="item"><a href="https://www.actionforconservation.org/" target="_blank" rel="noopener">
 <span class="nm">Action for Conservation<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>UK youth engagement</p><p class="use">Study its UK model for reaching teenagers who would never come to a nature reserve</p></a></li><li class="item"><a href="https://www.photographerswithoutborders.org/" target="_blank" rel="noopener">
+<p>UK youth engagement</p><p class="tags"><span class="tag">Tool</span><span class="tag">UK</span></p><p class="use">Study its UK model for reaching teenagers who would never come to a nature reserve</p></a></li><li class="item"><a href="https://www.photographerswithoutborders.org/" target="_blank" rel="noopener">
 <span class="nm">Photographers Without Borders<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Storytelling for NGOs</p><p class="use">Request ethical storytelling support when you need images but cannot pay a photographer</p></a></li><li class="item"><a href="https://www.ilcp.com/ethics" target="_blank" rel="noopener">
+<p>Storytelling for NGOs</p><p class="tags"><span class="tag">Tool</span></p><p class="use">Request ethical storytelling support when you need images but cannot pay a photographer</p></a></li><li class="item"><a href="https://www.ilcp.com/ethics" target="_blank" rel="noopener">
 <span class="nm">iLCP ethical principles<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>What the International League of Conservation Photographers holds its members to: welfare and conservation before the picture, and honesty about how the picture was made. The companion PDF works through the hard cases one at a time, including baiting, call playback, drone distance, chilling insects and captive animals in a documentary</p><p class="use">Adopt it as your own photography policy, and use the PDF to settle field arguments</p></a><a class="access" href="https://files.visurapro.com/pro/files/users/29/f3bba9e16328a868bf62b9f419a67de7.pdf" target="_blank" rel="noopener">Practical considerations PDF &rarr;</a></li><li class="item"><a href="https://www.ourbetterworld.org/" target="_blank" rel="noopener">
+<p>What the International League of Conservation Photographers holds its members to: welfare and conservation before the picture, and honesty about how the picture was made. The companion PDF works through the hard cases one at a time, including baiting, call playback, drone distance, chilling insects and captive animals in a documentary</p><p class="tags"><span class="tag">Standards</span><span class="tag">Global</span></p><p class="use">Adopt it as your own photography policy, and use the PDF to settle field arguments</p></a><a class="access" href="https://files.visurapro.com/pro/files/users/29/f3bba9e16328a868bf62b9f419a67de7.pdf" target="_blank" rel="noopener">Practical considerations PDF &rarr;</a></li><li class="item"><a href="https://www.ourbetterworld.org/" target="_blank" rel="noopener">
 <span class="nm">Our Better World<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Story platform</p><p class="use">Pitch a story when you want Asian audiences rather than Western donors</p></a></li><li class="item"><a href="https://only.one/" target="_blank" rel="noopener">
+<p>Story platform</p><p class="tags"><span class="tag">Tool</span></p><p class="use">Pitch a story when you want Asian audiences rather than Western donors</p></a></li><li class="item"><a href="https://only.one/" target="_blank" rel="noopener">
 <span class="nm">Only One<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Ocean storytelling and action</p><p class="use">Use it to reach an ocean-focused audience already primed to act on something</p></a></li><li class="item"><a href="https://mammalz.com/" target="_blank" rel="noopener">
+<p>Ocean storytelling and action</p><p class="tags"><span class="tag">Tool</span></p><p class="use">Use it to reach an ocean-focused audience already primed to act on something</p></a></li><li class="item"><a href="https://mammalz.com/" target="_blank" rel="noopener">
 <span class="nm">Mammalz<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Nature content platform</p><p class="use">Check the platform is still live before planning any content around it</p></a></li><li class="item"><a href="https://hiphopscienceshow.com/" target="_blank" rel="noopener">
+<p>Nature content platform</p><p class="tags"><span class="tag">Tool</span></p><p class="use">Check the platform is still live before planning any content around it</p></a></li><li class="item"><a href="https://hiphopscienceshow.com/" target="_blank" rel="noopener">
 <span class="nm">Hip Hop Science Show<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Science communication show</p><p class="use">Borrow the format when your audience is young and a lecture will not land</p></a></li><li class="item"><a href="https://buzzhootroar.com/" target="_blank" rel="noopener">
+<p>Science communication show</p><p class="tags"><span class="tag">Tool</span></p><p class="use">Borrow the format when your audience is young and a lecture will not land</p></a></li><li class="item"><a href="https://buzzhootroar.com/" target="_blank" rel="noopener">
 <span class="nm">BuzzHootRoar<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>SciComm graphics</p><p class="use">Copy its one-graphic-per-idea format for explaining a finding on social media</p></a></li><li class="item"><a href="https://r-graph-gallery.com/" target="_blank" rel="noopener">
+<p>SciComm graphics</p><p class="tags"><span class="tag">Tool</span></p><p class="use">Copy its one-graphic-per-idea format for explaining a finding on social media</p></a></li><li class="item"><a href="https://r-graph-gallery.com/" target="_blank" rel="noopener">
 <span class="nm">R Graph Gallery<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Chart references for R</p><p class="use">Find the chart type you need with the R code already written beside it</p></a></li><li class="item"><a href="https://visualisingdata.com/" target="_blank" rel="noopener">
+<p>Chart references for R</p><p class="tags"><span class="tag">Tool</span></p><p class="use">Find the chart type you need with the R code already written beside it</p></a></li><li class="item"><a href="https://visualisingdata.com/" target="_blank" rel="noopener">
 <span class="nm">Visualising Data<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Data visualization practice</p><p class="use">Read it before designing a figure, since most conservation charts fail on the basics</p></a></li><li class="item"><a href="https://nanpa.org/why-nanpa/ethics/" target="_blank" rel="noopener">
+<p>Data visualization practice</p><p class="tags"><span class="tag">Tool</span></p><p class="use">Read it before designing a figure, since most conservation charts fail on the basics</p></a></li><li class="item"><a href="https://nanpa.org/why-nanpa/ethics/" target="_blank" rel="noopener">
 <span class="nm">NANPA ethical field practices<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>The North American Nature Photography Association&#x27;s principles for behaving well in the field and disclosing what you did afterwards</p><p class="use">Give it to volunteer photographers, especially the part about disclosing what you altered</p></a></li>
+<p>The North American Nature Photography Association&#x27;s principles for behaving well in the field and disclosing what you did afterwards</p><p class="tags"><span class="tag">Standards</span><span class="tag">US</span></p><p class="use">Give it to volunteer photographers, especially the part about disclosing what you altered</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/training-and-courses/">&larr; Training and courses</a> <a href="/#browse">All categories</a> <a href="/free-imagery-icons-and-fonts/">Free imagery, icons and fonts &rarr;</a></p>

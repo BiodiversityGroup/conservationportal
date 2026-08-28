@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="build" content="d62e251804f9">
+<meta name="build" content="a061dc438150">
 <title>Literature, evidence and data access | Conservation Portal</title>
 <meta name="description" content="Journals, archives, data repositories and evidence syntheses. 21 hand-checked resources for conservationists.">
 <link rel="canonical" href="https://conservationportal.org/literature-evidence-and-data-access/">
@@ -138,8 +138,17 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 /* ---------- eight domain blocks ---------- */
 .domains{display:grid;gap:16px;margin-top:26px;
   grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.domain.wide{grid-column:span 2}
+.domain.wide ul{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.domain.wide ul li{border-bottom:1px solid var(--hair)}
+@media (max-width:1000px){
+  .domain.wide{grid-column:auto}
+  .domain.wide ul{grid-template-columns:1fr}}
 @media (max-width:740px){.domains{grid-template-columns:1fr}}
-.domain{background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
+/* scroll-margin so a breadcrumb landing on #money-and-services is not hidden under
+   the sticky header */
+.domain{scroll-margin-top:104px;
+  background:var(--surface);border:1px solid var(--hair);box-shadow:var(--shadow);
   padding:24px 24px 20px;
   /* the mark's angled panel, echoed once per block */
   clip-path:polygon(18px 0,100% 0,100% 100%,0 100%,0 18px)}
@@ -179,15 +188,22 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
   color:var(--forest);display:inline-flex;align-items:center;gap:7px}
 .item .nm .arw{opacity:.35;transition:opacity .16s,transform .16s;font-size:14px}
 .item > a:hover .nm .arw{opacity:1;transform:translate(2px,-2px)}
-.item p{margin:4px auto 0;font-size:15px;color:var(--muted);max-width:64ch}
-.item p.use{margin:7px auto 0;padding-top:6px;font-size:13.5px;line-height:1.5;
+/* three deliberately distinct levels: name strongest, descriptor smallest and muted,
+   use-note normal weight and full size because it is what distinguishes one entry
+   from the next. If these ever look equal the pages read as a wall. */
+.item p{margin:4px auto 0;font-size:13.5px;line-height:1.55;color:var(--muted);
+  max-width:66ch}
+.item p.use{margin:8px auto 0;padding-top:7px;font-size:15px;line-height:1.55;
+  color:var(--ink);
   border-top:1px solid var(--hair);max-width:64ch}
 .item .access{display:inline-block;margin:0 22px 16px;font-size:13px;font-weight:600;
   text-decoration:none;border-bottom:1px solid transparent}
 .item .access:hover{border-bottom-color:currentColor}
-.pill{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
-  background:var(--pill-bg);color:var(--pill-ink);border-radius:100px;padding:2px 8px;
-  margin-left:9px;vertical-align:2px;white-space:nowrap}
+.badge{font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
+  border-radius:100px;padding:2px 8px;margin-left:8px;vertical-align:2px;white-space:nowrap;
+  border:1px solid transparent}
+.badge.new{background:var(--pill-bg);color:var(--pill-ink)}
+.badge.tbg{background:transparent;color:var(--accent);border-color:var(--accent)}
 mark{background:var(--pill-bg);color:inherit;padding:0 2px;border-radius:2px}
 .item p.tags{margin:7px auto 0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
 .tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
@@ -333,7 +349,7 @@ img.ondark{display:none}
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb">
-<a href="/">Home</a><span>/</span><a href="/#browse">Knowledge and communication</a>
+<a href="/">Home</a><span>/</span><a href="/#knowledge-and-communication">Knowledge and communication</a>
 <span>/</span>Literature, evidence and data access
 </nav>
 <section class="cathead">
@@ -359,48 +375,48 @@ img.ondark{display:none}
 </div>
 <ul class="list" id="clist">
 <li class="item"><a href="https://biodiversitygroup.org/library/" target="_blank" rel="noopener">
-<span class="nm">The Biodiversity Library<span class="arw" aria-hidden="true">&#8599;</span></span><span class="pill">new</span>
-<p>Over 2,000 reference books, half of them on reptiles and amphibians, lent to nonprofits and researchers on request. We run this one</p><p class="use">Request a reference book on loan, especially for reptiles and amphibians, instead of buying it</p></a></li><li class="item"><a href="https://www.askdarwin.ai" target="_blank" rel="noopener">
-<span class="nm">Ask Darwin<span class="arw" aria-hidden="true">&#8599;</span></span><span class="pill">new</span>
-<p>Ask questions of TBG&#x27;s research library and get answers grounded in it. Access is for named partners, for non-commercial research only. We run this one</p><p class="use">Ask the research library a question directly, if you are a named partner doing non-commercial work</p></a></li><li class="item"><a href="https://www.biodiversitylibrary.org/" target="_blank" rel="noopener">
+<span class="nm">The Biodiversity Library<span class="arw" aria-hidden="true">&#8599;</span></span><span class="badge tbg" title="Run by The Biodiversity Group">TBG project</span><span class="badge new" title="Recently added">New</span>
+<p>Over 2,000 reference books, half of them on reptiles and amphibians, lent to nonprofits and researchers on request</p><p class="tags"><span class="tag">Literature</span></p><p class="use">Request a reference book on loan, especially for reptiles and amphibians, instead of buying it</p></a></li><li class="item"><a href="https://www.askdarwin.ai" target="_blank" rel="noopener">
+<span class="nm">Ask Darwin<span class="arw" aria-hidden="true">&#8599;</span></span><span class="badge tbg" title="Run by The Biodiversity Group">TBG project</span><span class="badge new" title="Recently added">New</span>
+<p>Ask questions of TBG&#x27;s research library and get answers grounded in it. Access is for named partners, for non-commercial research only</p><p class="tags"><span class="tag">Tool</span></p><p class="use">Ask the research library a question directly, if you are a named partner doing non-commercial work</p></a></li><li class="item"><a href="https://www.biodiversitylibrary.org/" target="_blank" rel="noopener">
 <span class="nm">Biodiversity Heritage Library<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Historic natural-history literature</p><p class="use">Find the original description of an old species name free, when a paywall blocks the reprint</p></a></li><li class="item"><a href="https://biostor.org/" target="_blank" rel="noopener">
+<p>Historic natural-history literature</p><p class="tags"><span class="tag">Literature</span></p><p class="use">Find the original description of an old species name free, when a paywall blocks the reprint</p></a></li><li class="item"><a href="https://biostor.org/" target="_blank" rel="noopener">
 <span class="nm">BioStor<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Article extraction from BHL</p><p class="use">Pull a single article out of a scanned volume instead of citing the whole book</p></a></li><li class="item"><a href="https://www.mapress.com/zt/" target="_blank" rel="noopener">
+<p>Article extraction from BHL</p><p class="tags"><span class="tag">Literature</span></p><p class="use">Pull a single article out of a scanned volume instead of citing the whole book</p></a></li><li class="item"><a href="https://www.mapress.com/zt/" target="_blank" rel="noopener">
 <span class="nm">Zootaxa<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>New animal species descriptions</p><p class="use">Check it for new species in your group, since much of the world&#x27;s description output lands here</p></a></li><li class="item"><a href="https://zookeys.pensoft.net/" target="_blank" rel="noopener">
+<p>New animal species descriptions</p><p class="tags"><span class="tag">Literature</span></p><p class="use">Check it for new species in your group, since much of the world&#x27;s description output lands here</p></a></li><li class="item"><a href="https://zookeys.pensoft.net/" target="_blank" rel="noopener">
 <span class="nm">ZooKeys<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Open-access taxonomy journal</p><p class="use">Publish taxonomy open access, and mine it for recent descriptions in your region</p></a></li><li class="item"><a href="https://novataxa.blogspot.com/" target="_blank" rel="noopener">
+<p>Open-access taxonomy journal</p><p class="tags"><span class="tag">Literature</span><span class="tag">Free</span></p><p class="use">Publish taxonomy open access, and mine it for recent descriptions in your region</p></a></li><li class="item"><a href="https://novataxa.blogspot.com/" target="_blank" rel="noopener">
 <span class="nm">Species New to Science<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Daily new-species blog</p><p class="use">Skim it daily to catch a new species in your taxon before any database has it</p></a></li><li class="item"><a href="https://www.conservationevidence.com/" target="_blank" rel="noopener">
+<p>Daily new-species blog</p><p class="tags"><span class="tag">Literature</span></p><p class="use">Skim it daily to catch a new species in your taxon before any database has it</p></a></li><li class="item"><a href="https://www.conservationevidence.com/" target="_blank" rel="noopener">
 <span class="nm">Conservation Evidence<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>What-works evidence synthesis</p><p class="use">Check whether an intervention has ever been tested before writing it into a proposal</p></a></li><li class="item"><a href="https://datadryad.org/" target="_blank" rel="noopener">
+<p>What-works evidence synthesis</p><p class="tags"><span class="tag">Literature</span></p><p class="use">Check whether an intervention has ever been tested before writing it into a proposal</p></a></li><li class="item"><a href="https://datadryad.org/" target="_blank" rel="noopener">
 <span class="nm">Dryad<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Data repository behind papers</p><p class="use">Deposit the data behind your paper, and search it for a dataset you were about to recollect</p></a></li><li class="item"><a href="https://figshare.com/" target="_blank" rel="noopener">
+<p>Data repository behind papers</p><p class="tags"><span class="tag">Literature</span></p><p class="use">Deposit the data behind your paper, and search it for a dataset you were about to recollect</p></a></li><li class="item"><a href="https://figshare.com/" target="_blank" rel="noopener">
 <span class="nm">figshare<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Research file repository</p><p class="use">Park figures, posters and negative results somewhere citable rather than losing them entirely</p></a></li><li class="item"><a href="https://data.world/" target="_blank" rel="noopener">
+<p>Research file repository</p><p class="tags"><span class="tag">Literature</span></p><p class="use">Park figures, posters and negative results somewhere citable rather than losing them entirely</p></a></li><li class="item"><a href="https://data.world/" target="_blank" rel="noopener">
 <span class="nm">data.world<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Datasets, including IRS 990 extracts</p><p class="use">Search for the tabular datasets nobody publishes as a paper, including IRS 990 extracts</p></a></li><li class="item"><a href="https://www.kaggle.com/" target="_blank" rel="noopener">
+<p>Datasets, including IRS 990 extracts</p><p class="tags"><span class="tag">Literature</span></p><p class="use">Search for the tabular datasets nobody publishes as a paper, including IRS 990 extracts</p></a></li><li class="item"><a href="https://www.kaggle.com/" target="_blank" rel="noopener">
 <span class="nm">Kaggle<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Datasets and notebooks</p><p class="use">Borrow a notebook that already solves your analysis rather than starting from a blank script</p></a></li><li class="item"><a href="https://www.data.gov/" target="_blank" rel="noopener">
+<p>Datasets and notebooks</p><p class="tags"><span class="tag">Literature</span></p><p class="use">Borrow a notebook that already solves your analysis rather than starting from a blank script</p></a></li><li class="item"><a href="https://www.data.gov/" target="_blank" rel="noopener">
 <span class="nm">Data.gov<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>US open data</p><p class="use">Search federal datasets before requesting anything, because it is often already published</p></a></li><li class="item"><a href="https://www.sciencebase.gov/" target="_blank" rel="noopener">
+<p>US open data</p><p class="tags"><span class="tag">Literature</span><span class="tag">US</span></p><p class="use">Search federal datasets before requesting anything, because it is often already published</p></a></li><li class="item"><a href="https://www.sciencebase.gov/" target="_blank" rel="noopener">
 <span class="nm">ScienceBase<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>USGS data catalog</p><p class="use">Find USGS project data, and the metadata that tells you whether it is usable</p></a></li><li class="item"><a href="https://app.researchrabbit.ai/" target="_blank" rel="noopener">
+<p>USGS data catalog</p><p class="tags"><span class="tag">Literature</span></p><p class="use">Find USGS project data, and the metadata that tells you whether it is usable</p></a></li><li class="item"><a href="https://app.researchrabbit.ai/" target="_blank" rel="noopener">
 <span class="nm">Research Rabbit<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Literature discovery</p><p class="use">Open the app directly when you want to work rather than read about the tool</p></a></li><li class="item"><a href="https://orcid.org/" target="_blank" rel="noopener">
+<p>Literature discovery</p><p class="tags"><span class="tag">Literature</span></p><p class="use">Open the app directly when you want to work rather than read about the tool</p></a></li><li class="item"><a href="https://orcid.org/" target="_blank" rel="noopener">
 <span class="nm">ORCID<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Researcher identifiers</p><p class="use">Register once so your publications follow you between institutions and countries</p></a></li><li class="item"><a href="https://www.mendeley.com/" target="_blank" rel="noopener">
+<p>Researcher identifiers</p><p class="tags"><span class="tag">Literature</span></p><p class="use">Register once so your publications follow you between institutions and countries</p></a></li><li class="item"><a href="https://www.mendeley.com/" target="_blank" rel="noopener">
 <span class="nm">Mendeley<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Reference management</p><p class="use">Manage references free, and use its groups when co-authors sit in different institutions</p></a></li><li class="item"><a href="https://statistics.laerd.com/" target="_blank" rel="noopener">
+<p>Reference management</p><p class="tags"><span class="tag">Literature</span></p><p class="use">Manage references free, and use its groups when co-authors sit in different institutions</p></a></li><li class="item"><a href="https://statistics.laerd.com/" target="_blank" rel="noopener">
 <span class="nm">Laerd Statistics<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Statistics guides</p><p class="use">Look up which test your design actually calls for before running anything in SPSS</p></a></li><li class="item"><a href="https://www.openepi.com/" target="_blank" rel="noopener">
+<p>Statistics guides</p><p class="tags"><span class="tag">Literature</span></p><p class="use">Look up which test your design actually calls for before running anything in SPSS</p></a></li><li class="item"><a href="https://www.openepi.com/" target="_blank" rel="noopener">
 <span class="nm">OpenEpi<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Epidemiological statistics tools</p><p class="use">Run sample size and confidence interval calculations in a browser with no license needed</p></a></li><li class="item"><a href="https://un-spider.org/links-and-resources" target="_blank" rel="noopener">
+<p>Epidemiological statistics tools</p><p class="tags"><span class="tag">Literature</span></p><p class="use">Run sample size and confidence interval calculations in a browser with no license needed</p></a></li><li class="item"><a href="https://un-spider.org/links-and-resources" target="_blank" rel="noopener">
 <span class="nm">UN-SPIDER data compilations<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>Geospatial data source lists</p><p class="use">Use its curated source lists to find satellite data for a land change question</p></a></li><li class="item"><a href="https://www.uwe.ac.uk/study/library/databases" target="_blank" rel="noopener">
+<p>Geospatial data source lists</p><p class="tags"><span class="tag">Literature</span></p><p class="use">Use its curated source lists to find satellite data for a land change question</p></a></li><li class="item"><a href="https://www.uwe.ac.uk/study/library/databases" target="_blank" rel="noopener">
 <span class="nm">UWE library conservation databases<span class="arw" aria-hidden="true">&#8599;</span></span>
-<p>University library index of subscription literature databases, browsable A to Z and by subject. Useful for working out which database covers a field, even where you have no login</p><p class="use">Browse by subject to find which literature database covers your topic</p></a></li>
+<p>University library index of subscription literature databases, browsable A to Z and by subject. Useful for working out which database covers a field, even where you have no login</p><p class="tags"><span class="tag">Literature</span><span class="tag">Paid</span></p><p class="use">Browse by subject to find which literature database covers your topic</p></a></li>
 </ul>
 <p class="hint hidden" id="none">Nothing in this category matches that.</p>
 <p class="nav2"><a href="/field-safety-and-remote-medicine/">&larr; Field safety and remote medicine</a> <a href="/#browse">All categories</a> <a href="/training-and-courses/">Training and courses &rarr;</a></p>
