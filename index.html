@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="build" content="1968f2ae1d95">
+<meta name="build" content="fe1f54a75477">
 <title>Conservation Portal</title>
 <meta name="description" content="611 hand-checked resources for wildlife conservationists across 48 categories: funding, species data, field tech, jobs and training.">
 <link rel="canonical" href="https://conservationportal.org/">
@@ -138,12 +138,6 @@ input[type=search]:focus{border-color:var(--accent);outline:none;
 /* ---------- eight domain blocks ---------- */
 .domains{display:grid;gap:16px;margin-top:26px;
   grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
-.domain.wide{grid-column:span 2}
-.domain.wide ul{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
-.domain.wide ul li{border-bottom:1px solid var(--hair)}
-@media (max-width:1000px){
-  .domain.wide{grid-column:auto}
-  .domain.wide ul{grid-template-columns:1fr}}
 @media (max-width:740px){.domains{grid-template-columns:1fr}}
 /* scroll-margin so a breadcrumb landing on #money-and-services is not hidden under
    the sticky header */
@@ -367,15 +361,15 @@ img.ondark{display:none}
 <div id="browse">
 <section class="sechead"><h2>Browse conservation resources</h2>
 <p>Eight domains, 48 categories. More ways to protect wildlife.</p></section>
-<div class="domains"><div class="domain wide" id="money-and-services">
+<div class="domains"><div class="domain" id="money-and-services">
 <div class="dh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8.5 12 4l9 4.5-9 4.5-9-4.5Z"/><path d="m3 13.5 9 4.5 9-4.5"/></svg>
 <h3>Money and services</h3></div>
 <p class="dmeta">134 resources &middot; 10 categories</p>
-<ul><li><a href="/funding-and-grants/">Funding and grants<span class="n">20</span></a></li><li><a href="/fundraising/">Fundraising<span class="n">10</span></a></li><li><a href="/conservation-swag/">Conservation swag<span class="n">3</span></a></li><li><a href="/prizes-awards-and-competitions/">Prizes, awards and competitions<span class="n">32</span></a></li><li><a href="/biodiversity-finance-mechanisms/">Biodiversity finance mechanisms<span class="n">4</span></a></li><li><a href="/fiscal-sponsorship/">Fiscal sponsorship<span class="n">21</span></a></li><li><a href="/consulting-and-advisory-services/">Consulting and advisory services<span class="n">17</span></a></li><li><a href="/ai-tools-for-nonprofits/">AI tools for nonprofits<span class="n">10</span></a></li><li><a href="/discounted-software-for-nonprofits/">Discounted software for nonprofits<span class="n">10</span></a></li><li><a href="/legal-insurance-and-back-office/">Legal, insurance and back office<span class="n">7</span></a></li></ul></div><div class="domain wide" id="recording-and-data">
+<ul><li><a href="/funding-and-grants/">Funding and grants<span class="n">20</span></a></li><li><a href="/fundraising/">Fundraising<span class="n">10</span></a></li><li><a href="/conservation-swag/">Conservation swag<span class="n">3</span></a></li><li><a href="/prizes-awards-and-competitions/">Prizes, awards and competitions<span class="n">32</span></a></li><li><a href="/biodiversity-finance-mechanisms/">Biodiversity finance mechanisms<span class="n">4</span></a></li><li><a href="/fiscal-sponsorship/">Fiscal sponsorship<span class="n">21</span></a></li><li><a href="/consulting-and-advisory-services/">Consulting and advisory services<span class="n">17</span></a></li><li><a href="/ai-tools-for-nonprofits/">AI tools for nonprofits<span class="n">10</span></a></li><li><a href="/discounted-software-for-nonprofits/">Discounted software for nonprofits<span class="n">10</span></a></li><li><a href="/legal-insurance-and-back-office/">Legal, insurance and back office<span class="n">7</span></a></li></ul></div><div class="domain" id="recording-and-data">
 <div class="dh"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="14" r="2.2"/><path d="M7.5 9.5a6 6 0 0 0 0 9"/><path d="M16.5 9.5a6 6 0 0 1 0 9"/><path d="M12 11.8V4"/></svg>
 <h3>Recording and data</h3></div>
 <p class="dmeta">150 resources &middot; 7 categories</p>
-<ul><li><a href="/occurrence-and-monitoring-platforms/">Occurrence and monitoring platforms<span class="n">13</span></a></li><li><a href="/citizen-science-recording-projects/">Citizen science recording projects<span class="n">31</span></a></li><li><a href="/incident-and-threat-reporting/">Incident and threat reporting<span class="n">27</span></a></li><li><a href="/bioblitzes-and-awareness-days/">Bioblitzes and awareness days<span class="n">22</span></a></li><li><a href="/spatial-data-and-mapping/">Spatial data and mapping<span class="n">24</span></a></li><li><a href="/analytical-methods-and-modeling-tools/">Analytical methods and modeling tools<span class="n">19</span></a></li><li><a href="/conservation-technology-and-field-equipment/">Conservation technology and field equipment<span class="n">14</span></a></li></ul></div><div class="domain wide" id="threats-and-response">
+<ul><li><a href="/occurrence-and-monitoring-platforms/">Occurrence and monitoring platforms<span class="n">13</span></a></li><li><a href="/citizen-science-recording-projects/">Citizen science recording projects<span class="n">31</span></a></li><li><a href="/incident-and-threat-reporting/">Incident and threat reporting<span class="n">27</span></a></li><li><a href="/bioblitzes-and-awareness-days/">Bioblitzes and awareness days<span class="n">22</span></a></li><li><a href="/spatial-data-and-mapping/">Spatial data and mapping<span class="n">24</span></a></li><li><a href="/analytical-methods-and-modeling-tools/">Analytical methods and modeling tools<span class="n">19</span></a></li><li><a href="/conservation-technology-and-field-equipment/">Conservation technology and field equipment<span class="n">14</span></a></li></ul></div><div class="domain" id="threats-and-response">
 <div class="dh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 3 20h18L12 4Z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg>
 <h3>Threats and response</h3></div>
 <p class="dmeta">47 resources &middot; 7 categories</p>
