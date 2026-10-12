@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://conservationportal.org/</loc><lastmod>2026-08-28</lastmod><priority>1.0</priority></url>
-  <url><loc>https://conservationportal.org/about/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://conservationportal.org/</loc><lastmod>2026-10-12</lastmod><priority>1.0</priority></url>
+  <url><loc>https://conservationportal.org/about/</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
   <url><loc>https://conservationportal.org/funding-and-grants/</loc><lastmod>2026-08-26</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/fundraising/</loc><lastmod>2026-08-26</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/conservation-swag/</loc><lastmod>2026-08-26</lastmod><priority>0.8</priority></url>
@@ -22,7 +22,7 @@
   <url><loc>https://conservationportal.org/invasive-species-and-biosecurity/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/wildlife-health-and-disease/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/wildlife-rehabilitation-and-veterinary/</loc><lastmod>2026-08-26</lastmod><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/wildlife-trade-crime-and-enforcement/</loc><lastmod>2026-08-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/wildlife-trade-crime-and-enforcement/</loc><lastmod>2026-10-12</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/human-wildlife-conflict-and-coexistence/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/infrastructure-and-wildlife/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/climate-adaptation-for-species-and-sites/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
