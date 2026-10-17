@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://conservationportal.org/</loc><lastmod>2026-10-16</lastmod><priority>1.0</priority></url>
-  <url><loc>https://conservationportal.org/about/</loc><lastmod>2026-10-16</lastmod><priority>0.6</priority></url>
-  <url><loc>https://conservationportal.org/funding-and-grants/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/</loc><lastmod>2026-10-17</lastmod><priority>1.0</priority></url>
+  <url><loc>https://conservationportal.org/about/</loc><lastmod>2026-10-17</lastmod><priority>0.6</priority></url>
+  <url><loc>https://conservationportal.org/funding-and-grants/</loc><lastmod>2026-10-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/fundraising/</loc><lastmod>2026-08-26</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/conservation-swag/</loc><lastmod>2026-08-26</lastmod><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/prizes-awards-and-competitions/</loc><lastmod>2026-08-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/prizes-awards-and-competitions/</loc><lastmod>2026-10-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/biodiversity-finance-mechanisms/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/fiscal-sponsorship/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/consulting-and-advisory-services/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
@@ -30,17 +30,17 @@
   <url><loc>https://conservationportal.org/ecological-restoration-and-rewilding/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/protected-area-management-and-ranger-welfare/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/indigenous-and-community-led-conservation/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/conservation-tourism/</loc><lastmod>2026-08-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/conservation-tourism/</loc><lastmod>2026-10-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/international-treaties-and-policy/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/permits-ethics-and-genetic-resources/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/planning-evaluation-and-practice/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/planning-evaluation-and-practice/</loc><lastmod>2026-10-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/taxon-specialist-networks/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/species-and-taxonomy-databases/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/lost-species-and-rediscovery/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/lost-species-and-rediscovery/</loc><lastmod>2026-10-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/zoos-and-ex-situ/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/organization-directories/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/communities-and-networks/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/jobs-and-careers/</loc><lastmod>2026-08-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/communities-and-networks/</loc><lastmod>2026-10-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/jobs-and-careers/</loc><lastmod>2026-10-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/volunteering-and-expeditions/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/youth-engagement-and-education/</loc><lastmod>2026-08-26</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/field-safety-and-remote-medicine/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
