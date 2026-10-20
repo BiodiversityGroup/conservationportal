@@ -1,6 +1,6 @@
 {
- "build": "79f531399dda",
- "count": 631,
+ "build": "e286bfa85504",
+ "count": 634,
  "resources": [
   {
    "name": "TBG conservation grants database",
@@ -6552,6 +6552,63 @@
    "tbg": false,
    "new": false,
    "added_on": "2026-08-25",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Ranger Professionalization Toolbox",
+   "url": "https://www.worldbank.org/en/programs/global-wildlife-program/publication/global-wildlife-program-ranger-professionalization-toolbox-series",
+   "description": "Three practical guides on ranger conditions, conduct and competencies, from the Global Wildlife Program with the International Ranger Federation and the Universal Ranger Support Alliance, with tools, standards and case studies",
+   "use_note": "Use the conduct guide to draft or revise a ranger code of conduct, and the competencies guide to assess what your team can do",
+   "category": "Protected area management and ranger welfare",
+   "category_slug": "protected-area-management-and-ranger-welfare",
+   "category_url": "https://conservationportal.org/protected-area-management-and-ranger-welfare/",
+   "group": "Land, sea and recovery",
+   "tags": [
+    "Guide",
+    "Global"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-10-20",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "International Ranger Federation",
+   "url": "https://www.internationalrangers.org/",
+   "description": "The international federation for rangers, with regional pages, the State of the Ranger report, resources on women rangers and the annual World Ranger Day",
+   "use_note": "Start with the State of the Ranger report for a picture of the profession before you plan ranger support",
+   "category": "Protected area management and ranger welfare",
+   "category_slug": "protected-area-management-and-ranger-welfare",
+   "category_url": "https://conservationportal.org/protected-area-management-and-ranger-welfare/",
+   "group": "Land, sea and recovery",
+   "tags": [
+    "Network",
+    "Global"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-10-20",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Universal Ranger Support Alliance",
+   "url": "https://www.ursa4rangers.org/",
+   "description": "A global coalition of conservation organizations that supports the International Ranger Federation and champions rangers, with a library of ranger documents in many languages",
+   "use_note": "Search its document library for ranger guidance in your language before writing your own",
+   "category": "Protected area management and ranger welfare",
+   "category_slug": "protected-area-management-and-ranger-welfare",
+   "category_url": "https://conservationportal.org/protected-area-management-and-ranger-welfare/",
+   "group": "Land, sea and recovery",
+   "tags": [
+    "Network",
+    "Global"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-10-20",
    "access_url": "",
    "access_label": ""
   },
