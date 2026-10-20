@@ -1,6 +1,6 @@
 {
- "build": "625d282c38c1",
- "count": 630,
+ "build": "79f531399dda",
+ "count": 631,
  "resources": [
   {
    "name": "TBG conservation grants database",
@@ -2877,6 +2877,24 @@
    "tbg": false,
    "new": false,
    "added_on": "2026-08-26",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "BirdWeather",
+   "url": "https://www.birdweather.com/",
+   "description": "Network of community bird listening stations that identify songs with the BirdNET neural network, with a live map, species and station pages, a data explorer and open GraphQL and REST APIs for researchers. The company sells the listening hardware, and its terms cover personal and non-commercial use",
+   "use_note": "Look for stations near your site on the live map, and use the API for detections within its non-commercial terms",
+   "category": "Occurrence and monitoring platforms",
+   "category_slug": "occurrence-and-monitoring-platforms",
+   "category_url": "https://conservationportal.org/occurrence-and-monitoring-platforms/",
+   "group": "Recording and data",
+   "tags": [
+    "Platform"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-10-19",
    "access_url": "",
    "access_label": ""
   },
