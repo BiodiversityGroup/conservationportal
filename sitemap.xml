@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://conservationportal.org/</loc><lastmod>2026-10-20</lastmod><priority>1.0</priority></url>
-  <url><loc>https://conservationportal.org/about/</loc><lastmod>2026-10-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://conservationportal.org/</loc><lastmod>2026-10-27</lastmod><priority>1.0</priority></url>
+  <url><loc>https://conservationportal.org/about/</loc><lastmod>2026-10-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://conservationportal.org/funding-and-grants/</loc><lastmod>2026-10-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/fundraising/</loc><lastmod>2026-08-26</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/conservation-swag/</loc><lastmod>2026-08-26</lastmod><priority>0.8</priority></url>
@@ -37,7 +37,7 @@
   <url><loc>https://conservationportal.org/taxon-specialist-networks/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/species-and-taxonomy-databases/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/lost-species-and-rediscovery/</loc><lastmod>2026-10-17</lastmod><priority>0.8</priority></url>
-  <url><loc>https://conservationportal.org/zoos-and-ex-situ/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://conservationportal.org/zoos-and-ex-situ/</loc><lastmod>2026-10-27</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/organization-directories/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/communities-and-networks/</loc><lastmod>2026-10-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://conservationportal.org/jobs-and-careers/</loc><lastmod>2026-10-17</lastmod><priority>0.8</priority></url>

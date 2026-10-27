@@ -1,6 +1,6 @@
 {
- "build": "e286bfa85504",
- "count": 634,
+ "build": "2e673db49b1f",
+ "count": 640,
  "resources": [
   {
    "name": "TBG conservation grants database",
@@ -8976,6 +8976,118 @@
    "tbg": false,
    "new": false,
    "added_on": "2026-08-25",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "WAZA International Studbooks",
+   "url": "https://www.waza.org/priorities/conservation/waza-international-studbooks/",
+   "description": "List of the international studbooks for endangered and rare species, with common and scientific names, studbook keepers, host institutions and regions, kept under WAZA in collaboration with Species360",
+   "use_note": "Look up your species to find its international studbook keeper and host institution before planning any ex-situ work",
+   "category": "Zoos and ex-situ",
+   "category_slug": "zoos-and-ex-situ",
+   "category_url": "https://conservationportal.org/zoos-and-ex-situ/",
+   "group": "Species and status",
+   "tags": [
+    "Directory",
+    "Global"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-10-27",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "AZA Animal Programs Database",
+   "url": "https://www.aza.org/about-animal-programs-database",
+   "description": "Public information on the Association of Zoos and Aquariums' Taxon Advisory Groups, Species Survival Plan programs and studbooks, and who leads them, with downloads for AZA members who log in",
+   "use_note": "Find the Species Survival Plan or Taxon Advisory Group covering your species, and who leads it, before you approach a zoo",
+   "category": "Zoos and ex-situ",
+   "category_slug": "zoos-and-ex-situ",
+   "category_url": "https://conservationportal.org/zoos-and-ex-situ/",
+   "group": "Species and status",
+   "tags": [
+    "Database"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-10-27",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "European Studbook Foundation",
+   "url": "https://studbooks.eu/studbooks/studbooks/",
+   "description": "List of active European studbooks sorted by scientific name, with each studbook's category and IUCN status and a way to contact its coordinator",
+   "use_note": "Check whether your species has a European studbook and contact its coordinator, since each one handles its own animal registration",
+   "category": "Zoos and ex-situ",
+   "category_slug": "zoos-and-ex-situ",
+   "category_url": "https://conservationportal.org/zoos-and-ex-situ/",
+   "group": "Species and status",
+   "tags": [
+    "Directory",
+    "Europe"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-10-27",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "PopLink",
+   "url": "https://www.lpzoo.org/science-project/poplink/",
+   "description": "Software from Lincoln Park Zoo and Tracks Data Solutions that studbook keepers and population biologists use to maintain, analyze and export the genetic and demographic data behind population management decisions",
+   "use_note": "Use it if you keep a studbook or analyze a managed population, and download the current version from its own site",
+   "category": "Zoos and ex-situ",
+   "category_slug": "zoos-and-ex-situ",
+   "category_url": "https://conservationportal.org/zoos-and-ex-situ/",
+   "group": "Species and status",
+   "tags": [
+    "Software"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-10-27",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Zootierliste",
+   "url": "https://www.zootierliste.de/",
+   "description": "German-language catalog of the vertebrate species held in zoos and other public animal collections worldwide, searchable by species or by zoo, with an English version of the site",
+   "use_note": "Look up a species to see which zoos hold it, as a starting point for finding ex-situ partners",
+   "category": "Zoos and ex-situ",
+   "category_slug": "zoos-and-ex-situ",
+   "category_url": "https://conservationportal.org/zoos-and-ex-situ/",
+   "group": "Species and status",
+   "tags": [
+    "Database",
+    "Global"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-10-27",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "OpenStudbook",
+   "url": "https://openstudbook.org/",
+   "description": "Open-source platform for zoos, aquariums and botanical gardens to manage species populations and track genetics, free to use and either self-hosted or hosted by its makers",
+   "use_note": "Try it for a small collection, but note it is a new one-developer project and its breeding-loan tools are marked experimental",
+   "category": "Zoos and ex-situ",
+   "category_slug": "zoos-and-ex-situ",
+   "category_url": "https://conservationportal.org/zoos-and-ex-situ/",
+   "group": "Species and status",
+   "tags": [
+    "Platform",
+    "Free"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-10-27",
    "access_url": "",
    "access_label": ""
   },
