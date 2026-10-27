@@ -1,6 +1,6 @@
 {
- "build": "2e673db49b1f",
- "count": 640,
+ "build": "f74aeaba1beb",
+ "count": 643,
  "resources": [
   {
    "name": "TBG conservation grants database",
@@ -5431,6 +5431,24 @@
    "access_label": ""
   },
   {
+   "name": "WatchSpotter",
+   "url": "https://watchspotterpro.com/",
+   "description": "Cloud-based mobile data collection with live maps and charts, built for marine mammal strandings, sea turtle nesting surveys and harmful algal bloom monitoring, and for citizen science programs. Commercial software, with pricing not published",
+   "use_note": "If you run stranding response or nesting surveys, look at its field app and live map, and ask for pricing since none is posted",
+   "category": "Conservation technology and field equipment",
+   "category_slug": "conservation-technology-and-field-equipment",
+   "category_url": "https://conservationportal.org/conservation-technology-and-field-equipment/",
+   "group": "Recording and data",
+   "tags": [
+    "Software"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-10-27",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
    "name": "Global Invasive Species Database",
    "url": "https://www.iucngisd.org/gisd/",
    "description": "Species profiles with IUCN-standardized invasive impact assessments",
@@ -9732,6 +9750,44 @@
    "tbg": false,
    "new": false,
    "added_on": "2026-08-25",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Environment Jobs",
+   "url": "https://environmentjob.co.uk/",
+   "description": "UK environmental job board covering conservation, wildlife, ecology and sustainability roles, with filters for paid or volunteer, sector and level, plus volunteering, courses and events",
+   "use_note": "Filter by sector and level to find UK conservation roles, and use the volunteering tab for unpaid posts",
+   "category": "Jobs and careers",
+   "category_slug": "jobs-and-careers",
+   "category_url": "https://conservationportal.org/jobs-and-careers/",
+   "group": "People",
+   "tags": [
+    "Job board",
+    "UK"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-10-27",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Countryside Jobs Service",
+   "url": "https://www.countryside-jobs.com/",
+   "description": "UK job service for countryside and conservation careers since 1994, with job, volunteer and training listings, browsable by sector, location or employer",
+   "use_note": "Browse by sector, such as ecology or wildlife work, to see current UK posts, and check the volunteer and training sections too",
+   "category": "Jobs and careers",
+   "category_slug": "jobs-and-careers",
+   "category_url": "https://conservationportal.org/jobs-and-careers/",
+   "group": "People",
+   "tags": [
+    "Job board",
+    "UK"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-10-27",
    "access_url": "",
    "access_label": ""
   },
