@@ -1,6 +1,6 @@
 {
- "build": "0c8f7e24eb5d",
- "count": 651,
+ "build": "e92c00451364",
+ "count": 670,
  "resources": [
   {
    "name": "TBG conservation grants database",
@@ -10084,24 +10084,6 @@
    "access_label": ""
   },
   {
-   "name": "Nature Lab",
-   "url": "https://www.nature.org/en-us/about-us/who-we-are/how-we-work/youth-engagement/nature-lab/",
-   "description": "Free lesson plans, virtual field trips and family guides from The Nature Conservancy, mostly aimed at ages 5 to 10 and their teachers. A curriculum to use, not a program a young person joins",
-   "use_note": "Hand a teacher a finished unit instead of writing outreach material from scratch",
-   "category": "Youth engagement and education",
-   "category_slug": "youth-engagement-and-education",
-   "category_url": "https://conservationportal.org/youth-engagement-and-education/",
-   "group": "People",
-   "tags": [
-    "Youth"
-   ],
-   "tbg": false,
-   "new": false,
-   "added_on": "2026-08-26",
-   "access_url": "",
-   "access_label": ""
-  },
-  {
    "name": "One Planet Youth, WWF-Hong Kong",
    "url": "https://www.wwf.org.hk/en/education/youth/",
    "description": "Leadership training and citizen science for 15 to 30 year olds, embedded in WWF's own Hong Kong conservation work. The structured, organization-led counterpart to a peer-led collective",
@@ -10136,6 +10118,374 @@
    "tbg": false,
    "new": false,
    "added_on": "2026-08-26",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Nature Lab",
+   "url": "https://www.nature.org/en-us/about-us/who-we-are/how-we-work/youth-engagement/nature-lab/",
+   "description": "Free lesson plans, virtual field trips and family guides from The Nature Conservancy, mostly aimed at ages 5 to 10 and their teachers. A curriculum to use, not a program a young person joins",
+   "use_note": "Hand a teacher a finished unit instead of writing outreach material from scratch",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Education",
+    "Free"
+   ],
+   "tbg": false,
+   "new": false,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Project WILD",
+   "url": "https://www.fishwildlife.org/projectwild",
+   "description": "Wildlife conservation education curricula for pre-K through grade 12, run by the Association of Fish and Wildlife Agencies, with student pages, activity resources and online courses for educators",
+   "use_note": "Start with its student pages and activity resources, and look at its training if you will teach it regularly",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Education"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Project Learning Tree",
+   "url": "https://www.plt.org/",
+   "description": "Activities and lessons that teach children about the environment through trees and forests, with free activities for families, sample student activities and alignment to standards",
+   "use_note": "Try its free family activities first, then look at the curriculum if you teach in a classroom",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Education",
+    "Free"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Project WET",
+   "url": "https://www.projectwet.org/",
+   "description": "Water education programs and resources for educators, including free downloadable lessons such as The Incredible Journey and Blue Planet",
+   "use_note": "Download one free lesson to see whether its hands-on style suits your group",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Education",
+    "Free"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "National Geographic Education",
+   "url": "https://education.nationalgeographic.org/",
+   "description": "Free maps, videos, interactives and other teaching resources, filterable by grade and subject, plus live events with National Geographic explorers",
+   "use_note": "Filter by grade and subject to find a ready-made resource for your class",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Education",
+    "Free"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Smithsonian Learning Lab",
+   "url": "https://learninglab.si.edu/",
+   "description": "Free-to-discover digital platform that connects learners to Smithsonian objects, resources and stories, where educators can build and share their own collections and assignments",
+   "use_note": "Search for wildlife and ecosystem collections, or build one of your own for a class",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Education",
+    "Free"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Cornell Lab K-12 education",
+   "url": "https://www.birds.cornell.edu/k12/",
+   "description": "Bird lessons and activities for every grade from kindergarten to grade 12, from the Cornell Lab of Ornithology, with professional development for educators",
+   "use_note": "Pick the grade band that matches your group and start with one of its bird lessons",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Education"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "NOAA Education",
+   "url": "https://www.noaa.gov/education",
+   "description": "Resources for students and educators on the ocean, coasts, marine life, weather and climate, including classroom-ready data, printable activities and a database of education resources",
+   "use_note": "Use its printable activities with younger learners and its classroom-ready data with older ones studying oceans or climate",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Education"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Eco-Schools USA",
+   "url": "https://www.nwf.org/eco-schools-us",
+   "description": "National Wildlife Federation's K-12 program that works with schools and communities on sustainability and environmental education",
+   "use_note": "Register your school if you want a structured path to a school-wide sustainability program",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Education"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Eco-Schools",
+   "url": "https://www.ecoschools.global/",
+   "description": "Worldwide school program built on seven steps toward a Green Flag, with free online courses that walk a school through it",
+   "use_note": "Take its free online course on what an Eco-School is before deciding whether to enroll a school",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Education",
+    "Free",
+    "Global"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "NAAEE",
+   "url": "https://naaee.org/",
+   "description": "Professional association for environmental educators, working to build environmental literacy and civic engagement, with resources and the eePRO network for educators",
+   "use_note": "Start here if you teach or design nature programs and want to find peers and guidance",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Network"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Children & Nature Network",
+   "url": "https://www.childrenandnature.org/",
+   "description": "Network working to connect children with nature, with sections for youth, families, schools and communities, a research library and a resource hub",
+   "use_note": "Use its research library to back a case for outdoor time, and its resource hub for guides",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Network"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Nature Explore",
+   "url": "https://natureexplore.org/",
+   "description": "Research-rooted program that works to make nature a joyful part of children's daily learning, including certified outdoor classrooms. It also runs a shop",
+   "use_note": "Look at its certified classrooms for a model before you design an outdoor space for children",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Education"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "KidsGardening",
+   "url": "https://kidsgardening.org/",
+   "description": "Resources for educators and caregivers who garden with children, including lesson guides",
+   "use_note": "Pull a lesson guide for a school or community garden, and read why gardening with children is worth the effort",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Education"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "National Geographic Kids",
+   "url": "https://kids.nationalgeographic.com/",
+   "description": "Animal pages, games, quizzes and videos for children, covering mammals, birds, reptiles, amphibians, fish and invertebrates, alongside a magazine and a shop",
+   "use_note": "Point a child at its animal pages for a quick fact file, or at a quiz for something to do",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Media"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Ranger Rick",
+   "url": "https://rangerrick.org/",
+   "description": "National Wildlife Federation's wildlife magazines for children since 1967, with book clubs and games, available to order",
+   "use_note": "Match a magazine to the child's age, since it separates younger readers from ages seven and up",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Reading"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "PBS Kids Wild Kratts",
+   "url": "https://pbskids.org/wildkratts/",
+   "description": "Games and videos from the PBS KIDS series that explores animals and their creature powers",
+   "use_note": "Use it as a way in for younger children who like cartoons, then move them on to real animal facts",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Media"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Kids in Parks (National Park Service)",
+   "url": "https://www.nps.gov/kids/index.htm",
+   "description": "The National Park Service's page for children and families on exploring national parks, with outdoor adventures and discovery activities",
+   "use_note": "Look here before a park visit to give children something to do and find once they arrive",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Education"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Earth Rangers",
+   "url": "https://www.earthrangers.com/",
+   "description": "Charity that turns children's concerns about the environment into positive action",
+   "use_note": "See how it structures action for children before you design a club or a challenge of your own",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Youth"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Wildlife Watch",
+   "url": "https://www.wildlifewatch.org.uk/",
+   "description": "The junior branch of The Wildlife Trusts, an environmental action club for children and families across the UK",
+   "use_note": "Find your local group if you are in the UK, or copy how it keeps children and families involved",
+   "category": "Nature education for kids",
+   "category_slug": "nature-education-for-kids",
+   "category_url": "https://conservationportal.org/nature-education-for-kids/",
+   "group": "People",
+   "tags": [
+    "Youth",
+    "UK"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
    "access_url": "",
    "access_label": ""
   },
