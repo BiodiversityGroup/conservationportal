@@ -1,5 +1,5 @@
 {
- "build": "e92c00451364",
+ "build": "60cf5bc1a7cf",
  "count": 670,
  "resources": [
   {
@@ -4395,8 +4395,8 @@
   {
    "name": "Protected Planet",
    "url": "https://www.protectedplanet.net/",
-   "description": "Protected area boundaries (WDPA)",
-   "use_note": "Download WDPA boundaries as the baseline layer for any protected area gap analysis",
+   "description": "Boundaries and data for protected areas and other effective area-based conservation measures, held in the World Database on Protected and Conserved Areas, which now brings together the WDPA and related databases",
+   "use_note": "Download its boundaries as the baseline layer for any protected area gap analysis",
    "category": "Spatial data and mapping",
    "category_slug": "spatial-data-and-mapping",
    "category_url": "https://conservationportal.org/spatial-data-and-mapping/",
@@ -4406,7 +4406,7 @@
    ],
    "tbg": false,
    "new": false,
-   "added_on": "2026-08-25",
+   "added_on": "2026-11-02",
    "access_url": "",
    "access_label": ""
   },
@@ -4657,25 +4657,6 @@
    "group": "Recording and data",
    "tags": [
     "Data"
-   ],
-   "tbg": false,
-   "new": false,
-   "added_on": "2026-08-25",
-   "access_url": "",
-   "access_label": ""
-  },
-  {
-   "name": "LandScope America",
-   "url": "http://www.landscope.org/",
-   "description": "US conservation priority mapping",
-   "use_note": "Treat these US priority layers as unavailable and source them from state natural heritage programs",
-   "category": "Spatial data and mapping",
-   "category_slug": "spatial-data-and-mapping",
-   "category_url": "https://conservationportal.org/spatial-data-and-mapping/",
-   "group": "Recording and data",
-   "tags": [
-    "Data",
-    "US"
    ],
    "tbg": false,
    "new": false,
@@ -5282,6 +5263,24 @@
    "tags": [
     "Platform",
     "Global"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "TESSA",
+   "url": "https://www.birdlife.org/tessa-tools/",
+   "description": "Toolkit for site-based assessment of ecosystem services, with practical guidance on which services matter at a site, what data to collect and which methods to use. BirdLife provides it through a request form",
+   "use_note": "Use it to compare a site's ecosystem services before and after a change such as conversion, using its guidance on data and methods",
+   "category": "Analytical methods and modeling tools",
+   "category_slug": "analytical-methods-and-modeling-tools",
+   "category_url": "https://conservationportal.org/analytical-methods-and-modeling-tools/",
+   "group": "Recording and data",
+   "tags": [
+    "Guide"
    ],
    "tbg": false,
    "new": true,
@@ -6391,7 +6390,7 @@
   },
   {
    "name": "System for Assessing Vulnerability of Species",
-   "url": "https://toolkit.climate.gov/tool/system-assessing-vulnerability-species-savs",
+   "url": "https://research.fs.usda.gov/rmrs/products/dataandtools/savs-system-assessing-vulnerability-species-climate-change",
    "description": "Free US Forest Service questionnaire, 22 criteria, built for managers with no climate modeling background",
    "use_note": "Answer 22 questions and get a vulnerability rating a site manager can actually act on",
    "category": "Climate adaptation for species and sites",
@@ -6404,7 +6403,7 @@
    ],
    "tbg": false,
    "new": false,
-   "added_on": "2026-08-25",
+   "added_on": "2026-11-02",
    "access_url": "",
    "access_label": ""
   },
@@ -7673,9 +7672,9 @@
   },
   {
    "name": "Prism evaluation toolkit",
-   "url": "https://conservationevaluation.org/",
-   "description": "Evaluation toolkit for small and medium projects",
-   "use_note": "Try the toolkit on a small project, checking the site loads before building a workshop around it",
+   "url": "https://www.conservationstandards.org/library-item/prism-toolkit-for-evaluating-outcomes-and-impacts/",
+   "description": "Toolkit for evaluating the outcomes and impacts of small and medium conservation projects, published in the Conservation Standards library",
+   "use_note": "Read it before you design monitoring for a small project, and use it to judge results against your own goals",
    "category": "Planning, evaluation and practice",
    "category_slug": "planning-evaluation-and-practice",
    "category_url": "https://conservationportal.org/planning-evaluation-and-practice/",
@@ -7685,7 +7684,7 @@
    ],
    "tbg": false,
    "new": false,
-   "added_on": "2026-08-25",
+   "added_on": "2026-11-02",
    "access_url": "",
    "access_label": ""
   },
