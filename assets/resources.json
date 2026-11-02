@@ -1,6 +1,6 @@
 {
- "build": "f74aeaba1beb",
- "count": 643,
+ "build": "0c8f7e24eb5d",
+ "count": 651,
  "resources": [
   {
    "name": "TBG conservation grants database",
@@ -4829,6 +4829,25 @@
    "access_label": ""
   },
   {
+   "name": "FEGN",
+   "url": "https://conservation.dcp.ufl.edu/fegn/",
+   "description": "Statewide database from the University of Florida that identifies and prioritizes a connected ecological network across the US state of Florida, with online tools, reports, data and maps",
+   "use_note": "Check its priority layers before you plan land protection in Florida, or study it as a worked example of a statewide network",
+   "category": "Spatial data and mapping",
+   "category_slug": "spatial-data-and-mapping",
+   "category_url": "https://conservationportal.org/spatial-data-and-mapping/",
+   "group": "Recording and data",
+   "tags": [
+    "Data",
+    "US"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
    "name": "Vortex",
    "url": "https://scti.tools/vortex/",
    "description": "Free population viability analysis for extinction-risk simulation",
@@ -5175,6 +5194,98 @@
    "tbg": false,
    "new": false,
    "added_on": "2026-08-25",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Marxan Planning Platform",
+   "url": "https://marxanplanning.org/",
+   "description": "Web platform for spatial conservation planning with the Marxan software, supporting collaboration and decision-making for biodiversity and socio-economic objectives across land, freshwater and ocean systems. The Marxan software is free and open source",
+   "use_note": "Start with its planning problem types to see whether your question suits Marxan before you set up an analysis",
+   "category": "Analytical methods and modeling tools",
+   "category_slug": "analytical-methods-and-modeling-tools",
+   "category_url": "https://conservationportal.org/analytical-methods-and-modeling-tools/",
+   "group": "Recording and data",
+   "tags": [
+    "Platform",
+    "Free"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Zonation 5",
+   "url": "https://zonationteam.github.io/Zonation5/",
+   "description": "Spatial prioritization software that identifies priority areas for conservation planning, land use planning and ecological impact avoidance from raster data on species, habitats and ecosystem services, with Windows and Linux downloads and a manual",
+   "use_note": "Try it when you have raster layers for many species or habitats and want a ranked priority map",
+   "category": "Analytical methods and modeling tools",
+   "category_slug": "analytical-methods-and-modeling-tools",
+   "category_url": "https://conservationportal.org/analytical-methods-and-modeling-tools/",
+   "group": "Recording and data",
+   "tags": [
+    "Software"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "prioritizr",
+   "url": "https://prioritizr.net/",
+   "description": "R package for systematic conservation prioritization that builds and solves planning problems with mixed integer linear programming, with tutorials on connectivity, trade-offs and management zones",
+   "use_note": "Use it when you want exact, reproducible solutions in R, and read its solver guide before you choose a solver",
+   "category": "Analytical methods and modeling tools",
+   "category_slug": "analytical-methods-and-modeling-tools",
+   "category_url": "https://conservationportal.org/analytical-methods-and-modeling-tools/",
+   "group": "Recording and data",
+   "tags": [
+    "Software"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "InVEST",
+   "url": "https://naturalcapitalalliance.stanford.edu/software/invest",
+   "description": "Open-source ecosystem services modeling platform with models for terrestrial, freshwater, marine, coastal and urban settings, plus a data hub, learning materials and a plugin registry",
+   "use_note": "Pick the model for the service you need to value, such as water or carbon, and work through its learning materials before running it on your site",
+   "category": "Analytical methods and modeling tools",
+   "category_slug": "analytical-methods-and-modeling-tools",
+   "category_url": "https://conservationportal.org/analytical-methods-and-modeling-tools/",
+   "group": "Recording and data",
+   "tags": [
+    "Software"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Co$ting Nature",
+   "url": "https://www.policysupport.org/costingnature",
+   "description": "Online tools for mapping the supply and demand of ecosystem services from local to national scales worldwide, with a simple map viewer for the global data",
+   "use_note": "Use its map viewer for a quick look at ecosystem service supply and demand around your site before you commission modeling",
+   "category": "Analytical methods and modeling tools",
+   "category_slug": "analytical-methods-and-modeling-tools",
+   "category_url": "https://conservationportal.org/analytical-methods-and-modeling-tools/",
+   "group": "Recording and data",
+   "tags": [
+    "Platform",
+    "Global"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
    "access_url": "",
    "access_label": ""
   },
@@ -7701,6 +7812,42 @@
    "tbg": false,
    "new": false,
    "added_on": "2026-08-25",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "ESVD",
+   "url": "https://www.esvd.net/",
+   "description": "Ecosystem Services Valuation Database, built to give accessible information on the economic benefits of ecosystems and biodiversity and the costs of their loss, to support decisions on conservation, restoration and land management",
+   "use_note": "Look for published values for ecosystems like yours when you need figures for a proposal or a cost-benefit case",
+   "category": "Planning, evaluation and practice",
+   "category_slug": "planning-evaluation-and-practice",
+   "category_url": "https://conservationportal.org/planning-evaluation-and-practice/",
+   "group": "Rules and planning",
+   "tags": [
+    "Database"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Conservation Corridor",
+   "url": "https://conservationcorridor.org/",
+   "description": "Resource hub that bridges the science and practice of conservation corridors and connectivity, with connectivity basics, strategies and real-world applications",
+   "use_note": "Start with its connectivity basics to explain why corridors matter, then use its strategies and examples in your planning",
+   "category": "Planning, evaluation and practice",
+   "category_slug": "planning-evaluation-and-practice",
+   "category_url": "https://conservationportal.org/planning-evaluation-and-practice/",
+   "group": "Rules and planning",
+   "tags": [
+    "Guide"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-02",
    "access_url": "",
    "access_label": ""
   },
