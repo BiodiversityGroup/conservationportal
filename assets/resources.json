@@ -1,6 +1,6 @@
 {
- "build": "60cf5bc1a7cf",
- "count": 670,
+ "build": "26ba1e7d8718",
+ "count": 672,
  "resources": [
   {
    "name": "TBG conservation grants database",
@@ -4825,6 +4825,43 @@
    "tbg": false,
    "new": true,
    "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Earth Atlas",
+   "url": "https://maps.mongabay.com/",
+   "description": "Map builder from Mongabay that stacks environmental, social and satellite data layers from reputable sources, such as biodiversity intactness, endangered species critical habitats, primary forests and tree cover, and exports the finished map",
+   "use_note": "Stack the layers that give context for your site or story, then export the map for a report or article",
+   "category": "Spatial data and mapping",
+   "category_slug": "spatial-data-and-mapping",
+   "category_url": "https://conservationportal.org/spatial-data-and-mapping/",
+   "group": "Recording and data",
+   "tags": [
+    "Data"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-11",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Earth Index",
+   "url": "https://www.earthgenome.org/earth-index",
+   "description": "Visual search engine from Earth Genome that uses AI on Sentinel-2 satellite imagery with global coverage to find places that look like examples you label, for uses such as detecting illegal mining. Access requires signing up",
+   "use_note": "Label a few known sites of the activity you track, then review the similar places it finds across your region",
+   "category": "Spatial data and mapping",
+   "category_slug": "spatial-data-and-mapping",
+   "category_url": "https://conservationportal.org/spatial-data-and-mapping/",
+   "group": "Recording and data",
+   "tags": [
+    "Data",
+    "Global"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-11",
    "access_url": "",
    "access_label": ""
   },
