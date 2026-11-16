@@ -1,6 +1,6 @@
 {
- "build": "26ba1e7d8718",
- "count": 672,
+ "build": "3aaffcaca3e0",
+ "count": 665,
  "resources": [
   {
    "name": "TBG conservation grants database",
@@ -7907,10 +7907,10 @@
    "access_label": ""
   },
   {
-   "name": "IUCN SSC Global Tree Specialist Group",
-   "url": "https://iucn.org/our-union/commissions/group/iucn-ssc-global-tree-specialist-group",
-   "description": "Threatened tree species assessments and action plans",
-   "use_note": "Reach the assessors behind the Global Tree Assessment when you need a tree species evaluated or an action plan cited",
+   "name": "IUCN SSC specialist groups",
+   "url": "https://iucn.org/our-union/commissions/group/1445",
+   "description": "Directory of the IUCN Species Survival Commission's specialist groups, Red List authorities, conservation committees and task forces, which you can filter by group type and by taxon, from amphibians and reptiles to plants and fungi",
+   "use_note": "Filter by taxon to find the specialist group that covers your species, then follow its page to reach it",
    "category": "Taxon specialist networks",
    "category_slug": "taxon-specialist-networks",
    "category_url": "https://conservationportal.org/taxon-specialist-networks/",
@@ -7919,8 +7919,8 @@
     "Network"
    ],
    "tbg": false,
-   "new": false,
-   "added_on": "2026-08-25",
+   "new": true,
+   "added_on": "2026-11-16",
    "access_url": "",
    "access_label": ""
   },
@@ -7929,24 +7929,6 @@
    "url": "https://xerces.org/",
    "description": "Insect and pollinator conservation programs",
    "use_note": "Pull free pollinator habitat guidance and pesticide risk factsheets you can hand straight to a landowner",
-   "category": "Taxon specialist networks",
-   "category_slug": "taxon-specialist-networks",
-   "category_url": "https://conservationportal.org/taxon-specialist-networks/",
-   "group": "Species and status",
-   "tags": [
-    "Network"
-   ],
-   "tbg": false,
-   "new": false,
-   "added_on": "2026-08-25",
-   "access_url": "",
-   "access_label": ""
-  },
-  {
-   "name": "IUCN SSC Wild Bee Specialist Group",
-   "url": "https://iucn.org/our-union/commissions/group/iucn-ssc-wild-bee-specialist-group",
-   "description": "Wild bee conservation status network",
-   "use_note": "Ask who is already assessing your region's wild bees before starting a survey that duplicates work underway",
    "category": "Taxon specialist networks",
    "category_slug": "taxon-specialist-networks",
    "category_url": "https://conservationportal.org/taxon-specialist-networks/",
@@ -7997,64 +7979,10 @@
    "access_label": ""
   },
   {
-   "name": "IUCN SSC Cetacean Specialist Group",
-   "url": "https://iucn-csg.org/",
-   "description": "Whale, dolphin and porpoise conservation network",
-   "use_note": "Contact the Global Stranding Network here when a stranding response needs regional expertise quickly",
-   "category": "Taxon specialist networks",
-   "category_slug": "taxon-specialist-networks",
-   "category_url": "https://conservationportal.org/taxon-specialist-networks/",
-   "group": "Species and status",
-   "tags": [
-    "Network"
-   ],
-   "tbg": false,
-   "new": false,
-   "added_on": "2026-08-25",
-   "access_url": "",
-   "access_label": ""
-  },
-  {
-   "name": "IUCN SSC Fungal Conservation Committee",
-   "url": "https://iucn.org/our-union/commissions/group/iucn-ssc-fungal-conservation-committee",
-   "description": "Fungal conservation coordination hub",
-   "use_note": "Route a fungal Red List proposal to the people who can shepherd it through assessment",
-   "category": "Taxon specialist networks",
-   "category_slug": "taxon-specialist-networks",
-   "category_url": "https://conservationportal.org/taxon-specialist-networks/",
-   "group": "Species and status",
-   "tags": [
-    "Network"
-   ],
-   "tbg": false,
-   "new": false,
-   "added_on": "2026-08-25",
-   "access_url": "",
-   "access_label": ""
-  },
-  {
    "name": "Fungi Foundation",
    "url": "https://www.ffungi.org/",
    "description": "Fungal species and habitat conservation advocacy",
    "use_note": "Borrow its framing and education material when you need funders to treat fungi as serious conservation targets",
-   "category": "Taxon specialist networks",
-   "category_slug": "taxon-specialist-networks",
-   "category_url": "https://conservationportal.org/taxon-specialist-networks/",
-   "group": "Species and status",
-   "tags": [
-    "Network"
-   ],
-   "tbg": false,
-   "new": false,
-   "added_on": "2026-08-25",
-   "access_url": "",
-   "access_label": ""
-  },
-  {
-   "name": "IUCN SSC Freshwater Fish Specialist Group",
-   "url": "https://freshwaterfish.org/",
-   "description": "Freshwater fish conservation status network",
-   "use_note": "Find regional freshwater fish specialists to co-author an assessment or review a survey design",
    "category": "Taxon specialist networks",
    "category_slug": "taxon-specialist-networks",
    "category_url": "https://conservationportal.org/taxon-specialist-networks/",
@@ -8091,61 +8019,6 @@
    "url": "https://www.batcon.org/",
    "description": "Bat species and habitat conservation nonprofit",
    "use_note": "Take its roost and habitat management guidance into a site plan, and watch its grant openings",
-   "category": "Taxon specialist networks",
-   "category_slug": "taxon-specialist-networks",
-   "category_url": "https://conservationportal.org/taxon-specialist-networks/",
-   "group": "Species and status",
-   "tags": [
-    "Network"
-   ],
-   "tbg": false,
-   "new": false,
-   "added_on": "2026-08-25",
-   "access_url": "",
-   "access_label": ""
-  },
-  {
-   "name": "IUCN SSC Bat Specialist Group",
-   "url": "https://www.iucnbsg.org/",
-   "description": "Global bat conservation specialist network",
-   "use_note": "Follow its field hygiene guidelines before handling bats, which most permit authorities now expect to see",
-   "category": "Taxon specialist networks",
-   "category_slug": "taxon-specialist-networks",
-   "category_url": "https://conservationportal.org/taxon-specialist-networks/",
-   "group": "Species and status",
-   "tags": [
-    "Network",
-    "Global"
-   ],
-   "tbg": false,
-   "new": false,
-   "added_on": "2026-08-25",
-   "access_url": "",
-   "access_label": ""
-  },
-  {
-   "name": "IUCN SSC Coral Specialist Group",
-   "url": "https://iucncoralsg.org/",
-   "description": "Coral reef conservation specialist network",
-   "use_note": "Check coral species assessments and stated reef positions before designing monitoring or restoration work",
-   "category": "Taxon specialist networks",
-   "category_slug": "taxon-specialist-networks",
-   "category_url": "https://conservationportal.org/taxon-specialist-networks/",
-   "group": "Species and status",
-   "tags": [
-    "Network"
-   ],
-   "tbg": false,
-   "new": false,
-   "added_on": "2026-08-25",
-   "access_url": "",
-   "access_label": ""
-  },
-  {
-   "name": "IUCN SSC Amphibian Specialist Group",
-   "url": "https://www.iucn-amphibians.org/",
-   "description": "Amphibian conservation status assessments",
-   "use_note": "Find the regional working group covering your amphibians and the Red List Authority that reviews their status",
    "category": "Taxon specialist networks",
    "category_slug": "taxon-specialist-networks",
    "category_url": "https://conservationportal.org/taxon-specialist-networks/",
