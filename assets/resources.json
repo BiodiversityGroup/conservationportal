@@ -1,6 +1,6 @@
 {
- "build": "3aaffcaca3e0",
- "count": 665,
+ "build": "2d9bd2a07759",
+ "count": 668,
  "resources": [
   {
    "name": "TBG conservation grants database",
@@ -7884,6 +7884,60 @@
    "tbg": false,
    "new": true,
    "added_on": "2026-11-02",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Conservation Standards",
+   "url": "https://www.conservationstandards.org/download-cs/",
+   "description": "The Conservation Standards, the framework for designing, managing and measuring conservation projects, with the full text available to download in several languages",
+   "use_note": "Work through its steps when you draft a project plan, so your strategies and monitoring follow from your goals",
+   "category": "Planning, evaluation and practice",
+   "category_slug": "planning-evaluation-and-practice",
+   "category_url": "https://conservationportal.org/planning-evaluation-and-practice/",
+   "group": "Rules and planning",
+   "tags": [
+    "Framework"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-16",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "COMET",
+   "url": "https://comet.conservationmeasures.org/",
+   "description": "Free, practitioner-focused repository of field-proven, cost-effective methods for monitoring conservation progress across habitat, species, human well-being and threats, grounded in both scientific and Indigenous ways of knowing",
+   "use_note": "Browse the methods for what you are tracking, such as a species or a threat, before you design your own monitoring protocol",
+   "category": "Planning, evaluation and practice",
+   "category_slug": "planning-evaluation-and-practice",
+   "category_url": "https://conservationportal.org/planning-evaluation-and-practice/",
+   "group": "Rules and planning",
+   "tags": [
+    "Framework"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-16",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Applying Behavior Change in the Conservation Standards",
+   "url": "https://sites.google.com/fosonline.org/using-behavior-change-levers/home",
+   "description": "Guidance on applying behavior change theory within the Conservation Standards cycle, with behavior change levers, case studies and webinars",
+   "use_note": "Use its levers when your strategy depends on changing what people do, then test your choice against your theory of change",
+   "category": "Planning, evaluation and practice",
+   "category_slug": "planning-evaluation-and-practice",
+   "category_url": "https://conservationportal.org/planning-evaluation-and-practice/",
+   "group": "Rules and planning",
+   "tags": [
+    "Framework"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-16",
    "access_url": "",
    "access_label": ""
   },
