@@ -1,6 +1,6 @@
 {
- "build": "2d9bd2a07759",
- "count": 668,
+ "build": "08e4b92d2f48",
+ "count": 675,
  "resources": [
   {
    "name": "TBG conservation grants database",
@@ -2641,6 +2641,142 @@
    "tbg": false,
    "new": false,
    "added_on": "2026-08-26",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "ELI Environmental Pro Bono Clearinghouse",
+   "url": "https://www.eli.org/probono",
+   "description": "Connects communities, non-profits and law clinics that have a public interest mission, including conservation, with attorneys who take environmental matters pro bono, meaning free of charge, for groups that could not otherwise afford counsel. ELI does not represent clients itself",
+   "use_note": "Describe your matter and why you cannot afford counsel when you submit it, and do not count on a match",
+   "category": "Legal, insurance and back office",
+   "category_slug": "legal-insurance-and-back-office",
+   "category_url": "https://conservationportal.org/legal-insurance-and-back-office/",
+   "group": "Money and services",
+   "tags": [
+    "Service",
+    "Free"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-17",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "PILnet Access Legal Help",
+   "url": "https://www.pilnet.org/access-legal-help/",
+   "description": "Connects NGOs and community-led organizations around the world with volunteer lawyers who give free legal help, across all causes rather than environmental work alone, with request forms in several languages",
+   "use_note": "Submit a request describing your legal need, such as registration, contracts or compliance, and choose your language",
+   "category": "Legal, insurance and back office",
+   "category_slug": "legal-insurance-and-back-office",
+   "category_url": "https://conservationportal.org/legal-insurance-and-back-office/",
+   "group": "Money and services",
+   "tags": [
+    "Service",
+    "Free"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-17",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Earthjustice",
+   "url": "https://earthjustice.org/about/request-legal-assistance",
+   "description": "Nonprofit environmental law firm that represents public interest clients free of charge in high-impact court and administrative cases, such as defending public lands, wildlife and threatened ecosystems. It is not a general legal aid service",
+   "use_note": "Check its list of matters it does not take before you request help, since it handles impact litigation and not private disputes",
+   "category": "Legal, insurance and back office",
+   "category_slug": "legal-insurance-and-back-office",
+   "category_url": "https://conservationportal.org/legal-insurance-and-back-office/",
+   "group": "Money and services",
+   "tags": [
+    "Service",
+    "Free"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-17",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Earthrise Law Center",
+   "url": "https://law.lclark.edu/centers/earthrise/about_us/",
+   "description": "Environmental law clinic at Lewis & Clark Law School that gives low or no-cost legal services to nonprofit conservation organizations across the United States, in environmental and natural resources law from protecting endangered species and ecosystems to reducing pollution",
+   "use_note": "Email the clinic about your legal need if you run a nonprofit conservation group, and ask what it can take on",
+   "category": "Legal, insurance and back office",
+   "category_slug": "legal-insurance-and-back-office",
+   "category_url": "https://conservationportal.org/legal-insurance-and-back-office/",
+   "group": "Money and services",
+   "tags": [
+    "Service",
+    "US"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-17",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Environmental Defenders Office",
+   "url": "https://www.edo.org.au/free-legal-advice/",
+   "description": "Australian environmental legal centre whose lawyers give free preliminary advice, if you are eligible, on public interest planning and environmental law, such as land clearing, mining, water and pollution",
+   "use_note": "Check its list of issues it can and cannot advise on before you apply for help",
+   "category": "Legal, insurance and back office",
+   "category_slug": "legal-insurance-and-back-office",
+   "category_url": "https://conservationportal.org/legal-insurance-and-back-office/",
+   "group": "Money and services",
+   "tags": [
+    "Service",
+    "Free",
+    "Australia"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-17",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "West Coast Environmental Law",
+   "url": "https://www.wcel.org/legal-advice",
+   "description": "British Columbia environmental law organization whose staff lawyers give free advice by phone or email to individuals, community groups, non-profits and First Nations in the province, and may refer you to a private lawyer",
+   "use_note": "Call or email its intake team to talk through your concern if you or your group are in British Columbia",
+   "category": "Legal, insurance and back office",
+   "category_slug": "legal-insurance-and-back-office",
+   "category_url": "https://conservationportal.org/legal-insurance-and-back-office/",
+   "group": "Money and services",
+   "tags": [
+    "Service",
+    "Free",
+    "Canada"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-17",
+   "access_url": "",
+   "access_label": ""
+  },
+  {
+   "name": "Environmental Law Foundation",
+   "url": "https://elflaw.org/",
+   "description": "Network of volunteer solicitors, barristers and technical experts in the UK who give free help to communities and individuals facing environmental threats, through an advice and referral service",
+   "use_note": "Fill in the form if an environmental threat affects your community, and ask to be matched with a volunteer expert",
+   "category": "Legal, insurance and back office",
+   "category_slug": "legal-insurance-and-back-office",
+   "category_url": "https://conservationportal.org/legal-insurance-and-back-office/",
+   "group": "Money and services",
+   "tags": [
+    "Service",
+    "Free",
+    "UK"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-17",
    "access_url": "",
    "access_label": ""
   },
