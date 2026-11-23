@@ -1,6 +1,6 @@
 {
- "build": "ce893153c65a",
- "count": 668,
+ "build": "25ebb8925ae4",
+ "count": 669,
  "resources": [
   {
    "name": "TBG conservation grants database",
@@ -7948,6 +7948,27 @@
    "added_on": "2026-11-16",
    "access_url": "",
    "access_label": ""
+  },
+  {
+   "name": "Adaptive Conservation Planning (free guide)",
+   "url": "https://www.globalconservationsolutions.com/",
+   "description": "A free 200-page beginner's guide to the Conservation Standards (version 5.0), step by step from a plan's purpose, team and scope through focal values, pressures, goals, theories of change, objectives and a monitoring plan, by Josh Noseworthy of Global Conservation Solutions",
+   "use_note": "Work through it with your planning team before your next strategic plan, one chapter per Conservation Standards step",
+   "category": "Planning, evaluation and practice",
+   "category_slug": "planning-evaluation-and-practice",
+   "category_url": "https://conservationportal.org/planning-evaluation-and-practice/",
+   "group": "Rules and planning",
+   "tags": [
+    "Guide",
+    "Framework",
+    "Free",
+    "Global"
+   ],
+   "tbg": false,
+   "new": true,
+   "added_on": "2026-11-23",
+   "access_url": "https://form.jotform.com/252683167447668",
+   "access_label": "Free PDF (short sign-up form)"
   },
   {
    "name": "Botanic Gardens Conservation International",
